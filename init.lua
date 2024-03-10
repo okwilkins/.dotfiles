@@ -5,7 +5,7 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- Set to true if you have a Nerd Font installed
-vim.g.have_nerd_font = false
+vim.g.have_nerd_font = true
 
 
 -- [[ Setting options ]]
@@ -813,5 +813,40 @@ require("lazy").setup({
       -- "ibhagwan/fzf-lua",           -- optional
     },
     config = true
-  }
+  },
+
+  -- Nicer bottom bar
+  {
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' }
+  },
+
+  -- Fancy VIM startup screen
+  {
+    'nvimdev/dashboard-nvim',
+    event = 'VimEnter',
+    config = function()
+      require('dashboard').setup {
+        config = {
+          center = {
+            {
+              icon = '',
+              icon_hl = 'group',
+              desc = 'description',
+              desc_hl = 'group',
+              key = 'shortcut key in dashboard buffer not keymap !!',
+              key_hl = 'group',
+              key_format = ' [%s]', -- `%s` will be substituted with value of `key`
+              action = '',
+            },
+          },
+          footer = {},
+        }
+      }
+    end,
+    dependencies = { { 'nvim-tree/nvim-web-devicons' } }
+  },
+  opts = {
+    theme = 'doom'
+  },
 })
