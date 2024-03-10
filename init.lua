@@ -780,6 +780,7 @@ require("lazy").setup({
     end,
   },
 
+  -- File browser
   {
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",
@@ -789,5 +790,28 @@ require("lazy").setup({
       "MunifTanjim/nui.nvim",
       -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
     }
+  },
+
+  -- Auto brakets
+  {
+    'windwp/nvim-autopairs',
+    event = "InsertEnter",
+    config = true
+    -- use opts = {} for passing setup options
+    -- this is equalent to setup({}) function
+  },
+
+  -- Git interface
+  {
+    "NeogitOrg/neogit",
+    dependencies = {
+      "nvim-lua/plenary.nvim",  -- required
+      "sindrets/diffview.nvim", -- optional - Diff integration
+
+      -- Only one of these is needed, not both.
+      "nvim-telescope/telescope.nvim", -- optional
+      -- "ibhagwan/fzf-lua",           -- optional
+    },
+    config = true
   }
 })
