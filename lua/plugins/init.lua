@@ -9,10 +9,15 @@ return {
 
   -- File explorer tree
   {
-    "nvim-tree/nvim-tree.lua",
-    opts = {
-      git = { enable = true },
-    },
+      "nvim-tree/nvim-tree.lua",
+      version = "*",
+      lazy = false,
+      dependencies = {
+        "nvim-tree/nvim-web-devicons",
+      },
+      config = function()
+        require("nvim-tree").setup {}
+      end,
   },
 
   -- Highlight todo, notes, etc in comments
