@@ -9,15 +9,14 @@ return {
 
   -- File explorer tree
   {
-      "nvim-tree/nvim-tree.lua",
-      version = "*",
-      lazy = false,
+      "nvim-neo-tree/neo-tree.nvim",
+      branch = "v3.x",
       dependencies = {
-        "nvim-tree/nvim-web-devicons",
-      },
-      config = function()
-        require("nvim-tree").setup {}
-      end,
+        "nvim-lua/plenary.nvim",
+        "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+        "MunifTanjim/nui.nvim",
+        -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+      }
   },
 
   -- Highlight todo, notes, etc in comments
