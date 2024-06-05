@@ -7,6 +7,7 @@ return {
     end,
   },
 
+  -- File explorer tree
   {
     "nvim-tree/nvim-tree.lua",
     opts = {
