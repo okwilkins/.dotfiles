@@ -67,3 +67,8 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.highlight.on_yank()
   end,
 })
+
+-- LSPs not from Mason
+local lspconfig = require('lspconfig')
+lspconfig.lua.setup({})
+lspconfig.gleam.setup({})
