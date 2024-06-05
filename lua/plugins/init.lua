@@ -1,4 +1,5 @@
 return {
+  -- Formatter pluging
   {
     "stevearc/conform.nvim",
     config = function()
