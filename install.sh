@@ -8,7 +8,7 @@ sudo apt install stow -y
 
 # Stow directories
 if [ -z $STOW_DIRS ]; then
-  STOW_DIRS="nvim,zsh"
+  STOW_DIRS="nvim,zsh,git"
 fi
 
 for dir in $(echo $STOW_DIRS | sed "s/,/ /g")
