@@ -27,6 +27,10 @@ sudo rm -rf /opt/nvim
 sudo tar -C /opt -xzf nvim-linux64.tar.gz
 rm nvim-linux64.tar.gz
 
+# Install ripgrep for telescope
+echo "Installing ripgrep"
+sudo apt install ripgrep -y
+
 
 # Zsh setup
 echo "Setting up zsh"
