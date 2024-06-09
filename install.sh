@@ -1,5 +1,6 @@
 #!/bin/bash
 
+sudo -v
 sudo apt update
 
 # Install stow
