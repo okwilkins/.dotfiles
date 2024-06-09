@@ -21,6 +21,7 @@ done
 
 # Neovim
 # NOTE: This won't work on MacOS only only Linux
+echo "Installing Neovim"
 curl -LO -s https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
 sudo rm -rf /opt/nvim
 sudo tar -C /opt -xzf nvim-linux64.tar.gz
@@ -28,6 +29,7 @@ rm nvim-linux64.tar.gz
 
 
 # Zsh setup
+echo "Setting up zsh"
 # Install zsh
 sudo apt install zsh -y
 
@@ -35,5 +37,6 @@ sudo apt install zsh -y
 chsh -s $(which zsh)
 
 # Install ohmyzsh
+echo "Installing ohmyzsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
