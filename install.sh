@@ -7,7 +7,7 @@ sudo apt update
 sudo apt install stow -y
 
 # Stow directories
-if [[ -z $STOW_DIRS ]]; then
+if [ -z $STOW_DIRS ]; then
   STOW_DIRS=".config,zsh"
 fi
 
