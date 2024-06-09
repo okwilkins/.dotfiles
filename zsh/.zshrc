@@ -105,6 +105,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 source /opt/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 export PATH=$PATH:/opt/nvim-linux64/bin
 export PATH=$PATH:/usr/local/go/bin
