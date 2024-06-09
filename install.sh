@@ -38,6 +38,4 @@ chsh -s $(which zsh)
 
 # Install ohmyzsh
 echo "Installing ohmyzsh"
-CHSH=no
-KEEP_ZSHRC=yes
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sed "2i CHSH=no" | sed "2i KEEP_ZSHRC=yes")"
