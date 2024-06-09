@@ -1,5 +1,12 @@
 #!/bin/bash
 
+if [[ -z $STOW_FOLDERS ]]; then
+  STOW_FOLDERS=".config,zsh"
+fi
+
+if [[ -z $DOT_FILES ]]; then
+  DOT
+
 sudo -v
 sudo apt update
 
