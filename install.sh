@@ -1,17 +1,22 @@
 #!/bin/bash
 
-if [[ -z $STOW_FOLDERS ]]; then
-  STOW_FOLDERS=".config,zsh"
-fi
-
-if [[ -z $DOT_FILES ]]; then
-  DOT
-
 sudo -v
 sudo apt update
 
 # Install stow
 sudo apt install stow
+
+# Stow directories
+if [[ -z $STOW_DIRS ]]; then
+  STOW_DIRS=".config,zsh"
+fi
+
+for dir in $(echo $STOW_DIRS | sed "s/,/ /g")
+do
+  echo "Stowing directory: $dir"
+  stow -D $dir
+  stow $dir
+done
 
 
 # Zsh setup
