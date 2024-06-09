@@ -106,7 +106,7 @@ source $ZSH/oh-my-zsh.sh
 
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-export PATH="$PATH:/opt/nvim-linux64/bin"
+export PATH=$PATH:/opt/nvim-linux64/bin
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:/usr/local/cuda-12.4/bin
 export PATH=$PATH:$HOME/.local/bin
