@@ -6,17 +6,15 @@ sudo apt update
 # Install stow
 sudo apt install stow -y
 
-# Stow directories
-if [ -z $STOW_DIRS ]; then
-  STOW_DIRS="nvim,zsh,git"
-fi
+cd configs
 
-for dir in $(echo $STOW_DIRS | sed "s/,/ /g")
-do
+for dir in */; do
   echo "Stowing directory: $dir"
   stow -D $dir
-  stow $dir
+  stow $dir -t ~
 done
+
+cd ..
 
 
 # Neovim
