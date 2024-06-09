@@ -111,8 +111,8 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:/usr/local/cuda-12.4/bin
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$HOME/.cache/rebar3/bin
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-12.4/bin
-export PATH=/home/oli/.cache/rebar3/bin:$PATH
 
 # Python alias
 alias python=python3
