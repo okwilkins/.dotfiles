@@ -52,5 +52,3 @@ sudo git clone https://github.com/zsh-users/zsh-autosuggestions /opt/zsh-autosug
 # Install ohmyzsh
 echo "Installing ohmyzsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sed "2i CHSH=no" | sed "2i KEEP_ZSHRC=yes")"
-
-source ~/.zshrc
