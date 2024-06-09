@@ -10,9 +10,10 @@ Git clone the repo wherever you want.
 git clone https://github.com/okwilkins/.dotfiles
 ```
 
-Then use [GNU Stow](https://www.gnu.org/software/stow/). This will create the symbolic links in the correct locations:
+Go into the directory and run the `install.sh` script.
 
 ```bash
-stow .
+cd .dotfiles && ./install.sh
 ```
 
+This will install the relevant packages to get things going will create the symbolic links for the dotfiles.
