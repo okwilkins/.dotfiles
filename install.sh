@@ -40,6 +40,10 @@ sudo apt install zsh -y
 # Make zsh the default shell
 chsh -s $(which zsh)
 
+# Install zsh-sytax-highlighting
+echo "Installing zsh-syntax-highlighting"
+sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting.git /opt/zsh-syntax-highlighting
+
 # Install ohmyzsh
 echo "Installing ohmyzsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sed "2i CHSH=no" | sed "2i KEEP_ZSHRC=yes")"
