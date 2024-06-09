@@ -1,5 +1,11 @@
 #!/bin/bash
 
+sudo apt update
+
+# Install stow
+sudo apt install stow
+
+
 # Zsh setup
 # Install zsh
 sudo apt install zsh
