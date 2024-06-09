@@ -4,7 +4,7 @@ sudo -v
 sudo apt update
 
 # Install stow
-sudo apt install stow
+sudo apt install stow -y
 
 # Stow directories
 if [[ -z $STOW_DIRS ]]; then
@@ -21,7 +21,7 @@ done
 
 # Zsh setup
 # Install zsh
-sudo apt install zsh
+sudo apt install zsh -y
 
 # Make zsh the default shell
 chsh -s $(which zsh)
