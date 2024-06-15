@@ -70,8 +70,15 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 -- LSPs not from Mason
 local lspconfig = require('lspconfig')
+
+-- Lua
 lspconfig.lua.setup({})
+
+-- Gleam
 lspconfig.gleam.setup({})
+
+-- Python
+lspconfig.pyright.setup({})
 lspconfig.ruff_lsp.setup({
   init_options = {
     settings = {
