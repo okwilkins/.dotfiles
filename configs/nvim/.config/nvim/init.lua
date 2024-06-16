@@ -87,3 +87,7 @@ lspconfig.ruff_lsp.setup({
     }
   }
 })
+
+-- Go
+lspconfig.gopls.setup({})
+
