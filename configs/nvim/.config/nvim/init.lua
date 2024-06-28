@@ -90,4 +90,4 @@ lspconfig.ruff_lsp.setup({
 
 -- Go
 lspconfig.gopls.setup({})
-
+lspconfig.golangci_lint_ls.setup{}
