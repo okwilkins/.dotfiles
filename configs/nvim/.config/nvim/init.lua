@@ -91,3 +91,11 @@ lspconfig.ruff_lsp.setup({
 -- Go
 lspconfig.gopls.setup({})
 lspconfig.golangci_lint_ls.setup{}
+
+-- Format on save
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*.go",
+  callback = function()
+    vim.lsp.buf.format()
+  end,
+})
