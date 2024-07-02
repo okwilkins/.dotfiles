@@ -68,6 +68,11 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+vim.opt.tabstop = 4        -- A TAB character looks like 4 spaces
+vim.opt.expandtab = true   -- Expand TABs to spaces
+vim.opt.softtabstop = 4    -- Number of spaces inserted instead of a TAB character
+vim.opt.shiftwidth = 4     -- Number of spaces inserted when indenting
+
 -- LSPs not from Mason
 local lspconfig = require('lspconfig')
 
