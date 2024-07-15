@@ -1,7 +1,7 @@
 {
   "workbench.startupEditor": "none",
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Material Theme",
+  "workbench.colorTheme": "Gruvbox Material Dark",
   // VIM extension settings
   "vim.easymotion": false,
   "vim.incsearch": true,
