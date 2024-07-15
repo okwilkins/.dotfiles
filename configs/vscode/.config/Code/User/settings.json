@@ -2,6 +2,18 @@
   "workbench.startupEditor": "none",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.colorTheme": "Gruvbox Material Dark",
+  // Editor settings
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.formatOnSave": true,
+  "editor.lineNumbers": "relative",
+  "editor.minimap.enabled": false,
+  "editor.indentSize": "tabSize",
+  // Terminal settings
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  // Git settings
+  "git.autofetch": true,
+  // Github settings
+  "githubPullRequests.fileListLayout": "tree",
   // VIM extension settings
   "vim.easymotion": false,
   "vim.incsearch": true,
@@ -15,5 +27,19 @@
   },
   "extensions.experimental.affinity": {
     "vscodevim.vim": 1
+  },
+  // Language specific settings
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "python.testing.pytestEnabled": true,
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
   }
 }
