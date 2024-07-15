@@ -56,18 +56,16 @@ sudo chsh -s $(which zsh)
 echo "Installing ohmyzsh"
 rm -rf $HOME/.oh-my-zsh 
 curl -s https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -o oh-my-zsh-install.sh&&
-sed -n "2i CHSH=no" oh-my-zsh-install.sh
-sed -n "2i KEEP_ZSHRC=yes" oh-my-zsh-install.sh
+sed -i "2i CHSH=no" oh-my-zsh-install.sh
+sed -i "2i KEEP_ZSHRC=yes" oh-my-zsh-install.sh
 chmod +x oh-my-zsh-install.sh
 ./oh-my-zsh-install.sh &
 wait
 rm oh-my-zsh-install.sh
 
 # Zsh plugins
-# Install zsh-sytax-highlighting
 echo "Installing zsh-syntax-highlighting"
 git clone --quiet https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
-# Install zsh-autosuggestions
 echo "Installing zsh-autosuggestions"
 git clone --quiet https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
