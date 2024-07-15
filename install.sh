@@ -14,6 +14,11 @@ for dir in */; do
   stow $dir -t ~
 done
 
+# If running WSL, VSCode needs to be in a seperate location
+if [[ $(grep -i Microsoft /proc/version) && $HOME/.config/Code/User/settings.json ]]; then
+    ln -s $HOME/.config/Code/User/settings.json $HOME/.vscode-server/data/Machine/settings.json
+fi
+
 cd ..
 
 
