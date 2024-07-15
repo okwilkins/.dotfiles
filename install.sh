@@ -16,6 +16,7 @@ done
 
 # If running WSL, VSCode needs to be in a seperate location
 if [[ $(grep -i Microsoft /proc/version) && $HOME/.config/Code/User/settings.json ]]; then
+    echo "Running WSL, symlinking VSCode settings"
     ln -s $HOME/.config/Code/User/settings.json $HOME/.vscode-server/data/Machine/settings.json
 fi
 
