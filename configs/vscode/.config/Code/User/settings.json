@@ -12,6 +12,7 @@
   "terminal.integrated.defaultProfile.linux": "zsh",
   // Git settings
   "git.autofetch": true,
+  "git.confirmSync": false,
   // Github settings
   "githubPullRequests.fileListLayout": "tree",
   // VIM extension settings
