@@ -50,17 +50,24 @@ echo "Setting up zsh"
 sudo apt install zsh -y
 
 # Make zsh the default shell
-chsh -s $(which zsh)
+sudo chsh -s $(which zsh)
+
+# Install ohmyzsh
+echo "Installing ohmyzsh"
+rm -rf $HOME/.oh-my-zsh 
+curl -s https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -o oh-my-zsh-install.sh&&
+sed -n "2i CHSH=no" oh-my-zsh-install.sh
+sed -n "2i KEEP_ZSHRC=yes" oh-my-zsh-install.sh
+chmod +x oh-my-zsh-install.sh
+./oh-my-zsh-install.sh &
+wait
+rm oh-my-zsh-install.sh
 
 # Zsh plugins
 # Install zsh-sytax-highlighting
 echo "Installing zsh-syntax-highlighting"
-sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting.git /opt/zsh-syntax-highlighting
+git clone --quiet https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 # Install zsh-autosuggestions
 echo "Installing zsh-autosuggestions"
-sudo git clone https://github.com/zsh-users/zsh-autosuggestions /opt/zsh-autosuggestions
-
-# Install ohmyzsh
-echo "Installing ohmyzsh"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sed "2i CHSH=no" | sed "2i KEEP_ZSHRC=yes")"
+git clone --quiet https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
