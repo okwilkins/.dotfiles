@@ -15,7 +15,7 @@ for dir in */; do
 done
 
 # If running WSL, VSCode needs to be in a seperate location
-if grep -qi Microsoft /proc/version && [[ -f $HOME/.config/Code/User/settings.json ]] && [[ -f $HOME/.vscode/extension.json ]]; then
+if grep -qi Microsoft /proc/version && [[ -f $HOME/.config/Code/User/settings.json ]]; then
   echo "Running WSL, symlinking VSCode settings"
   ln -sf $HOME/.config/Code/User/settings.json $HOME/.vscode-server/data/Machine/settings.json
 fi
