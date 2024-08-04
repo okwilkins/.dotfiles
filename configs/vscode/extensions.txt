@@ -34,3 +34,4 @@ sainnhe.gruvbox-material
 streetsidesoftware.code-spell-checker
 vscodevim.vim
 yzhang.markdown-all-in-one
+tamasfe.even-better-toml
