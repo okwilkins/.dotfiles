@@ -23,7 +23,7 @@ fi
 # If running VSCode install extensions
 if which code >/dev/null; then
   echo "Installing VSCode extensions"
-  cat vscode/extensions.txt | xargs -L 1 code --install-extension
+  cat vscode/.config/Code/extentions.txt | xargs -L 1 code --install-extension
 else
   echo "VSCode command does not exist, not installing extensions"
 fi
