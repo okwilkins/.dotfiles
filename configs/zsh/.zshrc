@@ -113,7 +113,7 @@ export PATH=$PATH:$HOME/.cache/rebar3/bin
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-12.4/bin
 
 # Go
-export GOBIN=/usr/local/bin/
+export GOBIN=$HOME/bin
 export PATH=$PATH:/usr/local/go/bin
 
 # Rust
