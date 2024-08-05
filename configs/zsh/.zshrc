@@ -106,15 +106,20 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export PATH=$PATH:/opt/nvim-linux64/bin
-export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:/home/oli/.cargo/bin
 export PATH=$PATH:/usr/local/cuda-12.4/bin
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/bin
 export PATH=$PATH:$HOME/.cache/rebar3/bin
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-12.4/bin
 
-# Python alias
+# Go
+export GOBIN=/usr/local/bin/
+export PATH=$PATH:/usr/local/go/bin
+
+# Rust
+export PATH=$PATH:/home/oli/.cargo/bin
+
+# Python 
 alias python=python3
 alias pip=pip3
 
