@@ -73,6 +73,13 @@ vim.opt.expandtab = true   -- Expand TABs to spaces
 vim.opt.softtabstop = 4    -- Number of spaces inserted instead of a TAB character
 vim.opt.shiftwidth = 4     -- Number of spaces inserted when indenting
 
+-- Treesitter configs
+require'nvim-treesitter.configs'.setup {
+    ensure_installed = { "html" }, -- Add other languages if needed
+    highlight = { enable = true },
+    indent = { enable = true }
+}
+
 -- LSPs not from Mason
 local lspconfig = require('lspconfig')
 
