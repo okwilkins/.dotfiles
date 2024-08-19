@@ -1,3 +1,6 @@
 [user]
 	email = okwilkins@googlemail.com
 	name = Oliver Wilkins
+
+[init]
+    defaultBranch = main
