@@ -57,3 +57,14 @@ for dir in */; do
     stow -D $dir
     stow $dir -t ~
 done
+
+# Install global Devbox packages
+eval "$(devbox global shellenv)"
+devbox global install
+
+# Make Devboxed zsh the default shell
+# Allows root to change shell without a password
+sudo sed s/required/sufficient/g -i /etc/pam.d/chsh
+command -v $(devbox global run which zsh) | sudo tee -a /etc/shells
+
+chsh -s $(devbox global run which zsh) $(whoami)
