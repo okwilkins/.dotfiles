@@ -1,7 +1,55 @@
 {
   "lockfile_version": "1",
   "packages": {
-    "zsh@latest": {
+    "oh-my-zsh@2024-05-03": {
+      "last_modified": "2024-05-22T06:18:38Z",
+      "resolved": "github:NixOS/nixpkgs/3f316d2a50699a78afe5e77ca486ad553169061e#oh-my-zsh",
+      "source": "devbox-search",
+      "version": "2024-05-03",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/0q4iicawq8r9gspqpdjwk4qigfp1dc30-oh-my-zsh-2024-05-03",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/0q4iicawq8r9gspqpdjwk4qigfp1dc30-oh-my-zsh-2024-05-03"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/pj8svc1c4ksgnh903a796pjifxqxa8wr-oh-my-zsh-2024-05-03",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/pj8svc1c4ksgnh903a796pjifxqxa8wr-oh-my-zsh-2024-05-03"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/6bnj6ik5l5mql3hx3pi97w123l0rqlg6-oh-my-zsh-2024-05-03",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/6bnj6ik5l5mql3hx3pi97w123l0rqlg6-oh-my-zsh-2024-05-03"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/hg81kn8jkhgsq794z2mvcsxgppjrz5r0-oh-my-zsh-2024-05-03",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/hg81kn8jkhgsq794z2mvcsxgppjrz5r0-oh-my-zsh-2024-05-03"
+        }
+      }
+    },
+    "zsh@5.9": {
       "last_modified": "2024-08-18T12:44:29Z",
       "resolved": "github:NixOS/nixpkgs/ff1c2669bbb4d0dd9e62cc94f0968cfa652ceec1#zsh",
       "source": "devbox-search",

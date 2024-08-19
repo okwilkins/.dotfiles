@@ -1,6 +1,9 @@
 {
   "$schema":  "https://raw.githubusercontent.com/jetify-com/devbox/0.12.0/.schema/devbox.schema.json",
-  "packages": ["zsh@latest"],
+  "packages": [
+	  "zsh@5.9",
+	  "oh-my-zsh@2024-05-03"
+  ],
   "shell": {
     "init_hook": [
       "echo 'Welcome to devbox!' > /dev/null"
