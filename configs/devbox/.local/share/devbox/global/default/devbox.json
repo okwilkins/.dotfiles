@@ -1,8 +1,8 @@
 {
-  "$schema":  "https://raw.githubusercontent.com/jetify-com/devbox/0.12.0/.schema/devbox.schema.json",
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.12.0/.schema/devbox.schema.json",
   "packages": [
-	  "zsh@5.9",
-	  "oh-my-zsh@2024-05-03"
+    "zsh@5.9",
+    "zsh-autosuggestions@0.7.0"
   ],
   "shell": {
     "init_hook": [
