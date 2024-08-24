@@ -1,3 +1,9 @@
+# Navigation
+alias ls=exa
+alias ll="exa -alh"
+alias tree="exa --tree"
+
+# Programming
 # Python
 alias python=python3
 alias pip=pip3
