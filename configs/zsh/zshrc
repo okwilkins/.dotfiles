@@ -1,6 +1,11 @@
 # Use the global Devbox
 eval "$(devbox global shellenv --init-hook)"
 
+
+# Style
+eval "$($DEVBOX_GLOBAL_BIN/starship init zsh)"
+
+
 # Navigation
 setopt CORRECT # Try to correct the spelling of commands
 
