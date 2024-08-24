@@ -6,9 +6,16 @@ export XDG_CONFIG_HOME=$HOME/.config
 export XDG_DATA_HOME=$XDG_CONFIG_HOME/local/share
 export XDG_CACHE_HOME=$XDG_CONFIG_HOME/cache
 
+
+# Devbox
+export DEVBOX_GLOBAL_PROFILE=$XDG_DATA_HOME/devbox/global/default/.devbox/nix/profile/default
+export DEVBOX_GLOBAL_BIN=$DEVBOX_GLOBAL_PROFILE/bin
+
+
 # Editor
 export EDITOR="nvim"
 export VISUAL="nvim"
+
 
 # Zsh
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"

@@ -2,8 +2,8 @@
   "lockfile_version": "1",
   "packages": {
     "zsh-autosuggestions@0.7.0": {
-      "last_modified": "2024-08-18T12:44:29Z",
-      "resolved": "github:NixOS/nixpkgs/ff1c2669bbb4d0dd9e62cc94f0968cfa652ceec1#zsh-autosuggestions",
+      "last_modified": "2024-08-14T11:41:26Z",
+      "resolved": "github:NixOS/nixpkgs/0cb2fd7c59fed0cd82ef858cbcbdb552b9a33465#zsh-autosuggestions",
       "source": "devbox-search",
       "version": "0.7.0",
       "systems": {
@@ -98,8 +98,8 @@
       }
     },
     "zsh@5.9": {
-      "last_modified": "2024-08-18T12:44:29Z",
-      "resolved": "github:NixOS/nixpkgs/ff1c2669bbb4d0dd9e62cc94f0968cfa652ceec1#zsh",
+      "last_modified": "2024-08-21T20:16:49Z",
+      "resolved": "github:NixOS/nixpkgs/36a9aeaaa17a2d4348498275f9fe530cd4f9e519#zsh",
       "source": "devbox-search",
       "version": "5.9",
       "systems": {
@@ -139,12 +139,12 @@
               "default": true
             },
             {
-              "name": "doc",
-              "path": "/nix/store/fm1iyn525n95v927zmh2rn8ig68n440q-zsh-5.9-doc"
-            },
-            {
               "name": "info",
               "path": "/nix/store/94cfhywj4spzccncmwpb865vgypd264m-zsh-5.9-info"
+            },
+            {
+              "name": "doc",
+              "path": "/nix/store/fm1iyn525n95v927zmh2rn8ig68n440q-zsh-5.9-doc"
             }
           ],
           "store_path": "/nix/store/2lgs1wnybc9a3bbq9dnb3hld00lm0x9f-zsh-5.9"
