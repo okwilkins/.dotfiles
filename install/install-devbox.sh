@@ -8,5 +8,8 @@ wget --quiet --output-document=/dev/stdout https://get.jetify.com/devbox | bash 
 curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install --no-confirm
 
 
+ln -sF "$DOTFILES/configs/devbox/devbox.json" "$XDG_DATA_HOME/devbox/global/default/devbox.json"
+ln -sF "$DOTFILES/configs/devbox/devbox.lock" "$XDG_DATA_HOME/devbox/global/default/devbox.lock"
+
 # Install global Devbox packages
 devbox global install

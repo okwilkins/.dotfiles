@@ -14,6 +14,6 @@ echo "Installing zsh"
 sudo sed s/required/sufficient/g -i /etc/pam.d/chsh
 command -v $DEVBOX_PACKAGES_DIR/bin/zsh | sudo tee -a /etc/shells
 
-chsh -s $DEVBOX_PACKAGES_DIR/bin/zsh $(whoami)
+chsh -s /bin/bash $(whoami)
 
 exec zsh
