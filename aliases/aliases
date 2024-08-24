@@ -2,6 +2,8 @@
 alias ls=exa
 alias ll="exa -alh"
 alias tree="exa --tree"
+alias cat=bat
+
 
 # Programming
 # Python

@@ -5,7 +5,8 @@
     "zsh-autosuggestions@0.7.0",
     "zsh-syntax-highlighting@0.8.0",
     "starship@1.19.0",
-    "eza@0.18.16"
+    "eza@0.18.16",
+    "bat@0.24.0"
   ],
   "shell": {
     "init_hook": [
