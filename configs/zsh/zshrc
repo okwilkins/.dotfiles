@@ -5,7 +5,7 @@ eval "$(devbox global shellenv --init-hook)"
 # Autocompletions
 autoload -U compinit; compinit
 source <(devbox completion zsh); compdef _devbox devbox # Devbox
-
+eval "$(zoxide init zsh)"
 
 # Style
 eval "$($DEVBOX_GLOBAL_BIN/starship init zsh)"

@@ -213,6 +213,54 @@
         }
       }
     },
+    "zoxide@0.9.4": {
+      "last_modified": "2024-08-14T11:41:26Z",
+      "resolved": "github:NixOS/nixpkgs/0cb2fd7c59fed0cd82ef858cbcbdb552b9a33465#zoxide",
+      "source": "devbox-search",
+      "version": "0.9.4",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/r01dgm3bwa1carkqby3d3fgjip27rmkw-zoxide-0.9.4",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/r01dgm3bwa1carkqby3d3fgjip27rmkw-zoxide-0.9.4"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/plngk91fm6bm5k2503kz2wj97n1f27q4-zoxide-0.9.4",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/plngk91fm6bm5k2503kz2wj97n1f27q4-zoxide-0.9.4"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/99xy04852c0a3yyrs717wwprbvp56swn-zoxide-0.9.4",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/99xy04852c0a3yyrs717wwprbvp56swn-zoxide-0.9.4"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/j6jnizyylji3qg63r4lr5xs0prcrhapd-zoxide-0.9.4",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/j6jnizyylji3qg63r4lr5xs0prcrhapd-zoxide-0.9.4"
+        }
+      }
+    },
     "zsh-autosuggestions@0.7.0": {
       "last_modified": "2024-08-14T11:41:26Z",
       "resolved": "github:NixOS/nixpkgs/0cb2fd7c59fed0cd82ef858cbcbdb552b9a33465#zsh-autosuggestions",

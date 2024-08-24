@@ -7,7 +7,8 @@
     "starship@1.19.0",
     "eza@0.18.16",
     "bat@0.24.0",
-    "ripgrep@14.1.0"
+    "ripgrep@14.1.0",
+    "zoxide@0.9.4"
   ],
   "shell": {
     "init_hook": [
