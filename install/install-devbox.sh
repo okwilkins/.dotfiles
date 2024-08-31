@@ -7,7 +7,7 @@ wget --quiet --output-document=/dev/stdout https://get.jetify.com/devbox | bash 
 # Install Nix
 curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install --no-confirm
 
-
+mkdir -p "$XDG_DATA_HOME/devbox/global/default"
 ln -sF "$DOTFILES/configs/devbox/devbox.json" "$XDG_DATA_HOME/devbox/global/default/devbox.json"
 ln -sF "$DOTFILES/configs/devbox/devbox.lock" "$XDG_DATA_HOME/devbox/global/default/devbox.lock"
 
