@@ -9,7 +9,8 @@
     "bat@0.24.0",
     "ripgrep@14.1.0",
     "zoxide@0.9.4",
-    "fzf@0.52.1"
+    "fzf@0.52.1",
+    "neovim@0.9.5"
   ],
   "shell": {
     "init_hook": [
