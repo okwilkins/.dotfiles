@@ -10,7 +10,8 @@
     "ripgrep@14.1.0",
     "zoxide@0.9.4",
     "fzf@0.52.1",
-    "neovim@0.9.5"
+    "neovim@0.9.5",
+    "zig@0.12.0"
   ],
   "shell": {
     "init_hook": [
