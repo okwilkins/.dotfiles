@@ -2,7 +2,7 @@
 
 # Install Nix package manager
 echo "Installing Nix package manager"
-if ! command -v nix-shell &> /dev/null; then
+if ! command -v nix &> /dev/null; then
     sh <(curl -sL https://nixos.org/nix/install) --daemon --yes
 else
     echo "Nix is already installed! Skipping installation..."
