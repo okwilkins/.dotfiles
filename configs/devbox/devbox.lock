@@ -185,51 +185,51 @@
         }
       }
     },
-    "neovim@0.9.5": {
-      "last_modified": "2024-05-22T06:18:38Z",
-      "resolved": "github:NixOS/nixpkgs/3f316d2a50699a78afe5e77ca486ad553169061e#neovim",
+    "neovim@0.10.1": {
+      "last_modified": "2024-08-14T11:41:26Z",
+      "resolved": "github:NixOS/nixpkgs/0cb2fd7c59fed0cd82ef858cbcbdb552b9a33465#neovim",
       "source": "devbox-search",
-      "version": "0.9.5",
+      "version": "0.10.1",
       "systems": {
         "aarch64-darwin": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/h7zwgaz6l50knf92mci8aajn44vwp332-neovim-0.9.5",
+              "path": "/nix/store/9rmllqx4vzgkr610l3xr7aandkna8b6p-neovim-0.10.1",
               "default": true
             }
           ],
-          "store_path": "/nix/store/h7zwgaz6l50knf92mci8aajn44vwp332-neovim-0.9.5"
+          "store_path": "/nix/store/9rmllqx4vzgkr610l3xr7aandkna8b6p-neovim-0.10.1"
         },
         "aarch64-linux": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/p1jszifrsp7knj59kyf0k61fdicak1bv-neovim-0.9.5",
+              "path": "/nix/store/saac7hz15421nrkql3y0jwqx0a3z7g4a-neovim-0.10.1",
               "default": true
             }
           ],
-          "store_path": "/nix/store/p1jszifrsp7knj59kyf0k61fdicak1bv-neovim-0.9.5"
+          "store_path": "/nix/store/saac7hz15421nrkql3y0jwqx0a3z7g4a-neovim-0.10.1"
         },
         "x86_64-darwin": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/h4q1gg77563n8kdz64j1grwc0rbpf6ng-neovim-0.9.5",
+              "path": "/nix/store/vqcdqw6acn01c00wzjhbbhzbri1973yk-neovim-0.10.1",
               "default": true
             }
           ],
-          "store_path": "/nix/store/h4q1gg77563n8kdz64j1grwc0rbpf6ng-neovim-0.9.5"
+          "store_path": "/nix/store/vqcdqw6acn01c00wzjhbbhzbri1973yk-neovim-0.10.1"
         },
         "x86_64-linux": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/mfpmj3jis8jp8d05g558fmkznb6yhvxi-neovim-0.9.5",
+              "path": "/nix/store/k5l8wnq3na7d2fzglhfq0zgv9w5giz9z-neovim-0.10.1",
               "default": true
             }
           ],
-          "store_path": "/nix/store/mfpmj3jis8jp8d05g558fmkznb6yhvxi-neovim-0.9.5"
+          "store_path": "/nix/store/k5l8wnq3na7d2fzglhfq0zgv9w5giz9z-neovim-0.10.1"
         }
       }
     },
