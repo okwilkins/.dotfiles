@@ -185,6 +185,78 @@
         }
       }
     },
+    "libgcc@13.2.0": {
+      "last_modified": "2024-06-11T15:44:47Z",
+      "resolved": "github:NixOS/nixpkgs/4bf2ef5ac2bf016aabe80b09ba5c0eef9829a664#libgcc",
+      "source": "devbox-search",
+      "version": "13.2.0",
+      "systems": {
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "libgcc",
+              "path": "/nix/store/4ik4dws0cfl45aj6qv9kk50q8wnxzzvy-gcc-13.2.0-libgcc",
+              "default": true
+            },
+            {
+              "name": "out",
+              "path": "/nix/store/i9w3plvhpwk8x37i5dwqxlfp0knv2zcj-gcc-13.2.0",
+              "default": true
+            },
+            {
+              "name": "man",
+              "path": "/nix/store/n7f5vg0d1mcc7lxz5lgh5ga0yzy1f4mn-gcc-13.2.0-man",
+              "default": true
+            },
+            {
+              "name": "checksum",
+              "path": "/nix/store/ivf7kq88fh0dlzy0qhvj9l0ncb0zsb43-gcc-13.2.0-checksum"
+            },
+            {
+              "name": "info",
+              "path": "/nix/store/ka2jdx4j6gybd6jn27rx7clzw2w4gvcs-gcc-13.2.0-info"
+            },
+            {
+              "name": "lib",
+              "path": "/nix/store/66qm2gvcb3img7faxli0jv10dahg61qa-gcc-13.2.0-lib"
+            }
+          ],
+          "store_path": "/nix/store/4ik4dws0cfl45aj6qv9kk50q8wnxzzvy-gcc-13.2.0-libgcc"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "libgcc",
+              "path": "/nix/store/0rxb3ixzk4zaqivc9s795m0a3679wbw2-gcc-13.2.0-libgcc",
+              "default": true
+            },
+            {
+              "name": "out",
+              "path": "/nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0",
+              "default": true
+            },
+            {
+              "name": "man",
+              "path": "/nix/store/66vw93cxjdsjf2chigxcy67iq1qvyv3s-gcc-13.2.0-man",
+              "default": true
+            },
+            {
+              "name": "checksum",
+              "path": "/nix/store/q6bqv2i2hzwavf5hqcs2lhkwhqvaw8fh-gcc-13.2.0-checksum"
+            },
+            {
+              "name": "info",
+              "path": "/nix/store/02pn0mzkyiri50fhg644qgh7f1drixql-gcc-13.2.0-info"
+            },
+            {
+              "name": "lib",
+              "path": "/nix/store/xvzz97yk73hw03v5dhhz3j47ggwf1yq1-gcc-13.2.0-lib"
+            }
+          ],
+          "store_path": "/nix/store/0rxb3ixzk4zaqivc9s795m0a3679wbw2-gcc-13.2.0-libgcc"
+        }
+      }
+    },
     "neovim@0.10.1": {
       "last_modified": "2024-08-14T11:41:26Z",
       "resolved": "github:NixOS/nixpkgs/0cb2fd7c59fed0cd82ef858cbcbdb552b9a33465#neovim",
@@ -326,70 +398,6 @@
             }
           ],
           "store_path": "/nix/store/0m0l1jvh23lxqa4wv9f3yhxr6ivw14m6-starship-1.19.0"
-        }
-      }
-    },
-    "zig@0.12.0": {
-      "last_modified": "2024-06-12T20:55:33Z",
-      "resolved": "github:NixOS/nixpkgs/a9858885e197f984d92d7fe64e9fff6b2e488d40#zig",
-      "source": "devbox-search",
-      "version": "0.12.0",
-      "systems": {
-        "aarch64-darwin": {
-          "outputs": [
-            {
-              "name": "out",
-              "path": "/nix/store/6acfmzm168nvqyxcrrhwp37jwf98iwh4-zig-0.12.0",
-              "default": true
-            },
-            {
-              "name": "doc",
-              "path": "/nix/store/z9ax6i2b4fbcnsvm9ffijpybj1pfk86g-zig-0.12.0-doc"
-            }
-          ],
-          "store_path": "/nix/store/6acfmzm168nvqyxcrrhwp37jwf98iwh4-zig-0.12.0"
-        },
-        "aarch64-linux": {
-          "outputs": [
-            {
-              "name": "out",
-              "path": "/nix/store/vww134xkgf9072gkd10jhvq3f5mczmhk-zig-0.12.0",
-              "default": true
-            },
-            {
-              "name": "doc",
-              "path": "/nix/store/cxzk4xcazljm6bshr38ip9w4n6vdb9iz-zig-0.12.0-doc"
-            }
-          ],
-          "store_path": "/nix/store/vww134xkgf9072gkd10jhvq3f5mczmhk-zig-0.12.0"
-        },
-        "x86_64-darwin": {
-          "outputs": [
-            {
-              "name": "out",
-              "path": "/nix/store/256y64jjbxympfbxfrx7kal0ji15wn73-zig-0.12.0",
-              "default": true
-            },
-            {
-              "name": "doc",
-              "path": "/nix/store/a468aln59clrcb3x89kaf5dsc50cfckv-zig-0.12.0-doc"
-            }
-          ],
-          "store_path": "/nix/store/256y64jjbxympfbxfrx7kal0ji15wn73-zig-0.12.0"
-        },
-        "x86_64-linux": {
-          "outputs": [
-            {
-              "name": "out",
-              "path": "/nix/store/5qmd0giv4p5blsviadyb29xfnm1k163b-zig-0.12.0",
-              "default": true
-            },
-            {
-              "name": "doc",
-              "path": "/nix/store/bbzc0kldp7k254kl1y5vqici1zp8jiwh-zig-0.12.0-doc"
-            }
-          ],
-          "store_path": "/nix/store/5qmd0giv4p5blsviadyb29xfnm1k163b-zig-0.12.0"
         }
       }
     },
