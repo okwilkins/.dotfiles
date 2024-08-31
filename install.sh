@@ -22,6 +22,12 @@ else
     echo "Nix home-manager is already installed! Skipping installation..."
 fi
 
+# Installs
+for file in ./install/*.sh; do
+    echo "Running: $file"
+    bash file
+done
+
 # Make zsh the default shell
 # Allows root to change shell without a password
 # sudo sed s/required/sufficient/g -i /etc/pam.d/chsh
