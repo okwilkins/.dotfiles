@@ -12,12 +12,12 @@ else
     echo "Nix is already installed! Skipping installation..."
 fi
 
+
 # Installs
 for file in ./install/*.sh; do
     echo "Running: $file"
     bash $file
 done
-echo "Installing Nix"
 
 # Make zsh the default shell
 # Allows root to change shell without a password
