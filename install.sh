@@ -19,6 +19,7 @@ for file in ./install/*.sh; do
     bash $file
 done
 
+
 # Make zsh the default shell
 # Allows root to change shell without a password
 # sudo sed s/required/sufficient/g -i /etc/pam.d/chsh
