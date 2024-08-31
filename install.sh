@@ -25,7 +25,7 @@ fi
 # Installs
 for file in ./install/*.sh; do
     echo "Running: $file"
-    bash file
+    bash $file
 done
 
 # Make zsh the default shell
