@@ -16,6 +16,9 @@ echo "Installing Nix"
 echo "Installing Nix package manager"
 if ! command -v nix &> /dev/null; then
     sh <(curl -sL https://nixos.org/nix/install) --daemon --yes
+    # Resets the shell to give access to the new Nix commands
+    exec bash
+    source ./configs/zsh/zshenv
 else
     echo "Nix is already installed! Skipping installation..."
 fi
