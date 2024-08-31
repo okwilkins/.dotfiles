@@ -2,11 +2,19 @@
 
 # Install Nix package manager
 echo "Installing Nix package manager"
-sh <(curl -sL https://nixos.org/nix/install) --daemon --yes
+if ! command -v nix-env &> /dev/null; then
+    sh <(curl -sL https://nixos.org/nix/install) --daemon --yes
+else
+    echo "Nix is already installed! Skipping installation..."
+fi
 
 # Install Nix home-manager
 echo "Installing Nix home-manager"
-nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
-nix-channel --update
-nix-shell '<home-manager>' -A install
+if ! command -v home-manager &> /dev/null; then
+    nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
+    nix-channel --update
+    nix-shell '<home-manager>' -A install
+else
+    echo "Nix home-manager is already installed! Skipping installation..."
+fi
 
