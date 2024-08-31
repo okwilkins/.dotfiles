@@ -15,7 +15,7 @@
         "oli" = inputs.home-manager.lib.homeManagerConfiguration {
 		system = "x86_64-linux";
                 homeDirectory = "/home/oli";
-                username = "your.username";
+                username = "oli";
                 configuration.imports = [ ./home.nix ];
         };                                                                                                                                                                                                                                                      };
   };
