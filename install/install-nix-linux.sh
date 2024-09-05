@@ -11,5 +11,5 @@ ln -sf "$DOTFILES/configs/nix-linux/home.nix" "$XDG_CONFIG_HOME/nix-linux/home.n
 
 cd $DOTFILES/configs/nix-linux
 nix run . -- build --flake .
-ln -sf "$XDG_CONFIG_HOME/nix-config" $(readlink result)
+ln -sf $(readlink result) "$XDG_CONFIG_HOME/nix-config"
 rm result
