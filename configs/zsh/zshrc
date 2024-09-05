@@ -1,4 +1,5 @@
 # Use Nix build
+source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
 # WARNING: The Nix install needs to be run before running this script!
 source $XDG_CONFIG_HOME/nix-config/activate
 
