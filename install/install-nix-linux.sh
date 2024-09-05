@@ -9,7 +9,7 @@ ln -sf "$DOTFILES/configs/nix-linux/flake.lock" "$XDG_CONFIG_HOME/nix-linux/flak
 ln -sf "$DOTFILES/configs/nix-linux/home.nix" "$XDG_CONFIG_HOME/nix-linux/home.nix"
 
 
-cd $XDG_CONFIG_HOME/nix-linux
+cd $DOTFILES/configs/nix-linux
 /nix/var/nix/profiles/default/bin/nix run . -- build --flake .
 ln -sf $(readlink result) "$XDG_CONFIG_HOME/nix-config"
 rm result
