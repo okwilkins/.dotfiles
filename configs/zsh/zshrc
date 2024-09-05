@@ -1,6 +1,6 @@
-# Use the global Devbox
-eval "$(devbox global shellenv --init-hook)"
-
+# Use Nix build
+# WARNING: The Nix install needs to be run before running this script!
+source $XDG_CONFIG_HOME/nix-config/activate
 
 # Autocompletions
 autoload -U compinit; compinit
