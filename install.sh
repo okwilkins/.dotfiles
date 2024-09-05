@@ -16,7 +16,9 @@ fi
 # Installs
 for file in ./install/*.sh; do
     echo "Running: $file"
-    bash $file
+    # Run each script in a new bash subshell with Nix environment
+    # When Nix is newly installed you need to restart the shell to gain access to the command
+    bash -c "source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh && bash $file"
 done
 
 

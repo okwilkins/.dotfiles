@@ -10,6 +10,6 @@ ln -sf "$DOTFILES/configs/nix-linux/home.nix" "$XDG_CONFIG_HOME/nix-linux/home.n
 
 
 cd $DOTFILES/configs/nix-linux
-/nix/var/nix/profiles/default/bin/nix run . -- build --flake .
-ln -sf $(readlink result) "$XDG_CONFIG_HOME/nix-config"
+nix run . -- build --flake .
+ln -sf "$XDG_CONFIG_HOME/nix-config" $(readlink result)
 rm result
