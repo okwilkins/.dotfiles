@@ -28,6 +28,7 @@
     "tmuxPlugins.catppuccin@latest",
     "tmuxPlugins.yank@latest",
     "tmuxPlugins.resurrect@latest",
-    "tmuxPlugins.continuum@latest"
+    "tmuxPlugins.continuum@latest",
+    "tmuxPlugins.vim-tmux-navigator@latest"
   ]
 }

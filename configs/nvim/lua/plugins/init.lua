@@ -80,5 +80,17 @@ return {
             "nvim-tree/nvim-web-devicons"
         }
     },
+
+    -- Nvim Tmux navigator for "shared" window navigation between the two    
+    {
+        "christoomey/vim-tmux-navigator",
+        lazy = false,
+    },
+
+    -- Multi cursor support
+    {
+        "mg979/vim-visual-multi",
+        lazy = false,
+    }
 }
 

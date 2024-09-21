@@ -1250,6 +1250,54 @@
         }
       }
     },
+    "tmuxPlugins.vim-tmux-navigator@latest": {
+      "last_modified": "2024-09-10T15:01:03Z",
+      "resolved": "github:NixOS/nixpkgs/5ed627539ac84809c78b2dd6d26a5cebeb5ae269#tmuxPlugins.vim-tmux-navigator",
+      "source": "devbox-search",
+      "version": "2022-08-21",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/90h8c2y4bczablzf9qimzvbk186np10x-tmuxplugin-vim-tmux-navigator-unstable-2022-08-21",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/90h8c2y4bczablzf9qimzvbk186np10x-tmuxplugin-vim-tmux-navigator-unstable-2022-08-21"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/wyld1k7b83sv5naia95jq39g1kc8bc0y-tmuxplugin-vim-tmux-navigator-unstable-2022-08-21",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/wyld1k7b83sv5naia95jq39g1kc8bc0y-tmuxplugin-vim-tmux-navigator-unstable-2022-08-21"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/w1473nxv17p08p6r7ksdvixmjxfk77ms-tmuxplugin-vim-tmux-navigator-unstable-2022-08-21",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/w1473nxv17p08p6r7ksdvixmjxfk77ms-tmuxplugin-vim-tmux-navigator-unstable-2022-08-21"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/hv8irq1jhyyx1lms4s4zi4gbhz7xj926-tmuxplugin-vim-tmux-navigator-unstable-2022-08-21",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/hv8irq1jhyyx1lms4s4zi4gbhz7xj926-tmuxplugin-vim-tmux-navigator-unstable-2022-08-21"
+        }
+      }
+    },
     "tmuxPlugins.yank@latest": {
       "last_modified": "2024-09-10T15:01:03Z",
       "resolved": "github:NixOS/nixpkgs/5ed627539ac84809c78b2dd6d26a5cebeb5ae269#tmuxPlugins.yank",
