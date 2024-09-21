@@ -1,5 +1,7 @@
 export WORKSPACE="$HOME/workspace"
 export DOTFILES="$HOME/.dotfiles"
+export DEVBOX_NO_PROMPT=true
+
 
 # XDG
 export XDG_CONFIG_HOME=$HOME/.config
