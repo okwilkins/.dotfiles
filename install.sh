@@ -15,6 +15,9 @@ echo "Installing nvim"
 echo "Installing Wezterm"
 . "$DOTFILES/install/install-wezterm.sh"
 
+echo "Installing Tmux"
+. "$DOTFILES/install/install-tmux.sh"
+
 # Make Devboxed zsh the default shell
 # Allows root to change shell without a password
 sudo sed s/required/sufficient/g -i /etc/pam.d/chsh
