@@ -4,8 +4,10 @@ eval "$(devbox global shellenv --init-hook)"
 
 # Autocompletions
 autoload -U compinit; compinit
-source <(devbox completion zsh); compdef _devbox devbox # Devbox
+source <(devbox completion zsh); compdef _devbox devbox 
 eval "$(zoxide init zsh)"
+source <(fzf --zsh)
+
 
 # Style
 eval "$($DEVBOX_GLOBAL_BIN/starship init zsh)"
@@ -14,8 +16,8 @@ eval "$($DEVBOX_GLOBAL_BIN/starship init zsh)"
 # Navigation
 setopt CORRECT # Try to correct the spelling of commands
 
-source $DEVBOX_PACKAGES_DIR/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $DEVBOX_PACKAGES_DIR/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $DEVBOX_GLOBAL_SHARE/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $DEVBOX_GLOBAL_SHARE/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
 # Aliases
