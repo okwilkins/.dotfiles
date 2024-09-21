@@ -12,6 +12,7 @@ export XDG_CACHE_HOME=$XDG_CONFIG_HOME/cache
 # Devbox
 export DEVBOX_GLOBAL_PROFILE=$XDG_DATA_HOME/devbox/global/default/.devbox/nix/profile/default
 export DEVBOX_GLOBAL_BIN=$DEVBOX_GLOBAL_PROFILE/bin
+export DEVBOX_GLOBAL_SHARE=$DEVBOX_GLOBAL_BIN/share
 
 
 # Editor
