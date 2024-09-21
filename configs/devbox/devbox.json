@@ -24,6 +24,7 @@
     "cosign@latest",
     "envsubst@latest",
     "grafana@latest",
-    "tmux@latest"
+    "tmux@latest",
+    "tmuxPlugins.catppuccin@latest"
   ]
 }

@@ -1106,6 +1106,54 @@
         }
       }
     },
+    "tmuxPlugins.catppuccin@latest": {
+      "last_modified": "2024-09-10T15:01:03Z",
+      "resolved": "github:NixOS/nixpkgs/5ed627539ac84809c78b2dd6d26a5cebeb5ae269#tmuxPlugins.catppuccin",
+      "source": "devbox-search",
+      "version": "2024-05-15",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/8cqfwlqfxp21fwbcvl8dyyahdm4klmxj-tmuxplugin-catppuccin-unstable-2024-05-15",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/8cqfwlqfxp21fwbcvl8dyyahdm4klmxj-tmuxplugin-catppuccin-unstable-2024-05-15"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/20rjixc99zy2zdyi17q53ka72jg8bm0d-tmuxplugin-catppuccin-unstable-2024-05-15",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/20rjixc99zy2zdyi17q53ka72jg8bm0d-tmuxplugin-catppuccin-unstable-2024-05-15"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/nsjjwbr75iq21h3w47xgymm45vr91vvh-tmuxplugin-catppuccin-unstable-2024-05-15",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/nsjjwbr75iq21h3w47xgymm45vr91vvh-tmuxplugin-catppuccin-unstable-2024-05-15"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/as7jxhhh48c36ii3g5vy6y2yj982i0mc-tmuxplugin-catppuccin-unstable-2024-05-15",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/as7jxhhh48c36ii3g5vy6y2yj982i0mc-tmuxplugin-catppuccin-unstable-2024-05-15"
+        }
+      }
+    },
     "yq-go@latest": {
       "last_modified": "2024-09-10T15:01:03Z",
       "resolved": "github:NixOS/nixpkgs/5ed627539ac84809c78b2dd6d26a5cebeb5ae269#yq-go",
