@@ -25,6 +25,9 @@
     "envsubst@latest",
     "grafana@latest",
     "tmux@latest",
-    "tmuxPlugins.catppuccin@latest"
+    "tmuxPlugins.catppuccin@latest",
+    "tmuxPlugins.yank@latest",
+    "tmuxPlugins.resurrect@latest",
+    "tmuxPlugins.continuum@latest"
   ]
 }

@@ -1154,6 +1154,150 @@
         }
       }
     },
+    "tmuxPlugins.continuum@latest": {
+      "last_modified": "2024-09-10T15:01:03Z",
+      "resolved": "github:NixOS/nixpkgs/5ed627539ac84809c78b2dd6d26a5cebeb5ae269#tmuxPlugins.continuum",
+      "source": "devbox-search",
+      "version": "2022-01-25",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/aqs7gq94wd4ldbbsnrrm232jifbywwjy-tmuxplugin-continuum-unstable-2022-01-25",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/aqs7gq94wd4ldbbsnrrm232jifbywwjy-tmuxplugin-continuum-unstable-2022-01-25"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/smdh9pccyy4gg72ab06p03w97nsn95hp-tmuxplugin-continuum-unstable-2022-01-25",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/smdh9pccyy4gg72ab06p03w97nsn95hp-tmuxplugin-continuum-unstable-2022-01-25"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/dl6rr0js0bg6p1ly0lmbz76p8hrcx517-tmuxplugin-continuum-unstable-2022-01-25",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/dl6rr0js0bg6p1ly0lmbz76p8hrcx517-tmuxplugin-continuum-unstable-2022-01-25"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/x2kncjmygzfjsrnddmpf05nh9qnrq37n-tmuxplugin-continuum-unstable-2022-01-25",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/x2kncjmygzfjsrnddmpf05nh9qnrq37n-tmuxplugin-continuum-unstable-2022-01-25"
+        }
+      }
+    },
+    "tmuxPlugins.resurrect@latest": {
+      "last_modified": "2024-09-10T15:01:03Z",
+      "resolved": "github:NixOS/nixpkgs/5ed627539ac84809c78b2dd6d26a5cebeb5ae269#tmuxPlugins.resurrect",
+      "source": "devbox-search",
+      "version": "2022-05-01",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/87czlf8i2q2bzk1xikhx20d80g9kpdi9-tmuxplugin-resurrect-unstable-2022-05-01",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/87czlf8i2q2bzk1xikhx20d80g9kpdi9-tmuxplugin-resurrect-unstable-2022-05-01"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/arr6z55pznljxipqvb8ix8li1qivjwkd-tmuxplugin-resurrect-unstable-2022-05-01",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/arr6z55pznljxipqvb8ix8li1qivjwkd-tmuxplugin-resurrect-unstable-2022-05-01"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/049459i6ldyvq1igc1y82hcp6awb2d84-tmuxplugin-resurrect-unstable-2022-05-01",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/049459i6ldyvq1igc1y82hcp6awb2d84-tmuxplugin-resurrect-unstable-2022-05-01"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/86z20339qi0bw5291hqbh3sk39n4jwrk-tmuxplugin-resurrect-unstable-2022-05-01",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/86z20339qi0bw5291hqbh3sk39n4jwrk-tmuxplugin-resurrect-unstable-2022-05-01"
+        }
+      }
+    },
+    "tmuxPlugins.yank@latest": {
+      "last_modified": "2024-09-10T15:01:03Z",
+      "resolved": "github:NixOS/nixpkgs/5ed627539ac84809c78b2dd6d26a5cebeb5ae269#tmuxPlugins.yank",
+      "source": "devbox-search",
+      "version": "2021-06-20",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/ixmqzdn5yck23fi1d824a04mvxkb7jk6-tmuxplugin-yank-unstable-2021-06-20",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/ixmqzdn5yck23fi1d824a04mvxkb7jk6-tmuxplugin-yank-unstable-2021-06-20"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/grj4cmrlg50igwa60v2k0bn6dh38791d-tmuxplugin-yank-unstable-2021-06-20",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/grj4cmrlg50igwa60v2k0bn6dh38791d-tmuxplugin-yank-unstable-2021-06-20"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/a1jcnkx6ncn6ypbmy93wd0l32h4z4zhj-tmuxplugin-yank-unstable-2021-06-20",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/a1jcnkx6ncn6ypbmy93wd0l32h4z4zhj-tmuxplugin-yank-unstable-2021-06-20"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/i323v1kl0g64p9bahj9ifznb1wyj4nl7-tmuxplugin-yank-unstable-2021-06-20",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/i323v1kl0g64p9bahj9ifznb1wyj4nl7-tmuxplugin-yank-unstable-2021-06-20"
+        }
+      }
+    },
     "yq-go@latest": {
       "last_modified": "2024-09-10T15:01:03Z",
       "resolved": "github:NixOS/nixpkgs/5ed627539ac84809c78b2dd6d26a5cebeb5ae269#yq-go",
