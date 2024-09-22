@@ -29,6 +29,8 @@
     "tmuxPlugins.yank@latest",
     "tmuxPlugins.resurrect@latest",
     "tmuxPlugins.continuum@latest",
-    "tmuxPlugins.vim-tmux-navigator@latest"
+    "tmuxPlugins.vim-tmux-navigator@latest",
+    "coreutils-full@latest",
+    "zsh-vi-mode@latest"
   ]
 }

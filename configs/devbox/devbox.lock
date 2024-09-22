@@ -113,6 +113,78 @@
         }
       }
     },
+    "coreutils-full@latest": {
+      "last_modified": "2024-09-10T15:01:03Z",
+      "resolved": "github:NixOS/nixpkgs/5ed627539ac84809c78b2dd6d26a5cebeb5ae269#coreutils-full",
+      "source": "devbox-search",
+      "version": "9.5",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/fvc392q87r0qbvvsxcyixcqv1h64hm2m-coreutils-full-9.5",
+              "default": true
+            },
+            {
+              "name": "info",
+              "path": "/nix/store/ya5a2d3jsbv0lby0ps9j6fx30akzbvbk-coreutils-full-9.5-info"
+            }
+          ],
+          "store_path": "/nix/store/fvc392q87r0qbvvsxcyixcqv1h64hm2m-coreutils-full-9.5"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/vy8awgzlk242b1m1s6rbn7g350l5vvmv-coreutils-full-9.5",
+              "default": true
+            },
+            {
+              "name": "debug",
+              "path": "/nix/store/im4if41pdgb6b1kz1pafrq2g19icf1fs-coreutils-full-9.5-debug"
+            },
+            {
+              "name": "info",
+              "path": "/nix/store/3i90lx5yy5hqm8ysdyf4dr934mm1lsgv-coreutils-full-9.5-info"
+            }
+          ],
+          "store_path": "/nix/store/vy8awgzlk242b1m1s6rbn7g350l5vvmv-coreutils-full-9.5"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/j88kinyhwal1vr72h2qn7yzryxp662jc-coreutils-full-9.5",
+              "default": true
+            },
+            {
+              "name": "info",
+              "path": "/nix/store/8clazbmr3rlbr89ciqnhs952k1594ghy-coreutils-full-9.5-info"
+            }
+          ],
+          "store_path": "/nix/store/j88kinyhwal1vr72h2qn7yzryxp662jc-coreutils-full-9.5"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/3rkmqbpa9x1cq16i7yz1rjl02z6i6p61-coreutils-full-9.5",
+              "default": true
+            },
+            {
+              "name": "debug",
+              "path": "/nix/store/zry2ihcidxs4fs4ysqw6w987kf92zg7l-coreutils-full-9.5-debug"
+            },
+            {
+              "name": "info",
+              "path": "/nix/store/ccjz14za4f0rglcm6kkjlbm2zicircr8-coreutils-full-9.5-info"
+            }
+          ],
+          "store_path": "/nix/store/3rkmqbpa9x1cq16i7yz1rjl02z6i6p61-coreutils-full-9.5"
+        }
+      }
+    },
     "cosign@latest": {
       "last_modified": "2024-09-10T15:01:03Z",
       "resolved": "github:NixOS/nixpkgs/5ed627539ac84809c78b2dd6d26a5cebeb5ae269#cosign",
@@ -1535,6 +1607,54 @@
             }
           ],
           "store_path": "/nix/store/snk5f9agv9dwvda8k03pmsw9aqzfziff-zsh-syntax-highlighting-0.8.0"
+        }
+      }
+    },
+    "zsh-vi-mode@latest": {
+      "last_modified": "2024-09-10T15:01:03Z",
+      "resolved": "github:NixOS/nixpkgs/5ed627539ac84809c78b2dd6d26a5cebeb5ae269#zsh-vi-mode",
+      "source": "devbox-search",
+      "version": "0.11.0",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/8206scr1fy2wla1lcxdb4jdy5rc2gfq2-zsh-vi-mode-0.11.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/8206scr1fy2wla1lcxdb4jdy5rc2gfq2-zsh-vi-mode-0.11.0"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/grm8czzywbqswx2s63anaz28kz5scq6f-zsh-vi-mode-0.11.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/grm8czzywbqswx2s63anaz28kz5scq6f-zsh-vi-mode-0.11.0"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/k6n60xqrqmwr78slg080f6xvznrzbwyd-zsh-vi-mode-0.11.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/k6n60xqrqmwr78slg080f6xvznrzbwyd-zsh-vi-mode-0.11.0"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/mjy2hzfpnp7w7hxm30m5m6ss1ks86j83-zsh-vi-mode-0.11.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/mjy2hzfpnp7w7hxm30m5m6ss1ks86j83-zsh-vi-mode-0.11.0"
         }
       }
     },
