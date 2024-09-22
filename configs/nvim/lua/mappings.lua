@@ -28,4 +28,9 @@ vim.g.VM_maps = {
 vim.api.nvim_set_keymap("n", "<C-h>", "<cmd> TmuxNavigateLeft<cr>", { noremap = true, silent = true })  
 vim.api.nvim_set_keymap("n", "<c-j>", "<cmd> TmuxNavigateDown<cr>", { noremap = true, silent = true })  
 vim.api.nvim_set_keymap("n", "<C-k>", "<cmd> TmuxNavigateUp<cr>", { noremap = true, silent = true })  
-vim.api.nvim_set_keymap("n", "<C-l>", "<cmd> TmuxNavigateRight<cr>", { noremap = true, silent = true })  
+vim.api.nvim_set_keymap("n", "<C-l>", "<cmd> TmuxNavigateRight<cr>", { noremap = true, silent = true }) 
+
+-- UFO
+vim.keymap.set("n", "zR", function() require("ufo").openAllFolds() end)
+vim.keymap.set("n", "zM", function() require("ufo").closeAllFolds() end)
+
