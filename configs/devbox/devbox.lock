@@ -873,6 +873,54 @@
         }
       }
     },
+    "lua-language-server@latest": {
+      "last_modified": "2024-09-11T08:20:13Z",
+      "resolved": "github:NixOS/nixpkgs/159be5db480d1df880a0135ca0bfed84c2f88353#lua-language-server",
+      "source": "devbox-search",
+      "version": "3.10.6",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/gl6c4k08agavqx4dikxxz7acdrnycfr5-lua-language-server-3.10.6",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/gl6c4k08agavqx4dikxxz7acdrnycfr5-lua-language-server-3.10.6"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/0xwaci2qxvp0d1bhh023pfy592486qp5-lua-language-server-3.10.6",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/0xwaci2qxvp0d1bhh023pfy592486qp5-lua-language-server-3.10.6"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/gpk41lf0fw0idnag99n5321974m1f4k3-lua-language-server-3.10.6",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/gpk41lf0fw0idnag99n5321974m1f4k3-lua-language-server-3.10.6"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/3fp5s0cydnczsh74ylsqni2c3kiapx4s-lua-language-server-3.10.6",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/3fp5s0cydnczsh74ylsqni2c3kiapx4s-lua-language-server-3.10.6"
+        }
+      }
+    },
     "moreutils@latest": {
       "last_modified": "2024-09-10T15:01:03Z",
       "resolved": "github:NixOS/nixpkgs/5ed627539ac84809c78b2dd6d26a5cebeb5ae269#moreutils",
@@ -1062,6 +1110,54 @@
             }
           ],
           "store_path": "/nix/store/3kqgbyp136g6qanfynag62b283fd05pn-starship-1.20.1"
+        }
+      }
+    },
+    "stylua@latest": {
+      "last_modified": "2024-09-10T15:01:03Z",
+      "resolved": "github:NixOS/nixpkgs/5ed627539ac84809c78b2dd6d26a5cebeb5ae269#stylua",
+      "source": "devbox-search",
+      "version": "0.20.0",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/2v0yy9j3x5vdgn389l236lizcwkfxay1-stylua-0.20.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/2v0yy9j3x5vdgn389l236lizcwkfxay1-stylua-0.20.0"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/hnhzrbcl8k16i7y8v8ldzvppqa42ccda-stylua-0.20.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/hnhzrbcl8k16i7y8v8ldzvppqa42ccda-stylua-0.20.0"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/4aj7b2kgsnxb73sy5pkzhvv5yq3qydk6-stylua-0.20.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/4aj7b2kgsnxb73sy5pkzhvv5yq3qydk6-stylua-0.20.0"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/h6w2vxwfazag67gg6ig5nly6yhfgjm8i-stylua-0.20.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/h6w2vxwfazag67gg6ig5nly6yhfgjm8i-stylua-0.20.0"
         }
       }
     },
@@ -1370,6 +1466,54 @@
             }
           ],
           "store_path": "/nix/store/i323v1kl0g64p9bahj9ifznb1wyj4nl7-tmuxplugin-yank-unstable-2021-06-20"
+        }
+      }
+    },
+    "yaml-language-server@latest": {
+      "last_modified": "2024-09-10T15:01:03Z",
+      "resolved": "github:NixOS/nixpkgs/5ed627539ac84809c78b2dd6d26a5cebeb5ae269#yaml-language-server",
+      "source": "devbox-search",
+      "version": "1.15.0",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/4i1a1fjhxnigkxbr009v8lsdfqwqjyxw-yaml-language-server-1.15.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/4i1a1fjhxnigkxbr009v8lsdfqwqjyxw-yaml-language-server-1.15.0"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/1cmf289k9nxwcb63vsn0xqkmjwcgfvdn-yaml-language-server-1.15.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/1cmf289k9nxwcb63vsn0xqkmjwcgfvdn-yaml-language-server-1.15.0"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/k64s83jy8y0a759i54dcjw56wgbs696k-yaml-language-server-1.15.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/k64s83jy8y0a759i54dcjw56wgbs696k-yaml-language-server-1.15.0"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/2ambrgqk3vk1bxm0jqjzdyhwy0b4nc3p-yaml-language-server-1.15.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/2ambrgqk3vk1bxm0jqjzdyhwy0b4nc3p-yaml-language-server-1.15.0"
         }
       }
     },

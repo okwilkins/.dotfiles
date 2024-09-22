@@ -30,6 +30,9 @@
     "coreutils-full@latest",
     "zsh-vi-mode@latest",
     "moreutils@latest",
-    "htop@latest"
+    "htop@latest",
+    "yaml-language-server@latest",
+    "lua-language-server@latest",
+    "stylua@latest"
   ]
 }
