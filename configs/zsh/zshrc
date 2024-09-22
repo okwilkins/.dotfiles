@@ -12,7 +12,7 @@ source $DEVBOX_GLOBAL_SHARE/zsh-vi-mode/zsh-vi-mode.zsh
 source $DOTFILES/configs/zsh/plugins/git.zsh
 source $DOTFILES/configs/zsh/plugins/kubectl.zsh
 source $DOTFILES/configs/zsh/plugins/docker.zsh
-
+source <(fzf --zsh)
 
 # Style
 eval "$($DEVBOX_GLOBAL_BIN/starship init zsh)"
