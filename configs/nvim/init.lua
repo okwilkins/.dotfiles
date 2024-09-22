@@ -86,6 +86,7 @@ local conform = require("conform")
 conform.setup({
     formatters_by_ft = {
         lua = { "stylua" },
+        yaml = { "yq" },
     },
     format_on_save = true,
 })
@@ -131,12 +132,12 @@ lspconfig.yamlls.setup({
                 enable = true,
             },
             schemas = {
-                ["kubernetes"] = "*.{yaml,yml}",
+                ["https://raw.githubusercontent.com/docker/compose/master/compose/config/compose_spec.json"] = "docker-compose*.{yml,yaml}",
                 ["https://json.schemastore.org/chart"] = "Chart.{yml,yaml}",
                 ["https://json.schemastore.org/github-action"] = ".github/action.{yml,yaml}",
                 ["https://json.schemastore.org/github-workflow"] = ".github/workflows/*.{yml,yaml}",
                 ["https://json.schemastore.org/kustomization.json"] = "kustomization.{yml,yaml}",
-                ["https://raw.githubusercontent.com/awslabs/goformation/master/schema/cloudformation.schema.json"] = "cloudformation.{yml,yaml}",
+                ["https://raw.githubusercontent.com/awslabs/goformation/master/schema/cloudformation.schema.json"] = "*cloudformation.{yml,yaml}",
             },
         },
     },
