@@ -921,6 +921,54 @@
         }
       }
     },
+    "marksman@latest": {
+      "last_modified": "2024-09-18T09:48:47Z",
+      "resolved": "github:NixOS/nixpkgs/294eb5975def0caa718fca92dc5a9d656ae392a9#marksman",
+      "source": "devbox-search",
+      "version": "2023-12-09",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/3x46f1mphmpa4sa1ksv7hnjqgchgpwdb-marksman-2023-12-09",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/3x46f1mphmpa4sa1ksv7hnjqgchgpwdb-marksman-2023-12-09"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/wbd5bsv7dwa55pl1mzrgmplfx675xqda-marksman-2023-12-09",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/wbd5bsv7dwa55pl1mzrgmplfx675xqda-marksman-2023-12-09"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/c16arjmpdg70pxc2c71v56m7plfm9rzn-marksman-2023-12-09",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/c16arjmpdg70pxc2c71v56m7plfm9rzn-marksman-2023-12-09"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/3xhbzkzc7kgwx7s6kahnsn64ynsi2g51-marksman-2023-12-09",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/3xhbzkzc7kgwx7s6kahnsn64ynsi2g51-marksman-2023-12-09"
+        }
+      }
+    },
     "moreutils@latest": {
       "last_modified": "2024-09-10T15:01:03Z",
       "resolved": "github:NixOS/nixpkgs/5ed627539ac84809c78b2dd6d26a5cebeb5ae269#moreutils",

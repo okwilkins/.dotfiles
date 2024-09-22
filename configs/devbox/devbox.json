@@ -33,6 +33,7 @@
     "htop@latest",
     "yaml-language-server@latest",
     "lua-language-server@latest",
-    "stylua@latest"
+    "stylua@latest",
+    "marksman@latest"
   ]
 }

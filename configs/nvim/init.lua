@@ -142,3 +142,6 @@ lspconfig.yamlls.setup({
         },
     },
 })
+
+-- Markdown
+lspconfig.marksman.setup({})
