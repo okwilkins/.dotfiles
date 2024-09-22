@@ -4,12 +4,11 @@ eval "$(devbox global shellenv --init-hook)"
 
 # Autocompletions
 autoload -U compinit; compinit
-source <(devbox completion zsh); compdef _devbox devbox 
-eval "$(zoxide init zsh)"
-source <(fzf --zsh)
-source $DEVBOX_GLOBAL_SHARE/zsh-vi-mode/zsh-vi-mode.zsh
+fpath=($DOTFILES/configs/zsh/completions/ $fpath)
+
 
 # Plugins
+source $DEVBOX_GLOBAL_SHARE/zsh-vi-mode/zsh-vi-mode.zsh
 source $DOTFILES/configs/zsh/plugins/git.zsh
 source $DOTFILES/configs/zsh/plugins/kubectl.zsh
 source $DOTFILES/configs/zsh/plugins/docker.zsh
