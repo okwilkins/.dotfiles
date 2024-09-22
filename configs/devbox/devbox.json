@@ -34,6 +34,7 @@
     "yaml-language-server@latest",
     "lua-language-server@latest",
     "stylua@latest",
-    "marksman@latest"
+    "marksman@latest",
+    "teller@latest"
   ]
 }
