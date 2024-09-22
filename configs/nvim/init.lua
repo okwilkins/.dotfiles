@@ -82,9 +82,15 @@ require("nvim-treesitter.configs").setup({
 
 -- LSPs not from Mason
 local lspconfig = require("lspconfig")
+local conform = require("conform")
+conform.setup({
+    formatters_by_ft = {
+        lua = { "stylua" },
+    },
+    format_on_save = true,
+})
 
 -- Lua
--- lspconfig.stylua.setup({})
 lspconfig.lua_ls.setup({})
 
 -- Gleam
