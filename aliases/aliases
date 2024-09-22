@@ -1,7 +1,8 @@
 # Navigation
 alias ls="exa --icons --git -a"
 alias ll="exa -alh --icons --long --git"
-alias tree="exa --tree --level=2 --icons --git"
+alias lt="exa --tree --level=2 --icons --git"
+alias tree="lt"
 alias cat=bat
 alias cd=z
 
