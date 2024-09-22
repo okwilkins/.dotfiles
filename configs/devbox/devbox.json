@@ -29,6 +29,7 @@
     "tmuxPlugins.vim-tmux-navigator@latest",
     "coreutils-full@latest",
     "zsh-vi-mode@latest",
-    "moreutils@latest"
+    "moreutils@latest",
+    "htop@latest"
   ]
 }
