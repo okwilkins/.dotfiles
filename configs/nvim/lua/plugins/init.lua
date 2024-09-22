@@ -112,5 +112,12 @@ return {
             -- log_level = 'debug',
         }
     },
+
+    -- Adds more objects
+    {
+        "chrisgrieser/nvim-various-textobjs",
+        event = "UIEnter",
+        opts = { useDefaultKeymaps = true },
+    },
 }
 
