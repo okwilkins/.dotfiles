@@ -9,6 +9,12 @@ eval "$(zoxide init zsh)"
 source <(fzf --zsh)
 source $DEVBOX_GLOBAL_SHARE/zsh-vi-mode/zsh-vi-mode.zsh
 
+# Plugins
+source $DOTFILES/configs/zsh/plugins/git.zsh
+source $DOTFILES/configs/zsh/plugins/kubectl.zsh
+source $DOTFILES/configs/zsh/plugins/docker.zsh
+
+
 # Style
 eval "$($DEVBOX_GLOBAL_BIN/starship init zsh)"
 
@@ -18,6 +24,7 @@ setopt CORRECT # Try to correct the spelling of commands
 
 source $DEVBOX_GLOBAL_SHARE/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $DEVBOX_GLOBAL_SHARE/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 
 # History
 setopt EXTENDED_HISTORY         # Write the history file in the ':start:elapsed;command' format.
@@ -29,6 +36,7 @@ setopt HIST_FIND_NO_DUPS        # Do not display a previously found event.
 setopt HIST_IGNORE_SPACE        # Do not record an event starting with a space.
 setopt HIST_SAVE_NO_DUPS        # Do not write a duplicate event to the history file.
 setopt HIST_VERIFY              # Do not execute immediately upon history expansion.
+
 
 # Aliases
 source $DOTFILES/aliases/aliases
