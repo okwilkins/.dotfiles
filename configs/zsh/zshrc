@@ -13,6 +13,7 @@ source $DOTFILES/configs/zsh/plugins/git.zsh
 source $DOTFILES/configs/zsh/plugins/kubectl.zsh
 source $DOTFILES/configs/zsh/plugins/docker.zsh
 source <(fzf --zsh)
+eval "$(zoxide init zsh)"
 
 # Style
 eval "$($DEVBOX_GLOBAL_BIN/starship init zsh)"
