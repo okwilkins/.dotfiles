@@ -1,6 +1,7 @@
 {
   "LuaSnip": { "branch": "master", "commit": "e808bee352d1a6fcf902ca1a71cee76e60e24071" },
   "NvChad": { "branch": "v2.5", "commit": "8d2bb359e47d816e67ff86b5ce2d8f5abfe2b631" },
+  "auto-session": { "branch": "main", "commit": "0caedb838e3cace2eaf52696ec7c8b6000f9ee30" },
   "base46": { "branch": "v2.5", "commit": "82d71bc6def6a752cbf5fbd0e496aea5f088d940" },
   "cmp-buffer": { "branch": "main", "commit": "3022dbc9166796b644a841a02de8dd1cc1d311fa" },
   "cmp-nvim-lsp": { "branch": "main", "commit": "39e2eda76828d88b773cc27a3f61d2ad782c922d" },
@@ -13,6 +14,7 @@
   "gitsigns.nvim": { "branch": "main", "commit": "1ef74b546732f185d0f806860fa5404df7614f28" },
   "indent-blankline.nvim": { "branch": "master", "commit": "18603eb949eba08300799f64027af11ef922283f" },
   "lazy.nvim": { "branch": "main", "commit": "077102c5bfc578693f12377846d427f49bc50076" },
+  "marks.nvim": { "branch": "master", "commit": "bb25ae3f65f504379e3d08c8a02560b76eaf91e8" },
   "markview.nvim": { "branch": "main", "commit": "f16486e49561740f33b6773df43c9bc2c3c34c7b" },
   "mason.nvim": { "branch": "main", "commit": "e2f7f9044ec30067bc11800a9e266664b88cda22" },
   "neogit": { "branch": "master", "commit": "9959b58a897036ce89d47385021db1f716613399" },

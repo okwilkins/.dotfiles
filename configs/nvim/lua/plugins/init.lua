@@ -91,6 +91,26 @@ return {
     {
         "mg979/vim-visual-multi",
         lazy = false,
-    }
+    },
+
+    -- Shows marks in the gutter
+    {
+        "chentoast/marks.nvim",
+        event = "VeryLazy",
+        opts = {},
+    },
+
+    {
+        'rmagatti/auto-session',
+        lazy = false,
+
+        ---enables autocomplete for opts
+        ---@module "auto-session"
+        ---@type AutoSession.Config
+        opts = {
+            suppressed_dirs = { '~/', '~/Projects', '~/Downloads', '/' },
+            -- log_level = 'debug',
+        }
+    },
 }
 
