@@ -1,4 +1,4 @@
-require "nvchad.options"
+require("nvchad.options")
 
 -- For UFO folding
 vim.o.foldcolumn = "1" -- '0' is not bad
@@ -6,4 +6,3 @@ vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decr
 vim.o.foldlevelstart = 99
 vim.o.foldenable = true
 vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]] -- add yours here!
-
