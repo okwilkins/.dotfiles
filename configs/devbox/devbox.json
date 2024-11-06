@@ -35,6 +35,6 @@
     "lua-language-server@latest",
     "stylua@latest",
     "marksman@latest",
-    "teller@latest"
+    "talosctl@latest"
   ]
 }
