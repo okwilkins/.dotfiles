@@ -41,6 +41,3 @@ end)
 vim.keymap.set("n", "zM", function()
     require("ufo").closeAllFolds()
 end)
-
--- LazyGit
--- map("n", "<leader>gg", ":LazyGit<CR>", { desc = "Open Lazygit" })
