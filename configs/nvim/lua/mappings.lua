@@ -1,6 +1,12 @@
 require("nvchad.mappings")
 
--- add yours here
+-- Which-key
+local wk = require("which-key")
+wk.add({
+    { "<leader>gg", ":LazyGit<CR>", desc = "Open Lazygit", icon = { icon = "", color = "red" } },
+})
+
+-- Standard VIM
 
 local map = vim.keymap.set
 
@@ -35,3 +41,6 @@ end)
 vim.keymap.set("n", "zM", function()
     require("ufo").closeAllFolds()
 end)
+
+-- LazyGit
+-- map("n", "<leader>gg", ":LazyGit<CR>", { desc = "Open Lazygit" })
