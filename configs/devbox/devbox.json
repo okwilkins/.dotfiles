@@ -35,6 +35,7 @@
     "lua-language-server@latest",
     "stylua@latest",
     "marksman@latest",
-    "talosctl@latest"
+    "talosctl@latest",
+    "lazygit@latest"
   ]
 }
