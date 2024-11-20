@@ -23,3 +23,7 @@ gui:
   authorColors:
     '*': '#b4befe'
   mouseEvents: false
+git:
+  paging:
+    colorArg: always
+    pager: delta --paging=never
