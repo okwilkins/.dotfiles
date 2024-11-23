@@ -1,8 +1,8 @@
 gui:
-  # Catppucin lavender: https://github.com/catppuccin/lazygit/blob/d3c95a67ea3f778f7705d8ef814f87ac5213436d/themes/mocha/lavender.yml
+  # Catppucin blue: https://github.com/catppuccin/lazygit/blob/d3c95a67ea3f778f7705d8ef814f87ac5213436d/themes/mocha/blue.yml
   theme:
     activeBorderColor:
-      - '#b4befe'
+      - '#89b4fa'
       - bold
     inactiveBorderColor:
       - '#a6adc8'
@@ -13,15 +13,15 @@ gui:
     cherryPickedCommitBgColor:
       - '#45475a'
     cherryPickedCommitFgColor:
-      - '#b4befe'
+      - '#89b4fa'
     unstagedChangesColor:
       - '#f38ba8'
     defaultFgColor:
       - '#cdd6f4'
     searchingActiveBorderColor:
       - '#f9e2af'
-  authorColors:
-    '*': '#b4befe'
+authorColors:
+  '*': '#b4befe'
   mouseEvents: false
 git:
   paging:
