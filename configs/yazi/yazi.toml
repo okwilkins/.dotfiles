@@ -1,2 +1,5 @@
 [manager]
 show_hidden = true
+show_symlink = true
+sort_by = "natural"
+ratio = [1, 2, 5]
