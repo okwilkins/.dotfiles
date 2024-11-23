@@ -9,6 +9,9 @@ echo "Installing Devbox and packages"
 echo "Installing zsh"
 . "$DOTFILES/install/install-zsh.sh"
 
+echo "Installing Git"
+. "$DOTFILES/install/install-git.sh"
+
 echo "Installing nvim"
 . "$DOTFILES/install/install-nvim.sh"
 

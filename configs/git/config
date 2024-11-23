@@ -19,7 +19,7 @@
 [merge]
     conflictstyle = zdiff3
 
-; https://github.com/catppuccin/delta/blob/0674ec5114c08393d808e2516d153c7e6df00d41/catppuccin.gitconfig
+# https://github.com/catppuccin/delta/blob/0674ec5114c08393d808e2516d153c7e6df00d41/catppuccin.gitconfig
 [delta "catppuccin-mocha"]
 	blame-palette = "#1e1e2e #181825 #11111b #313244 #45475a"
 	commit-decoration-style = box ul
