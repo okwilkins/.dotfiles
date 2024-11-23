@@ -28,3 +28,8 @@ map(
 
 -- Lazygit
 map("n", "<leader>gg", "<cmd>LazyGit<cr>", { desc = "LazyGit" })
+
+-- Yazi
+map("n", "<leader>fc", "<cmd>Yazi<cr>", { desc = "Yazi current file" })
+map("n", "<leader>fe", "<cmd>Yazi cwd<cr>", { desc = "Yazi working directory" })
+map("n", '<leader>ft', "<cmd>Yazi toggle<cr>", { desc = "Yazi resume session" })
