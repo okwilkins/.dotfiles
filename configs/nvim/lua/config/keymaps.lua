@@ -26,3 +26,5 @@ map(
   { desc = "Telescope find all files" }
 )
 
+-- Lazygit
+map("n", "<leader>gg", "<cmd>LazyGit<cr>", { desc = "LazyGit" })
