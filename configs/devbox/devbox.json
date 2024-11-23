@@ -37,6 +37,7 @@
     "marksman@latest",
     "talosctl@latest",
     "lazygit@latest",
-    "delta@latest"
+    "delta@latest",
+    "yazi@latest"
   ]
 }
