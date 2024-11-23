@@ -1,5 +1,9 @@
 return {
     "nvim-lualine/lualine.nvim",
     dependencies = { 'nvim-tree/nvim-web-devicons' },
-    opts = {},
+    opts = {
+        tabline = {
+            lualine_a = {'buffers'}, -- Display buffers in the tabline
+        },
+    },
 }
