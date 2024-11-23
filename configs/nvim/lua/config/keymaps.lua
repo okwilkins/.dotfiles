@@ -33,3 +33,9 @@ map("n", "<leader>gg", "<cmd>LazyGit<cr>", { desc = "LazyGit" })
 map("n", "<leader>fc", "<cmd>Yazi<cr>", { desc = "Yazi current file" })
 map("n", "<leader>fe", "<cmd>Yazi cwd<cr>", { desc = "Yazi working directory" })
 map("n", '<leader>ft', "<cmd>Yazi toggle<cr>", { desc = "Yazi resume session" })
+
+-- Buffers
+map("n", "<leader>x", ":bd<CR>", { noremap = true, silent = true,  desc = "Close current buffer" })
+map("n", "<Tab>", ":bnext<CR>", { noremap = true, silent = true, desc = "Switch to next buffer" })
+map("n", "<S-Tab>", ":bprevious<CR>", { noremap = true, silent = true, desc = "Switch to previous buffer" })
+
