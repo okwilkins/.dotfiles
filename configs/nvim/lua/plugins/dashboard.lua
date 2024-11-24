@@ -17,19 +17,7 @@ return {
               action = 'Yazi cwd',
               key = 'f',
             },
-            {
-              desc = ' Apps',
-              group = 'DiagnosticHint',
-              action = 'Telescope app',
-              key = 'a',
-            },
-            {
-              desc = ' dotfiles',
-              group = 'Number',
-              action = 'Telescope $DOTFILES',
-              key = 'd',
-            },
-          },
         },
     },
+ },
 }
