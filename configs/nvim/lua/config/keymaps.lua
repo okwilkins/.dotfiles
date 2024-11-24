@@ -39,7 +39,6 @@ map("n", "<leader>x", ":bd<CR>", { noremap = true, silent = true,  desc = "Close
 map("n", "<Tab>", ":bnext<CR>", { noremap = true, silent = true, desc = "Switch to next buffer" })
 map("n", "<S-Tab>", ":bprevious<CR>", { noremap = true, silent = true, desc = "Switch to previous buffer" })
 
-
 -- Vim Tmux navigation
 vim.api.nvim_set_keymap("n", "<C-h>", "<cmd> TmuxNavigateLeft<cr>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<c-j>", "<cmd> TmuxNavigateDown<cr>", { noremap = true, silent = true })
