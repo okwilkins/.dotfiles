@@ -68,3 +68,28 @@ vim.api.nvim_create_autocmd("TextYankPost", {
     end,
 })
 
+
+-- Open dashboard when no buffers
+vim.api.nvim_create_autocmd("BufDelete", {
+    desc = "Open dashboard when no meaningful buffers remain",
+    group = vim.api.nvim_create_augroup("dashboard_when_no_buffer", { clear = true }),
+    callback = function()
+        local buffers = vim.api.nvim_list_bufs()
+        local actual = {}
+
+        -- Filter out nofile buffers created by plugins
+        for _, buf in ipairs(buffers) do
+            if vim.bo[buf].buftype == "" and vim.api.nvim_buf_is_loaded(buf) then
+                table.insert(actual, buf)
+            end
+        end
+
+        -- If there's exactly one actual buffer and it's empty, open the dashboard
+        if #actual == 1 then
+            local bufname = vim.api.nvim_buf_get_name(actual[1])
+            if bufname == "" then
+                vim.cmd("Dashboard")
+            end
+        end
+    end,
+})
