@@ -1,7 +1,5 @@
 return {
     "rmagatti/auto-session",
     lazy = false,
-    opts = {
-        suppressed_dirs = { "~/", "~/Projects", "~/Downloads", "/" },
-    },
+    opts = require("config.plugins.auto-session"),
 }
