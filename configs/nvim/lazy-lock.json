@@ -1,8 +1,13 @@
 {
+  "auto-session": { "branch": "main", "commit": "8d2eddb14ef66ed1019c92251e2d31bb7a2a2f87" },
   "catppuccin": { "branch": "main", "commit": "a4c64d7605f6eb95674e322bbbedfaa00aab7904" },
+  "dashboard-nvim": { "branch": "master", "commit": "ae309606940d26d8c9df8b048a6e136b6bbec478" },
   "lazy.nvim": { "branch": "main", "commit": "56ead98e05bb37a4ec28930a54d836d033cf00f2" },
   "lazygit.nvim": { "branch": "main", "commit": "56760339a81cd1540d5a72fd9d93010a2677b55d" },
+  "lualine.nvim": { "branch": "master", "commit": "2a5bae925481f999263d6f5ed8361baef8df4f83" },
+  "nvim-web-devicons": { "branch": "master", "commit": "f09be61d05bebcba85bb47be1931322d51b95644" },
   "plenary.nvim": { "branch": "master", "commit": "2d9b06177a975543726ce5c73fca176cedbffe9d" },
+  "telescope.nvim": { "branch": "master", "commit": "85922dde3767e01d42a08e750a773effbffaea3e" },
   "which-key.nvim": { "branch": "main", "commit": "68e37e12913a66b60073906f5d3f14dee0de19f2" },
   "yazi.nvim": { "branch": "main", "commit": "5bc361c54f158ae399708e6d146667a164944d8f" }
 }
