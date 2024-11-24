@@ -39,6 +39,7 @@ return {
                     TelescopePrompt = " ",
                     lazygit = "  ",
                     yazi = "  ",
+                    checkhealth = " 󰓙 ",
                 },
             },
         },
