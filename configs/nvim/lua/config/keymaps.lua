@@ -20,10 +20,10 @@ map("n", "<leader>cm", "<cmd>Telescope git_commits<CR>", { desc = "Telescope git
 map("n", "<leader>gt", "<cmd>Telescope git_status<CR>", { desc = "Telescope git status" })
 map("n", "<leader>pt", "<cmd>Telescope terms<CR>", { desc = "Telescope pick hidden term" })
 map(
-  "n",
-  "<leader>fa",
-  "<cmd>Telescope find_files follow=true no_ignore=true hidden=true<CR>",
-  { desc = "Telescope find all files" }
+    "n",
+    "<leader>fa",
+    "<cmd>Telescope find_files follow=true no_ignore=true hidden=true<CR>",
+    { desc = "Telescope find all files" }
 )
 
 -- Lazygit
@@ -32,10 +32,10 @@ map("n", "<leader>gg", "<cmd>LazyGit<cr>", { desc = "LazyGit" })
 -- Yazi
 map("n", "<leader>fc", "<cmd>Yazi<cr>", { desc = "Yazi current file" })
 map("n", "<leader>fe", "<cmd>Yazi cwd<cr>", { desc = "Yazi working directory" })
-map("n", '<leader>ft', "<cmd>Yazi toggle<cr>", { desc = "Yazi resume session" })
+map("n", "<leader>ft", "<cmd>Yazi toggle<cr>", { desc = "Yazi resume session" })
 
 -- Buffers
-map("n", "<leader>x", ":bd<CR>", { noremap = true, silent = true,  desc = "Close current buffer" })
+map("n", "<leader>x", ":bd<CR>", { noremap = true, silent = true, desc = "Close current buffer" })
 map("n", "<Tab>", ":bnext<CR>", { noremap = true, silent = true, desc = "Switch to next buffer" })
 map("n", "<S-Tab>", ":bprevious<CR>", { noremap = true, silent = true, desc = "Switch to previous buffer" })
 
@@ -44,4 +44,3 @@ vim.api.nvim_set_keymap("n", "<C-h>", "<cmd> TmuxNavigateLeft<cr>", { noremap = 
 vim.api.nvim_set_keymap("n", "<c-j>", "<cmd> TmuxNavigateDown<cr>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-k>", "<cmd> TmuxNavigateUp<cr>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-l>", "<cmd> TmuxNavigateRight<cr>", { noremap = true, silent = true })
-

@@ -31,7 +31,6 @@ local config = {
     },
 }
 
-
 -- Add WSL config if running under WSL
 if wezterm.running_under_wsl() then
     config.default_domain = "WSL:Ubuntu"
@@ -42,6 +41,5 @@ if wezterm.running_under_wsl() then
         },
     }
 end
-
 
 return config
