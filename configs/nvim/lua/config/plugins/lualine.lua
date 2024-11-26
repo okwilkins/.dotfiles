@@ -27,7 +27,7 @@ return {
                 buffers_color = {
                     -- https://github.com/catppuccin/catppuccin?tab=readme-ov-file#-palette
                     active = { bg = "#1e1e2e", fg = "#89b4fa" },
-                    inactive = { bg = "#313244", fg = "#6c7086" },
+                    inactive = { bg = "#1e1e2e", fg = "#6c7086" },
                 },
                 section_separators = { left = "", right = "" },
                 symbols = {
