@@ -91,3 +91,19 @@ vim.api.nvim_create_autocmd("BufDelete", {
         end
     end,
 })
+
+-- LSP Diagnostics
+local signs = {
+    { name = "DiagnosticSignError", text = "" },
+    { name = "DiagnosticSignWarn", text = "" },
+    { name = "DiagnosticSignHint", text = "󰌶" },
+    { name = "DiagnosticSignInfo", text = "" },
+}
+
+for _, sign in ipairs(signs) do
+    vim.fn.sign_define(sign.name, { text = sign.text, texthl = sign.name, numhl = "" })
+end
+
+-- Misc
+vim.opt.termguicolors = true
+local test = { a = 1 }
