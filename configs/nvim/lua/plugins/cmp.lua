@@ -6,8 +6,10 @@ return {
         "hrsh7th/cmp-buffer",
         "hrsh7th/cmp-path",
     },
+    -- TODO: Move this to the config directory
     config = function()
         local cmp = require("cmp")
+        local lspkind = require("lspkind")
 
         cmp.setup({
             mapping = {
@@ -31,6 +33,9 @@ return {
                 { name = "buffer" },
                 { name = "path" },
             }),
+            formatting = {
+                format = lspkind.cmp_format(),
+            },
         })
     end,
 }
