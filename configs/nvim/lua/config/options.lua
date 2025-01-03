@@ -104,6 +104,8 @@ for _, sign in ipairs(signs) do
     vim.fn.sign_define(sign.name, { text = sign.text, texthl = sign.name, numhl = "" })
 end
 
+-- Reserve space for the LSP diagnostics so it stops the sidebar from suddenly jerking to the side
+vim.opt.signcolumn = "yes"
+
 -- Misc
 vim.opt.termguicolors = true
-local test = { a = 1 }
