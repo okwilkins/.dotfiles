@@ -27,6 +27,3 @@ git:
   paging:
     colorArg: always
     pager: delta --paging=never
-keybinding:
-  universal:
-    quit: <esc>
