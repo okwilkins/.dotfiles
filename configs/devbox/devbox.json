@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.12.0/.schema/devbox.schema.json",
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.13.0/.schema/devbox.schema.json",
   "packages": [
     "zsh@latest",
     "zsh-autosuggestions@latest",
@@ -37,6 +37,7 @@
     "marksman@latest",
     "talosctl@latest",
     "lazygit@latest",
-    "delta@latest"
+    "delta@latest",
+    "yazi@latest"
   ]
 }

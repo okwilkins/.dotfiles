@@ -1,7 +1,10 @@
 return {
-    defaults = { lazy = true },
-    install = { colorscheme = { "nvchad" } },
-
+    spec = {
+        -- import your plugins
+        { import = "plugins" },
+    },
+    -- automatically check for plugin updates
+    checker = { enabled = true },
     ui = {
         icons = {
             ft = "",
@@ -10,7 +13,6 @@ return {
             not_loaded = "",
         },
     },
-
     performance = {
         rtp = {
             disabled_plugins = {
