@@ -10,12 +10,34 @@ local function lsp_client_names()
     end
 
     -- Return a comma-separated list of client names or a default value
-    if next(buffer_clients) == nil then
+    if #buffer_clients == 0 then
         return "󰣖 LSP: Inactive"
     end
 
     local language_servers = table.concat(buffer_clients, ", ")
     return string.format("󰣖 LSP: [%s]", language_servers)
+end
+
+local function formatter_names()
+    local conform_success, conform = pcall(require, "conform")
+    local buffer_formatters = {}
+
+    if not conform_success then
+        return " Formatter: Error"
+    end
+
+    for _, formatter in pairs(conform.list_formatters_for_buffer(0)) do
+        if formatter then
+            table.insert(buffer_formatters, formatter)
+        end
+    end
+
+    if #buffer_formatters == 0 then
+        return "󰉨 Formatter: Inactive"
+    end
+
+    local formatters = table.concat(buffer_formatters, ", ")
+    return string.format("󰉨 Formatter: [%s]", formatters)
 end
 
 return {
@@ -25,10 +47,7 @@ return {
         section_separators = "",
     },
     sections = {
-        lualine_a = {
-            "mode",
-            -- color = { fg = "#ffffff", bg = "#0077cc", gui = "bold" },
-        },
+        lualine_a = { "mode" },
         lualine_b = {
             {
                 "filetype",
@@ -54,15 +73,15 @@ return {
             },
         },
         lualine_x = {
-            {
-                "diagnostics",
-            },
-            {
-                lsp_client_names,
-            },
+            "diagnostics",
+            formatter_names,
+            lsp_client_names,
         },
-        lualine_y = { { "filename" }, "progress" },
-        lualine_z = { "location" },
+        lualine_y = { { "filename" } },
+        lualine_z = {
+            { "progress" },
+            { "location" },
+        },
     },
     always_show_tabline = true,
     tabline = {
