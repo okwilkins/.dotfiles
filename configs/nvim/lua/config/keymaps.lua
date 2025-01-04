@@ -25,6 +25,7 @@ map(
     "<cmd>Telescope find_files follow=true no_ignore=true hidden=true<CR>",
     { desc = "Telescope find all files" }
 )
+map("n", "<leader>fi", "<cmd>TodoTelescope<cr>", { desc = "Find todos" })
 
 -- Lazygit
 map("n", "<leader>gg", "<cmd>LazyGit<cr>", { desc = "LazyGit" })
