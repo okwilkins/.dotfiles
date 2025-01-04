@@ -2,6 +2,7 @@ local cmp_success, cmp = pcall(require, "cmp")
 local lspkind_success, lspkind = pcall(require, "lspkind")
 
 if not cmp_success then
+    vim.notify("nvim-cmp failed to load", vim.log.levels.ERROR)
     return {}
 end
 
@@ -9,6 +10,8 @@ local format = {}
 
 if lspkind_success then
     format = lspkind.cmp_format()
+else
+    vim.notify("lspkind failed to load", vim.log.levels.ERROR)
 end
 
 return {
