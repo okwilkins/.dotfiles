@@ -16,19 +16,22 @@ end
 
 return {
     mapping = {
-        ["<C-p>"] = cmp.mapping.select_prev_item(),
-        ["<C-n>"] = cmp.mapping.select_next_item(),
-        -- Add tab support
         ["<S-Tab>"] = cmp.mapping.select_prev_item(),
-        ["<Tab>"] = cmp.mapping.select_next_item(),
+        -- If only one entry, auto select that
+        ["<Tab>"] = cmp.mapping(function(fallback)
+            if cmp.visible() then
+                if #cmp.get_entries() == 1 then
+                    cmp.confirm({ select = true })
+                else
+                    cmp.select_next_item()
+                end
+            else
+                fallback()
+            end
+        end, { "i", "s" }),
         ["<C-S-f>"] = cmp.mapping.scroll_docs(-4),
         ["<C-f>"] = cmp.mapping.scroll_docs(4),
         ["<C-Space>"] = cmp.mapping.complete(),
-        ["<C-e>"] = cmp.mapping.close(),
-        ["<C-m>"] = cmp.mapping.confirm({
-            behavior = cmp.ConfirmBehavior.Insert,
-            select = true,
-        }),
         -- If nothing is selected (including preselections) add a newline as usual on return key
         ["<CR>"] = cmp.mapping({
             i = function(fallback)
