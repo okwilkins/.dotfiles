@@ -17,6 +17,7 @@ return {
                     and vim.bo[buf].buftype == ""
                     -- Turn this off for the dashboard
                     and vim.bo[buf].filetype ~= "dashboard"
+                    and vim.bo[buf].filetype ~= "markdown"
                 )
             end,
         },
