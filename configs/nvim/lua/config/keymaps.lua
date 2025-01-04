@@ -49,6 +49,7 @@ vim.api.nvim_set_keymap("n", "<C-l>", "<cmd> TmuxNavigateRight<cr>", { noremap =
 map("n", "gD", vim.lsp.buf.declaration, { desc = "Go to declaration" })
 map("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
 map("n", "gi", vim.lsp.buf.implementation, { desc = "Go to implementation" })
+map("n", "gr", "<cmd>Telescope lsp_references<CR>", { desc = "Telescope find references" })
 map("n", "<leader>sh", vim.lsp.buf.signature_help, { desc = "Show signature help" })
 map("n", "<leader>wa", vim.lsp.buf.add_workspace_folder, { desc = "Add workspace folder" })
 map("n", "<leader>wr", vim.lsp.buf.remove_workspace_folder, { desc = "Remove workspace folder" })
