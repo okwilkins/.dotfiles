@@ -36,8 +36,8 @@ return {
                 fallback()
             end
         end, { "i", "s" }),
-        ["<C-S-f>"] = cmp.mapping.scroll_docs(-4),
-        ["<C-f>"] = cmp.mapping.scroll_docs(4),
+        ["<C-u>"] = cmp.mapping.scroll_docs(-4),
+        ["<C-d>"] = cmp.mapping.scroll_docs(4),
         ["<C-Space>"] = cmp.mapping.complete(),
         -- If nothing is selected (including preselections) add a newline as usual on return key
         ["<CR>"] = cmp.mapping({
