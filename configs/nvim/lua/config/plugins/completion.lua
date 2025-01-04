@@ -1,5 +1,6 @@
 local cmp_success, cmp = pcall(require, "cmp")
 local lspkind_success, lspkind = pcall(require, "lspkind")
+local autopairs_success, autopairs = pcall(require, "nvim-autopairs.completion.cmp")
 
 if not cmp_success then
     vim.notify("nvim-cmp failed to load", vim.log.levels.ERROR)
@@ -11,7 +12,13 @@ local format = {}
 if lspkind_success then
     format = lspkind.cmp_format()
 else
-    vim.notify("lspkind failed to load", vim.log.levels.ERROR)
+    vim.notify("lspkind failed to load with nvim-cmp", vim.log.levels.ERROR)
+end
+
+if autopairs_success then
+    cmp.event:on("confirm_done", autopairs.on_confirm_done())
+else
+    vim.notify("nvim-autopairs failed to load with nvim-cmp", vim.log.levels.ERROR)
 end
 
 return {
