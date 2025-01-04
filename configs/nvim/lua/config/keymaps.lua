@@ -53,3 +53,4 @@ map("n", "<leader>lf", "<cmd>Telescope lsp_references<CR>", { desc = "Telescope 
 map("n", "<leader>lh", vim.lsp.buf.signature_help, { desc = "LSP show signature help" })
 map("n", "<leader>lr", vim.lsp.buf.rename, { desc = "LSP rename object" })
 map("n", "<leader>lx", ":LspRestart<CR>", { desc = "LSP restart server" })
+map("n", "<leader>ld", "<cmd>Telescope diagnostics bufnr=0<CR>", { desc = "Telescope show buffer diagnostics" })
