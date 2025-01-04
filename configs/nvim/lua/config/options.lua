@@ -99,8 +99,6 @@ local signs = {
     { name = "DiagnosticSignHint", text = "󰌶" },
     { name = "DiagnosticSignInfo", text = "" },
 }
--- Turn off diagnostics in the gutter
-vim.diagnostic.config({ signs = false })
 
 for _, sign in ipairs(signs) do
     vim.fn.sign_define(sign.name, { text = sign.text, texthl = sign.name, numhl = "" })
