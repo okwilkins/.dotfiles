@@ -13,6 +13,7 @@
   "lspkind.nvim": { "branch": "master", "commit": "d79a1c3299ad0ef94e255d045bed9fa26025dab6" },
   "lualine.nvim": { "branch": "master", "commit": "2a5bae925481f999263d6f5ed8361baef8df4f83" },
   "markview.nvim": { "branch": "main", "commit": "72cd34279e94ee96ee33bdf30a87b00e6d45319d" },
+  "multicursor.nvim": { "branch": "1.0", "commit": "f454cac9d03ccaf20008f4793f05b159f5547e78" },
   "noice.nvim": { "branch": "main", "commit": "eaed6cc9c06aa2013b5255349e4f26a6b17ab70f" },
   "nui.nvim": { "branch": "main", "commit": "53e907ffe5eedebdca1cd503b00aa8692068ca46" },
   "nvim-autopairs": { "branch": "master", "commit": "b464658e9b880f463b9f7e6ccddd93fb0013f559" },
