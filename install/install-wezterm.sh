@@ -1,7 +1,7 @@
 #!/bin/bash
 
 mkdir -p "$XDG_CONFIG_HOME/wezterm"
-ln -sF "$DOTFILES/configs/wezterm/wezterm.lua" "$XDG_CONFIG_HOME/wezterm/wezterm.lua"
+ln -sf "$DOTFILES/configs/wezterm/wezterm.lua" "$XDG_CONFIG_HOME/wezterm/wezterm.lua"
 
 # If in WSL, need to place the Wezterm config here
 if [ -n "$WSL_DISTRO_NAME" ]; then
