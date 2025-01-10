@@ -24,9 +24,12 @@ source $DOTFILES/configs/zsh/plugins/kubectl.zsh
 source $DOTFILES/configs/zsh/plugins/docker.zsh
 source <(fzf --zsh)
 eval "$(zoxide init zsh)"
+source <(carapace _carapace zsh)
 
 # Style
 eval "$($DEVBOX_GLOBAL_BIN/starship init zsh)"
+# Styling for carapace
+zstyle ':completion:*' format $'\e[2;37m%d\e[m'
 
 
 # Navigation
