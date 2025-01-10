@@ -36,4 +36,9 @@ return function()
             },
         },
     })
+
+    -- Terraform
+    lspconfig.terraformls.setup({
+        filetypes = { "terraform", "terraform-vars", "tf" },
+    })
 end
