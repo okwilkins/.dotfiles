@@ -41,6 +41,7 @@
     "yazi@latest",
     "kubeseal@latest",
     "carapace@latest",
-    "zsh-fzf-tab@latest"
+    "zsh-fzf-tab@latest",
+    "terraform-ls@latest"
   ]
 }
