@@ -40,6 +40,7 @@
     "delta@latest",
     "yazi@latest",
     "kubeseal@latest",
-    "carapace@latest"
+    "carapace@latest",
+    "zsh-fzf-tab@latest"
   ]
 }

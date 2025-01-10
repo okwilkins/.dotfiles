@@ -1997,6 +1997,54 @@
         }
       }
     },
+    "zsh-fzf-tab@latest": {
+      "last_modified": "2024-12-28T15:08:12Z",
+      "resolved": "github:NixOS/nixpkgs/f56cbb9a85e5f5a6d41f25cfc0286fc8eba54a2a#zsh-fzf-tab",
+      "source": "devbox-search",
+      "version": "1.1.2",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/djvdgnj5i6ncyyfsrk17hmz26y1y8ky3-zsh-fzf-tab-1.1.2",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/djvdgnj5i6ncyyfsrk17hmz26y1y8ky3-zsh-fzf-tab-1.1.2"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/pk53bkmra721n6ammjnpknadj37qkf0g-zsh-fzf-tab-1.1.2",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/pk53bkmra721n6ammjnpknadj37qkf0g-zsh-fzf-tab-1.1.2"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/his78f0xhxm6446hqsnpdzzqx4gwvj6r-zsh-fzf-tab-1.1.2",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/his78f0xhxm6446hqsnpdzzqx4gwvj6r-zsh-fzf-tab-1.1.2"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/x71pbyks3v6qc0n8x6lam0mybgc7xi1s-zsh-fzf-tab-1.1.2",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/x71pbyks3v6qc0n8x6lam0mybgc7xi1s-zsh-fzf-tab-1.1.2"
+        }
+      }
+    },
     "zsh-syntax-highlighting@latest": {
       "last_modified": "2024-09-10T15:01:03Z",
       "resolved": "github:NixOS/nixpkgs/5ed627539ac84809c78b2dd6d26a5cebeb5ae269#zsh-syntax-highlighting",
