@@ -39,6 +39,7 @@
     "lazygit@latest",
     "delta@latest",
     "yazi@latest",
-    "kubeseal@latest"
+    "kubeseal@latest",
+    "carapace@latest"
   ]
 }

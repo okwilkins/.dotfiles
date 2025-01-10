@@ -113,6 +113,54 @@
         }
       }
     },
+    "carapace@latest": {
+      "last_modified": "2024-12-31T22:49:03Z",
+      "resolved": "github:NixOS/nixpkgs/81934660d6e9ea54d2f0cdee821e8533b10c221a#carapace",
+      "source": "devbox-search",
+      "version": "1.1.1",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/zpvjy3qrsl6xz61yi6fgakzg3f140pgp-carapace-1.1.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/zpvjy3qrsl6xz61yi6fgakzg3f140pgp-carapace-1.1.1"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/gsml6syx9srpf7j9xg44cqmx9nxkgg70-carapace-1.1.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/gsml6syx9srpf7j9xg44cqmx9nxkgg70-carapace-1.1.1"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/chbla49h4ah90pzlp7zmdamynfz7j7i2-carapace-1.1.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/chbla49h4ah90pzlp7zmdamynfz7j7i2-carapace-1.1.1"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/49s2p4isj3dag4h9zd8zcxppg7mzng8a-carapace-1.1.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/49s2p4isj3dag4h9zd8zcxppg7mzng8a-carapace-1.1.1"
+        }
+      }
+    },
     "coreutils-full@latest": {
       "last_modified": "2024-09-10T15:01:03Z",
       "resolved": "github:NixOS/nixpkgs/5ed627539ac84809c78b2dd6d26a5cebeb5ae269#coreutils-full",
