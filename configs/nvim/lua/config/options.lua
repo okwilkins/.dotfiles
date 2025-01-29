@@ -66,6 +66,9 @@ vim.api.nvim_create_autocmd("TextYankPost", {
         vim.highlight.on_yank()
     end,
 })
+-- Paste without overwriting register
+vim.keymap.set("x", "p", '"_dP', { noremap = true })
+vim.keymap.set("x", "P", '"_dP', { noremap = true })
 
 -- Open dashboard when no buffers
 vim.api.nvim_create_autocmd("BufDelete", {
