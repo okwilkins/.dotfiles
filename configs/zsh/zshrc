@@ -19,9 +19,11 @@ fpath=($DOTFILES/configs/zsh/completions/ $fpath)
 
 # Plugins
 source $DEVBOX_GLOBAL_SHARE/zsh-vi-mode/zsh-vi-mode.zsh
-source $DOTFILES/configs/zsh/plugins/git.zsh
-source $DOTFILES/configs/zsh/plugins/kubectl.zsh
-source $DOTFILES/configs/zsh/plugins/docker.zsh
+
+for plugin in $DOTFILES/configs/zsh/plugins/*.zsh; do
+  source "$plugin"
+done
+
 source <(fzf --zsh)
 eval "$(zoxide init zsh)"
 source <(carapace _carapace zsh)
