@@ -42,6 +42,7 @@
     "kubeseal@latest",
     "carapace@latest",
     "zsh-fzf-tab@latest",
-    "terraform-ls@latest"
+    "terraform-ls@latest",
+    "tmuxPlugins.tmux-sessionx@latest"
   ]
 }
