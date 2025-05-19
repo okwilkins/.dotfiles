@@ -41,4 +41,11 @@ return function()
     lspconfig.terraformls.setup({
         filetypes = { "terraform", "terraform-vars", "tf" },
     })
+
+    -- Go
+    lspconfig.gopls.setup({})
+
+    -- Python
+    lspconfig.ruff.setup({})
+    lspconfig.pyright.setup({})
 end
