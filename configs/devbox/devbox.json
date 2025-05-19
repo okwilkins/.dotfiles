@@ -22,7 +22,6 @@
     "cosign@latest",
     "envsubst@latest",
     "tmux@latest",
-    "tmuxPlugins.catppuccin@latest",
     "tmuxPlugins.yank@latest",
     "tmuxPlugins.resurrect@latest",
     "tmuxPlugins.continuum@latest",
@@ -43,6 +42,19 @@
     "carapace@latest",
     "zsh-fzf-tab@latest",
     "terraform-ls@latest",
-    "tmuxPlugins.tmux-sessionx@latest"
+    "go-task@latest",
+    "go@latest",
+    "gopls@latest",
+    "ruff@latest",
+    "pylyzer@latest",
+    "python312@latest",
+    "python313Packages.jedi-language-server@latest",
+    "pyright@latest",
+    "poetry@1.8",
+    "bottom@latest",
+    "nodejs_23@latest",
+    "tmuxPlugins.catppuccin@2024-05-15",
+    "ssm-session-manager-plugin@latest",
+    "lazydocker@latest"
   ]
 }
