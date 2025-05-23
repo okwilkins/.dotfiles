@@ -2632,6 +2632,54 @@
         }
       }
     },
+    "uutils-coreutils@latest": {
+      "last_modified": "2025-05-16T20:19:48Z",
+      "resolved": "github:NixOS/nixpkgs/12a55407652e04dcf2309436eb06fef0d3713ef3#uutils-coreutils",
+      "source": "devbox-search",
+      "version": "0.0.30",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/whv7zynwqsp75zcv2qx59f5qj1kq49xn-uutils-coreutils-0.0.30",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/whv7zynwqsp75zcv2qx59f5qj1kq49xn-uutils-coreutils-0.0.30"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/g5x1i2chwwl11k1kc7qhwj970cl66x5s-uutils-coreutils-0.0.30",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/g5x1i2chwwl11k1kc7qhwj970cl66x5s-uutils-coreutils-0.0.30"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/acwzha3mcb2nvij5521jbj9chlx6l126-uutils-coreutils-0.0.30",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/acwzha3mcb2nvij5521jbj9chlx6l126-uutils-coreutils-0.0.30"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/yc97m6yyn1vnlqgwnh28rgirfxidly92-uutils-coreutils-0.0.30",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/yc97m6yyn1vnlqgwnh28rgirfxidly92-uutils-coreutils-0.0.30"
+        }
+      }
+    },
     "xh@latest": {
       "last_modified": "2025-05-16T20:19:48Z",
       "resolved": "github:NixOS/nixpkgs/12a55407652e04dcf2309436eb06fef0d3713ef3#xh",

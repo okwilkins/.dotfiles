@@ -59,6 +59,7 @@
     "hyperfine@latest",
     "xh@latest",
     "fd@latest",
-    "dust@latest"
+    "dust@latest",
+    "uutils-coreutils@latest"
   ]
 }
