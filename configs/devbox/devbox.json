@@ -55,6 +55,7 @@
     "nodejs_23@latest",
     "tmuxPlugins.catppuccin@2024-05-15",
     "ssm-session-manager-plugin@latest",
-    "lazydocker@latest"
+    "lazydocker@latest",
+    "hyperfine@latest"
   ]
 }
