@@ -1,4 +1,7 @@
 # Coreutils Replacement
+# Replaces as many GNU core utils with Rust-based replacements
+# https://github.com/uutils/coreutils
+
 alias arch="uutils-coreutils arch"
 alias b2sum="uutils-coreutils b2sum"
 alias b3sum="uutils-coreutils b3sum"
