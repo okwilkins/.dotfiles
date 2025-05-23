@@ -64,4 +64,5 @@ setopt HIST_VERIFY              # Do not execute immediately upon history expans
 
 
 # Aliases
+source $DOTFILES/aliases/coreutils
 source $DOTFILES/aliases/aliases
