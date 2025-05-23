@@ -6,6 +6,7 @@ alias tree="lt"
 alias cat=bat
 alias cd=z
 alias c=clear
+alias find=fd
 
 
 # Programming
