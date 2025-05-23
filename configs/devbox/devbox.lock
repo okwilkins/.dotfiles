@@ -2536,6 +2536,54 @@
         }
       }
     },
+    "xh@latest": {
+      "last_modified": "2025-05-16T20:19:48Z",
+      "resolved": "github:NixOS/nixpkgs/12a55407652e04dcf2309436eb06fef0d3713ef3#xh",
+      "source": "devbox-search",
+      "version": "0.24.1",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/1mqylln390a83d1njlqk37n1y6fdh4b7-xh-0.24.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/1mqylln390a83d1njlqk37n1y6fdh4b7-xh-0.24.1"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/4spbcbf4n4p5njr5d6h8zxhs70rm1720-xh-0.24.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/4spbcbf4n4p5njr5d6h8zxhs70rm1720-xh-0.24.1"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/v3c4w8472280v8m3rjq14vkb7qz98qhw-xh-0.24.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/v3c4w8472280v8m3rjq14vkb7qz98qhw-xh-0.24.1"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/2drq45hf2cd5xwnynrxsblan5c3xjgha-xh-0.24.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/2drq45hf2cd5xwnynrxsblan5c3xjgha-xh-0.24.1"
+        }
+      }
+    },
     "yaml-language-server@latest": {
       "last_modified": "2025-05-16T20:19:48Z",
       "resolved": "github:NixOS/nixpkgs/12a55407652e04dcf2309436eb06fef0d3713ef3#yaml-language-server",
