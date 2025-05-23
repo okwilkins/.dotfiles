@@ -8,7 +8,7 @@ alias cd=z
 alias c=clear
 alias find=fd
 alias du=dust
-
+alias diff=delta
 
 # Programming
 # Python
