@@ -130,6 +130,10 @@
     "go": {
       "version": "latest"
     },
+    "python": {
+      "version": "3.12",
+      "disable_plugins": true
+    },
     "gopls": {
       "version": "latest"
     },
