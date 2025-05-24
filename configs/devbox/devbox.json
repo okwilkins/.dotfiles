@@ -1,64 +1,179 @@
 {
   "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.13.0/.schema/devbox.schema.json",
-  "packages": [
-    "zsh@latest",
-    "zsh-autosuggestions@latest",
-    "zsh-syntax-highlighting@latest",
-    "starship@latest",
-    "eza@latest",
-    "bat@latest",
-    "ripgrep@latest",
-    "zoxide@latest",
-    "fzf@latest",
-    "neovim@latest",
-    "awscli2@latest",
-    "eksctl@latest",
-    "yq-go@latest",
-    "jq@latest",
-    "direnv@latest",
-    "k9s@latest",
-    "kubectl@latest",
-    "kubernetes-helm@latest",
-    "cosign@latest",
-    "envsubst@latest",
-    "tmux@latest",
-    "tmuxPlugins.yank@latest",
-    "tmuxPlugins.resurrect@latest",
-    "tmuxPlugins.continuum@latest",
-    "tmuxPlugins.vim-tmux-navigator@latest",
-    "coreutils-full@latest",
-    "zsh-vi-mode@latest",
-    "moreutils@latest",
-    "htop@latest",
-    "yaml-language-server@latest",
-    "lua-language-server@latest",
-    "stylua@latest",
-    "marksman@latest",
-    "talosctl@latest",
-    "lazygit@latest",
-    "delta@latest",
-    "yazi@latest",
-    "kubeseal@latest",
-    "carapace@latest",
-    "zsh-fzf-tab@latest",
-    "terraform-ls@latest",
-    "go-task@latest",
-    "go@latest",
-    "gopls@latest",
-    "ruff@latest",
-    "pylyzer@latest",
-    "python312@latest",
-    "pyright@latest",
-    "poetry@1.8",
-    "bottom@latest",
-    "nodejs_23@latest",
-    "tmuxPlugins.catppuccin@2024-05-15",
-    "ssm-session-manager-plugin@latest",
-    "lazydocker@latest",
-    "hyperfine@latest",
-    "xh@latest",
-    "fd@latest",
-    "dust@latest",
-    "uutils-coreutils@latest"
-  ]
+  "packages": {
+    "zsh": {
+      "version": "latest"
+    },
+    "zsh-autosuggestions": {
+      "version": "latest"
+    },
+    "zsh-syntax-highlighting": {
+      "version": "latest"
+    },
+    "starship": {
+      "version": "latest"
+    },
+    "eza": {
+      "version": "latest"
+    },
+    "bat": {
+      "version": "latest"
+    },
+    "ripgrep": {
+      "version": "latest"
+    },
+    "zoxide": {
+      "version": "latest"
+    },
+    "fzf": {
+      "version": "latest"
+    },
+    "neovim": {
+      "version": "latest"
+    },
+    "awscli2": {
+      "version": "latest"
+    },
+    "eksctl": {
+      "version": "latest"
+    },
+    "yq-go": {
+      "version": "latest"
+    },
+    "jq": {
+      "version": "latest"
+    },
+    "direnv": {
+      "version": "latest"
+    },
+    "k9s": {
+      "version": "latest"
+    },
+    "kubectl": {
+      "version": "latest"
+    },
+    "kubernetes-helm": {
+      "version": "latest"
+    },
+    "cosign": {
+      "version": "latest"
+    },
+    "envsubst": {
+      "version": "latest"
+    },
+    "tmux": {
+      "version": "latest"
+    },
+    "tmuxPlugins.yank": {
+      "version": "latest"
+    },
+    "tmuxPlugins.resurrect": {
+      "version": "latest"
+    },
+    "tmuxPlugins.continuum": {
+      "version": "latest"
+    },
+    "tmuxPlugins.vim-tmux-navigator": {
+      "version": "latest"
+    },
+    "coreutils-full": {
+      "version": "latest"
+    },
+    "zsh-vi-mode": {
+      "version": "latest"
+    },
+    "moreutils": {
+      "version": "latest"
+    },
+    "htop": {
+      "version": "latest"
+    },
+    "yaml-language-server": {
+      "version": "latest"
+    },
+    "lua-language-server": {
+      "version": "latest"
+    },
+    "stylua": {
+      "version": "latest"
+    },
+    "marksman": {
+      "version": "latest"
+    },
+    "talosctl": {
+      "version": "latest"
+    },
+    "lazygit": {
+      "version": "latest"
+    },
+    "delta": {
+      "version": "latest"
+    },
+    "yazi": {
+      "version": "latest"
+    },
+    "kubeseal": {
+      "version": "latest"
+    },
+    "carapace": {
+      "version": "latest"
+    },
+    "zsh-fzf-tab": {
+      "version": "latest"
+    },
+    "terraform-ls": {
+      "version": "latest"
+    },
+    "go-task": {
+      "version": "latest"
+    },
+    "go": {
+      "version": "latest"
+    },
+    "gopls": {
+      "version": "latest"
+    },
+    "ruff": {
+      "version": "latest"
+    },
+    "pylyzer": {
+      "version": "latest"
+    },
+    "pyright": {
+      "version": "latest"
+    },
+    "poetry": {
+      "version": "1.8"
+    },
+    "bottom": {
+      "version": "latest"
+    },
+    "nodejs_23": {
+      "version": "latest"
+    },
+    "tmuxPlugins.catppuccin": {
+      "version": "2024-05-15"
+    },
+    "ssm-session-manager-plugin": {
+      "version": "latest"
+    },
+    "lazydocker": {
+      "version": "latest"
+    },
+    "hyperfine": {
+      "version": "latest"
+    },
+    "xh": {
+      "version": "latest"
+    },
+    "fd": {
+      "version": "latest"
+    },
+    "dust": {
+      "version": "latest"
+    },
+    "uutils-coreutils": {
+      "version": "latest"
+    }
+  }
 }
