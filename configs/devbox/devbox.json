@@ -147,7 +147,8 @@
       "version": "latest"
     },
     "poetry": {
-      "version": "1.8"
+      "version": "1.8",
+      "disable_plugins": true
     },
     "bottom": {
       "version": "latest"
