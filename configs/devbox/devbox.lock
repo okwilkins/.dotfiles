@@ -753,6 +753,10 @@
         }
       }
     },
+    "github:NixOS/nixpkgs/nixpkgs-unstable": {
+      "last_modified": "2025-05-22T23:55:03Z",
+      "resolved": "github:NixOS/nixpkgs/fe51d34885f7b5e3e7b59572796e1bcb427eccb1?lastModified=1747958103&narHash=sha256-qmmFCrfBwSHoWw7cVK4Aj%2Bfns%2Bc54EBP8cGqp%2FyK410%3D"
+    },
     "go-task@latest": {
       "last_modified": "2025-05-16T20:19:48Z",
       "resolved": "github:NixOS/nixpkgs/12a55407652e04dcf2309436eb06fef0d3713ef3#go-task",
@@ -1921,70 +1925,6 @@
             }
           ],
           "store_path": "/nix/store/zwvdwiw0zg5liz6lkkkqyab035parhld-python3-3.12.3"
-        }
-      }
-    },
-    "python313Packages.jedi-language-server@latest": {
-      "last_modified": "2025-05-16T20:19:48Z",
-      "resolved": "github:NixOS/nixpkgs/12a55407652e04dcf2309436eb06fef0d3713ef3#python313Packages.jedi-language-server",
-      "source": "devbox-search",
-      "version": "0.45.1",
-      "systems": {
-        "aarch64-darwin": {
-          "outputs": [
-            {
-              "name": "out",
-              "path": "/nix/store/l0aap33zjs3snm7zfmkv71sx991fpg77-python3.13-jedi-language-server-0.45.1",
-              "default": true
-            },
-            {
-              "name": "dist",
-              "path": "/nix/store/dq2v3qhf05p7iyrlz3ax76i43xi9ibxv-python3.13-jedi-language-server-0.45.1-dist"
-            }
-          ],
-          "store_path": "/nix/store/l0aap33zjs3snm7zfmkv71sx991fpg77-python3.13-jedi-language-server-0.45.1"
-        },
-        "aarch64-linux": {
-          "outputs": [
-            {
-              "name": "out",
-              "path": "/nix/store/ja1qr27wl6c2bxyg26vczlqfdmznnvk5-python3.13-jedi-language-server-0.45.1",
-              "default": true
-            },
-            {
-              "name": "dist",
-              "path": "/nix/store/gg4kngvhz9sp0fgm352sa8iilsyxz2im-python3.13-jedi-language-server-0.45.1-dist"
-            }
-          ],
-          "store_path": "/nix/store/ja1qr27wl6c2bxyg26vczlqfdmznnvk5-python3.13-jedi-language-server-0.45.1"
-        },
-        "x86_64-darwin": {
-          "outputs": [
-            {
-              "name": "out",
-              "path": "/nix/store/vzrd43k072s77i2wx9kbybv5mmvxcdwf-python3.13-jedi-language-server-0.45.1",
-              "default": true
-            },
-            {
-              "name": "dist",
-              "path": "/nix/store/5bgkpvpwvx01hq96lzxqs0rh43njrfh8-python3.13-jedi-language-server-0.45.1-dist"
-            }
-          ],
-          "store_path": "/nix/store/vzrd43k072s77i2wx9kbybv5mmvxcdwf-python3.13-jedi-language-server-0.45.1"
-        },
-        "x86_64-linux": {
-          "outputs": [
-            {
-              "name": "out",
-              "path": "/nix/store/w407rsg2v1jfm29s5cq7qb68wf0mzmk8-python3.13-jedi-language-server-0.45.1",
-              "default": true
-            },
-            {
-              "name": "dist",
-              "path": "/nix/store/m8668v6805n3jaf92y3vm2rm56dq71gc-python3.13-jedi-language-server-0.45.1-dist"
-            }
-          ],
-          "store_path": "/nix/store/w407rsg2v1jfm29s5cq7qb68wf0mzmk8-python3.13-jedi-language-server-0.45.1"
         }
       }
     },

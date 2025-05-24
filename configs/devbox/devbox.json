@@ -48,7 +48,6 @@
     "ruff@latest",
     "pylyzer@latest",
     "python312@latest",
-    "python313Packages.jedi-language-server@latest",
     "pyright@latest",
     "poetry@1.8",
     "bottom@latest",
