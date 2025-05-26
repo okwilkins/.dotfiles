@@ -101,7 +101,7 @@
       "version": "latest"
     },
     "talosctl": {
-      "version": "latest"
+      "version": "1.10.0"
     },
     "lazygit": {
       "version": "latest"
