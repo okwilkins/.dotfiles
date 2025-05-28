@@ -9,6 +9,7 @@ local config = {
     macos_window_background_blur = 30,
     window_background_opacity = 0.95,
     window_decorations = "RESIZE",
+    animation_fps = 144,
     keys = {
         {
             key = "f",
