@@ -179,6 +179,7 @@
     },
     "uutils-coreutils": {
       "version": "latest"
-    }
+    },
+    "parallel": "latest"
   }
 }
