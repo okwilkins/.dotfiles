@@ -1859,54 +1859,6 @@
         }
       }
     },
-    "pylyzer@latest": {
-      "last_modified": "2025-05-16T20:19:48Z",
-      "resolved": "github:NixOS/nixpkgs/12a55407652e04dcf2309436eb06fef0d3713ef3#pylyzer",
-      "source": "devbox-search",
-      "version": "0.0.82",
-      "systems": {
-        "aarch64-darwin": {
-          "outputs": [
-            {
-              "name": "out",
-              "path": "/nix/store/h5wy0bghf1yb6l339xiiz5h8x7jw8glz-pylyzer-0.0.82",
-              "default": true
-            }
-          ],
-          "store_path": "/nix/store/h5wy0bghf1yb6l339xiiz5h8x7jw8glz-pylyzer-0.0.82"
-        },
-        "aarch64-linux": {
-          "outputs": [
-            {
-              "name": "out",
-              "path": "/nix/store/s3d5yba96s1w9a1brbrd1dqrzxxrkbpg-pylyzer-0.0.82",
-              "default": true
-            }
-          ],
-          "store_path": "/nix/store/s3d5yba96s1w9a1brbrd1dqrzxxrkbpg-pylyzer-0.0.82"
-        },
-        "x86_64-darwin": {
-          "outputs": [
-            {
-              "name": "out",
-              "path": "/nix/store/3hi2frnsfz5qizix343p97b0i0kilxr9-pylyzer-0.0.82",
-              "default": true
-            }
-          ],
-          "store_path": "/nix/store/3hi2frnsfz5qizix343p97b0i0kilxr9-pylyzer-0.0.82"
-        },
-        "x86_64-linux": {
-          "outputs": [
-            {
-              "name": "out",
-              "path": "/nix/store/1yzv0i7klldk9y7nm7rz1x89pwaviadr-pylyzer-0.0.82",
-              "default": true
-            }
-          ],
-          "store_path": "/nix/store/1yzv0i7klldk9y7nm7rz1x89pwaviadr-pylyzer-0.0.82"
-        }
-      }
-    },
     "pyright@latest": {
       "last_modified": "2025-05-16T20:19:48Z",
       "resolved": "github:NixOS/nixpkgs/12a55407652e04dcf2309436eb06fef0d3713ef3#pyright",

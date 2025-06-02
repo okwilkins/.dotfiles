@@ -140,9 +140,6 @@
     "ruff": {
       "version": "latest"
     },
-    "pylyzer": {
-      "version": "latest"
-    },
     "pyright": {
       "version": "latest"
     },
