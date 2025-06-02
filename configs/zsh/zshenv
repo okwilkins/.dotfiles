@@ -39,4 +39,3 @@ export GOPATH="$WORKSPACE/go"
 export GOBIN="$WORKSPACE/go/bin"
 export GOCACHE="$XDG_CACHE_HOME/go-build"
 
-# Rust
