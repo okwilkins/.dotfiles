@@ -33,6 +33,9 @@ echo "Installing Bat"
 echo "Installing Yazi"
 . "$DOTFILES/install/install-yazi.sh"
 
+echo "Installing Rainfrog"
+. "$DOTFILES/install/install-rainfrog.sh"
+
 # Make Devboxed zsh the default shell
 # Allows root to change shell without a password
 sudo sed s/required/sufficient/g -i /etc/pam.d/chsh
