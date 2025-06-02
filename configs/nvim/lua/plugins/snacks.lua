@@ -4,7 +4,7 @@ return {
     lazy = false,
     opts = {
         animate = {
-            fps = 120,
+            fps = 144,
         },
         quickfile = { enabled = true },
         indent = {
