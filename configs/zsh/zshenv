@@ -30,6 +30,9 @@ export SAVEHIST=10000                   # Maximum events in history file
 # Talos OS
 export TALOSCONFIG=$XDG_CONFIG_HOME/talos/talosconfig
 
+# Rainfrog
+export RAINFROG_CONFIG=$XDG_CONFIG_HOME/rainfrog/config.toml
+
 # Programming
 # Go
 export GOPATH="$WORKSPACE/go"
