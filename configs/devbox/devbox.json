@@ -177,6 +177,7 @@
     "uutils-coreutils": {
       "version": "latest"
     },
-    "parallel": "latest"
+    "parallel": "latest",
+    "rainfrog": "latest"
   }
 }

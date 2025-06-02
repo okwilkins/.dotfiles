@@ -1964,6 +1964,54 @@
         }
       }
     },
+    "rainfrog@latest": {
+      "last_modified": "2025-05-16T20:19:48Z",
+      "resolved": "github:NixOS/nixpkgs/12a55407652e04dcf2309436eb06fef0d3713ef3#rainfrog",
+      "source": "devbox-search",
+      "version": "0.3.1",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/8m69ilqlvyrpmna2pdx0gnwxiakxarjb-rainfrog-0.3.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/8m69ilqlvyrpmna2pdx0gnwxiakxarjb-rainfrog-0.3.1"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/g90hbgxi6qiz8vanzlx20661pqb81ibn-rainfrog-0.3.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/g90hbgxi6qiz8vanzlx20661pqb81ibn-rainfrog-0.3.1"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/1vgagsnyzwkp8vr0gk4j09xnsw7abv6l-rainfrog-0.3.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/1vgagsnyzwkp8vr0gk4j09xnsw7abv6l-rainfrog-0.3.1"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/j907pvmn0s0isa6iab3pnqzi1v77x07r-rainfrog-0.3.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/j907pvmn0s0isa6iab3pnqzi1v77x07r-rainfrog-0.3.1"
+        }
+      }
+    },
     "ripgrep@latest": {
       "last_modified": "2025-05-16T20:19:48Z",
       "resolved": "github:NixOS/nixpkgs/12a55407652e04dcf2309436eb06fef0d3713ef3#ripgrep",
