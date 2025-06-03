@@ -12,6 +12,11 @@ alias find=fd
 alias du=dust
 alias diff=delta
 
+# QoL for applications
+alias t=taloctl
+alias lg=lazygit
+alias ld=lazydocker
+
 # Programming
 # Python
 alias python=python3
