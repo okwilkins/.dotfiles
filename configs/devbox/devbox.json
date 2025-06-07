@@ -178,6 +178,21 @@
       "version": "latest"
     },
     "parallel": "latest",
-    "rainfrog": "latest"
+    "rainfrog": "latest",
+    "github:dagger/nix#packages.x86_64-linux.dagger": {
+      "platforms": [
+        "x86_64-linux"
+      ]
+    },
+    "github:dagger/nix#packages.aarch64-darwin.dagger": {
+      "platforms": [
+        "aarch64-darwin"
+      ]
+    },
+    "github:dagger/nix#packages.x86_64-darwin.dagger": {
+      "platforms": [
+        "x86_64-darwin"
+      ]
+    }
   }
 }
