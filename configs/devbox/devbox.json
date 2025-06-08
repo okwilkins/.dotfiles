@@ -193,6 +193,7 @@
       "platforms": [
         "x86_64-darwin"
       ]
-    }
+    },
+    "ffmpeg": "latest"
   }
 }
