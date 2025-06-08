@@ -1,5 +1,5 @@
 # https://github.com/catppuccin/yazi/blob/54d868433a0c2f3e1651114136ea088eef72a4a7/themes/mocha/catppuccin-mocha-blue.toml
-[manager]
+[mgr]
 cwd = { fg = "#94e2d5" }
 
 # Hovered
