@@ -17,3 +17,12 @@ yml
 nvim
 nvim
 vim
+NixOS
+env
+nixpkgs
+tmuxPlugins
+sessionx
+args
+XDG
+CONFIG
+conf
