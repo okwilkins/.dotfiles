@@ -902,8 +902,12 @@
       }
     },
     "github:NixOS/nixpkgs/nixpkgs-unstable": {
-      "last_modified": "2025-06-06T12:35:49Z",
-      "resolved": "github:NixOS/nixpkgs/a4ff0e3c64846abea89662bfbacf037ef4b34207?lastModified=1749213349&narHash=sha256-UAaWOyQhdp7nXzsbmLVC67fo%2BQetzoTm9hsPf9X3yr4%3D"
+      "last_modified": "2025-06-08T16:50:33Z",
+      "resolved": "github:NixOS/nixpkgs/08fcb0dcb59df0344652b38ea6326a2d8271baff?lastModified=1749401433&narHash=sha256-HXIQzULIG%2FMEUW2Q%2FSs47oE3QrjxvpUX7gUl4Xp6lnc%3D"
+    },
+    "github:dagger/nix#packages.aarch64-darwin.dagger": {
+      "last_modified": "2025-05-27T13:27:07Z",
+      "resolved": "github:dagger/nix/70530d252c0b3172161dbbb81dc3f63a33a4f17b?lastModified=1748352427&narHash=sha256-k4Kfgj8i9l4w%2FFyX3f5HYjvGz%2B%2Fbzyh0ALnVUJkOvqM%3D#packages.aarch64-darwin.dagger"
     },
     "github:dagger/nix#packages.x86_64-linux.dagger": {
       "last_modified": "2025-05-27T13:27:07Z",
@@ -1262,6 +1266,54 @@
             }
           ],
           "store_path": "/nix/store/n9ch6ggimi6ri5vx62mqmzgrrkb3qfwg-jq-1.7.1-bin"
+        }
+      }
+    },
+    "jupyter@latest": {
+      "last_modified": "2025-05-16T20:19:48Z",
+      "resolved": "github:NixOS/nixpkgs/12a55407652e04dcf2309436eb06fef0d3713ef3#jupyter",
+      "source": "devbox-search",
+      "version": "3.12.10-env",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/b9sy9dfryadrmap0i99wqr2rh64kw60p-python3-3.12.10-env",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/b9sy9dfryadrmap0i99wqr2rh64kw60p-python3-3.12.10-env"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/x5k5c5yxf0ilnxfk0pj7x3xf21l7aqvz-python3-3.12.10-env",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/x5k5c5yxf0ilnxfk0pj7x3xf21l7aqvz-python3-3.12.10-env"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/i6kcrhr2a46qpq6rdrmxfnz94c9is686-python3-3.12.10-env",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/i6kcrhr2a46qpq6rdrmxfnz94c9is686-python3-3.12.10-env"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/023apiam5jvw6b4j08adw277634pndr4-python3-3.12.10-env",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/023apiam5jvw6b4j08adw277634pndr4-python3-3.12.10-env"
         }
       }
     },

@@ -131,7 +131,7 @@
       "version": "latest"
     },
     "python": {
-      "version": "3.12",
+      "version":         "3.12",
       "disable_plugins": true
     },
     "gopls": {
@@ -144,7 +144,7 @@
       "version": "latest"
     },
     "poetry": {
-      "version": "1.8",
+      "version":         "1.8",
       "disable_plugins": true
     },
     "bottom": {
@@ -194,6 +194,7 @@
         "x86_64-darwin"
       ]
     },
-    "ffmpeg": "latest"
+    "ffmpeg":  "latest",
+    "jupyter": "latest"
   }
 }
