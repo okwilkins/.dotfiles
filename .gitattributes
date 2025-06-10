@@ -17,6 +17,7 @@ configs/zsh/completions/** linguist-generated linguist-language=Shell
 
 # TOML
 *.toml   text eol=lf diff linguist-language=TOML linguist-detectable=true
+configs/yazi/theme.toml text eol=lf diff linguist-language=TOML linguist-detectable=false
 
 # JSON
 *.json   text eol=lf diff linguist-language=JSON linguist-detectable=true
