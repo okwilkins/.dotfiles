@@ -9,6 +9,7 @@
 *.zsh    text eol=lf diff linguist-language=Shell linguist-detectable=true
 zshenv   text eol=lf diff linguist-language=Shell linguist-detectable=true
 zshrc    text eol=lf diff linguist-language=Shell linguist-detectable=true
+configs/zsh/completions/** linguist-generated linguist-language=Shell
 
 # YAML
 *.yaml   text eol=lf diff linguist-language=YAML linguist-detectable=true
