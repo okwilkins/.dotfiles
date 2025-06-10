@@ -37,6 +37,6 @@ A big thank you to the following people for their inspiration and help:
 - [Phantas0s](https://github.com/Phantas0s)
 - [omerxx](https://github.com/omerxx)
 - [vfarcic](https://github.com/vfarcic)
-- [dreamsofcode-io](https://github.com/dreamsofcode-io)
+- [elliotminns](https://github.com/elliottminns)
 - [vl-cr](https://github.com/vl-cr)
 
