@@ -1,20 +1,20 @@
 # Lua
-*.lua    text eol=lf diff linguist-language=Config linguist-detectable=true
+*.lua    text eol=lf diff linguist-language=EditorConfig linguist-detectable=true
 
 # Shell/Bash/Zsh
 *.sh     text eol=lf diff linguist-language=Shell linguist-detectable=true
 *.bash   text eol=lf diff linguist-language=Shell linguist-detectable=true
-*.zsh    text eol=lf diff linguist-language=Config linguist-detectable=true
+*.zsh    text eol=lf diff linguist-language=EditorConfig linguist-detectable=true
 
 # YAML
-*.yaml   text eol=lf diff linguist-language=Config linguist-detectable=true
-*.yml    text eol=lf diff linguist-language=Config linguist-detectable=true
+*.yaml   text eol=lf diff linguist-language=EditorConfig linguist-detectable=true
+*.yml    text eol=lf diff linguist-language=EditorConfig linguist-detectable=true
 
 # TOML
-*.toml   text eol=lf diff linguist-language=Config linguist-detectable=true
+*.toml   text eol=lf diff linguist-language=EditorConfig linguist-detectable=true
 
 # JSON
-*.json   text eol=lf diff linguist-language=Config linguist-detectable=true
+*.json   text eol=lf diff linguist-language=EditorConfig linguist-detectable=true
 
 # Markdown
 *.md     text eol=lf diff linguist-language=Markdown linguist-detectable=false
