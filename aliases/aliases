@@ -16,6 +16,7 @@ alias diff=delta
 alias t=taloctl
 alias lg=lazygit
 alias ld=lazydocker
+alias n=nvim
 
 # Programming
 # Python
