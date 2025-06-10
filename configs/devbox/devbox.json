@@ -194,7 +194,8 @@
         "x86_64-darwin"
       ]
     },
-    "ffmpeg":  "latest",
-    "jupyter": "latest"
+    "ffmpeg":                    "latest",
+    "jupyter":                   "latest",
+    "tmuxPlugins.tmux-sessionx": "latest"
   }
 }

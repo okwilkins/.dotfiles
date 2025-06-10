@@ -2764,6 +2764,54 @@
         }
       }
     },
+    "tmuxPlugins.tmux-sessionx@latest": {
+      "last_modified": "2025-05-27T11:07:55Z",
+      "resolved": "github:NixOS/nixpkgs/e0042dedfbc9134ef973f64e5c7f56a38cc5cc97#tmuxPlugins.tmux-sessionx",
+      "source": "devbox-search",
+      "version": "0-unstable-2024-09-22",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/j15sm0iww0xlywfhk1x738ii22vxmidm-tmuxplugin-sessionx-0-unstable-2024-09-22",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/j15sm0iww0xlywfhk1x738ii22vxmidm-tmuxplugin-sessionx-0-unstable-2024-09-22"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/n05jvsg1xi849kk44qc5j7pbcyq3s9xz-tmuxplugin-sessionx-0-unstable-2024-09-22",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/n05jvsg1xi849kk44qc5j7pbcyq3s9xz-tmuxplugin-sessionx-0-unstable-2024-09-22"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/dgx444lx068pv95wrxyp2ba8wggd66si-tmuxplugin-sessionx-0-unstable-2024-09-22",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/dgx444lx068pv95wrxyp2ba8wggd66si-tmuxplugin-sessionx-0-unstable-2024-09-22"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/ksf4fnjqr6s9lv7gqgpqiz1z3jr7v4r0-tmuxplugin-sessionx-0-unstable-2024-09-22",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/ksf4fnjqr6s9lv7gqgpqiz1z3jr7v4r0-tmuxplugin-sessionx-0-unstable-2024-09-22"
+        }
+      }
+    },
     "tmuxPlugins.vim-tmux-navigator@latest": {
       "last_modified": "2025-05-16T20:19:48Z",
       "resolved": "github:NixOS/nixpkgs/12a55407652e04dcf2309436eb06fef0d3713ef3#tmuxPlugins.vim-tmux-navigator",
