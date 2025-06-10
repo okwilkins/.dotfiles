@@ -5,6 +5,10 @@
 [init]
     defaultBranch = main
 
+[rebase]
+    # Keep dates when rebasing
+    instructionFormat = %s%nexec GIT_COMMITTER_DATE=\"%cD\" git commit --amend --no-edit
+
 [core]
     pager = delta
 
