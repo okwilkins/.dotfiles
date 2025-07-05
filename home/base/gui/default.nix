@@ -1,0 +1,6 @@
+{...}: {
+  imports [
+    ./terminals
+    ./browsers
+  ];
+}
