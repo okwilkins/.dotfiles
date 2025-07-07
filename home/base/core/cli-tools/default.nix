@@ -11,5 +11,16 @@
     tmux
     yazi
     lazygit
+    hyperfine
+    xh
+    fd
+    dust
+    # coreutils-full
+    # moreutils
+    # uutils-coreutils
+    parallel
+    bottom
+    delta
+    htop
   ];
 }
