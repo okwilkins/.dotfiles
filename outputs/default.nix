@@ -38,6 +38,7 @@ in {
         home-manager.users.oli.imports = [
 	  ../home/base/home.nix
 	  ../home/base/core/cli-tools
+	  ../home/base/core/shells/zsh
 	  ../home/base/gui/terminals
 	  ../home/base/gui/browsers
 	  ../home/base/tui/neovim
