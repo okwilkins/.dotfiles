@@ -1,8 +1,13 @@
-fullscreen = true
+maximize = true
 
-background-opacity = 0.95
+window-decoration = none
+
+window-padding-balance = true
+
+background-opacity = 0.90
 background-blur = true
 
 theme = catppuccin-mocha
 
-keybind = "ctrl+f=toggle_fullscreen"
+keybind = "ctrl+shift+f=toggle_fullscreen"
+keybind = "ctrl+shift+m=toggle_maximize"
