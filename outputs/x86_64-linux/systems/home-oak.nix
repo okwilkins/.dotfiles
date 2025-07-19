@@ -8,7 +8,7 @@
       modules = [ 
         ../../../../systems/home-oak
         ../../../../modules/base
-	../../../../home/base/home.nix
+        ../../../../home/base/home.nix
       ];
     };
   };
