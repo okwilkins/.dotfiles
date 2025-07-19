@@ -74,18 +74,13 @@
     isNormalUser = true;
     description = "Oliver Wilkins";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-    ];
+    packages = with pkgs; [];
   };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  environment.systemPackages = with pkgs; [
-    vim
-    git
-  ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
