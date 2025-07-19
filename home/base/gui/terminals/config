@@ -1,0 +1,8 @@
+fullscreen = true
+
+background-opacity = 0.95
+background-blur = true
+
+theme = catppuccin-mocha
+
+keybind = "ctrl+f=toggle_fullscreen"
