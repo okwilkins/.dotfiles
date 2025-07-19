@@ -34,6 +34,7 @@ This will install the relevant packages to get things going will create the symb
 A big thank you to the following people for their inspiration and help:
 
 - [ThePrimeagen](https://github.com/ThePrimeagen)
+- [ryan4yin](https://github.com/ryan4yin)
 - [Phantas0s](https://github.com/Phantas0s)
 - [omerxx](https://github.com/omerxx)
 - [vfarcic](https://github.com/vfarcic)
