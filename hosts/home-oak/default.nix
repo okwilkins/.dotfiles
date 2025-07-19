@@ -100,4 +100,7 @@
     };
     openFirewall = true;
   };
+
+  # Only keep the last 25 generations
+  nix.gc.options = "--delete-older-than +25";
 }
