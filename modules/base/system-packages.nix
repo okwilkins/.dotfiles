@@ -8,4 +8,8 @@
     neovim
     git
   ];
+
+  programs.zsh = {
+    enable = true;
+  };
 }
