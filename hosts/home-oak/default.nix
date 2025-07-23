@@ -76,6 +76,7 @@
     description = "Oliver Wilkins";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
+    shell = pkgs.zsh;
   };
 
   # Allow unfree packages
