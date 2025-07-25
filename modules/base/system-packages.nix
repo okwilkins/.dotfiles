@@ -7,6 +7,7 @@
     # Core tools
     neovim
     git
+    wl-clipboard
   ];
 
   programs.zsh = { enable = true; };
