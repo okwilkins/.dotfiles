@@ -32,13 +32,7 @@ in {
         home-manager.useUserPackages = true;
         # Backup conflicting files when switching to not cause errors
         home-manager.backupFileExtension = "backup";
-        home-manager.users.oli.imports = [
-          ../home/base/home.nix
-          ../home/base/core
-          ../home/base/gui/terminals
-          ../home/base/gui/browsers
-          ../home/base/tui/neovim
-        ];
+        home-manager.users.oli.imports = [ ../home/base ];
       }
     ];
   };
