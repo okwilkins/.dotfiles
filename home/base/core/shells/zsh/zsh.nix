@@ -1,7 +1,5 @@
-{...}: {
-  programs.zsh = {
-    enable = true;
-  };
+{ ... }: {
+  programs.zsh = { enable = true; };
   home.file.".config/zsh/.zshenv" = {
     source = ../../../../../configs/zsh/zshenv;
   };

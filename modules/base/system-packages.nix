@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   # For security reasons, do not load Neovim's user config
   # since EDITOR may be used to edit some critical files
   environment.variables.EDITOR = "nvim --clean";
@@ -9,8 +9,6 @@
     git
   ];
 
-  programs.zsh = {
-    enable = true;
-  };
+  programs.zsh = { enable = true; };
   users.defaultUserShell = pkgs.zsh;
 }

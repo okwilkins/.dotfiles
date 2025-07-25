@@ -1,6 +1,6 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   home.packages = with pkgs; [
-    starship    
+    starship
     eza
     bat
     ripgrep
@@ -24,21 +24,13 @@
     htop
   ];
 
-  home.file.".config/bat" = {
-    source = ../../../../configs/bat;
-  };
+  home.file.".config/bat" = { source = ../../../../configs/bat; };
 
-  home.file.".config/git" = {
-    source = ../../../../configs/git;
-  };
+  home.file.".config/git" = { source = ../../../../configs/git; };
 
-  home.file.".config/yazi" = {
-    source = ../../../../configs/yazi;
-  };
+  home.file.".config/yazi" = { source = ../../../../configs/yazi; };
 
-  home.file.".config/tmux" = {
-    source = ../../../../configs/tmux;
-  };
+  home.file.".config/tmux" = { source = ../../../../configs/tmux; };
 
   home.file.".config/lazygit/config.yml" = {
     source = ../../../../configs/lazygit/config.yaml;

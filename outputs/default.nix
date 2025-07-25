@@ -1,14 +1,9 @@
-{
-  nixpkgs,
-  home-manager,
-  ...
-}@inputs: let
+{ nixpkgs, home-manager, ... }@inputs:
+let
   inherit (inputs.nixpkgs) lib;
-  projectVars = import ../vars {inherit lib;};
+  projectVars = import ../vars { inherit lib; };
   nixosSystems = {
-    x86_64-linux = import ./x86_64-linux {
-      inherit nixpkgs inputs;
-    };
+    x86_64-linux = import ./x86_64-linux { inherit nixpkgs inputs; };
     # aarch64-linux = import ./aarch64-linux ({system = "aarch64-linux";});
     # riscv64-linux = import ./riscv64-linux ({system = "riscv64-linux";});
   };
@@ -17,12 +12,12 @@
     # x86_64-darwin = import ./x86_64-darwin ({system = "x86_64-darwin";});
   };
   allSystems = nixosSystems // darwinSystems;
-  allSystemsNames = builtins.attrNames allSystems;  
+  allSystemsNames = builtins.attrNames allSystems;
   nixosSystemValues = builtins.attrValues nixosSystems;
   darwinSystemValues = builtins.attrValues darwinSystems;
-  allSystemValues = nixosSystemValues ++ darwinSystemValues; 
+  allSystemValues = nixosSystemValues ++ darwinSystemValues;
 in {
-  args = {inherit inputs;};
+  args = { inherit inputs; };
   # nixosConfigurations = lib.attrsets.mergeAttrsList (map (it: it.nixosConfigurations or {}) nixosSystemValues);
   # darwinConfigurations = lib.attrsets.mergeAttrsList (map (it: it.darwinConfigurations or {}) darwinSystemValues);
   nixosConfigurations.oak = nixpkgs.lib.nixosSystem {
@@ -31,7 +26,8 @@ in {
       ../hosts/home-oak
       ../modules/base
       ../modules/desktop
-      home-manager.nixosModules.home-manager {
+      home-manager.nixosModules.home-manager
+      {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
         # Backup conflicting files when switching to not cause errors

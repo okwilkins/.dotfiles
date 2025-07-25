@@ -3,11 +3,10 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, ... }: {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ./nvidia.nix
-    ];
+  imports = [ # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    ./nvidia.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -16,7 +15,8 @@
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  boot.initrd.luks.devices."luks-c461448d-dc40-45ae-98cd-29b002e5b790".device = "/dev/disk/by-uuid/c461448d-dc40-45ae-98cd-29b002e5b790";
+  boot.initrd.luks.devices."luks-c461448d-dc40-45ae-98cd-29b002e5b790".device =
+    "/dev/disk/by-uuid/c461448d-dc40-45ae-98cd-29b002e5b790";
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -75,7 +75,7 @@
     isNormalUser = true;
     description = "Oliver Wilkins";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
+    packages = with pkgs; [ ];
     shell = pkgs.zsh;
   };
 

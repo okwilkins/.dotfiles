@@ -1,5 +1,1 @@
-{...}: {
-  imports = [
-    ./games
-  ];
-}
+{ ... }: { imports = [ ./games ]; }
