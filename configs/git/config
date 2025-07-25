@@ -50,4 +50,4 @@
 		bold cyan => syntax "#384d5d", \
 		bold yellow => syntax "#544f4e"
 	# Should match the name of the bat theme
-	syntax-theme = Catppuccin Mocha
+	syntax-theme = Catppuccin Mocha.tmTheme
