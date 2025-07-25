@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, lib, ... }: {
   home.packages = with pkgs; [
     starship
     eza
@@ -26,6 +26,9 @@
   ];
 
   home.file.".config/bat" = { source = ../../../../configs/bat; };
+  home.activation.batCacheRebuild = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+    ${pkgs.bat}/bin/bat cache --build
+  '';
 
   home.file.".config/git" = { source = ../../../../configs/git; };
 
