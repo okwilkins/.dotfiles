@@ -1,5 +1,1 @@
-{...}: {
-  imports = [
-    ./neovim
-  ]
-}
+{ ... }: { imports = [ ./neovim.nix ]; }
