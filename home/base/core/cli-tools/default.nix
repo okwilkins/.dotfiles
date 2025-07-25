@@ -22,6 +22,7 @@
     bottom
     delta
     htop
+    carapace
   ];
 
   home.file.".config/bat" = { source = ../../../../configs/bat; };
