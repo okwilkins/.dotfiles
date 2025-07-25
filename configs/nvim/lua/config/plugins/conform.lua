@@ -6,6 +6,7 @@ return {
         terraform = { "terraform_fmt" },
         go = { "gofmt" },
         python = { "ruff" },
+        nix = { "nixfmt" },
     },
     format_on_save = {
         -- These options will be passed to conform.format()
