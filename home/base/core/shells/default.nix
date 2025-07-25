@@ -1,1 +1,1 @@
-{ ... }: { imports = [ ./zsh ]; }
+{ ... }: { imports = [ ./zsh.nix ]; }
