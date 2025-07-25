@@ -2,6 +2,7 @@
   home.packages = with pkgs; [
     zig
     go
+    gcc
     # LSPs
     nixd
     lua-language-server
