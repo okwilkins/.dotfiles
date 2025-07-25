@@ -25,18 +25,16 @@
     carapace
   ];
 
-  home.file.".config/bat" = { source = ../../../../configs/bat; };
+  home.file.".config/bat" = { source = ./bat/config; };
   home.activation.batCacheRebuild = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     ${pkgs.bat}/bin/bat cache --build
   '';
 
-  home.file.".config/git" = { source = ../../../../configs/git; };
+  home.file.".config/git" = { source = ./git; };
 
-  home.file.".config/yazi" = { source = ../../../../configs/yazi; };
+  home.file.".config/yazi" = { source = ./yazi; };
 
-  home.file.".config/tmux" = { source = ../../../../configs/tmux; };
+  home.file.".config/tmux" = { source = ./tmux; };
 
-  home.file.".config/lazygit/config.yml" = {
-    source = ../../../../configs/lazygit/config.yaml;
-  };
+  home.file.".config/lazygit/config.yml" = { source = ./lazygit/config.yaml; };
 }
