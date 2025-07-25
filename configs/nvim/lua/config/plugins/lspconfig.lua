@@ -48,4 +48,7 @@ return function()
     -- Python
     lspconfig.ruff.setup({})
     lspconfig.pyright.setup({})
+
+    -- Nix
+    lspconfig.nixd.setup({})
 end
