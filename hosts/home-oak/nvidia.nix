@@ -18,7 +18,7 @@
     powerManagement.enable = false;
 
     # Fine-grained power management. Turns off GPU when not in use.
-    # Experimental and old works on modern GPUs (Turing or newer).
+    # Experimental and only works on modern GPUs (Turing or newer).
     powerManagement.finegrained = false;
 
     # Use the Nvidia open source kernel module (not to be consfused with the
