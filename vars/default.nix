@@ -18,7 +18,7 @@ rec {
     cacheDir = ".cache";
     configHome = "${homeDir}/${configDir}";
     dataHome = "${homeDir}/${dataDir}";
-    cacheHome = "${homeDir}/${cacheHome}";
+    cacheHome = "${homeDir}/${cacheDir}";
   };
   zshDotDir = "${xdg.configHome}/zsh";
 }
