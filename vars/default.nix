@@ -1,4 +1,6 @@
-{ nixpkgs, ... }: {
+{ ... }:
+
+rec {
   username = "oli";
   userFullname = "Oliver Kenyon Wilkins";
   userEmail = "okwilkins@googlemail.com";
@@ -7,4 +9,13 @@
     "$7$CU..../....Ky0nmU3QG7xuTv8RoBXtu1$4NLnWFNqL0c/4Lzqm9KZCgnrXARLqLU3Glh44m0KDt4";
 
   networking = import ./networking.nix;
+
+  homeDir = "/home/${username}";
+  workspaceDir = "${homeDir}/workspace";
+  xdg = {
+    configHome = "${homeDir}/.config";
+    dataHome = "${homeDir}/.local/share";
+    cacheHome = "${homeDir}/.cache";
+  };
+  zshDotDir = "${xdg.configHome}/zsh";
 }
