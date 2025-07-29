@@ -4,7 +4,10 @@
     zsh-syntax-highlighting
     zsh-fzf-tab
   ];
-  home.file."${projectVars.xdg.configDir}/zsh" = { source = ./zsh; };
+  home.file."${projectVars.xdg.configDir}/zsh" = {
+    source = ./zsh;
+    recursive = true;
+  };
   home.file."${projectVars.xdg.configDir}/zsh/.zshenv".text = ''
     export WORKSPACE="$HOME/workspace"
     export DOTFILES="$HOME/.dotfiles"
