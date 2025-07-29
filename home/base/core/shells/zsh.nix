@@ -52,10 +52,9 @@
 
 
     # Plugins
-    # TODO: Enable this when Zsh plugins are installed again
-    # for plugin in $DOTFILES/configs/zsh/plugins/*.zsh; do
-    #   source "$plugin"
-    # done
+    for plugin in $XDG_CONFIG_HOME/zsh/plugins/*.zsh; do
+      source "$plugin"
+    done
 
     source <(fzf --zsh)
     eval "$(zoxide init zsh)"
@@ -96,7 +95,7 @@
 
 
     # Aliases
-    source $DOTFILES/aliases/coreutils.zsh
-    source $DOTFILES/aliases/aliases.zsh
+    source $XDG_CONFIG_HOME/zsh/aliases/coreutils.zsh
+    source $XDG_CONFIG_HOME/zsh/aliases/aliases.zsh
   '';
 }
