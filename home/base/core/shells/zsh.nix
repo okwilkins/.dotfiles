@@ -4,7 +4,8 @@
     zsh-syntax-highlighting
     zsh-fzf-tab
   ];
-  home.file."${projectVars.xdg.configHome}/zsh/.zshenv".text = ''
+  home.file."${projectVars.xdg.configDir}/zsh" = { source = ./zsh; };
+  home.file."${projectVars.xdg.configDir}/zsh/.zshenv".text = ''
     export WORKSPACE="$HOME/workspace"
     export DOTFILES="$HOME/.dotfiles"
 
@@ -30,7 +31,7 @@
     export GOCACHE="$XDG_CACHE_HOME/go-build"
   '';
 
-  home.file."${projectVars.xdg.configHome}/zsh/.zshrc".text = ''
+  home.file."${projectVars.xdg.configDir}/zsh/.zshrc".text = ''
     # Start Tmux on shell start and attempt to attach to the last session
     if [ -z "$TMUX" ]; then
         LAST_SESSION=$(tmux list-sessions -F "#{session_name}" | tail -n1)
