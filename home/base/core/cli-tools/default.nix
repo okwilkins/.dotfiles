@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }: {
+{ pkgs, lib, projectVars, ... }: {
   home.packages = with pkgs; [
     starship
     eza
@@ -25,16 +25,18 @@
     carapace
   ];
 
-  home.file.".config/bat" = { source = ./bat; };
+  home.file."${projectVars.xdg.configDir}/bat" = { source = ./bat; };
   home.activation.batCacheRebuild = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     ${pkgs.bat}/bin/bat cache --build
   '';
 
-  home.file.".config/git" = { source = ./git; };
+  home.file."${projectVars.xdg.configDir}/git" = { source = ./git; };
 
-  home.file.".config/yazi" = { source = ./yazi; };
+  home.file."${projectVars.xdg.configDir}/yazi" = { source = ./yazi; };
 
-  home.file.".config/tmux" = { source = ./tmux; };
+  home.file."${projectVars.xdg.configDir}/tmux" = { source = ./tmux; };
 
-  home.file.".config/lazygit/config.yml" = { source = ./lazygit/config.yaml; };
+  home.file."${projectVars.xdg.configDir}/lazygit/config.yml" = {
+    source = ./lazygit/config.yaml;
+  };
 }

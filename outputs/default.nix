@@ -28,6 +28,7 @@ in {
       ../modules/desktop
       home-manager.nixosModules.home-manager
       {
+        home-manager.extraSpecialArgs = { inherit projectVars; };
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
         # Backup conflicting files when switching to not cause errors
@@ -35,6 +36,7 @@ in {
         home-manager.users.oli.imports = [ ../home/base ];
       }
     ];
+    specialArgs = { inherit projectVars; };
   };
   # nixosConfigurations.oak = import ./x86_64-linux/systems/home-oak.nix {inherit nixpkgs;};
 }

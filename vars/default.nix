@@ -12,10 +12,13 @@ rec {
 
   homeDir = "/home/${username}";
   workspaceDir = "${homeDir}/workspace";
-  xdg = {
-    configHome = "${homeDir}/.config";
-    dataHome = "${homeDir}/.local/share";
-    cacheHome = "${homeDir}/.cache";
+  xdg = rec {
+    configDir = ".config";
+    dataDir = ".local/share";
+    cacheDir = ".cache";
+    configHome = "${homeDir}/${configDir}";
+    dataHome = "${homeDir}/${dataDir}";
+    cacheHome = "${homeDir}/${cacheHome}";
   };
   zshDotDir = "${xdg.configHome}/zsh";
 }
