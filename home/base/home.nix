@@ -1,7 +1,7 @@
-{ ... }: {
+{ projectVars, ... }: {
   home = {
-    username = "oli";
-    homeDirectory = "/home/oli";
+    username = projectVars.username;
+    homeDirectory = projectVars.homeDir;
 
     # This value determines the home Manager release that your
     # configuration is compatible with. This helps avoid breakage
