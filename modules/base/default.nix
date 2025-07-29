@@ -1,1 +1,1 @@
-{ pkgs, config, ... }: { imports = [ ./system-packages.nix ]; }
+{ ... }: { imports = [ ./system-packages.nix ./system-variables.nix ]; }
