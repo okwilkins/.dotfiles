@@ -25,7 +25,7 @@
     carapace
   ];
 
-  home.file.".config/bat" = { source = ./bat/config; };
+  home.file.".config/bat" = { source = ./bat; };
   home.activation.batCacheRebuild = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     ${pkgs.bat}/bin/bat cache --build
   '';
