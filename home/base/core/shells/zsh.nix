@@ -1,5 +1,9 @@
 { pkgs, projectVars, ... }: {
-  home.packages = with pkgs; [ zsh-autosuggestions zsh-syntax-highlighting ];
+  home.packages = with pkgs; [
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+    zsh-fzf-tab
+  ];
   home.file."${projectVars.xdg.configHome}/zsh/.zshenv".text = ''
     export WORKSPACE="$HOME/workspace"
     export DOTFILES="$HOME/.dotfiles"
@@ -64,7 +68,7 @@
     source "${pkgs.zsh-autosuggestions}/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
     source "${pkgs.zsh-syntax-highlighting}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
     # fzf-tab
-    source $DEVBOX_GLOBAL_SHARE/fzf-tab/fzf-tab.plugin.zsh
+    source "${pkgs.zsh-fzf-tab}/share/fzf-tab/fzf-tab.plugin.zsh"
     zstyle ":fzf-tab:*" fzf-flags \
         --height "90%" --layout=reverse --border \
         --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#a6e3a1 \
