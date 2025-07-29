@@ -26,7 +26,7 @@
     export GOCACHE="$XDG_CACHE_HOME/go-build"
   '';
 
-  home.file."${projectVars.xdg.configHome}/zsh/.zshenv".text = ''
+  home.file."${projectVars.xdg.configHome}/zsh/.zshrc".text = ''
     # Start Tmux on shell start and attempt to attach to the last session
     if [ -z "$TMUX" ]; then
         LAST_SESSION=$(tmux list-sessions -F "#{session_name}" | tail -n1)
@@ -61,9 +61,8 @@
 
     # Navigation
     setopt CORRECT # Try to correct the spelling of commands
-
-    source $DEVBOX_GLOBAL_SHARE/zsh-autosuggestions/zsh-autosuggestions.zsh
-    source $DEVBOX_GLOBAL_SHARE/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    source "${pkgs.zsh-autosuggestions}/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+    source "${pkgs.zsh-syntax-highlighting}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
     # fzf-tab
     source $DEVBOX_GLOBAL_SHARE/fzf-tab/fzf-tab.plugin.zsh
     zstyle ":fzf-tab:*" fzf-flags \
