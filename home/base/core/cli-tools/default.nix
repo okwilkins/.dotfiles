@@ -1,4 +1,5 @@
 { pkgs, lib, projectVars, ... }: {
+  imports = [ ./tmux.nix ];
   home.packages = with pkgs; [
     starship
     eza
@@ -8,7 +9,6 @@
     fzf
     yq-go
     jq
-    tmux
     yazi
     lazygit
     hyperfine
@@ -32,8 +32,6 @@
   home.file."${projectVars.xdg.configDir}/git" = { source = ./git; };
 
   home.file."${projectVars.xdg.configDir}/yazi" = { source = ./yazi; };
-
-  home.file."${projectVars.xdg.configDir}/tmux" = { source = ./tmux; };
 
   home.file."${projectVars.xdg.configDir}/lazygit/config.yml" = {
     source = ./lazygit/config.yaml;
