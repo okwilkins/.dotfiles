@@ -3,15 +3,13 @@
     zsh-autosuggestions
     zsh-syntax-highlighting
     zsh-fzf-tab
+    zsh-vi-mode
   ];
   home.file."${projectVars.xdg.configDir}/zsh" = {
     source = ./zsh;
     recursive = true;
   };
   home.file."${projectVars.xdg.configDir}/zsh/.zshenv".text = ''
-    export WORKSPACE="$HOME/workspace"
-    export DOTFILES="$HOME/.dotfiles"
-
     # Zsh
     export HISTFILE="$ZDOTDIR/.zhistory"    # History filepath
     export HISTSIZE=10000                   # Maximum events for internal history
@@ -47,7 +45,6 @@
 
     # Autocompletions
     autoload -U compinit; compinit
-    # TODO: Make home link this file somewhere, DO NOT USER DOTFILES dir!
     fpath=($DOTFILES/configs/zsh/completions/ $fpath)
 
 
