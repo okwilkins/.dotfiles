@@ -69,6 +69,7 @@
     source "${pkgs.zsh-syntax-highlighting}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
     # fzf-tab
     source "${pkgs.zsh-fzf-tab}/share/fzf-tab/fzf-tab.plugin.zsh"
+    source "${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.zsh"
     zstyle ":fzf-tab:*" fzf-flags \
         --height "90%" --layout=reverse --border \
         --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#a6e3a1 \
