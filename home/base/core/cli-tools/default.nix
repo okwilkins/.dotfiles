@@ -15,10 +15,9 @@
     xh
     fd
     dust
-    # coreutils-full
-    # moreutils
-    # uutils-coreutils
-    parallel
+    coreutils-full
+    moreutils
+    uutils-coreutils
     bottom
     delta
     htop
