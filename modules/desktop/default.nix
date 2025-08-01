@@ -1,1 +1,1 @@
-{ ... }: { imports = [ ./games ]; }
+{ ... }: { imports = [ ./games ./hyprland.nix ]; }
