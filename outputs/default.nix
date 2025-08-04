@@ -24,7 +24,6 @@ in {
     system = "x86_64-linux";
     modules = [
       ../hosts/home-oak
-      ../modules/base
       ../modules/linux/desktop
       home-manager.nixosModules.home-manager
       {
