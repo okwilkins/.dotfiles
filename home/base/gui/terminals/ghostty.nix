@@ -1,4 +1,6 @@
-{ ... }: {
+{ projectVars, ... }: {
   programs.ghostty = { enable = true; };
-  home.file.".config/ghostty/config" = { source = ./config; };
+  home.file."${projectVars.xdg.configDir}/ghostty/config" = {
+    source = ./config;
+  };
 }
