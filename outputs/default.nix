@@ -25,7 +25,7 @@ in {
     modules = [
       ../hosts/home-oak
       ../modules/base
-      ../modules/desktop
+      ../modules/linux/desktop
       home-manager.nixosModules.home-manager
       {
         home-manager.extraSpecialArgs = { inherit projectVars; };
