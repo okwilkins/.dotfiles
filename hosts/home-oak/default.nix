@@ -1,12 +1,5 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { pkgs, ... }: {
-  imports = [ # Include the results of the hardware scan.
-    ./hardware-configuration.nix
-    ./nvidia.nix
-  ];
+  imports = [ ./hardware-configuration.nix ./nvidia.nix ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -17,11 +10,6 @@
 
   boot.initrd.luks.devices."luks-c461448d-dc40-45ae-98cd-29b002e5b790".device =
     "/dev/disk/by-uuid/c461448d-dc40-45ae-98cd-29b002e5b790";
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -39,9 +27,6 @@
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.zsh;
   };
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -62,7 +47,4 @@
     };
     openFirewall = true;
   };
-
-  # Only keep the last 25 generations
-  nix.gc.options = "--delete-older-than +25";
 }
