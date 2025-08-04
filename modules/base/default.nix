@@ -1,1 +1,3 @@
-{ ... }: { imports = [ ./system-packages.nix ./system-variables.nix ]; }
+{ ... }: {
+  imports = [ ./system-packages.nix ./system-variables.nix ./i18n.nix ];
+}
