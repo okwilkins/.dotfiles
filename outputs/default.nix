@@ -33,7 +33,7 @@ in {
         home-manager.useUserPackages = true;
         # Backup conflicting files when switching to not cause errors
         home-manager.backupFileExtension = "backup";
-        home-manager.users.oli.imports = [ ../home/base ../hosts/home-oak ];
+        home-manager.users.oli.imports = [ ../home/base ];
       }
     ];
     specialArgs = { inherit projectVars; };
