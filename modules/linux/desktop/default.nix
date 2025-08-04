@@ -1,3 +1,4 @@
 { ... }: {
-  imports = [ ./system-packages.nix ./system-variables.nix ./steam.nix ];
+  imports =
+    [ ./system-packages.nix ./system-variables.nix ./security.nix ./steam.nix ];
 }
