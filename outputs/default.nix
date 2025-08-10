@@ -32,7 +32,7 @@ in {
         home-manager.useUserPackages = true;
         # Backup conflicting files when switching to not cause errors
         home-manager.backupFileExtension = "backup";
-        home-manager.users.oli.imports = [ ../home/base ];
+        home-manager.users.oli.imports = [ ../home/base ../home/linux ];
       }
     ];
     specialArgs = { inherit projectVars; };
