@@ -33,16 +33,6 @@
   '';
 
   home.file."${projectVars.xdg.configDir}/zsh/.zshrc".text = ''
-    # Start Tmux on shell start and attempt to attach to the last session
-    if [ -z "$TMUX" ]; then
-        LAST_SESSION=$(tmux list-sessions -F "#{session_name}" | tail -n1)
-        if [ -n "$LAST_SESSION" ]; then
-            tmux attach -t "$LAST_SESSION"
-        else
-            tmux new -s new_session
-        fi
-    fi
-
     # Autocompletions
     autoload -U compinit; compinit
     fpath=($DOTFILES/configs/zsh/completions/ $fpath)
