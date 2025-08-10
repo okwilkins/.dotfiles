@@ -1,7 +1,6 @@
 maximize = true
 
 window-decoration = none
-
 window-padding-balance = true
 
 background-opacity = 0.90
