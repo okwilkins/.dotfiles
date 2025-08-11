@@ -8,5 +8,7 @@ background-blur = true
 
 theme = catppuccin-mocha
 
+font-family = "FiraCode Nerd Font Mono"
+
 keybind = "ctrl+shift+f=toggle_fullscreen"
 keybind = "ctrl+shift+m=toggle_maximize"
