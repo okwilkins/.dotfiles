@@ -12,3 +12,6 @@ font-family = "FiraCode Nerd Font Mono"
 
 keybind = "ctrl+shift+f=toggle_fullscreen"
 keybind = "ctrl+shift+m=toggle_maximize"
+# Vim-like naivation
+keybind = "ctrl+u=scroll_page_up"
+keybind = "ctrl+d=scroll_page_down"
