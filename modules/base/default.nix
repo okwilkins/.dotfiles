@@ -5,5 +5,6 @@
     ./i18n.nix
     ./nix.nix
     ./ssh.nix
+    ./fonts.nix
   ];
 }
