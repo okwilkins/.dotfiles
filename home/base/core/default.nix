@@ -1,1 +1,8 @@
-{ ... }: { imports = [ ./shells ./cli-tools ./programming ]; }
+{ ... }:
+{
+  imports = [
+    ./shells
+    ./cli-tools
+    ./programming
+  ];
+}

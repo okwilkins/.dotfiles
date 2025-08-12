@@ -1,1 +1,4 @@
-{ ... }: { imports = [ ./anyrun.nix ]; }
+{ ... }:
+{
+  imports = [ ./anyrun.nix ];
+}

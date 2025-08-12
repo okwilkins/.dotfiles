@@ -1,4 +1,5 @@
-{ pkgs, projectVars, ... }: {
+{ pkgs, projectVars, ... }:
+{
   home.packages = with pkgs; [
     tmux
     tmuxPlugins.yank
@@ -90,4 +91,3 @@
     run-shell ${pkgs.tmuxPlugins.tmux-sessionx}/share/tmux-plugins/sessionx/sessionx.tmux
   '';
 }
-

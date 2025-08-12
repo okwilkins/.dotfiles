@@ -1,4 +1,5 @@
-{ pkgs, projectVars, ... }: {
+{ pkgs, projectVars, ... }:
+{
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;

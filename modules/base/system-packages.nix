@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   environment.systemPackages = with pkgs; [
     # Core tools
     neovim
@@ -11,6 +12,8 @@
     wl-clipboard
   ];
 
-  programs.zsh = { enable = true; };
+  programs.zsh = {
+    enable = true;
+  };
   users.defaultUserShell = pkgs.zsh;
 }

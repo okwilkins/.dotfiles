@@ -1,4 +1,5 @@
-{ projectVars, ... }: {
+{ projectVars, ... }:
+{
   home = {
     username = projectVars.username;
     homeDirectory = projectVars.homeDir;

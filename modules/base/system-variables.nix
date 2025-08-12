@@ -1,4 +1,5 @@
-{ projectVars, ... }: {
+{ projectVars, ... }:
+{
   environment.variables = {
     # Editors
     # For security reasons, do not load Neovim's user config

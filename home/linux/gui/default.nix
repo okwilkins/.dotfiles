@@ -1,1 +1,8 @@
-{ ... }: { imports = [ ./hyprland ./cursor.nix ./anyrun ]; }
+{ ... }:
+{
+  imports = [
+    ./hyprland
+    ./cursor.nix
+    ./anyrun
+  ];
+}

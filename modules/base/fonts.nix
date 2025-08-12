@@ -1,6 +1,7 @@
 # https://nixos.wiki/wiki/Fonts
 
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   fonts = {
     # Use fonts specified by the user rather than the default ones
     enableDefaultPackages = false;

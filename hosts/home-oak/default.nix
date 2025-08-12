@@ -1,5 +1,9 @@
-{ pkgs, ... }: {
-  imports = [ ./hardware-configuration.nix ./nvidia.nix ];
+{ pkgs, ... }:
+{
+  imports = [
+    ./hardware-configuration.nix
+    ./nvidia.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -24,11 +28,17 @@
   users.users.oli = {
     isNormalUser = true;
     description = "Oliver Wilkins";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
     shell = pkgs.zsh;
   };
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

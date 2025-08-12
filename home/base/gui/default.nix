@@ -1,1 +1,8 @@
-{ ... }: { imports = [ ./terminals ./browsers ./thunderbird.nix ]; }
+{ ... }:
+{
+  imports = [
+    ./terminals
+    ./browsers
+    ./thunderbird.nix
+  ];
+}

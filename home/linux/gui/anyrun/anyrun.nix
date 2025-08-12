@@ -1,1 +1,4 @@
-{ pkgs, ... }: { home.packages = with pkgs; [ anyrun ]; }
+{ pkgs, ... }:
+{
+  home.packages = with pkgs; [ anyrun ];
+}

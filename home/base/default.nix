@@ -1,1 +1,9 @@
-{ ... }: { imports = [ ./home.nix ./gui ./tui ./core ]; }
+{ ... }:
+{
+  imports = [
+    ./home.nix
+    ./gui
+    ./tui
+    ./core
+  ];
+}

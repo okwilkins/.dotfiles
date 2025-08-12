@@ -1,4 +1,5 @@
-{ pkgs, projectVars, ... }: {
+{ pkgs, projectVars, ... }:
+{
   home.packages = with pkgs; [
     zsh-autosuggestions
     zsh-syntax-highlighting

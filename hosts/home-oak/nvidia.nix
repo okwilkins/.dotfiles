@@ -1,8 +1,11 @@
 # https://nixos.wiki/wiki/Nvidia
 
-{ config, ... }: {
+{ config, ... }:
+{
   # Enable OpenGL
-  hardware.graphics = { enable = true; };
+  hardware.graphics = {
+    enable = true;
+  };
 
   # Load Nvidia driver for Xorg and Wayland
   services.xserver.videoDrivers = [ "nvidia" ];
