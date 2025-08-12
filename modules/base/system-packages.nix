@@ -3,6 +3,11 @@
     # Core tools
     neovim
     git
+
+    # Achieves
+    gnutar
+
+    # Misc
     wl-clipboard
   ];
 
