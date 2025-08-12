@@ -1,1 +1,1 @@
-{ ... }: { imports = [ ./terminals ./browsers ]; }
+{ ... }: { imports = [ ./terminals ./browsers ./thunderbird.nix ]; }
