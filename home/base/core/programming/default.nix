@@ -4,6 +4,15 @@
     zig
     go
     gcc
+    python312
+    poetry
+    # Cloud/Devops
+    awscli2
+    kubectl
+    kubernetes-helm
+    cosign
+    talosctl
+    go-task
     # LSPs
     nixd
     lua-language-server
@@ -11,6 +20,7 @@
     pyright
     gopls
     terraform-ls
+    yaml-language-server
     # Formatters
     nixfmt-rfc-style
     stylua
