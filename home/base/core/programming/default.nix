@@ -11,7 +11,7 @@
     gopls
     terraform-ls
     # Formatters
-    nixfmt
+    nixfmt-rfc-style
     stylua
     ruff
   ];
