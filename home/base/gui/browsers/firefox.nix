@@ -1,4 +1,3 @@
-# TODO: Remove this file when Zen working
 { pkgs, ... }:
 let
   firefoxCss = pkgs.fetchFromGitHub {
