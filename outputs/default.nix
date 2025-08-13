@@ -28,7 +28,7 @@ in
       ../modules/linux/desktop
       home-manager.nixosModules.home-manager
       {
-        home-manager.extraSpecialArgs = { inherit projectVars; };
+        home-manager.extraSpecialArgs = { inherit inputs projectVars; };
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
         # Backup conflicting files when switching to not cause errors
