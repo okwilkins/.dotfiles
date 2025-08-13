@@ -15,9 +15,11 @@ rec {
     configDir = ".config";
     dataDir = ".local/share";
     cacheDir = ".cache";
+    stateDir = ".local/state";
     configHome = "${homeDir}/${configDir}";
     dataHome = "${homeDir}/${dataDir}";
     cacheHome = "${homeDir}/${cacheDir}";
+    stateHome = "${homeDir}/${stateDir}";
   };
   zshDotDir = "${xdg.configHome}/zsh";
 }
