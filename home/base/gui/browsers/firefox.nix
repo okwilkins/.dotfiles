@@ -27,6 +27,7 @@ in
         "browser.aboutConfig.showWarning" = false;
         "browser.newtab.url" = "about:blank";
         "signon.rememberSignons" = false; # Stops asking to save passwords
+        "browser.shell.checkDefaultBrowser" = false;
         # Clean up new tab page
         "browser.newtabpage.activity-stream.feeds.topsites" = false;
         "browser.newtabpage.activity-stream.feeds.section.topstories" = false;
