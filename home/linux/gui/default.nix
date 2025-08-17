@@ -5,5 +5,6 @@
     ./cursor.nix
     ./anyrun
     ./overskride.nix
+    ./easyeffects.nix
   ];
 }
