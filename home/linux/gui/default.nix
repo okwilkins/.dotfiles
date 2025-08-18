@@ -22,5 +22,6 @@ in
     easyeffects
     overskride
     playerctl
+    pavucontrol
   ];
 }
