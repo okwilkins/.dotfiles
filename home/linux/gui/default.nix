@@ -6,5 +6,6 @@
     ./anyrun
     ./overskride.nix
     ./easyeffects.nix
+    ./waybar
   ];
 }
