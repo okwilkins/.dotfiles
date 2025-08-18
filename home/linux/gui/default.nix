@@ -21,5 +21,6 @@ in
   home.packages = with pkgs; [
     easyeffects
     overskride
+    playerctl
   ];
 }
