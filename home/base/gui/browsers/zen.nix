@@ -1,5 +1,7 @@
 { inputs, ... }:
 {
+  # Until Zen is fully declarative, follow this for full styling
+  # https://www.sameerasw.com/zen
   imports = [
     inputs.zen-browser.homeModules.beta
   ];
@@ -56,6 +58,11 @@
         };
         "uBlock0@raymondhill.net" = {
           install_url = "https://addons.mozilla.org/firefox/downloads/file/4531307/ublock_origin-1.65.0.xpi";
+          installation_mode = "force_installed";
+          default_area = "menupanel";
+        };
+        "{91aa3897-2634-4a8a-9092-279db23a7689}" = {
+          install_url = "https://addons.mozilla.org/firefox/downloads/file/4537733/zen_internet-2.7.0.xpi";
           installation_mode = "force_installed";
           default_area = "menupanel";
         };
