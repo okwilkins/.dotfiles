@@ -28,6 +28,8 @@
     delta
     htop
     carapace
+    ouch
+    rar
   ];
 
   home.file."${projectVars.xdg.configDir}/bat" = {
