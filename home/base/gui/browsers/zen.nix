@@ -1,12 +1,36 @@
-{ inputs, ... }:
+{ inputs, pkgs, ... }:
+let
+  nebulaCss = pkgs.fetchFromGitHub {
+    owner = "JustAdumbPrsn";
+    repo = "Zen-Nebula";
+    rev = "v3.1";
+    sha256 = "sha256-r0yPqyCj5IYWzD5D9J6GPzj1DjSzdv5llIs+zsaVH9A=";
+  };
+in
 {
   # Until Zen is fully declarative, follow this for full styling
   # https://www.sameerasw.com/zen
   imports = [
     inputs.zen-browser.homeModules.beta
   ];
+  home.file.".zen/default/chrome" = {
+    source = "${nebulaCss}";
+    recursive = true;
+  };
   programs.zen-browser = {
     enable = true;
+    profiles.default = {
+      settings = {
+        "browser.startup.page" = 3; # Launch the last tab open
+        "browser.aboutConfig.showWarning" = false;
+        "signon.rememberSignons" = false; # Stops asking to save passwords
+        # Styling
+        "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+        "widget.transparent-windows" = true;
+        "zen.theme.gradient.show-custom-colors" = true;
+        "zen.theme.acrylic-elements" = true;
+      };
+    };
     policies = {
       AutofillAddressEnabled = true;
       AutofillCreditCardEnabled = false;
@@ -15,8 +39,6 @@
       DisableFirefoxStudies = true;
       DisablePocket = true;
       DisableTelemetry = true;
-      DontCheckDefaultBrowser = true;
-      NoDefaultBookmarks = true;
       OfferToSaveLogins = false;
       EnableTrackingProtection = {
         Value = true;
