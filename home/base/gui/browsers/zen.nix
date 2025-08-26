@@ -29,6 +29,18 @@ in
         "widget.transparent-windows" = true;
         "zen.theme.gradient.show-custom-colors" = true;
         "zen.theme.acrylic-elements" = true;
+        # Styling Transparent Zen v1.13.0
+        "browser.tabs.allow_transparent_browser" = true;
+        "zen.widget.linux.transparency" = true;
+        "zen.view.grey-out-inactive-windows" = false;
+        "mod.sameerasw.zen_transparent_sidebar_enabled" = true;
+        "mod.sameerasw_zen_light_tint" = 2; # No light
+        "mod.sameerasw_zen_animations" = 2; # Quick snap
+        "mod.sameerasw.zen_no_shadow" = true;
+        "mod.sameerasw.zen_notab_img_enabled" = false;
+        "mod.sameerasw.zen_tab_switch_anim" = true;
+        "mod.sameerasw.zen_urlbar_zoom_anim" = true;
+        "mod.sameerasw.zen_trackpad_anim" = true;
       };
     };
     policies = {
