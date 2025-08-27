@@ -30,6 +30,7 @@
     carapace
     ouch
     rar
+    dnsutils
   ];
 
   home.file."${projectVars.xdg.configDir}/bat" = {
