@@ -1,22 +1,8 @@
-{ inputs, pkgs, ... }:
-let
-  nebulaCss = pkgs.fetchFromGitHub {
-    owner = "JustAdumbPrsn";
-    repo = "Zen-Nebula";
-    rev = "v3.1";
-    sha256 = "sha256-r0yPqyCj5IYWzD5D9J6GPzj1DjSzdv5llIs+zsaVH9A=";
-  };
-in
+{ inputs, ... }:
 {
-  # Until Zen is fully declarative, follow this for full styling
-  # https://www.sameerasw.com/zen
   imports = [
     inputs.zen-browser.homeModules.beta
   ];
-  home.file.".zen/default/chrome" = {
-    source = "${nebulaCss}";
-    recursive = true;
-  };
   programs.zen-browser = {
     enable = true;
     profiles.default = {
@@ -29,18 +15,9 @@ in
         "widget.transparent-windows" = true;
         "zen.theme.gradient.show-custom-colors" = true;
         "zen.theme.acrylic-elements" = true;
-        # Styling Transparent Zen v1.13.0
         "browser.tabs.allow_transparent_browser" = true;
         "zen.widget.linux.transparency" = true;
         "zen.view.grey-out-inactive-windows" = false;
-        "mod.sameerasw.zen_transparent_sidebar_enabled" = true;
-        "mod.sameerasw_zen_light_tint" = 2; # No light
-        "mod.sameerasw_zen_animations" = 2; # Quick snap
-        "mod.sameerasw.zen_no_shadow" = true;
-        "mod.sameerasw.zen_notab_img_enabled" = false;
-        "mod.sameerasw.zen_tab_switch_anim" = true;
-        "mod.sameerasw.zen_urlbar_zoom_anim" = true;
-        "mod.sameerasw.zen_trackpad_anim" = true;
       };
     };
     policies = {
@@ -92,11 +69,6 @@ in
         };
         "uBlock0@raymondhill.net" = {
           install_url = "https://addons.mozilla.org/firefox/downloads/file/4531307/ublock_origin-1.65.0.xpi";
-          installation_mode = "force_installed";
-          default_area = "menupanel";
-        };
-        "{91aa3897-2634-4a8a-9092-279db23a7689}" = {
-          install_url = "https://addons.mozilla.org/firefox/downloads/file/4537733/zen_internet-2.7.0.xpi";
           installation_mode = "force_installed";
           default_area = "menupanel";
         };
