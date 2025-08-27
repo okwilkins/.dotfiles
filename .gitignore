@@ -1,2 +1,6 @@
 # Ignore Neovim spell files
 *.spl
+
+# Stop sensitive certs from leaking
+*.key
+*.csr
