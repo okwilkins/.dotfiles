@@ -9,6 +9,7 @@
       settings = {
         "browser.startup.page" = 3; # Launch the last tab open
         "browser.aboutConfig.showWarning" = false;
+        "browser.shell.checkDefaultBrowser" = false;
         "signon.rememberSignons" = false; # Stops asking to save passwords
         # Styling
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
