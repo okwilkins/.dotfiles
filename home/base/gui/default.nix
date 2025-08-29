@@ -6,5 +6,6 @@
     ./xdg.nix
     ./thunderbird.nix
     ./discord.nix
+    ./wallpaper.nix
   ];
 }
