@@ -1,4 +1,6 @@
 # https://nixos.wiki/wiki/Fonts
+# To find font family names:
+# fc-list : family | fzf
 
 { pkgs, ... }:
 {
