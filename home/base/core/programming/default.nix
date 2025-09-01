@@ -21,6 +21,7 @@
     gopls
     terraform-ls
     yaml-language-server
+    vscode-langservers-extracted
     # Formatters
     nixfmt-rfc-style
     stylua
