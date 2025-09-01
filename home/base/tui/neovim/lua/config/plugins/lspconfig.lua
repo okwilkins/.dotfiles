@@ -51,4 +51,7 @@ return function()
 
     -- Nix
     lspconfig.nixd.setup({})
+
+    -- CSS
+    lspconfig.cssls.setup({})
 end
