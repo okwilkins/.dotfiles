@@ -1,19 +1,20 @@
-// https://github.com/basecamp/omarchy/blob/v2.0.3/config/waybar/config.jsonc
 {
   "reload_style_on_change": true,
   "layer": "top",
   "position": "top",
+  "margin": "6 8 0 8",
   "spacing": 0,
-  "height": 50,
-  "modules-left": ["custom/omarchy", "hyprland/workspaces"],
-  "modules-center": ["clock", "custom/update"],
+  "height": 40,
+  "modules-left": ["hyprland/workspaces", "custom/playerctl"],
+  "modules-center": ["clock"],
   "modules-right": [
-    "group/tray-expander",
+    "tray",
     "bluetooth",
     "network",
     "pulseaudio",
     "cpu",
-    "battery"
+    "battery",
+    "group/power"
   ],
   "hyprland/workspaces": {
     "on-click": "activate",
@@ -41,14 +42,13 @@
   },
   "cpu": {
     "interval": 5,
-    "format": "󰍛",
-    "on-click": "ghostty -e btm"
+    "format": "",
+    "on-click": "ghostty --confirm-close-surface=false -e btm"
   },
   "clock": {
-    "format": "{:%A %H:%M}",
-    "format-alt": "{:%d %B W%V %Y}",
+    "format": "{:%H:%M}",
+    "format-alt": "{:%A, %B %d, %Y}",
     "tooltip": false,
-    "on-click-right": "omarchy-cmd-tzupdate"
   },
   "network": {
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
@@ -86,33 +86,78 @@
     "format-disabled": "󰂲",
     "format-connected": "",
     "tooltip-format": "Devices connected: {num_connections}",
-    "on-click": "blueberry"
+    "on-click": "overskride"
   },
   "pulseaudio": {
     "format": "{icon}",
-    "on-click": "alacritty --class=Wiremix -e wiremix",
-    "on-click-right": "pamixer -t",
-    "tooltip-format": "Playing at {volume}%",
-    "scroll-step": 5,
-    "format-muted": "󰝟",
+    "format-bluetooth": "{icon}",
+    "format-muted": "",
     "format-icons": {
-      "default": ["", "", ""]
-    }
-  },
-  "group/tray-expander": {
-    "orientation": "inherit",
-    "drawer": {
-      "transition-duration": 600,
-      "children-class": "tray-group-item"
+      "alsa_output.pci-0000_00_1f.3.analog-stereo": "",
+      "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "",
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "phone-muted": "",
+      "portable": "",
+      "car": "",
+      "default": ["", ""]
     },
-    "modules": ["custom/expand-icon", "tray"]
-  },
-  "custom/expand-icon": {
-    "format": " ",
-    "tooltip": false
+    "scroll-step": 5.0,
+    "on-click": "pavucontrol",
+    "on-click-right": "easyeffects",
+    "ignored-sinks": ["Easy Effects Sink"]
   },
   "tray": {
-    "icon-size": 12,
-    "spacing": 12
-  }
+    "icon-size": 20,
+    "spacing": 14
+  },
+  "group/power": {
+    "orientation": "vertical",
+    "drawer": {
+      "transition-duration": 500,
+      "children-class": "group-power-children",
+      "transition-left-to-right": true,
+    },
+    "modules": [
+      "custom/power",
+      "custom/quit",
+      "custom/lock",
+      "custom/reboot",
+    ]
+  },
+  "custom/quit": {
+    "format": "󰗼",
+    "tooltip": false,
+    "on-click": "hyprctl dispatch exit"
+  },
+  "custom/lock": {
+    "format": "󰍁",
+    "tooltip": false,
+    "on-click": "swaylock"
+  },
+  "custom/reboot": {
+    "format": "󰜉",
+    "tooltip": false,
+    "on-click": "reboot"
+  },
+  "custom/power": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "shutdown now"
+  },
+  "custom/playerctl": {
+    "format": "{icon}  <span>{}</span>",
+    "return-type": "json",
+    "max-length": 55,
+    "exec": "playerctl -a metadata --format '{\"text\": \"  {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+    "on-click-middle": "playerctl previous",
+    "on-click": "playerctl play-pause",
+    "on-click-right": "playerctl next",
+    "format-icons": {
+      "Paused": "<span foreground='#a6e3a1'></span>",
+      "Playing": "<span foreground='#89b4fa'></span>",
+    },
+  },
 }
