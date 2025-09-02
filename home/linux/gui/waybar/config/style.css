@@ -34,10 +34,6 @@ tooltip {
     background: @base;
 }
 
-#workspaces label {
-    font-weight: normal;
-}
-
 #workspaces button.empty {
     opacity: 0.5;
 }
@@ -92,7 +88,8 @@ tooltip {
 #battery,
 #bluetooth,
 #pulseaudio,
-#tray {
+#tray,
+#custom-launcher {
     margin: 0px 6px;
     font-size: 18px;
     font-family: Symbols Nerd Font;

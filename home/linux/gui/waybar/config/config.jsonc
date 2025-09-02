@@ -5,7 +5,7 @@
   "margin": "6 8 0 8",
   "spacing": 0,
   "height": 40,
-  "modules-left": ["hyprland/workspaces", "custom/playerctl"],
+  "modules-left": ["custom/launcher", "hyprland/workspaces", "custom/playerctl"],
   "modules-center": ["clock"],
   "modules-right": [
     "tray",
@@ -43,7 +43,7 @@
   "cpu": {
     "interval": 5,
     "format": "",
-    "on-click": "ghostty --confirm-close-surface=false -e btm"
+    "on-click": "ghostty --confirm-close-surface=false --class=com.ghostty.btm -e btm"
   },
   "clock": {
     "format": "{:%H:%M}",
@@ -61,7 +61,6 @@
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "spacing": 1,
-    "on-click": "alacritty --class=Impala -e impala"
   },
   "battery": {
     "format": "{capacity}% {icon}",
@@ -160,4 +159,9 @@
       "Playing": "<span foreground='#89b4fa'></span>",
     },
   },
+  "custom/launcher": {
+      "format": "󱄅",
+      "on-click-right": "ghostty --confirm-close-surface=false --class=com.ghostty.fastfetch --window-height=25 --window-width=65 -e 'sleep 0.1; cbonsai -l -i'",
+      "on-click": "ghostty --confirm-close-surface=false --class=com.ghostty.fastfetch --window-height=21 --window-width=130 -e 'sleep 0.1; fastfetch; read -n 1 -s'"
+  }
 }
