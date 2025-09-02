@@ -1,8 +1,10 @@
+@import url("./catppuccin-mocha.css");
+
 * {
     border: none;
     font-family: Noto Sans;
     font-size: 14px;
-    color: #cdd6f4;
+    color: @text;
     border-radius: 10px;
 }
 
@@ -16,15 +18,11 @@ window#waybar {
 .modules-center {
     margin-right: 8px;
     margin-left: 8px;
-    background: rgba(24, 24, 36, 1.0);
 }
 
 tooltip {
-    background: rgba(30, 30, 46, 1.0);
+    background: @mantle;
     margin: 10px;
-    /* TODO: Fix the shadow clipping */
-    box-shadow: 5px 10px 8px #11111b;
-    border: 1px solid transparent;
 }
 
 /* Workspaces */
@@ -33,6 +31,7 @@ tooltip {
     padding: 0 6px;
     margin: 0 1.5px;
     min-width: 9px;
+    background: @base;
 }
 
 #workspaces label {
@@ -43,28 +42,49 @@ tooltip {
     opacity: 0.5;
 }
 
+/* Tray */
+#tray menu {
+    background: @mantle;
+    margin: 10px;
+}
+
+#tray menu menuitem {
+    border-radius: 0px;
+}
+
+#tray menu menuitem:hover {
+    background: @surface0;
+    border-radius: 10px;
+}
+
+#tray menu separator {
+    min-height: 2px;
+    border-radius: 0px;
+    background-color: @crust;
+}
+
 /* Everything else */
 #clock {
     font-weight: bold;
     margin: 0px 10px;
+    padding: 0px 10px;
     font-family: Symbols Nerd Font;
+    background: @base;
 }
 
 #custom-playerctl,
 #workspaces {
-    background: rgba(24, 24, 36, 1.0);
     margin: 0px 6px;
     padding: 0px 10px;
-    border-radius: 10px;
+    background: @base;
 }
 
 #power {
-    background: rgba(24, 24, 36, 1.0);
-    /* margin: 0px 6px; */
+    margin: 0px 6px;
     font-size: 18px;
     font-family: Symbols Nerd Font;
-    /* padding: 0px 10px; */
-    border-radius: 10px;
+    padding: 0px 10px;
+    background: @base;
 }
 
 #cpu,
@@ -73,10 +93,9 @@ tooltip {
 #bluetooth,
 #pulseaudio,
 #tray {
-    background: rgba(24, 24, 36, 1.0);
     margin: 0px 6px;
     font-size: 18px;
     font-family: Symbols Nerd Font;
     padding: 0px 10px;
-    border-radius: 10px;
+    background: @base;
 }
