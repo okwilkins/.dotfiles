@@ -75,12 +75,8 @@ tooltip {
     background: @base;
 }
 
-#power {
-    margin: 0px 6px;
-    font-size: 18px;
-    font-family: Symbols Nerd Font;
-    padding: 0px 10px;
-    background: @base;
+#custom-power:hover {
+    color: @red;
 }
 
 #cpu,
@@ -89,7 +85,8 @@ tooltip {
 #bluetooth,
 #pulseaudio,
 #tray,
-#custom-launcher {
+#custom-launcher,
+#custom-power {
     margin: 0px 6px;
     font-size: 18px;
     font-family: Symbols Nerd Font;

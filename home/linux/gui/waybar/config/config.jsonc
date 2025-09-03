@@ -14,7 +14,7 @@
     "pulseaudio",
     "cpu",
     "battery",
-    "group/power"
+    "custom/power"
   ],
   "hyprland/workspaces": {
     "on-click": "activate",
@@ -112,39 +112,10 @@
     "icon-size": 20,
     "spacing": 14
   },
-  "group/power": {
-    "orientation": "vertical",
-    "drawer": {
-      "transition-duration": 500,
-      "children-class": "group-power-children",
-      "transition-left-to-right": true,
-    },
-    "modules": [
-      "custom/power",
-      "custom/quit",
-      "custom/lock",
-      "custom/reboot",
-    ]
-  },
-  "custom/quit": {
-    "format": "󰗼",
-    "tooltip": false,
-    "on-click": "hyprctl dispatch exit"
-  },
-  "custom/lock": {
-    "format": "󰍁",
-    "tooltip": false,
-    "on-click": "swaylock"
-  },
-  "custom/reboot": {
-    "format": "󰜉",
-    "tooltip": false,
-    "on-click": "reboot"
-  },
   "custom/power": {
     "format": "",
     "tooltip": false,
-    "on-click": "shutdown now"
+    "on-click": "wlogout"
   },
   "custom/playerctl": {
     "format": "{icon}  <span>{}</span>",
