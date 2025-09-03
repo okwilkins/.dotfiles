@@ -12,6 +12,7 @@ in
     ./hyprland
     ./anyrun
     ./waybar
+    ./wlogout
   ];
 
   home.file."${projectVars.xdg.dataDir}/icons/rose-pine-hyprcursor".source = "${
