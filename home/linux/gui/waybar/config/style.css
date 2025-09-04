@@ -6,6 +6,7 @@
     font-size: 14px;
     color: @text;
     border-radius: 10px;
+    transition: color 0.4s ease;
 }
 
 window#waybar {
@@ -75,10 +76,6 @@ tooltip {
     background: @base;
 }
 
-#custom-power:hover {
-    color: @red;
-}
-
 #cpu,
 #network,
 #battery,
@@ -92,4 +89,46 @@ tooltip {
     font-family: Symbols Nerd Font;
     padding: 0px 10px;
     background: @base;
+}
+
+/* Hover effects */
+#tray:hover,
+#custom-playerctl:hover {
+    background: @mantle;
+}
+
+#workspaces button:hover {
+    border-radius: 5px;
+    background: @overlay0;
+}
+
+#clock:hover {
+    color: @rosewater;
+    background: @mantle;
+}
+
+#cpu:hover {
+    color: @green;
+    background: @mantle;
+}
+
+#network:hover {
+    color: @lavender;
+    background: @mantle;
+}
+
+#pulseaudio:hover {
+    color: @yellow;
+    background: @mantle;
+}
+
+#custom-power:hover {
+    color: @red;
+    background: @mantle;
+}
+
+#custom-launcher:hover,
+#bluetooth:hover {
+    color: @blue;
+    background: @mantle;
 }
