@@ -15,7 +15,6 @@
     fzf
     yq-go
     jq
-    yazi
     lazygit
     hyperfine
     xh
@@ -41,10 +40,6 @@
 
   home.file."${projectVars.xdg.configDir}/git" = {
     source = ./git;
-  };
-
-  home.file."${projectVars.xdg.configDir}/yazi" = {
-    source = ./yazi;
   };
 
   home.file."${projectVars.xdg.configDir}/lazygit/config.yml" = {

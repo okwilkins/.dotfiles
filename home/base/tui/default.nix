@@ -6,6 +6,7 @@
     ./rainfrog.nix
     ./fastfetch.nix
     ./bottom.nix
+    ./yazi.nix
   ];
 
   home.packages = with pkgs; [
