@@ -1,0 +1,5 @@
+Config(
+    prefix: ":",
+    max_entries: 3,
+    symbols: {},
+)
