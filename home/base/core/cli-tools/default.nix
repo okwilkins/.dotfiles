@@ -24,7 +24,6 @@
     coreutils-full
     moreutils
     uutils-coreutils
-    bottom
     delta
     htop
     carapace
