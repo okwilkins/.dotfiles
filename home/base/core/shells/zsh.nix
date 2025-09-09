@@ -80,5 +80,11 @@
     # Aliases
     source $XDG_CONFIG_HOME/zsh/aliases/coreutils.zsh
     source $XDG_CONFIG_HOME/zsh/aliases/aliases.zsh
+
+    # oh-my-zsh Plugins
+    source "${pkgs.oh-my-zsh}/share/oh-my-zsh/plugins/git/git.plugin.zsh"
+    source "${pkgs.oh-my-zsh}/share/oh-my-zsh/plugins/kubectl/kubectl.plugin.zsh"
+    source "${pkgs.oh-my-zsh}/share/oh-my-zsh/plugins/docker/docker.plugin.zsh"
+    source "${pkgs.oh-my-zsh}/share/oh-my-zsh/plugins/terraform/terraform.plugin.zsh"
   '';
 }
