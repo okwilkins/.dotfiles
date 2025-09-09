@@ -1,11 +1,5 @@
 { pkgs, projectVars, ... }:
 {
-  home.packages = with pkgs; [
-    zsh-autosuggestions
-    zsh-syntax-highlighting
-    zsh-fzf-tab
-    zsh-vi-mode
-  ];
   home.file."${projectVars.xdg.configDir}/zsh" = {
     source = ./zsh;
     recursive = true;
