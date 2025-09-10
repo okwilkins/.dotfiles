@@ -6,7 +6,7 @@ k9s:
   # Toggles whether k9s should exit when CTRL-C is pressed. When set to true, you will need to exist k9s via the :quit command. Default is false.
   noExitOnCtrlC: true
   ui:
-    skin: catppuccin-mocha
+    skin: catppuccin-mocha-transparent
     # Enable mouse support. Default false
     enableMouse: false
     # Set to true to hide K9s header. Default false
