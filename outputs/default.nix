@@ -42,5 +42,27 @@ in
     ];
     specialArgs = { inherit projectVars; };
   };
+
+  nixosConfigurations.birch = nixpkgs.lib.nixosSystem {
+    system = "x86_64-linux";
+    modules = [
+      ../hosts/home-birch
+      ../modules/linux/desktop
+      home-manager.nixosModules.home-manager
+      {
+        home-manager.extraSpecialArgs = { inherit inputs projectVars; };
+        home-manager.useGlobalPkgs = true;
+        home-manager.useUserPackages = true;
+        # Backup conflicting files when switching to not cause errors
+        home-manager.backupFileExtension = "backup";
+        home-manager.users.oli.imports = [
+          ../home/base
+          ../home/linux
+          # ../hosts/home-oak/hyprland.nix
+        ];
+      }
+    ];
+    specialArgs = { inherit projectVars; };
+  };
   # nixosConfigurations.oak = import ./x86_64-linux/systems/home-oak.nix {inherit nixpkgs;};
 }
