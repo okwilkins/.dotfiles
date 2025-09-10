@@ -5,10 +5,10 @@
     nixpkgs
   ];
   nixosConfigurations = {
-    "oak" = nixpkgs.lib.nixosSystem {
+    "birch" = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
-        ../../../../systems/home-oak
+        ../../../../systems/home-birch
         ../../../../modules/base
         ../../../../home/base/home.nix
       ];

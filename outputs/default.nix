@@ -58,7 +58,7 @@ in
         home-manager.users.oli.imports = [
           ../home/base
           ../home/linux
-          # ../hosts/home-oak/hyprland.nix
+          ../hosts/home-birch/hyprland.nix
         ];
       }
     ];
