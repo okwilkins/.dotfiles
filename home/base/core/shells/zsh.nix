@@ -32,20 +32,13 @@
   home.file."${projectVars.xdg.configDir}/zsh/.zshrc".text = ''
     # Autocompletions
     autoload -U compinit; compinit
-    fpath=($DOTFILES/configs/zsh/completions/ $fpath)
-
 
     # Plugins
     for plugin in $XDG_CONFIG_HOME/zsh/plugins/*.zsh; do
       source "$plugin"
     done
 
-    source <(fzf --zsh)
-    eval "$(zoxide init zsh)"
-    source <(carapace _carapace zsh)
 
-    # Style
-    eval "$(starship init zsh)"
     # Styling for carapace
     zstyle ':completion:*' format $'\e[2;37m%d\e[m'
 

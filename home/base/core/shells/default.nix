@@ -2,6 +2,6 @@
 {
   imports = [
     ./zsh.nix
-    ./zsh-completions.nix
+    ./zsh-plugins.nix
   ];
 }
