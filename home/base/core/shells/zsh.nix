@@ -73,7 +73,7 @@
 
 
     # Aliases
-    source $XDG_CONFIG_HOME/zsh/aliases/coreutils.zsh
+    source $XDG_CONFIG_HOME/zsh/aliases/uutils-coreutils-aliases.zsh
     source $XDG_CONFIG_HOME/zsh/aliases/aliases.zsh
 
 
