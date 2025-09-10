@@ -29,7 +29,7 @@ Config(
   hide_plugin_info: false, 
 
   // Close window when a click outside the main box is received
-  close_on_click: false,
+  close_on_click: true,
 
   // Show search results immediately when Anyrun starts
   show_results_immediately: false,
