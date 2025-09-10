@@ -1,0 +1,48 @@
+@import "../shared/style-sheets/catppuccin-mocha.css";
+
+* {
+    transition: 200ms ease;
+    color: @text;
+    font-size: 14px;
+}
+
+#window {
+    background: transparent;
+}
+
+#main {
+    background-color: alpha(@mantle, 0.7);
+    border-radius: 16px;
+    padding: 5px;
+}
+
+#plugin {
+    background-color: transparent;
+}
+
+#entry {
+    background-color: @base;
+    border: 2px solid @blue;
+}
+
+#match {
+    background: transparent;
+}
+
+#match:selected {
+    background: alpha(@overlay0, 0.5);
+}
+
+#match {
+    padding: 3px;
+    border-radius: 16px;
+}
+
+#entry,
+#plugin:hover {
+    border-radius: 16px;
+}
+
+box#main {
+    background: transparent;
+}
