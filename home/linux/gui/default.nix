@@ -24,5 +24,6 @@ in
     overskride
     playerctl
     pavucontrol
+    hyprlock
   ];
 }
