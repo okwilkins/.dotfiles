@@ -73,6 +73,11 @@
           installation_mode = "force_installed";
           default_area = "menupanel";
         };
+        "{356f451b-e441-4bf4-8683-f33a29c38cc6}" = {
+          install_url = "https://addons.mozilla.org/firefox/downloads/file/4532383/simplified_twitter-2.0.0.xpi";
+          installation_mode = "force_installed";
+          default_area = "menupanel";
+        };
       };
     };
   };
