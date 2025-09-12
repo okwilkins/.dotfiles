@@ -55,12 +55,6 @@
     # fzf-tab
     source "${pkgs.zsh-fzf-tab}/share/fzf-tab/fzf-tab.plugin.zsh"
     source "${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.zsh"
-    zstyle ":fzf-tab:*" fzf-flags \
-        --height "90%" --layout=reverse --border \
-        --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#a6e3a1 \
-        --color=fg:#cdd6f4,header:#a6e3a1,info:#cba6f7,pointer:#f5e0dc \
-        --color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#a6e3a1 \
-        --color=selected-bg:#45475a
     # Make completions case-insensitive
     zstyle ":completion:*" matcher-list "m:{a-z}={A-Za-z}"
 
