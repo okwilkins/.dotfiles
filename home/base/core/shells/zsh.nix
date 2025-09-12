@@ -37,7 +37,12 @@
     for plugin in $XDG_CONFIG_HOME/zsh/plugins/*.zsh; do
       source "$plugin"
     done
-
+    for plugin in $XDG_CONFIG_HOME/zsh/plugins/*.sh; do
+      source "$plugin"
+    done
+    for plugin in $XDG_CONFIG_HOME/zsh/plugins/*.bash; do
+      source "$plugin"
+    done
 
     # Styling for carapace
     zstyle ':completion:*' format $'\e[2;37m%d\e[m'
