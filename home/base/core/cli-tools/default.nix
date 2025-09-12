@@ -5,7 +5,10 @@
   ...
 }:
 {
-  imports = [ ./tmux.nix ];
+  imports = [
+    ./tmux.nix
+    ./fzf.nix
+  ];
   home.packages = with pkgs; [
     starship
     eza

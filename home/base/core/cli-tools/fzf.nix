@@ -11,7 +11,7 @@ in
   home.packages = with pkgs; [
     fzf
   ];
-  home.file."${projectVars.xdg.configDir}/zsh/pugins/catppuccin-fzf-mocha.sh" = {
+  home.file."${projectVars.xdg.configDir}/zsh/plugins/catppuccin-fzf-mocha.sh" = {
     source = "${catppuccinRepo}/themes/catppuccin-fzf-mocha.sh";
   };
 }
