@@ -34,13 +34,9 @@
     autoload -U compinit; compinit
 
     # Plugins
-    for plugin in $XDG_CONFIG_HOME/zsh/plugins/*.zsh; do
-      source "$plugin"
-    done
-    for plugin in $XDG_CONFIG_HOME/zsh/plugins/*.sh; do
-      source "$plugin"
-    done
-    for plugin in $XDG_CONFIG_HOME/zsh/plugins/*.bash; do
+    for plugin in "$XDG_CONFIG_HOME"/zsh/plugins/*.zsh(N) \
+                   "$XDG_CONFIG_HOME"/zsh/plugins/*.sh(N)  \
+                   "$XDG_CONFIG_HOME"/zsh/plugins/*.bash(N); do
       source "$plugin"
     done
 
