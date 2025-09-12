@@ -25,5 +25,6 @@ in
     playerctl
     pavucontrol
     hyprlock
+    imv
   ];
 }
