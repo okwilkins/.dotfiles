@@ -7,5 +7,6 @@
     ./security.nix
     ./steam.nix
     ./peripherals.nix
+    ./services.nix
   ];
 }
