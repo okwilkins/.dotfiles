@@ -26,5 +26,6 @@ in
     pavucontrol
     hyprlock
     imv
+    nautilus
   ];
 }
