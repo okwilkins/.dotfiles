@@ -6,6 +6,8 @@ window-padding-balance = true
 background-opacity = 0.90
 background-blur = true
 
+mouse-hide-while-typing = true
+
 theme = catppuccin-mocha
 
 font-family = "FiraCode Nerd Font Mono"
