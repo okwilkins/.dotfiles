@@ -43,8 +43,13 @@
           imageViewer = [
             "imv.desktop"
           ];
+          fileBrowser = [
+            "org.gnome.Nautilus.desktop"
+          ];
         in
         {
+          "inode/directory" = fileBrowser;
+
           "application/json" = browser;
           "application/pdf" = browser;
 
