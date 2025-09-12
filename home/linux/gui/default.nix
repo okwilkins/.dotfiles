@@ -27,6 +27,8 @@ in
     hyprlock
     imv
     nautilus
+    # Allows for viewing archived files with Nautilus
+    file-roller
   ];
 
   gtk = {
