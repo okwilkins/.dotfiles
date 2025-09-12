@@ -24,7 +24,6 @@ in
     overskride
     playerctl
     pavucontrol
-    hyprlock
     imv
     nautilus
     # Allows for viewing archived files with Nautilus
