@@ -5,7 +5,6 @@
     ./browsers
     ./styling
     ./xdg.nix
-    ./thunderbird.nix
     ./discord.nix
     ./images.nix
   ];
