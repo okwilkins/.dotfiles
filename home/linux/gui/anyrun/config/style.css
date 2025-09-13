@@ -11,7 +11,7 @@
 }
 
 #main {
-    background-color: alpha(@mantle, 0.7);
+    background-color: alpha(@mantle, 0.9);
     border-radius: 16px;
     padding: 5px;
 }
@@ -30,7 +30,7 @@
 }
 
 #match:selected {
-    background: alpha(@overlay0, 0.5);
+    background: alpha(@overlay0, 0.9);
 }
 
 #match {
