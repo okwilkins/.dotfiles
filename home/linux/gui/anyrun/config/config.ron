@@ -48,6 +48,7 @@ Config(
     "libshell.so",
     "libtranslate.so",
     "libdictionary.so",
+    "libwebsearch.so",
   ],
 
   keybinds: [
