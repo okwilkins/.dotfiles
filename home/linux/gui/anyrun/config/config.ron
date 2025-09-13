@@ -47,6 +47,7 @@ Config(
     "libsymbols.so",
     "libshell.so",
     "libtranslate.so",
+    "libdictionary.so",
   ],
 
   keybinds: [
