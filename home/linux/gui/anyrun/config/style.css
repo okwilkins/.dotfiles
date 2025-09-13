@@ -3,7 +3,6 @@
 * {
     transition: 200ms ease;
     color: @text;
-    font-size: 14px;
 }
 
 #window {
@@ -12,7 +11,7 @@
 
 #main {
     background-color: alpha(@mantle, 0.9);
-    border-radius: 16px;
+    border-radius: 10px;
     padding: 5px;
 }
 
@@ -35,12 +34,12 @@
 
 #match {
     padding: 3px;
-    border-radius: 16px;
+    border-radius: 10px;
 }
 
 #entry,
 #plugin:hover {
-    border-radius: 16px;
+    border-radius: 10px;
 }
 
 box#main {
