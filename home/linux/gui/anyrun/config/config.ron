@@ -10,7 +10,7 @@ Config(
   y: Fraction(0.3),
 
   // The width of the runner
-  width: Absolute(800),
+  width: Fraction(0.3),
 
   // The minimum height of the runner, the runner will expand to fit all the entries
   // NOTE: If this is set to 0, the window will never shrink after being expanded
@@ -45,7 +45,6 @@ Config(
   plugins: [
     "libapplications.so",
     "libsymbols.so",
-    "libshell.so",
     "libtranslate.so",
     "libdictionary.so",
     "libwebsearch.so",

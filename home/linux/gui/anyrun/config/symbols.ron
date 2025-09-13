@@ -1,5 +1,5 @@
 Config(
     prefix: ":sym",
-    max_entries: 3,
+    max_entries: 10,
     symbols: {},
 )
