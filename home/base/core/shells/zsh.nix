@@ -48,8 +48,12 @@
     setopt CORRECT # Try to correct the spelling of commands
     source "${pkgs.zsh-autosuggestions}/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
     source "${pkgs.zsh-syntax-highlighting}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-    # fzf-tab
+
     source "${pkgs.zsh-fzf-tab}/share/fzf-tab/fzf-tab.plugin.zsh"
+    # FZF_DEFAULT_OPTS comes from FZF Catppuccin theme
+    zstyle ":fzf-tab:*" fzf-flags --height "90%" --layout=reverse --border=rounded
+    zstyle ":fzf-tab:*" use-fzf-default-opts yes
+
     source "${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.zsh"
     # Make completions case-insensitive
     zstyle ":completion:*" matcher-list "m:{a-z}={A-Za-z}"
