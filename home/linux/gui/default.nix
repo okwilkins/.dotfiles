@@ -30,11 +30,21 @@ in
     file-roller
   ];
 
+  # https://nixos.wiki/wiki/GNOME#Dark_mode
+  dconf = {
+    enable = true;
+    settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
+  };
+
   gtk = {
     enable = true;
     iconTheme = {
-      package = pkgs.papirus-icon-theme;
-      name = "Papirus-Dark";
+      package = pkgs.dracula-icon-theme;
+      name = "Dracula";
+    };
+    theme = {
+      package = pkgs.dracula-theme;
+      name = "Dracula";
     };
   };
 }

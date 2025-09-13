@@ -14,5 +14,8 @@
 
     # Zsh
     ZDOTDIR = "${projectVars.xdg.configHome}/zsh";
+
+    # GNOME
+    GTK_THEME = "Dracula:dark";
   };
 }
