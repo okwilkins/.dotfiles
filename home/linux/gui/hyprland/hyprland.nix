@@ -4,6 +4,7 @@
     hyprpaper
     hyprshot
     hyprlock
+    hypridle
   ];
   home.file."${projectVars.xdg.configDir}/hypr/" = {
     source = ./configs;
