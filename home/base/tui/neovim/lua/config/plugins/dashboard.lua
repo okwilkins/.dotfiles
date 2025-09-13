@@ -34,9 +34,6 @@ end
 
 local opts = {
     theme = "doom",
-    hide = {
-        statusline = false,
-    },
     config = {
         header = read_random_logo_lines(logo_dir, fallback_logo),
         center = {},
