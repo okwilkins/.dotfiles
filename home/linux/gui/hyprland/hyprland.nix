@@ -7,7 +7,7 @@
     hypridle
   ];
   home.file."${projectVars.xdg.configDir}/hypr/" = {
-    source = ./configs;
+    source = ./config;
     recursive = true;
   };
 }
