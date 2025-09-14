@@ -13,6 +13,7 @@ in
     ./anyrun
     ./waybar
     ./wlogout
+    ./swaync
   ];
 
   home.file."${projectVars.xdg.dataDir}/icons/rose-pine-hyprcursor".source = "${
