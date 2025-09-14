@@ -26,6 +26,7 @@ in
     playerctl
     pavucontrol
     imv
+    mpv
     nautilus
     # Allows for viewing archived files with Nautilus
     file-roller
