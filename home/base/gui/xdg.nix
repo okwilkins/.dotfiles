@@ -73,13 +73,7 @@
           "x-scheme-handler/http" = browser;
           "x-scheme-handler/https" = browser;
 
-          "image/jpeg" = imageViewer;
-          "image/jpg" = imageViewer;
-          "image/png" = imageViewer;
-          "image/gif" = imageViewer;
-          "image/webp" = imageViewer;
-          "image/svg+xml" = imageViewer;
-          "image/avif" = imageViewer;
+          "image/*" = imageViewer;
         };
 
       associations.removed = {
