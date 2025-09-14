@@ -83,6 +83,7 @@ tooltip {
 #pulseaudio,
 #tray,
 #custom-launcher,
+#custom-notification,
 #custom-power {
     margin: 0px 6px;
     font-size: 18px;
@@ -122,8 +123,18 @@ tooltip {
     background: @mantle;
 }
 
+#battery:hover {
+    color: @green;
+    background: @mantle;
+}
+
 #custom-power:hover {
     color: @red;
+    background: @mantle;
+}
+
+#custom-notification:hover {
+    color: @yellow;
     background: @mantle;
 }
 
