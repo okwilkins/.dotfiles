@@ -22,6 +22,7 @@
     terraform-ls
     yaml-language-server
     vscode-langservers-extracted
+    zls
     # Formatters
     nixfmt-rfc-style
     stylua
