@@ -7,6 +7,7 @@ return {
         go = { "gofmt" },
         python = { "ruff" },
         nix = { "nixfmt" },
+        zig = { "zig fmt" },
     },
     format_on_save = {
         -- These options will be passed to conform.format()
