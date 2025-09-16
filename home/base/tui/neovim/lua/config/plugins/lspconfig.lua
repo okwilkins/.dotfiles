@@ -54,4 +54,7 @@ return function()
 
     -- CSS
     lspconfig.cssls.setup({})
+
+    -- Zig
+    lspconfig.zls.setup({})
 end
