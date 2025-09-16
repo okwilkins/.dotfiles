@@ -43,6 +43,9 @@
           imageViewer = [
             "imv.desktop"
           ];
+          videoViewer = [
+            "imv.desktop"
+          ];
           fileBrowser = [
             "org.gnome.Nautilus.desktop"
           ];
@@ -74,6 +77,7 @@
           "x-scheme-handler/https" = browser;
 
           "image/*" = imageViewer;
+          "video/*" = videoViewer;
         };
 
       associations.removed = {
