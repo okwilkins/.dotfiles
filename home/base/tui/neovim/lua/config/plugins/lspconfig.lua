@@ -56,5 +56,11 @@ return function()
     lspconfig.cssls.setup({})
 
     -- Zig
-    lspconfig.zls.setup({})
+    lspconfig.zls.setup({
+        root_dir = lspconfig.util.root_pattern("build.zig", ".git"),
+        settings = {
+            enable_build_on_save = true,
+            build_on_save_step = "check",
+        },
+    })
 end
