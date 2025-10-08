@@ -1,3 +1,5 @@
-indent: 2
-retain_line_breaks_single: true
-trim_trailing_whitespace: true
+formatter:
+  type: basic
+  indent: 2
+  retain_line_breaks_single: true
+  trim_trailing_whitespace: true
