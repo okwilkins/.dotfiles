@@ -1,7 +1,7 @@
 return {
     formatters_by_ft = {
         lua = { "stylua" },
-        yaml = { "yq" },
+        yaml = { "yamlfmt" },
         json = { "jq" },
         terraform = { "terraform_fmt" },
         go = { "gofmt" },
