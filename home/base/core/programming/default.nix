@@ -27,5 +27,6 @@
     nixfmt-rfc-style
     stylua
     ruff
+    yamlfmt
   ];
 }
