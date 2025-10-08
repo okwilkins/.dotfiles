@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, projectVars, ... }:
 {
   home.packages = with pkgs; [
     zig
@@ -29,4 +29,8 @@
     ruff
     yamlfmt
   ];
+
+  home.file."${projectVars.xdg.configDir}/yamlfmt/.yamlfmt" = {
+    source = ./yamlfmt/config.yaml;
+  };
 }
