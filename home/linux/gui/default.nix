@@ -26,11 +26,19 @@ in
     playerctl
     pavucontrol
     imv
-    mpv
     nautilus
     # Allows for viewing archived files with Nautilus
     file-roller
   ];
+
+  programs.mpv = {
+    enable = true;
+    config = {
+      vo = "gpu";
+      gpu-context = "wayland";
+      hwdec = "auto-safe";
+    };
+  };
 
   # https://nixos.wiki/wiki/GNOME#Dark_mode
   dconf = {
