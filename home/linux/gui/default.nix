@@ -22,6 +22,8 @@ in
   }";
 
   home.packages = with pkgs; [
+    # Discord
+    legcord
     easyeffects
     overskride
     playerctl
