@@ -1,7 +1,7 @@
 { ... }:
 {
   imports = [
-    ../../base
+    ../base
     ./fonts.nix
     ./system-packages.nix
     ./system-variables.nix
