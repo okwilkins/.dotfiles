@@ -9,6 +9,7 @@ let
 in
 {
   imports = [
+    ./xdg.nix
     ./hyprland
     ./anyrun
     ./waybar
