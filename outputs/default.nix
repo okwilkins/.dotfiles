@@ -1,4 +1,4 @@
-{ nixpkgs, home-manager, ... }@inputs:
+{ nixpkgs, home-manager, nix-darwin, ... }@inputs:
 let
   inherit (inputs.nixpkgs) lib;
   projectVars = import ../vars { inherit lib; };
@@ -64,5 +64,26 @@ in
     ];
     specialArgs = { inherit projectVars; };
   };
+
+  darwinConfigurations.hamming = nix-darwin.lib.darwinSystem {
+    system = "aarch64-darwin";
+    modules = [
+      ../hosts/work-hamming
+      ../modules/base
+      home-manager.darwinModules.home-manager
+      {
+        home-manager.extraSpecialArgs = { inherit inputs projectVars; };
+        home-manager.useGlobalPkgs = true;
+        home-manager.useUserPackages = true;
+        # Backup conflicting files when switching to not cause errors
+        home-manager.backupFileExtension = "backup";
+        home-manager.users.oli.imports = [
+          ../home/base
+        ];
+      }
+    ];
+    specialArgs = { inherit projectVars; };
+  };
+
   # nixosConfigurations.oak = import ./x86_64-linux/systems/home-oak.nix {inherit nixpkgs;};
 }

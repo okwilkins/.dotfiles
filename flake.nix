@@ -3,6 +3,13 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+
+    nixpkgs-darwin.url = "github:NixOS/nixpkgs/nixpkgs-25.05-darwin";
+    nix-darwin = {
+      url = "github:nix-darwin/nix-darwin/nix-darwin-25.05";
+      inputs.nixpkgs.follows = "nixpkgs-darwin";
+    };
+
     home-manager = {
       url = "github:nix-community/home-manager/master";
       # The `follows` keyword in inputs is used for inheritance.
