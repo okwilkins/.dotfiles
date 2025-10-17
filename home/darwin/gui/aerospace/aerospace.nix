@@ -7,5 +7,4 @@
   home.file."${projectVars.xdg.configDir}/aerospace/aerospace.toml" = {
     source = ./aerospace.toml;
   };
-
 }
