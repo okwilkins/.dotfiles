@@ -1,0 +1,6 @@
+{ ... }:
+{
+  imports = [
+    ./karabiner-elements.nix
+  ];
+}
