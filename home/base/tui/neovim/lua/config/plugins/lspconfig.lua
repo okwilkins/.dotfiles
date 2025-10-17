@@ -1,14 +1,12 @@
 return function()
-    local lspconfig = require("lspconfig")
-
     -- Lua
-    lspconfig.lua_ls.setup({})
+    vim.lsp.enable("lua_ls")
 
     -- Markdown
-    lspconfig.marksman.setup({})
+    vim.lsp.enable("marksman")
 
     -- YAML
-    lspconfig.yamlls.setup({
+    vim.lsp.config("yamlls", {
         settings = {
             redhat = { telemetry = { enabled = false } },
             yaml = {
@@ -36,28 +34,29 @@ return function()
             },
         },
     })
+    vim.lsp.enable("yamlls")
 
     -- Terraform
-    lspconfig.terraformls.setup({
+    vim.lsp.config("terraformls", {
         filetypes = { "terraform", "terraform-vars", "tf" },
     })
+    vim.lsp.enable("terraformls")
 
     -- Go
-    lspconfig.gopls.setup({})
+    vim.lsp.enable("gopls")
 
     -- Python
-    lspconfig.ruff.setup({})
-    lspconfig.pyright.setup({})
+    vim.lsp.enable("ruff")
+    vim.lsp.enable("pyright")
 
     -- Nix
-    lspconfig.nixd.setup({})
+    vim.lsp.enable("nixd")
 
     -- CSS
-    lspconfig.cssls.setup({})
+    vim.lsp.enable("cssls")
 
     -- Zig
-    lspconfig.zls.setup({
-        root_dir = lspconfig.util.root_pattern("build.zig", ".git"),
+    vim.lsp.config("zls", {
         settings = {
             zls = {
                 enable_build_on_save = true,
@@ -65,4 +64,5 @@ return function()
             },
         },
     })
+    vim.lsp.enable("zls")
 end
