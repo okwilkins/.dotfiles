@@ -85,6 +85,7 @@ in
         home-manager.backupFileExtension = "backup";
         home-manager.users.oli.imports = [
           ../home/base
+          ../home/darwin
         ];
       }
     ];
