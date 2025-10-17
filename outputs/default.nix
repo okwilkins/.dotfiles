@@ -1,4 +1,10 @@
-{ nixpkgs, home-manager, nix-darwin, ... }@inputs:
+{
+  nixpkgs,
+  home-manager,
+  nix-darwin,
+  home-manager-darwin,
+  ...
+}@inputs:
 let
   inherit (inputs.nixpkgs) lib;
   projectVars = import ../vars { inherit lib; };
@@ -70,7 +76,7 @@ in
     modules = [
       ../hosts/work-hamming
       ../modules/base
-      home-manager.darwinModules.home-manager
+      home-manager-darwin.darwinModules.home-manager
       {
         home-manager.extraSpecialArgs = { inherit inputs projectVars; };
         home-manager.useGlobalPkgs = true;
