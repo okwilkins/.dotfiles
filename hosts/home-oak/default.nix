@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, projectVars, ... }:
 {
   imports = [
     ./hardware-configuration.nix
@@ -25,9 +25,9 @@
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.oli = {
+  users.users.projectVars.username = {
     isNormalUser = true;
-    description = "Oliver Wilkins";
+    description = projectVars.userFullname;
     extraGroups = [
       "networkmanager"
       "wheel"
