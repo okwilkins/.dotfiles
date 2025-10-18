@@ -1,10 +1,10 @@
-{ pkgs, projectVars, ... }:
+{ pkgs, osConfig, ... }:
 {
   home.packages = with pkgs; [
     jankyborders
   ];
 
-  home.file."${projectVars.xdg.configDir}/borders/bordersrc" = {
+  home.file."${osConfig.system.xdg.configDir}/borders/bordersrc" = {
     source = ./borders.bash;
   };
 }

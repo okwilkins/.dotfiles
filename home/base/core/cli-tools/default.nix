@@ -1,7 +1,7 @@
 {
   pkgs,
   lib,
-  projectVars,
+  osConfig,
   ...
 }:
 {
@@ -34,18 +34,18 @@
     dnsutils
   ];
 
-  home.file."${projectVars.xdg.configDir}/bat" = {
+  home.file."${osConfig.system.xdg.configDir}/bat" = {
     source = ./bat;
   };
   home.activation.batCacheRebuild = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     ${pkgs.bat}/bin/bat cache --build
   '';
 
-  home.file."${projectVars.xdg.configDir}/git" = {
+  home.file."${osConfig.system.xdg.configDir}/git" = {
     source = ./git;
   };
 
-  home.file."${projectVars.xdg.configDir}/lazygit/config.yml" = {
+  home.file."${osConfig.system.xdg.configDir}/lazygit/config.yml" = {
     source = ./lazygit/config.yaml;
   };
 }

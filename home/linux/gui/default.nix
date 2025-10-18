@@ -1,4 +1,4 @@
-{ pkgs, projectVars, ... }:
+{ pkgs, osConfig, ... }:
 let
   rosePineCursorHyprcursor = pkgs.fetchFromGitHub {
     owner = "ndom91";
@@ -17,7 +17,7 @@ in
     ./swaync
   ];
 
-  home.file."${projectVars.xdg.dataDir}/icons/rose-pine-hyprcursor".source = "${
+  home.file."${osConfig.system.xdg.dataDir}/icons/rose-pine-hyprcursor".source = "${
     rosePineCursorHyprcursor
   }";
 

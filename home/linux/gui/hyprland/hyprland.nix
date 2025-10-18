@@ -1,4 +1,4 @@
-{ projectVars, pkgs, ... }:
+{ osConfig, pkgs, ... }:
 {
   home.packages = with pkgs; [
     hyprpaper
@@ -6,7 +6,7 @@
     hyprlock
     hypridle
   ];
-  home.file."${projectVars.xdg.configDir}/hypr/" = {
+  home.file."${osConfig.system.xdg.configDir}/hypr/" = {
     source = ./config;
     recursive = true;
   };

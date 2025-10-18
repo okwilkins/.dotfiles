@@ -1,4 +1,4 @@
-{ projectVars, ... }:
+{ config, ... }:
 {
   environment.variables = {
     # Editors
@@ -8,12 +8,12 @@
     VISUAL = "nvim --clean";
 
     # XDG
-    XDG_CONFIG_HOME = projectVars.xdg.configHome;
-    XDG_DATA_HOME = projectVars.xdg.dataHome;
-    XDG_CACHE_HOME = projectVars.xdg.cacheHome;
+    XDG_CONFIG_HOME = config.system.xdg.configHome;
+    XDG_DATA_HOME = config.system.xdg.dataHome;
+    XDG_CACHE_HOME = config.system.xdg.cacheHome;
 
     # Zsh
-    ZDOTDIR = "${projectVars.xdg.configHome}/zsh";
+    ZDOTDIR = config.system.zshDotDir;
 
     # GNOME
     GTK_THEME = "Dracula:dark";

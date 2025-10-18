@@ -1,4 +1,4 @@
-{ pkgs, projectVars, ... }:
+{ pkgs, osConfig, ... }:
 {
   home.packages = with pkgs; [
     zig
@@ -30,7 +30,7 @@
     yamlfmt
   ];
 
-  home.file."${projectVars.xdg.configDir}/yamlfmt/.yamlfmt" = {
+  home.file."${osConfig.system.xdg.configDir}/yamlfmt/.yamlfmt" = {
     source = ./yamlfmt/config.yaml;
   };
 }

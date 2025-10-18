@@ -1,7 +1,7 @@
-{ pkgs, projectVars, ... }:
+{ pkgs, osConfig, ... }:
 {
   home.packages = with pkgs; [ anyrun ];
-  home.file."${projectVars.xdg.configDir}/anyrun" = {
+  home.file."${osConfig.system.xdg.configDir}/anyrun" = {
     source = ./config;
     recursive = true;
   };

@@ -1,7 +1,7 @@
 {
   pkgs,
   lib,
-  projectVars,
+  osConfig,
   ...
 }:
 let
@@ -21,7 +21,7 @@ let
 in
 {
 
-  home.file."${projectVars.xdg.configDir}/zsh/aliases/uutils-coreutils-aliases.zsh" = {
+  home.file."${osConfig.system.xdg.configDir}/zsh/aliases/uutils-coreutils-aliases.zsh" = {
     text = aliasesFileContent;
   };
 }

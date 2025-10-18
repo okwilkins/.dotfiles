@@ -1,8 +1,8 @@
-{ projectVars, ... }:
+{ osConfig, ... }:
 {
   home = {
-    username = projectVars.username;
-    homeDirectory = projectVars.homeDir;
+    username = osConfig.system.username;
+    homeDirectory = osConfig.system.homeDir;
 
     # This value determines the home Manager release that your
     # configuration is compatible with. This helps avoid breakage

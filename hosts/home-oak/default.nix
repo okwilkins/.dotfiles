@@ -1,4 +1,4 @@
-{ pkgs, projectVars, ... }:
+{ pkgs, config, ... }:
 {
   imports = [
     ./hardware-configuration.nix
@@ -25,9 +25,9 @@
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.${projectVars.username} = {
+  users.users.${config.system.username} = {
     isNormalUser = true;
-    description = projectVars.userFullname;
+    description = config.system.userFullname;
     extraGroups = [
       "networkmanager"
       "wheel"

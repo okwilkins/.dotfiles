@@ -1,9 +1,9 @@
-{ projectVars, ... }:
+{ osConfig, ... }:
 {
   programs.neovim = {
     enable = true;
   };
-  home.file."${projectVars.xdg.configDir}/nvim" = {
+  home.file."${osConfig.system.xdg.configDir}/nvim" = {
     source = ./neovim;
     recursive = true;
   };

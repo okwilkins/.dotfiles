@@ -1,7 +1,7 @@
-{ projectVars, ... }:
+{ config, ... }:
 {
   system = {
-    primaryUser = projectVars.username;
+    primaryUser = config.system.username;
 
     defaults = {
       menuExtraClock.Show24Hour = true;

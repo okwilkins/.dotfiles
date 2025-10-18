@@ -1,10 +1,10 @@
-{ pkgs, projectVars, ... }:
+{ pkgs, osConfig, ... }:
 {
   home.packages = with pkgs; [
     karabiner-elements
   ];
 
-  home.file."${projectVars.xdg.configDir}/karabiner/karabiner.json" = {
+  home.file."${osConfig.system.xdg.configDir}/karabiner/karabiner.json" = {
     source = ./karabiner.json;
   };
 }

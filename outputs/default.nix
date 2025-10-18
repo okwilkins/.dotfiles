@@ -7,7 +7,6 @@
 }@inputs:
 let
   inherit (inputs.nixpkgs) lib;
-  projectVars = import ../vars { inherit lib; };
   nixosSystems = {
     x86_64-linux = import ./x86_64-linux { inherit nixpkgs inputs; };
     # aarch64-linux = import ./aarch64-linux ({system = "aarch64-linux";});
@@ -32,9 +31,10 @@ in
     modules = [
       ../hosts/home-oak
       ../modules/linux/desktop
+      ../vars
       home-manager.nixosModules.home-manager
       {
-        home-manager.extraSpecialArgs = { inherit inputs projectVars; };
+        home-manager.extraSpecialArgs = { inherit inputs; };
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
         # Backup conflicting files when switching to not cause errors
@@ -46,7 +46,6 @@ in
         ];
       }
     ];
-    specialArgs = { inherit projectVars; };
   };
 
   nixosConfigurations.birch = nixpkgs.lib.nixosSystem {
@@ -54,9 +53,10 @@ in
     modules = [
       ../hosts/home-birch
       ../modules/linux/desktop
+      ../vars
       home-manager.nixosModules.home-manager
       {
-        home-manager.extraSpecialArgs = { inherit inputs projectVars; };
+        home-manager.extraSpecialArgs = { inherit inputs; };
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
         # Backup conflicting files when switching to not cause errors
@@ -68,28 +68,27 @@ in
         ];
       }
     ];
-    specialArgs = { inherit projectVars; };
   };
 
   darwinConfigurations.hamming = nix-darwin.lib.darwinSystem {
     system = "aarch64-darwin";
     modules = [
       ../hosts/work-hamming
-      ../modules/base
+      ../modules/darwin/base
+      ../vars
       home-manager-darwin.darwinModules.home-manager
       {
-        home-manager.extraSpecialArgs = { inherit inputs projectVars; };
+        home-manager.extraSpecialArgs = { inherit inputs; };
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
         # Backup conflicting files when switching to not cause errors
         home-manager.backupFileExtension = "backup";
-        home-manager.users.oli.imports = [
+        home-manager.users."oliver.wilkins".imports = [
           ../home/base
           ../home/darwin
         ];
       }
     ];
-    specialArgs = { inherit projectVars; };
   };
 
   # nixosConfigurations.oak = import ./x86_64-linux/systems/home-oak.nix {inherit nixpkgs;};

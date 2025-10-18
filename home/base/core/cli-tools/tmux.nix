@@ -1,4 +1,4 @@
-{ pkgs, projectVars, ... }:
+{ pkgs, osConfig, ... }:
 {
   home.packages = with pkgs; [
     tmux
@@ -10,12 +10,12 @@
     tmuxPlugins.tmux-sessionx
   ];
 
-  home.file."${projectVars.xdg.configDir}/tmux" = {
+  home.file."${osConfig.system.xdg.configDir}/tmux" = {
     source = ./tmux;
     recursive = true;
   };
-  home.file."${projectVars.xdg.configDir}/tmux/tmux.conf".text = ''
-    source-file ${projectVars.xdg.configDir}/tmux/tmux.keybinds.conf
+  home.file."${osConfig.system.xdg.configDir}/tmux/tmux.conf".text = ''
+    source-file ${osConfig.system.xdg.configDir}/tmux/tmux.keybinds.conf
     set-option -g default-terminal 'screen-256color'
     set-option -g terminal-overrides ',xterm-256color:RGB'
 

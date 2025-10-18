@@ -1,4 +1,4 @@
-{ pkgs, projectVars, ... }:
+{ pkgs, osConfig, ... }:
 let
   catppuccinMochaSwaync = pkgs.fetchurl {
     # Upgrade to 1.X when swaync is upgraded to 0.12+
@@ -11,7 +11,7 @@ in
     swaynotificationcenter
   ];
 
-  home.file."${projectVars.xdg.configDir}/swaync/style.css" = {
+  home.file."${osConfig.system.xdg.configDir}/swaync/style.css" = {
     source = "${catppuccinMochaSwaync}";
   };
 }

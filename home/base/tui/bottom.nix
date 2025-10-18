@@ -1,7 +1,7 @@
 {
   pkgs,
   lib,
-  projectVars,
+  osConfig,
   ...
 }:
 let
@@ -19,7 +19,7 @@ let
 in
 {
   home.packages = [ pkgs.bottom ];
-  home.file."${projectVars.xdg.configDir}/bottom/bottom.toml" = {
+  home.file."${osConfig.system.xdg.configDir}/bottom/bottom.toml" = {
     source = bottomToml;
   };
 }

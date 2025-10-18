@@ -1,7 +1,7 @@
-{ pkgs, projectVars, ... }:
+{ pkgs, osConfig, ... }:
 {
   home.packages = [ pkgs.rainfrog ];
-  home.file."${projectVars.xdg.configDir}/rainfrog" = {
+  home.file."${osConfig.system.xdg.configDir}/rainfrog" = {
     source = ./rainfrog;
     recursive = true;
   };

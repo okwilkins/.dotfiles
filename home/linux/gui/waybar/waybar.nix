@@ -1,7 +1,7 @@
-{ pkgs, projectVars, ... }:
+{ pkgs, osConfig, ... }:
 {
   home.packages = with pkgs; [ waybar ];
-  home.file."${projectVars.xdg.configDir}/waybar" = {
+  home.file."${osConfig.system.xdg.configDir}/waybar" = {
     source = ./config;
     recursive = true;
   };

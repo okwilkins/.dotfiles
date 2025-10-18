@@ -1,9 +1,9 @@
-{ projectVars, ... }:
+{ osConfig, ... }:
 {
   programs.ghostty = {
     enable = true;
   };
-  home.file."${projectVars.xdg.configDir}/ghostty/config" = {
+  home.file."${osConfig.system.xdg.configDir}/ghostty/config" = {
     source = ./ghostty/config;
   };
 }

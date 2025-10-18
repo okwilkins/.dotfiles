@@ -1,6 +1,6 @@
 {
   pkgs,
-  projectVars,
+  osConfig,
   ...
 }:
 let
@@ -13,10 +13,10 @@ let
 in
 {
   home.packages = [ pkgs.yazi ];
-  home.file."${projectVars.xdg.configDir}/yazi/yazi.toml" = {
+  home.file."${osConfig.system.xdg.configDir}/yazi/yazi.toml" = {
     source = ./yazi/yazi.toml;
   };
-  home.file."${projectVars.xdg.configDir}/yazi/theme.toml" = {
+  home.file."${osConfig.system.xdg.configDir}/yazi/theme.toml" = {
     source = "${catppuccinRepo}/themes/mocha/catppuccin-mocha-blue.toml";
   };
 }

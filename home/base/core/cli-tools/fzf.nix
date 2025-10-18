@@ -1,4 +1,4 @@
-{ pkgs, projectVars, ... }:
+{ pkgs, osConfig, ... }:
 let
   catppuccinRepo = pkgs.fetchFromGitHub {
     owner = "catppuccin";
@@ -11,7 +11,7 @@ in
   home.packages = with pkgs; [
     fzf
   ];
-  home.file."${projectVars.xdg.configDir}/zsh/plugins/catppuccin-fzf-mocha.sh" = {
+  home.file."${osConfig.system.xdg.configDir}/zsh/plugins/catppuccin-fzf-mocha.sh" = {
     source = "${catppuccinRepo}/themes/catppuccin-fzf-mocha.sh";
   };
 }

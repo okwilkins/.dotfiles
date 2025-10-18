@@ -1,4 +1,4 @@
-{ pkgs, projectVars, ... }:
+{ pkgs, config, ... }:
 {
   programs.hyprland = {
     enable = true;
@@ -14,7 +14,7 @@
       enable = true;
       settings = {
         default_session = {
-          user = projectVars.username;
+          user = config.system.username;
           command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --remember --cmd hyprland --theme border=magenta;text=cyan;prompt=green;time=red;action=blue;button=yellow;container=gray;input=red";
         };
       };

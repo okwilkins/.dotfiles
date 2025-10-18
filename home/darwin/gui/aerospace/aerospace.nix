@@ -1,10 +1,10 @@
-{ pkgs, projectVars, ... }:
+{ pkgs, osConfig, ... }:
 {
   home.packages = with pkgs; [
     aerospace
   ];
 
-  home.file."${projectVars.xdg.configDir}/aerospace/aerospace.toml" = {
+  home.file."${osConfig.system.xdg.configDir}/aerospace/aerospace.toml" = {
     source = ./aerospace.toml;
   };
 }

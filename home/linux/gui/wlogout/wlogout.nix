@@ -1,8 +1,8 @@
-{ pkgs, projectVars, ... }:
+{ pkgs, osConfig, ... }:
 {
   home.packages = with pkgs; [ wlogout ];
 
-  home.file."${projectVars.xdg.configDir}/wlogout" = {
+  home.file."${osConfig.system.xdg.configDir}/wlogout" = {
     source = ./config;
     recursive = true;
   };

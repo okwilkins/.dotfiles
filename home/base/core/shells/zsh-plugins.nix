@@ -1,4 +1,4 @@
-{ pkgs, projectVars, ... }:
+{ pkgs, osConfig, ... }:
 let
   gen-plugin =
     {
@@ -48,25 +48,25 @@ let
   # };
 in
 {
-  home.file."${projectVars.xdg.configDir}/zsh/plugins/docker-plugin.zsh" = {
+  home.file."${osConfig.system.xdg.configDir}/zsh/plugins/docker-plugin.zsh" = {
     source = dockerPlugin;
   };
-  home.file."${projectVars.xdg.configDir}/zsh/plugins/kubectl-plugin.zsh" = {
+  home.file."${osConfig.system.xdg.configDir}/zsh/plugins/kubectl-plugin.zsh" = {
     source = kubectlPlugin;
   };
-  home.file."${projectVars.xdg.configDir}/zsh/plugins/zoxide-plugin.zsh" = {
+  home.file."${osConfig.system.xdg.configDir}/zsh/plugins/zoxide-plugin.zsh" = {
     source = zoxidePlugin;
   };
-  home.file."${projectVars.xdg.configDir}/zsh/plugins/fzf-plugin.zsh" = {
+  home.file."${osConfig.system.xdg.configDir}/zsh/plugins/fzf-plugin.zsh" = {
     source = fzfPlugin;
   };
-  home.file."${projectVars.xdg.configDir}/zsh/plugins/carapace-plugin.zsh" = {
+  home.file."${osConfig.system.xdg.configDir}/zsh/plugins/carapace-plugin.zsh" = {
     source = carapacePlugin;
   };
-  home.file."${projectVars.xdg.configDir}/zsh/plugins/starship-plugin.zsh" = {
+  home.file."${osConfig.system.xdg.configDir}/zsh/plugins/starship-plugin.zsh" = {
     source = starshipPlugin;
   };
-  # home.file."${projectVars.xdg.configDir}/zsh/plugins/dagger-plugin.zsh" = {
+  # home.file."${osConfig.system.xdg.configDir}/zsh/plugins/dagger-plugin.zsh" = {
   #   source = daggerPlugin;
   # };
 }

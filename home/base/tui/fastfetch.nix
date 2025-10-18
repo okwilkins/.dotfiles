@@ -1,7 +1,7 @@
-{ pkgs, projectVars, ... }:
+{ pkgs, osConfig, ... }:
 {
   home.packages = [ pkgs.fastfetch ];
-  home.file."${projectVars.xdg.configDir}/fastfetch" = {
+  home.file."${osConfig.system.xdg.configDir}/fastfetch" = {
     source = ./fastfetch;
     recursive = true;
   };

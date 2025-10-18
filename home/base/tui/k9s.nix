@@ -1,4 +1,4 @@
-{ pkgs, projectVars, ... }:
+{ pkgs, osConfig, ... }:
 let
   catppuccinRepo = pkgs.fetchFromGitHub {
     owner = "catppuccin";
@@ -9,11 +9,11 @@ let
 in
 {
   home.packages = [ pkgs.k9s ];
-  home.file."${projectVars.xdg.configDir}/k9s" = {
+  home.file."${osConfig.system.xdg.configDir}/k9s" = {
     source = ./k9s;
     recursive = true;
   };
-  home.file."${projectVars.xdg.configDir}/k9s/skins" = {
+  home.file."${osConfig.system.xdg.configDir}/k9s/skins" = {
     source = "${catppuccinRepo}/dist";
     recursive = true;
   };

@@ -3,7 +3,7 @@
 # other GUI applications on various systems (primarily Unix-like) to be interoperable:
 #   https://www.freedesktop.org/wiki/Specifications/
 {
-  projectVars,
+  osConfig,
   pkgs,
   ...
 }:
@@ -16,10 +16,10 @@
   xdg.configFile."mimeapps.list".force = true;
   xdg = {
     enable = true;
-    cacheHome = projectVars.xdg.cacheHome;
-    configHome = projectVars.xdg.configHome;
-    dataHome = projectVars.xdg.dataHome;
-    stateHome = projectVars.xdg.stateHome;
+    cacheHome = osConfig.system.xdg.cacheHome;
+    configHome = osConfig.system.xdg.configHome;
+    dataHome = osConfig.system.xdg.dataHome;
+    stateHome = osConfig.system.xdg.stateHome;
 
     # manage $XDG_CONFIG_HOME/mimeapps.list
     # xdg search all desktop entries from $XDG_DATA_DIRS, check it by command:

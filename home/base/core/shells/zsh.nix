@@ -1,12 +1,12 @@
-{ pkgs, projectVars, ... }:
+{ pkgs, osConfig, ... }:
 {
-  home.file."${projectVars.xdg.configDir}/zsh" = {
+  home.file."${osConfig.system.xdg.configDir}/zsh" = {
     source = ./zsh;
     recursive = true;
   };
 
   # Zsh config files
-  home.file."${projectVars.xdg.configDir}/zsh/.zshenv".text = ''
+  home.file."${osConfig.system.xdg.configDir}/zsh/.zshenv".text = ''
     # Zsh
     export HISTFILE="$ZDOTDIR/.zhistory"    # History filepath
     export HISTSIZE=10000                   # Maximum events for internal history
@@ -29,7 +29,7 @@
     export GOCACHE="$XDG_CACHE_HOME/go-build"
   '';
 
-  home.file."${projectVars.xdg.configDir}/zsh/.zshrc".text = ''
+  home.file."${osConfig.system.xdg.configDir}/zsh/.zshrc".text = ''
     # Autocompletions
     autoload -U compinit; compinit
 
