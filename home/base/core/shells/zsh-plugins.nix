@@ -48,9 +48,10 @@ let
   # };
 in
 {
-  home.file."${osConfig.system.xdg.configDir}/zsh/plugins/docker-plugin.zsh" = {
-    source = dockerPlugin;
-  };
+  # INFO: Broken on Darwin 25.05
+  # home.file."${osConfig.system.xdg.configDir}/zsh/plugins/docker-plugin.zsh" = {
+  #   source = dockerPlugin;
+  # };
   home.file."${osConfig.system.xdg.configDir}/zsh/plugins/kubectl-plugin.zsh" = {
     source = kubectlPlugin;
   };
