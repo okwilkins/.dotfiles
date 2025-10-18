@@ -25,7 +25,7 @@
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.projectVars.username = {
+  users.users.${projectVars.username} = {
     isNormalUser = true;
     description = projectVars.userFullname;
     extraGroups = [
