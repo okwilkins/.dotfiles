@@ -31,7 +31,7 @@ in
     modules = [
       ../hosts/home-oak
       ../modules/linux/desktop
-      ../vars
+      ../config
       home-manager.nixosModules.home-manager
       {
         home-manager.extraSpecialArgs = { inherit inputs; };
@@ -53,7 +53,7 @@ in
     modules = [
       ../hosts/home-birch
       ../modules/linux/desktop
-      ../vars
+      ../config
       home-manager.nixosModules.home-manager
       {
         home-manager.extraSpecialArgs = { inherit inputs; };
@@ -75,7 +75,7 @@ in
     modules = [
       ../hosts/work-hamming
       ../modules/darwin/base
-      ../vars
+      ../config
       home-manager-darwin.darwinModules.home-manager
       {
         home-manager.extraSpecialArgs = { inherit inputs; };

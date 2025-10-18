@@ -1,9 +1,10 @@
 { lib, ... }:
 {
-  # This config will be written to /etc/ssh/ssh_known_hosts
-  ssh = {
-    knownHosts =
-      lib.attresets.mapAttrs
+  options.knownHosts = lib.mkOption {
+    type = lib.types.attrs;
+    readOnly = true;
+    default =
+      lib.attrsets.mapAttrs
         (host: value: {
           hostNames = [ host ];
           publicKey = value.publicKey;
