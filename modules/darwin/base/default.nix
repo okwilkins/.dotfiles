@@ -5,5 +5,6 @@
     ./nix.nix
     ./system.nix
     ./security.nix
+    ./broken-packages.nix
   ];
 }
