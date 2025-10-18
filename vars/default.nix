@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 rec {
   username = "oli";
@@ -9,7 +9,7 @@ rec {
 
   networking = import ./networking.nix;
 
-  homeDir = "/home/${username}";
+  homeDir = if pkgs.stdenv.isDarwin then "/Users/${username}" else "/home/${username}";
   workspaceDir = "${homeDir}/workspace";
   xdg = rec {
     configDir = ".config";
