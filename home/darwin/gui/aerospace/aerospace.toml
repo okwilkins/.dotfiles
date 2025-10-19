@@ -1,8 +1,6 @@
 after-login-command = []
 
-after-startup-command = [
-  'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0'
-]
+after-startup-command = []
 
 start-at-login = true
 
@@ -16,7 +14,7 @@ default-root-container-layout = 'tiles'
 # Possible values: horizontal|vertical|auto
 default-root-container-orientation = 'auto'
 
-# See https://nikitabobko.github.io/AeroSpace/guide#key-mapping
+# https://nikitabobko.github.io/AeroSpace/guide#key-mapping
 key-mapping.preset = 'qwerty'
 
 # https://nikitabobko.github.io/AeroSpace/guide#on-focus-changed-callbacks
@@ -26,11 +24,11 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 # https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
 inner.horizontal = 8
-inner.vertical =   8
-outer.left =       8
-outer.bottom =     8
-outer.top =        8
-outer.right =      8
+inner.vertical   = 8
+outer.left       = 8
+outer.bottom     = 8
+outer.top        = 8
+outer.right      = 8
 
 # https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 [mode.main.binding]

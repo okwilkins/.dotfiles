@@ -1,6 +1,0 @@
-{ ... }:
-{
-  imports = [
-    ./janky-boarders.nix
-  ];
-}
