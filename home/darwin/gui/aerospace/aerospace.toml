@@ -48,6 +48,7 @@ alt-l = 'focus right'
 
 alt-m = 'fullscreen'
 alt-f = 'fullscreen'
+alt-q = 'close'
 
 # https://nikitabobko.github.io/AeroSpace/commands#move
 alt-shift-h = 'move left'
