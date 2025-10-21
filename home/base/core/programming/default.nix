@@ -13,6 +13,7 @@
     cosign
     talosctl
     go-task
+    terraform
     # LSPs
     nixd
     lua-language-server
