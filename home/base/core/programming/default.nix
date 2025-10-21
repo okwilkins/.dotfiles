@@ -14,6 +14,7 @@
     talosctl
     go-task
     terraform
+    opentofu
     # LSPs
     nixd
     lua-language-server
