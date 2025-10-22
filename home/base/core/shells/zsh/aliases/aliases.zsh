@@ -22,3 +22,7 @@ alias n=nvim
 # Python
 alias python=python3
 alias pip=pip3
+
+# Kubectl
+alias kdelk='kubectl delete -k'
+alias kak='kubectl apply -k'
