@@ -1,15 +1,10 @@
-{ nixpkgs, ... }@inputs:
-let
-  # TODO: Maybe switch to using Haumea to auto import
-  oakSystem = import ./systems/home-oak.nix { inherit nixpkgs inputs; };
-  birchSystem = import ./systems/home-birch.nix { inherit nixpkgs inputs; };
-in
+{ nixpkgs, home-manager, ... }@inputs:
 {
   outputs = {
-    # TODO: Temp till I can generalise this part as I dont want to manaully have to do this
     nixosConfigurations = {
-      oak = oakSystem.nixosConfigurations;
-      birch = birchSystem.nixosConfigurations;
+      # TODO: Maybe switch to using Haumea to auto import
+      oak = import ./systems/home-oak.nix { inherit nixpkgs home-manager inputs; };
+      birch = import ./systems/home-birch.nix { inherit nixpkgs home-manager inputs; };
     };
   };
 }

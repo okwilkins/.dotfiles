@@ -1,12 +1,10 @@
-{ nixpkgs, ... }@inputs:
-let
-  hammingSystem = import ./systems/work-hamming.nix {inherit nixpkgs inputs; };
-in
+{ nix-darwin, home-manager-darwin, ... }@inputs:
 {
   outputs = {
-    # TODO: Temp till I can generalise this part as I dont want to manually have to do this
     nixosConfigurations = {
-      hamming = oakSystem.nixosConfigurations;
+      hamming = import ./systems/work-hamming.nix {
+        inherit nix-darwin home-manager-darwin inputs;
+      };
     };
   };
 }
