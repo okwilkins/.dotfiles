@@ -1,4 +1,8 @@
-{ nix-darwin, home-manager-darwin, ... }@inputs:
+{
+  nix-darwin,
+  home-manager-darwin,
+  ...
+}@inputs:
 {
   darwinConfigurations.hamming = nix-darwin.lib.darwinSystem {
     system = "aarch64-darwin";
