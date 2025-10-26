@@ -1,8 +1,9 @@
 {
   nix-darwin,
-  home-manager-darwin,
+  home-manager,
+  inputs,
   ...
-}@inputs:
+}:
 {
   darwinConfigurations.hamming = nix-darwin.lib.darwinSystem {
     system = "aarch64-darwin";
@@ -10,7 +11,7 @@
       ../../../hosts/work-hamming
       ../../../modules/darwin/base
       ../../../config
-      home-manager-darwin.darwinModules.home-manager
+      home-manager.darwinModules.home-manager
       {
         home-manager.extraSpecialArgs = { inherit inputs; };
         home-manager.useGlobalPkgs = true;
@@ -19,7 +20,7 @@
         home-manager.backupFileExtension = "backup";
         home-manager.users."oliver.wilkins".imports = [
           ../../../home/base
-          ../../home/darwin
+          ../../../home/darwin
         ];
       }
     ];

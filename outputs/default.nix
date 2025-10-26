@@ -2,7 +2,6 @@
   nixpkgs,
   home-manager,
   nix-darwin,
-  home-manager-darwin,
   ...
 }@inputs:
 let
@@ -13,7 +12,7 @@ let
     # riscv64-linux = import ./riscv64-linux ({system = "riscv64-linux";});
   };
   darwinSystems = {
-    aarch64-darwin = import ./aarch_64-darwin { inherit nix-darwin home-manager-darwin inputs; };
+    aarch64-darwin = import ./aarch_64-darwin { inherit nix-darwin home-manager inputs; };
     # x86_64-darwin = import ./x86_64-darwin ({system = "x86_64-darwin";});
   };
   allSystems = nixosSystems // darwinSystems;
