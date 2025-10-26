@@ -7,9 +7,6 @@
 
     # Achieves
     gnutar
-
-    # Misc
-    wl-clipboard
   ];
 
   programs.zsh = {
