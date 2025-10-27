@@ -2,6 +2,7 @@
   nixpkgs,
   home-manager,
   inputs,
+  overlays,
   ...
 }:
 import ./systems/home-oak.nix {
@@ -9,5 +10,6 @@ import ./systems/home-oak.nix {
     inputs
     nixpkgs
     home-manager
+    overlays
     ;
 }

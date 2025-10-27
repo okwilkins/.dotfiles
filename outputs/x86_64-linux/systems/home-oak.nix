@@ -2,6 +2,7 @@
   nixpkgs,
   home-manager,
   inputs,
+  overlays,
   ...
 }:
 {
@@ -11,6 +12,12 @@
       ../../../hosts/home-oak
       ../../../modules/linux/desktop
       ../../../config
+      (
+        { ... }:
+        {
+          nixpkgs.overlays = overlays;
+        }
+      )
       home-manager.nixosModules.home-manager
       {
         home-manager.extraSpecialArgs = { inherit inputs; };

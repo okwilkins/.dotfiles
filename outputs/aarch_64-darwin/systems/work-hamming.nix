@@ -2,6 +2,7 @@
   nix-darwin,
   home-manager,
   inputs,
+  overlay,
   ...
 }:
 {
@@ -11,6 +12,12 @@
       ../../../hosts/work-hamming
       ../../../modules/darwin/base
       ../../../config
+      (
+        { ... }:
+        {
+          nixpkgs.overlays = overlay;
+        }
+      )
       home-manager.darwinModules.home-manager
       {
         home-manager.extraSpecialArgs = { inherit inputs; };

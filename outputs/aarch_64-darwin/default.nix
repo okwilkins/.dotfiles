@@ -2,6 +2,7 @@
   nix-darwin,
   home-manager,
   inputs,
+  overlays,
   ...
 }:
 import ./systems/work-hamming.nix {
@@ -9,5 +10,6 @@ import ./systems/work-hamming.nix {
     inputs
     nix-darwin
     home-manager
+    overlays
     ;
 }
