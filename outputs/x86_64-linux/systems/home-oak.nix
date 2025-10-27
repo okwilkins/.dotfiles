@@ -1,4 +1,9 @@
-{ nixpkgs, home-manager, ... }@inputs:
+{
+  nixpkgs,
+  home-manager,
+  inputs,
+  ...
+}:
 {
   nixosConfigurations.oak = nixpkgs.lib.nixosSystem {
     system = "x86_64-linux";
