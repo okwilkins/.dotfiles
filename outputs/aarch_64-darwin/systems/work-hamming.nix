@@ -2,7 +2,7 @@
   nix-darwin,
   home-manager,
   inputs,
-  overlay,
+  overlays,
   ...
 }:
 {
@@ -15,7 +15,7 @@
       (
         { ... }:
         {
-          nixpkgs.overlays = overlay;
+          nixpkgs.overlays = overlays;
         }
       )
       home-manager.darwinModules.home-manager
