@@ -27,6 +27,10 @@
         else
           "/home/${config.system.username}";
     };
+    dotfilesDir = lib.mkOption {
+      type = lib.types.str;
+      default = "${config.system.homeDir}/.dotfiles";
+    };
     workspaceDir = lib.mkOption {
       type = lib.types.str;
       default = "${config.system.homeDir}/workspace";
