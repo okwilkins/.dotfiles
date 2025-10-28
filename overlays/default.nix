@@ -1,17 +1,12 @@
 { inputs }:
 [
-  (
-    final: prev:
-    let
-      pkgs-stable = import inputs.nixpkgs-stable {
-        system = prev.system;
-        config.allowUnfree = true;
-      };
-    in
-    {
-      terraform = pkgs-stable.terraform;
-    }
-  )
+  (final: prev: {
+    # Cosign 3.0.2 checks fail
+    cosign = prev.cosign.overrideAttrs (oldAttrs: {
+      doCheck = false;
+      doInstallCheck = false;
+    });
+  })
 
   # (final: prev: {
   #   another-package = ...;
