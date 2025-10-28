@@ -24,8 +24,8 @@
 
     # Programming
     # Go
-    export GOPATH="$WORKSPACE/go"
-    export GOBIN="$WORKSPACE/go/bin"
+    export GOPATH="$HOME/go"
+    export GOBIN="$HOME/go/bin"
     export GOCACHE="$XDG_CACHE_HOME/go-build"
   '';
 
