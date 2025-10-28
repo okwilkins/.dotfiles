@@ -15,19 +15,14 @@ Opinionated dotfiles to hyper-personalise my development environment across ever
 
 ## 🏃Getting Started
 
-Git clone the repo wherever you want.
+Git clone to the root of your home directory:
 
 ```bash
+cd ~
 git clone https://github.com/okwilkins/.dotfiles
 ```
 
-Go into the directory and run the `install.sh` script.
-
-```bash
-cd .dotfiles && bash ./install.sh
-```
-
-This will install the relevant packages to get things going will create the symbolic links for the dotfiles.
+Ensure that the [Nix config](./config/default.nix) is the same as the `dotfilesDir` variable.
 
 ## 🙏 Thanks To
 
