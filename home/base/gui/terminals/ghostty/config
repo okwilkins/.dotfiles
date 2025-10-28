@@ -8,7 +8,7 @@ background-blur = true
 
 mouse-hide-while-typing = true
 
-theme = catppuccin-mocha
+theme = "Catppuccin Mocha"
 
 font-family = "FiraCode Nerd Font Mono"
 
