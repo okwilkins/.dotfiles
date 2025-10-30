@@ -1,3 +1,4 @@
+# TODO: Seperate this file out of base as servers DEFFO do not want all of these things
 { pkgs, osConfig, ... }:
 {
   home.packages = with pkgs; [
