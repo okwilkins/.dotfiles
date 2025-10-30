@@ -16,6 +16,7 @@
     go-task
     terraform
     opentofu
+    cilium-cli
     # LSPs
     nixd
     lua-language-server
