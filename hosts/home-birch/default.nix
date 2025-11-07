@@ -2,6 +2,7 @@
 {
   imports = [
     ./hardware-configuration.nix
+    ./nvidia.nix
   ];
 
   # Bootloader.
