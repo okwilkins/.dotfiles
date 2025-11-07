@@ -53,3 +53,7 @@ linux
 amd64
 arm64
 config
+Nvidia
+nvidia
+nixos
+gpus
