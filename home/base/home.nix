@@ -1,8 +1,16 @@
-{ osConfig, ... }:
+{
+  osConfig,
+  inputs,
+  pkgs,
+  ...
+}:
 {
   home = {
     username = osConfig.system.username;
     homeDirectory = osConfig.system.homeDir;
+    packages = [
+      inputs.dagger.packages.${pkgs.system}.dagger
+    ];
 
     # This value determines the home Manager release that your
     # configuration is compatible with. This helps avoid breakage
