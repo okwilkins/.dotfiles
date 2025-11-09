@@ -13,7 +13,7 @@ alias du=dust
 alias diff=delta
 
 # QoL for applications
-alias t=taloctl
+alias t=talosctl
 alias lg=lazygit
 alias ld=lazydocker
 alias n=nvim
