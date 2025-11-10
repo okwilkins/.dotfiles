@@ -1,5 +1,5 @@
-{ ... }:
+{ config, ... }:
 {
   virtualisation.docker.enable = true;
-  users.users.oli.extraGroups = [ "docker" ];
+  users.users.${config.system.username}.extraGroups = [ "docker" ];
 }
