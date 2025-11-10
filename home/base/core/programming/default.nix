@@ -37,4 +37,10 @@
   home.file."${osConfig.system.xdg.configDir}/yamlfmt/.yamlfmt" = {
     source = ./yamlfmt/config.yaml;
   };
+
+  home.sessionVariables.TALOSCONFIG = "${osConfig.system.xdg.configHome}/talos/talosconfig";
+  home.sessionVariables.RAINFROG_CONFIG = "${osConfig.system.xdg.configHome}/rainfrog/config.toml";
+  home.sessionVariables.GOPATH = "${osConfig.system.homeDir}/go";
+  home.sessionVariables.GOBIN = "${osConfig.system.homeDir}/go/bin";
+  home.sessionVariables.GOCACHE = "${osConfig.system.xdg.cacheHome}/go-build";
 }

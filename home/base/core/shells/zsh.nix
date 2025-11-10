@@ -7,23 +7,13 @@
 
   # Zsh config files
   home.file."${osConfig.system.xdg.configDir}/zsh/.zshenv".text = ''
+    # Managed by Nix
+    source /etc/profiles/per-user/$USER/etc/profile.d/hm-session-vars.sh
+
     # Zsh
     export HISTFILE="$ZDOTDIR/.zhistory"    # History filepath
     export HISTSIZE=10000                   # Maximum events for internal history
     export SAVEHIST=10000                   # Maximum events in history file
-
-
-    # Talos OS
-    export TALOSCONFIG=$XDG_CONFIG_HOME/talos/talosconfig
-
-    # Rainfrog
-    export RAINFROG_CONFIG=$XDG_CONFIG_HOME/rainfrog/config.toml
-
-    # Programming
-    # Go
-    export GOPATH="$HOME/go"
-    export GOBIN="$HOME/go/bin"
-    export GOCACHE="$XDG_CACHE_HOME/go-build"
   '';
 
   home.file."${osConfig.system.xdg.configDir}/zsh/.zshrc".text = ''
