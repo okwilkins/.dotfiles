@@ -19,9 +19,6 @@
     # Rainfrog
     export RAINFROG_CONFIG=$XDG_CONFIG_HOME/rainfrog/config.toml
 
-    # Dagger
-    export DAGGER_NO_NAG=1
-
     # Programming
     # Go
     export GOPATH="$HOME/go"

@@ -40,12 +40,6 @@ let
     command = "${pkgs.starship}/bin/starship init zsh > $out";
     packages = [ pkgs.starship ];
   };
-  # TODO: Install Dagger via its Flake as not available via pkgs
-  # daggerPlugin = gen-plugin {
-  #   name = "dagger";
-  #   command = "${pkgs.dagger}/bin/dagger plugin zsh > $out";
-  #   packages = [ pkgs.dagger ];
-  # };
 in
 {
   # INFO: Broken on Darwin 25.05
@@ -67,7 +61,4 @@ in
   home.file."${osConfig.system.xdg.configDir}/zsh/plugins/starship-plugin.zsh" = {
     source = starshipPlugin;
   };
-  # home.file."${osConfig.system.xdg.configDir}/zsh/plugins/dagger-plugin.zsh" = {
-  #   source = daggerPlugin;
-  # };
 }

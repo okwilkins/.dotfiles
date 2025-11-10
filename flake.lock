@@ -1,25 +1,5 @@
 {
   "nodes": {
-    "dagger": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1762539092,
-        "narHash": "sha256-bUbFZGGl1nMs6/gc1ifBuFGG3U37e6gieK6xRKhMAsk=",
-        "owner": "dagger",
-        "repo": "nix",
-        "rev": "42b32a9eb8cab302143f3117b5913c384e7f5d67",
-        "type": "github"
-      },
-      "original": {
-        "owner": "dagger",
-        "repo": "nix",
-        "type": "github"
-      }
-    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -117,7 +97,6 @@
     },
     "root": {
       "inputs": {
-        "dagger": "dagger",
         "home-manager": "home-manager",
         "nix-darwin": "nix-darwin",
         "nixpkgs": "nixpkgs",
