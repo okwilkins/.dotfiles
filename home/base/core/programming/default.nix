@@ -1,6 +1,10 @@
 # TODO: Seperate this file out of base as servers DEFFO do not want all of these things
 { pkgs, osConfig, ... }:
 {
+  imports = [
+    ./docker.nix
+  ];
+
   home.packages = with pkgs; [
     zig
     go
