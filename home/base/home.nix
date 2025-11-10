@@ -1,7 +1,5 @@
 {
   osConfig,
-  inputs,
-  pkgs,
   ...
 }:
 {

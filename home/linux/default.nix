@@ -1,4 +1,7 @@
 { ... }:
 {
-  imports = [ ./gui ];
+  imports = [
+    ./home.nix
+    ./gui
+  ];
 }
