@@ -24,6 +24,11 @@
       url = "github:hyprwm/hyprlauncher";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    argonaut-temp = {
+      url = "github:okwilkins/argonaut/feat/nix-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs: import ./outputs inputs;

@@ -1,4 +1,6 @@
 {
+  inputs,
+  pkgs,
   osConfig,
   ...
 }:
@@ -6,6 +8,10 @@
   home = {
     username = osConfig.system.username;
     homeDirectory = osConfig.system.homeDir;
+
+    packages = with inputs; [
+      argonaut-temp.packages.${pkgs.system}.default
+    ];
 
     # This value determines the home Manager release that your
     # configuration is compatible with. This helps avoid breakage
