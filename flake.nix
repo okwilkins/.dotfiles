@@ -25,8 +25,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    argonaut-temp = {
-      url = "github:okwilkins/argonaut/feat/nix-flake";
+    argonaut = {
+      url = "github:darksworm/argonaut";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

@@ -33,7 +33,7 @@
         "type": "github"
       }
     },
-    "argonaut-temp": {
+    "argonaut": {
       "inputs": {
         "flake-utils": "flake-utils",
         "nixpkgs": [
@@ -41,16 +41,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1762989436,
-        "narHash": "sha256-sorrtYjgY0ML8EXIQeCa5Xev2OTJ3LbW6TSSzDyMQIg=",
-        "owner": "okwilkins",
+        "lastModified": 1763056322,
+        "narHash": "sha256-DuyIIhMivcw+bPhh2JXGh8maL5tpZFEO58oQSdy1FcI=",
+        "owner": "darksworm",
         "repo": "argonaut",
-        "rev": "27e710dc9a5ba90e1592385a8a34ee3c268214db",
+        "rev": "85152f3c207b4e70bc3229c8ef109fd63fd6f82c",
         "type": "github"
       },
       "original": {
-        "owner": "okwilkins",
-        "ref": "feat/nix-flake",
+        "owner": "darksworm",
         "repo": "argonaut",
         "type": "github"
       }
@@ -409,7 +408,7 @@
     },
     "root": {
       "inputs": {
-        "argonaut-temp": "argonaut-temp",
+        "argonaut": "argonaut",
         "home-manager": "home-manager",
         "hyprlauncher": "hyprlauncher",
         "nix-darwin": "nix-darwin",

@@ -10,7 +10,7 @@
     homeDirectory = osConfig.system.homeDir;
 
     packages = with inputs; [
-      argonaut-temp.packages.${pkgs.system}.default
+      argonaut.packages.${pkgs.system}.default
     ];
 
     # This value determines the home Manager release that your
