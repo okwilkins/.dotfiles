@@ -45,7 +45,7 @@ in
   home.file."${osConfig.system.xdg.configDir}/containers/policy.json" = {
     source = ./buildah/config.json;
   };
-  home.file."${osConfig.system.xdg.configDir}/containers/registry.conf" = {
+  home.file."${osConfig.system.xdg.configDir}/containers/registries.conf" = {
     source = registryToml;
   };
 }

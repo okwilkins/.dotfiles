@@ -1,6 +1,10 @@
-{ pkgs, osConfig, ... }:
+{
+  pkgs,
+  osConfig,
+  registryHost,
+  ...
+}:
 let
-  registryHost = "harbor.okwilkins.dev";
   tomlFormat = pkgs.formats.toml { };
   caStorePath = pkgs.writeText "talos-homelab-ca.crt" (
     builtins.readFile ../../../../certs/talos-homelab-ca.crt
