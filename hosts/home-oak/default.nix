@@ -9,6 +9,11 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # QEMU system emulation
+  boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
+  # Stops containerised workloads from complaining about dynamically linked libs not existing
+  boot.binfmt.preferStaticEmulators = true;
+
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
