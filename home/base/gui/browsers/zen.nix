@@ -45,7 +45,7 @@
       # To find the key, install the addon, right-click inspect and look at the link: addons://detail/<<AUTHOR ID>>
       ExtensionSettings = {
         "addon@darkreader.org" = {
-          install_url = "https://addons.mozilla.org/firefox/downloads/file/4535824/darkreader-4.9.110.xpi";
+          install_url = "https://addons.mozilla.org/firefox/downloads/file/4535824/darkreader-4.9.116.xpi";
           installation_mode = "force_installed";
           default_area = "menupanel";
         };
@@ -55,12 +55,12 @@
           default_area = "menupanel";
         };
         "jid1-MnnxcxisBPnSXQ@jetpack" = {
-          install_url = "https://addons.mozilla.org/firefox/downloads/file/4504218/privacy_badger17-2025.5.30.xpi";
+          install_url = "https://addons.mozilla.org/firefox/downloads/file/4504218/privacy_badger17-2025.9.2.xpi";
           installation_mode = "force_installed";
           default_area = "menupanel";
         };
         "{a4c4eda4-fb84-4a84-b4a1-f7c1cbf2a1ad}" = {
-          install_url = "https://addons.mozilla.org/firefox/downloads/file/4550452/refined_github-25.8.4.xpi";
+          install_url = "https://addons.mozilla.org/firefox/downloads/file/4550452/refined_github-25.11.22.xpi";
           installation_mode = "force_installed";
           default_area = "menupanel";
         };
@@ -70,7 +70,7 @@
           default_area = "menupanel";
         };
         "uBlock0@raymondhill.net" = {
-          install_url = "https://addons.mozilla.org/firefox/downloads/file/4531307/ublock_origin-1.65.0.xpi";
+          install_url = "https://addons.mozilla.org/firefox/downloads/file/4531307/ublock_origin-1.67.0.xpi";
           installation_mode = "force_installed";
           default_area = "menupanel";
         };
