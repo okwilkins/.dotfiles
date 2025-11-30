@@ -42,14 +42,15 @@
           "Status" = "locked";
         };
       };
+      # To find the key, install the addon, right-click inspect and look at the link: addons://detail/<<AUTHOR ID>>
       ExtensionSettings = {
         "addon@darkreader.org" = {
           install_url = "https://addons.mozilla.org/firefox/downloads/file/4535824/darkreader-4.9.110.xpi";
           installation_mode = "force_installed";
           default_area = "menupanel";
         };
-        "support@lastpass.com" = {
-          install_url = "https://addons.mozilla.org/firefox/downloads/file/4535188/lastpass_password_manager-4.145.0.xpi";
+        "{446900e4-71c2-419f-a6a7-df9c091e268b}" = {
+          install_url = "https://addons.mozilla.org/firefox/downloads/file/4624303/bitwarden_password_manager-2025.11.1.xpi";
           installation_mode = "force_installed";
           default_area = "menupanel";
         };
