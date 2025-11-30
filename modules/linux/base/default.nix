@@ -6,5 +6,6 @@
     ./ssh.nix
     ./nix.nix
     ./system-packages.nix
+    ./security.nix
   ];
 }
