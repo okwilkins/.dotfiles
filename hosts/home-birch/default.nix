@@ -17,6 +17,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+  networking.hostName = "birch-nixos";
 
   # Configure keymap in X11
   services.xserver.xkb = {
