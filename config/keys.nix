@@ -7,9 +7,9 @@
     default = [
       # These keys were generated with my Yubikeys, to generate more run:
       # ssh-keygen -t ed25519-sk -N "" -C "<EMAIL>" -f <FILE LOC>
-      # Yubikey 5 NFC
+      # racoon
       "sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29tAAAAIH4AQrahpVqwh6eDbB71pBwGBh+tlLRFqTfXyuB+qtlTAAAABHNzaDo= okwilkins@googlemail.com"
-      # Yubikey Security Key NFC
+      # raven
       "sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29tAAAAIBDTUkI3Zvgl91ULeoD5YjoN67ldfuRdc3aZuN3CKDhKAAAABHNzaDo= okwilkins@googlemail.com
       "
     ];
