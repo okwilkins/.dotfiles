@@ -5,6 +5,5 @@
     ./system-variables.nix
     ./security.nix
     ./networking.nix
-    ./virtualisation.nix
   ];
 }
