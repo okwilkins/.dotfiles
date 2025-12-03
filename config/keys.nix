@@ -11,6 +11,8 @@
       "sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29tAAAAIH4AQrahpVqwh6eDbB71pBwGBh+tlLRFqTfXyuB+qtlTAAAABHNzaDo= okwilkins@googlemail.com"
       # raven
       "sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29tAAAAIBDTUkI3Zvgl91ULeoD5YjoN67ldfuRdc3aZuN3CKDhKAAAABHNzaDo= okwilkins@googlemail.com"
+      # oak age
+      "age1q5966lsr67xv3pt8vvpwxrq0axm0te73xrrd9rr84vdx0ut5egrqnhk292"
     ];
   };
 }
