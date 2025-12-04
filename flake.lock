@@ -54,6 +54,22 @@
         "type": "github"
       }
     },
+    "dot-secrets": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1764881170,
+        "narHash": "sha256-c47+Hvp6Nl/kzFKPm0lmF6ounwIDgMsJnLrkhlN0pcA=",
+        "ref": "refs/heads/main",
+        "rev": "cfcb438fbc45d018b6323b41f47d774467186f60",
+        "revCount": 2,
+        "type": "git",
+        "url": "ssh://git@github.com/okwilkins/.secrets.git"
+      },
+      "original": {
+        "type": "git",
+        "url": "ssh://git@github.com/okwilkins/.secrets.git"
+      }
+    },
     "flake-utils": {
       "inputs": {
         "systems": "systems"
@@ -409,6 +425,7 @@
     "root": {
       "inputs": {
         "argonaut": "argonaut",
+        "dot-secrets": "dot-secrets",
         "home-manager": "home-manager",
         "hyprlauncher": "hyprlauncher",
         "nix-darwin": "nix-darwin",
