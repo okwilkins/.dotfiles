@@ -1,6 +1,7 @@
 {
   nixpkgs,
   home-manager,
+  sops-nix,
   inputs,
   overlays,
   ...
@@ -12,6 +13,7 @@
       ../../../hosts/home-oak
       ../../../modules/linux/desktop
       ../../../config
+      sops-nix.nixosModules.sops
       (
         { ... }:
         {

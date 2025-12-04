@@ -3,6 +3,7 @@
   home-manager,
   inputs,
   overlays,
+  sops-nix,
   ...
 }:
 
@@ -22,6 +23,7 @@ nixpkgs.lib.recursiveUpdate
         nixpkgs
         home-manager
         overlays
+        sops-nix
         ;
     }
   )

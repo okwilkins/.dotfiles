@@ -2,6 +2,7 @@
   nixpkgs,
   home-manager,
   nix-darwin,
+  sops-nix,
   ...
 }@inputs:
 let
@@ -10,7 +11,12 @@ let
 
   nixosSystems = {
     x86_64-linux = import ./x86_64-linux {
-      inherit nixpkgs home-manager inputs;
+      inherit
+        nixpkgs
+        home-manager
+        inputs
+        sops-nix
+        ;
       overlays = overlays;
     };
     # aarch64-linux = import ./aarch64-linux ({system = "aarch64-linux";});
