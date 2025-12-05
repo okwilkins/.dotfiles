@@ -14,4 +14,9 @@
     age.generateKey = true;
     gnupg.sshKeyPaths = [ ];
   };
+
+  sops.secrets."talos/homelab" = {
+    owner = config.system.username;
+    path = "${config.system.xdg.configHome}/talos/config.yaml";
+  };
 }
