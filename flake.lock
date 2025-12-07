@@ -57,11 +57,11 @@
     "dot-secrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1764885218,
-        "narHash": "sha256-Kd1Kssc5b9oIqX1OVRha4HJ9vUACo8fHIlRZmeVSE/A=",
+        "lastModified": 1765110534,
+        "narHash": "sha256-Waya4WvQJLPitu6KlSo6eSY5z1phl1/6mEo4TSEN4ms=",
         "ref": "refs/heads/main",
-        "rev": "fe505091c1c76c58de4d04390fdbb22cd642f52f",
-        "revCount": 3,
+        "rev": "21086224896c4003e32eaf4b0da154e14265f3cf",
+        "revCount": 9,
         "type": "git",
         "url": "ssh://git@github.com/okwilkins/.secrets.git"
       },
