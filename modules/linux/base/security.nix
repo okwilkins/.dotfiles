@@ -7,12 +7,11 @@
 
   # INFO: https://nixos.wiki/wiki/Yubikey#pam_u2f
   # To add more security keys read here
-  security.pam.services = {
-    login.u2fAuth = true;
-    sudo.u2fAuth = true;
-  };
   security.pam.u2f = {
     enable = true;
-    settings.cue = true;
+    settings = {
+      cue = true;
+      pinverification = true;
+    };
   };
 }
