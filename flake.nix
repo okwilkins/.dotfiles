@@ -22,7 +22,7 @@
 
     dot-secrets = {
       url = "git+ssh://git@github.com/okwilkins/.secrets.git";
-      flake = false;
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     zen-browser = {
