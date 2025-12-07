@@ -15,6 +15,11 @@
     gnupg.sshKeyPaths = [ ];
   };
 
+  sops.secrets."yubico/u2f_keys" = {
+    owner = config.system.username;
+    path = "${config.system.xdg.configHome}/Yubico/u2f_keys";
+  };
+
   sops.secrets."talos/homelab" = {
     owner = config.system.username;
     path = "${config.system.xdg.configHome}/talos/config.yaml";
