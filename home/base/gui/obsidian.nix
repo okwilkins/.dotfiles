@@ -8,6 +8,13 @@ let
   relVaultPath = "Documents/projects/knowledge-system";
   vaultPath = "${osConfig.system.homeDir}/${relVaultPath}";
   repoUrl = "git@github.com:okwilkins/knowledge-system.git";
+
+  obsidianGit = pkgs.fetchzip {
+    url = "https://github.com/Vinzent03/obsidian-git/releases/download/2.35.2/obsidian-git-2.35.2.zip";
+    name = "obsidian-git";
+    stripRoot = false;
+    hash = "sha256-FKpNQu5AUhYa62NWAt2MX0fmIUXuHyx05e3F3txW8Sw=";
+  };
 in
 {
   home.activation.cloneKnowledgeSystem = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
@@ -17,10 +24,6 @@ in
       ${pkgs.git}/bin/git clone "${repoUrl}" "${vaultPath}"
     fi
   '';
-  home.file."${relVaultPath}/.obsidian/config".text = builtins.toJSON {
-    vimMode = true;
-    attachmentFolderPath = "assets";
-  };
 
   programs.obsidian = {
     enable = true;
@@ -28,6 +31,14 @@ in
       ${relVaultPath} = {
         enable = true;
         settings = {
+          app = {
+            safeMode = false;
+            vimMode = true;
+            showLineNumber = true;
+          };
+          communityPlugins = [
+            obsidianGitRepo
+          ];
           corePlugins = [
             "backlink"
             "bookmarks"
