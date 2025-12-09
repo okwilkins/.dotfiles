@@ -25,6 +25,7 @@ in
     terraform
     opentofu
     cilium-cli
+    clang-tools
     # LSPs
     nixd
     lua-language-server
