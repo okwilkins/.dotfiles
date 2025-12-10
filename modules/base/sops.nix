@@ -22,4 +22,14 @@
     owner = config.system.username;
     path = "${config.system.xdg.configHome}/talos/config.yaml";
   };
+
+  sops.secrets."ssh_keys/racoon" = {
+    owner = config.system.username;
+    path = "${config.system.homeDir}/.ssh/id_racoon";
+  };
+
+  sops.secrets."ssh_keys/raven" = {
+    owner = config.system.username;
+    path = "${config.system.homeDir}/.ssh/id_raven";
+  };
 }
