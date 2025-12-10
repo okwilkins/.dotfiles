@@ -2,6 +2,7 @@
 let
   brokenPackages = [
     "ghostty"
+    "buildah"
   ];
 in
 {
