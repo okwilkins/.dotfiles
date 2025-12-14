@@ -13,6 +13,7 @@ in
     hyprshot
     hyprlock
     hypridle
+    hyprlauncher
   ];
   home.file."${osConfig.system.xdg.configDir}/hypr/" = {
     source = ./config;
