@@ -30,11 +30,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprlauncher = {
-      url = "github:hyprwm/hyprlauncher";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     argonaut = {
       url = "github:darksworm/argonaut";
       inputs.nixpkgs.follows = "nixpkgs";
