@@ -1,8 +1,8 @@
 { ... }:
 {
   imports = [
-    ./home.nix
     ./gui
     ./yubikey.nix
+    ./sops.nix
   ];
 }
