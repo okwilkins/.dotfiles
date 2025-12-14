@@ -11,7 +11,7 @@ in
   imports = [
     ./xdg.nix
     ./hyprland
-    ./anyrun
+    # ./anyrun
     ./waybar
     ./wlogout
     ./swaync
