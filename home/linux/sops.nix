@@ -27,6 +27,11 @@ in
     source = ageKeyFile;
   };
 
+  home.file.".ssh/" = {
+    source = "${inputs.dot-secrets}/keys/ssh";
+    recursive = true;
+  };
+
   sops = {
     age.sshKeyPaths = [
       # "${osConfig.system.homeDir}/.ssh/id_racoon"
