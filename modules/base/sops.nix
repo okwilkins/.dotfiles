@@ -26,12 +26,12 @@ in
 
   sops.secrets."ssh_keys/racoon" = {
     owner = config.system.username;
-    path = "${config.system.homeDir}/.ssh/id_racoon";
+    path = "${config.system.homeDir}/.ssh/racoon";
   };
 
   sops.secrets."ssh_keys/raven" = {
     owner = config.system.username;
-    path = "${config.system.homeDir}/.ssh/id_raven";
+    path = "${config.system.homeDir}/.ssh/raven";
   };
 
   sops.secrets."ssh_keys/oli" = {

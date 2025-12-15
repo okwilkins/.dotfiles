@@ -34,8 +34,6 @@ in
 
   sops = {
     age.sshKeyPaths = [
-      # "${osConfig.system.homeDir}/.ssh/id_racoon"
-      # "${osConfig.system.homeDir}/.ssh/id_raven"
       "${osConfig.system.homeDir}/.ssh/oli"
     ];
     # age.keyFile = "${osConfig.system.xdg.configDir}/sops/age-keys";
