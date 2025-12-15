@@ -1,6 +1,7 @@
 [user]
     email = okwilkins@googlemail.com
     name = Oliver Wilkins
+    signingkey = ~/.ssh/raven.pub
 
 [init]
     defaultBranch = main
@@ -11,6 +12,12 @@
 [rebase]
     # Keep dates when rebasing
     instructionFormat = %s%nexec GIT_COMMITTER_DATE=\"%cD\" git commit --amend --no-edit
+
+[gpg]
+    format = ssh
+
+[commit]
+    gpgsign = true
 
 [core]
     pager = delta
