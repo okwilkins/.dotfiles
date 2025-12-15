@@ -33,4 +33,9 @@ in
     owner = config.system.username;
     path = "${config.system.homeDir}/.ssh/id_raven";
   };
+
+  sops.secrets."ssh_keys/oli" = {
+    owner = config.system.username;
+    path = "${config.system.homeDir}/.ssh/oli";
+  };
 }
