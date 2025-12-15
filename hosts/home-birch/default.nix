@@ -34,7 +34,6 @@
       "wheel"
     ];
     shell = pkgs.zsh;
-    openssh.authorizedKeys.keys = config.keys;
   };
 
   nix.settings.experimental-features = [
