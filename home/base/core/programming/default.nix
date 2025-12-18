@@ -41,6 +41,8 @@ in
     stylua
     ruff
     yamlfmt
+    # Debuggers
+    lldb
   ];
 
   home.file."${osConfig.system.xdg.configDir}/yamlfmt/.yamlfmt" = {
