@@ -1,9 +1,11 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 FORMAT=$(printf '{{status}}\t{{playerName}}\t{{markup_escape(title)}}\t{{markup_escape(artist)}}')
 
 playerctl metadata --format "$FORMAT" -F | \
 while IFS=$'\t' read -r status player title artist; do
+    [[ -z "$status" ]] && continue
+
     if [[ -z "$artist" ]]; then
         tooltip="$player: $title"
     else
