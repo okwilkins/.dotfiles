@@ -36,6 +36,7 @@
 
   home.file."${osConfig.system.xdg.configDir}/bat" = {
     source = ./bat;
+    recursive = true;
   };
   home.activation.batCacheRebuild = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     ${pkgs.bat}/bin/bat cache --build
@@ -43,9 +44,11 @@
 
   home.file."${osConfig.system.xdg.configDir}/git" = {
     source = ./git;
+    recursive = true;
   };
 
-  home.file."${osConfig.system.xdg.configDir}/lazygit/config.yml" = {
-    source = ./lazygit/config.yaml;
+  home.file."${osConfig.system.xdg.configDir}/lazygit" = {
+    source = ./lazygit;
+    recursive = true;
   };
 }
