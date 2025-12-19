@@ -119,10 +119,11 @@
     "on-click": "wlogout"
   },
   "custom/playerctl": {
-    "format": "{icon}  <span>{}</span>",
+    "format": "{icon}  <span>{text}</span>",
     "return-type": "json",
     "max-length": 55,
-    "exec": "playerctl -a metadata --format '{\"text\": \"  {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+    "exec": "$HOME/.config/waybar/scripts/playerctl.sh",
+    "return-type": "json",
     "on-click-middle": "playerctl previous",
     "on-click": "playerctl play-pause",
     "on-click-right": "playerctl next",
