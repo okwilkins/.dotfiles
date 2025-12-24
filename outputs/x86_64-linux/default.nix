@@ -14,6 +14,7 @@ nixpkgs.lib.recursiveUpdate
       nixpkgs
       home-manager
       overlays
+      sops-nix
       ;
   })
   (
