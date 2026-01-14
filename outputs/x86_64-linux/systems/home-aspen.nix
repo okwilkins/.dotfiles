@@ -30,8 +30,11 @@
         # Backup conflicting files when switching to not cause errors
         home-manager.backupFileExtension = "backup";
         home-manager.users.oli.imports = [
-          ../../../home/base
-          ../../../home/linux
+          ../../../home/base/home.nix
+          ../../../home/base/core
+          ../../../home/base/tui
+          ../../../home/linux/sops.nix
+          ../../../home/linux/yubikey.nix
         ];
       }
     ];
