@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  pkgs,
   ...
 }:
 {
@@ -21,7 +22,7 @@
     extraGroups = [
       "wheel"
     ];
-    # shell = pkgs.zsh;
+    shell = pkgs.zsh;
   };
 
   nix.settings.experimental-features = [
