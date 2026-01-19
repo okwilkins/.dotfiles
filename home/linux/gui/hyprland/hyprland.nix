@@ -14,6 +14,7 @@ in
     hyprlock
     hypridle
     hyprlauncher
+    hyprsunset
   ];
   home.file."${osConfig.system.xdg.configDir}/hypr/" = {
     source = ./config;
