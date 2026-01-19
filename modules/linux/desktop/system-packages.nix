@@ -15,7 +15,7 @@
       settings = {
         default_session = {
           user = config.system.username;
-          command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --cmd hyprland --theme border=magenta;text=cyan;prompt=green;time=red;action=blue;button=yellow;container=gray;input=red";
+          command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --cmd start-hyprland --theme border=magenta;text=cyan;prompt=green;time=red;action=blue;button=yellow;container=gray;input=red";
         };
       };
     };
