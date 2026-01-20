@@ -135,8 +135,8 @@
   "custom/launcher": {
     "format": "󱄅",
     "tooltip": false,
-    "on-click-right": "ghostty --confirm-close-surface=false --class=com.ghostty.fastfetch --window-height=25 --window-width=65 -e 'sleep 0.1; cbonsai -l -i'",
-    "on-click": "ghostty --confirm-close-surface=false --class=com.ghostty.fastfetch --window-height=21 --window-width=130 -e 'sleep 0.1; fastfetch; read -n 1 -s'"
+    "on-click-right": "ghostty --confirm-close-surface=false --class=com.ghostty.fastfetch --window-height=25 --window-width=65 -e sh -c 'sleep 0.1; cbonsai -l -i'",
+    "on-click": "ghostty --confirm-close-surface=false --class=com.ghostty.fastfetch --window-height=21 --window-width=300 --window-step-resize=false -e sh -c 'sleep 0.1; fastfetch; read -n 1 -s'"
   },
   "custom/notification": {
     "tooltip": false,

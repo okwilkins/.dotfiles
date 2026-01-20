@@ -7,11 +7,12 @@ let
   };
 in
 {
-  home.packages = with pkgs; [
-    swaynotificationcenter
-  ];
 
-  home.file."${osConfig.system.xdg.configDir}/swaync/style.css" = {
-    source = "${catppuccinMochaSwaync}";
-  };
+  # INFO: Old setup using the hyprland applications
+  # home.packages = with pkgs; [
+  #   swaynotificationcenter
+  # ];
+  # home.file."${osConfig.system.xdg.configDir}/swaync/style.css" = {
+  #   source = "${catppuccinMochaSwaync}";
+  # };
 }

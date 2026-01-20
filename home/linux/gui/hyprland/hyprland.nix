@@ -8,14 +8,16 @@ let
   };
 in
 {
-  home.packages = with pkgs; [
-    hyprpaper
-    hyprshot
-    hyprlock
-    hypridle
-    hyprlauncher
-    hyprsunset
-  ];
+
+  # INFO: Old setup using the hyprland applications
+  # home.packages = with pkgs; [
+  # hyprpaper
+  # hyprshot
+  # hyprlock
+  # hypridle
+  # hyprlauncher
+  # hyprsunset
+  # ];
   home.file."${osConfig.system.xdg.configDir}/hypr/" = {
     source = ./config;
     recursive = true;

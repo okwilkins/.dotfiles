@@ -9,12 +9,14 @@ let
 in
 {
   imports = [
-    ./xdg.nix
     ./hyprland
+    # INFO: Old setup using the hyprland applications
     # ./anyrun
-    ./waybar
-    ./wlogout
-    ./swaync
+    # ./waybar
+    # ./wlogout
+    # ./swaync
+    ./noctalia.nix
+    ./xdg.nix
   ];
 
   home.file."${osConfig.system.xdg.dataDir}/icons/rose-pine-hyprcursor".source = "${
