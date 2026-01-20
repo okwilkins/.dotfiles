@@ -45,7 +45,7 @@
         volumeStep = 5;
       };
       bar = {
-        backgroundOpacity = 0.93;
+        backgroundOpacity = 1;
         capsuleOpacity = 1;
         density = "default";
         exclusive = true;
@@ -275,7 +275,8 @@
         avatarImage = "${osConfig.system.homeDir}/Pictures/profiles/headshot-profile.png";
         boxRadiusRatio = 1;
         compactLockScreen = false;
-        dimmerOpacity = 0.2;
+        # Same as Hyprland's noctalia-blur layerrule
+        dimmerOpacity = 0.35;
         enableLockScreenCountdown = true;
         enableShadows = false;
         forceBlackScreenCorners = false;
@@ -458,12 +459,12 @@
         bluetoothDetailsViewMode = "grid";
         bluetoothHideUnnamedDevices = false;
         boxBorderEnabled = false;
-        fontDefault = "Noto Sans";
+        fontDefault = "Inter";
         fontDefaultScale = 1;
         fontFixed = "Noto Sans Mono";
         fontFixedScale = 1;
         networkPanelView = "wifi";
-        panelBackgroundOpacity = 1;
+        panelBackgroundOpacity = 0.76;
         panelsAttachedToBar = true;
         settingsPanelMode = "attached";
         tooltipsEnabled = true;
