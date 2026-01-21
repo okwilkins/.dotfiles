@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   imports = [
     ./terminals
@@ -6,5 +6,9 @@
     ./styling
     ./images.nix
     ./obsidian.nix
+  ];
+
+  home.packages = with pkgs; [
+    obs-studio
   ];
 }
