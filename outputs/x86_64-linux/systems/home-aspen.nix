@@ -8,13 +8,12 @@
 }:
 {
   nixosConfigurations.aspen = nixpkgs.lib.nixosSystem {
-    system = "x86_64-linux";
+    system = "aarch64-linux";
     specialArgs = { inherit inputs; };
     modules = [
       ../../../hosts/home-aspen
       ../../../modules/linux/base
       ../../../config
-      ../../../generators/docker.nix
       sops-nix.nixosModules.sops
       (
         { ... }:

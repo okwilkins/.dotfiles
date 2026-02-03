@@ -1,25 +1,29 @@
+{ pkgs, config, ... }:
 {
-  config,
-  lib,
-  pkgs,
-  ...
-}:
-{
-  # Settings to get containerisation working for this host
-  boot.isContainer = true;
 
-  # Disable networking hardware management (Podman handles this)
-  networking.networkmanager.enable = false;
-  networking.useDHCP = false;
+  # Bootloader.
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+
+  # Use latest kernel.
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
+  # Enable networking
+  networking.networkmanager.enable = true;
   networking.hostName = "aspen-nixos";
-  # Trust the DNS provided by Podman
-  networking.resolvconf.enable = false;
+
+  # Configure keymap in X11
+  services.xserver.xkb = {
+    layout = "us";
+    variant = "";
+  };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.${config.system.username} = {
     isNormalUser = true;
     description = config.system.userFullname;
     extraGroups = [
+      "networkmanager"
       "wheel"
     ];
     shell = pkgs.zsh;
@@ -29,8 +33,6 @@
     "nix-command"
     "flakes"
   ];
-
-  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

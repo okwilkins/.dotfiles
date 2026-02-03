@@ -4,7 +4,6 @@
   inputs,
   overlays,
   sops-nix,
-  nixos-generators,
   ...
 }:
 
@@ -16,7 +15,6 @@ nixpkgs.lib.foldl' nixpkgs.lib.recursiveUpdate { } [
       home-manager
       overlays
       sops-nix
-      nixos-generators
       ;
   })
   (import ./systems/home-birch.nix {
