@@ -30,7 +30,6 @@
     htop
     carapace
     ouch
-    rar
     dnsutils
   ];
 
