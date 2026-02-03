@@ -89,19 +89,19 @@
             }
             {
               compactMode = false;
-              compactShowAlbumArt = true;
+              compactShowAlbumArt = false;
               compactShowVisualizer = false;
               hideMode = "hidden";
               hideWhenIdle = false;
               id = "MediaMini";
-              maxWidth = 145;
+              maxWidth = 300;
               panelShowAlbumArt = true;
               panelShowVisualizer = true;
               scrollingMode = "hover";
               showAlbumArt = true;
               showArtistFirst = true;
               showProgressRing = true;
-              showVisualizer = false;
+              showVisualizer = true;
               useFixedWidth = false;
               visualizerType = "linear";
             }
