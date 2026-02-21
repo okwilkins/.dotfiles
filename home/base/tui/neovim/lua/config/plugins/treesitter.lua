@@ -25,6 +25,7 @@ return {
         "toml",
         "tsx",
         "typescript",
+        "nix",
         "vim",
         "vimdoc",
         "xml",
