@@ -5,7 +5,10 @@
   ];
   programs.zen-browser = {
     enable = true;
+    suppressXdgMigrationWarning = true;
     profiles.default = {
+      path = "default";
+      isDefault = true;
       settings = {
         "browser.startup.page" = 3; # Launch the last tab open
         "browser.aboutConfig.showWarning" = false;
