@@ -23,7 +23,242 @@
         "zen.widget.linux.transparency" = true;
         "zen.view.grey-out-inactive-windows" = false;
       };
+
+      # Spaces/Workspaces Configuration
+      spaces = {
+        nix = {
+          id = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
+          name = "Nix";
+          icon = "❄️";
+          position = 1000;
+          theme.type = "gradient";
+          theme.opacity = 0.456;
+        };
+      };
+
+      pins = {
+        # Essentials
+        gmail = {
+          id = "gmail";
+          title = "Gmail";
+          url = "https://mail.google.com";
+          position = 0;
+          isEssential = true;
+          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
+        };
+        youtube-music = {
+          id = "youtube-music";
+          title = "YouTube Music";
+          url = "https://music.youtube.com/";
+          position = 1;
+          isEssential = true;
+          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
+        };
+        perplexity = {
+          id = "perplexity";
+          title = "Perplexity";
+          url = "https://www.perplexity.ai/";
+          position = 2;
+          isEssential = true;
+          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
+        };
+        x-twitter = {
+          id = "x-twitter";
+          title = "X";
+          url = "https://x.com/home";
+          position = 3;
+          isEssential = true;
+          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
+        };
+        github = {
+          id = "github";
+          title = "GitHub";
+          url = "https://github.com/";
+          position = 4;
+          isEssential = true;
+          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
+        };
+        whatsapp = {
+          id = "whatsapp";
+          title = "WhatsApp";
+          url = "https://web.whatsapp.com/";
+          position = 5;
+          isEssential = true;
+          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
+        };
+        reddit = {
+          id = "reddit";
+          title = "Reddit";
+          url = "https://www.reddit.com/";
+          position = 6;
+          isEssential = true;
+          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
+        };
+        financial-times = {
+          id = "financial-times";
+          title = "Financial Times";
+          url = "https://www.ft.com/";
+          position = 7;
+          isEssential = true;
+          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
+        };
+        linkedin = {
+          id = "linkedin";
+          title = "LinkedIn";
+          url = "https://www.linkedin.com";
+          position = 8;
+          isEssential = true;
+          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
+        };
+
+        # Regular pins
+        messenger = {
+          id = "messenger";
+          title = "Messenger";
+          url = "https://www.messenger.com";
+          position = 9;
+          isEssential = false;
+          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
+        };
+        telegram = {
+          id = "telegram";
+          title = "Telegram";
+          url = "https://web.telegram.org/k/#-498955210";
+          position = 10;
+          isEssential = false;
+          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
+        };
+
+        # Homelab group
+        homelab-group = {
+          id = "homelab-group";
+          title = "Homelab";
+          url = null;
+          position = 11;
+          isEssential = false;
+          isGroup = true;
+          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
+        };
+
+        # Homelab members
+        proxmox-server-01 = {
+          id = "proxmox-server-01";
+          title = "Proxmox 01";
+          url = "https://pve1.okwilkins.dev:8006";
+          position = 12;
+          isEssential = false;
+          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
+          folderParentId = "homelab-group";
+        };
+        proxmox-server-02 = {
+          id = "proxmox-server-02";
+          title = "Proxmox 02";
+          url = "https://pve2.okwilkins.dev:8006";
+          position = 13;
+          isEssential = false;
+          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
+          folderParentId = "homelab-group";
+        };
+        grafana = {
+          id = "grafana";
+          title = "Grafana";
+          url = "https://grafana.okwilkins.dev";
+          position = 14;
+          isEssential = false;
+          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
+          folderParentId = "homelab-group";
+        };
+        argocd = {
+          id = "argocd";
+          title = "ArgoCD";
+          url = "https://argocd.okwilkins.dev";
+          position = 15;
+          isEssential = false;
+          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
+          folderParentId = "homelab-group";
+        };
+        argo-workflows = {
+          id = "argo-workflows";
+          title = "Argo Workflows";
+          url = "https://workflows.okwilkins.dev";
+          position = 16;
+          isEssential = false;
+          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
+          folderParentId = "homelab-group";
+        };
+        excalidraw = {
+          id = "excalidraw";
+          title = "Excalidraw";
+          url = "https://draw.okwilkins.dev/";
+          position = 17;
+          isEssential = false;
+          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
+          folderParentId = "homelab-group";
+        };
+        harbor = {
+          id = "harbor";
+          title = "Harbor";
+          url = "https://harbor.okwilkins.dev";
+          position = 18;
+          isEssential = false;
+          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
+          folderParentId = "homelab-group";
+        };
+        prometheus = {
+          id = "prometheus";
+          title = "Prometheus";
+          url = "https://prometheus.okwilkins.dev";
+          position = 19;
+          isEssential = false;
+          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
+          folderParentId = "homelab-group";
+        };
+        hubble = {
+          id = "hubble";
+          title = "Hubble";
+          url = "https://hubble.okwilkins.dev/";
+          position = 20;
+          isEssential = false;
+          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
+          folderParentId = "homelab-group";
+        };
+
+        # Other pins
+        frontend-masters = {
+          id = "frontend-masters";
+          title = "Frontend Masters";
+          url = "https://frontendmasters.com/courses/algorithms/linked-list-complexity/";
+          position = 21;
+          isEssential = false;
+          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
+        };
+        monkeytype = {
+          id = "monkeytype";
+          title = "Monkeytype";
+          url = "https://monkeytype.com/";
+          position = 22;
+          isEssential = false;
+          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
+        };
+        keybr = {
+          id = "keybr";
+          title = "Keybr";
+          url = "https://www.keybr.com/";
+          position = 23;
+          isEssential = false;
+          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
+        };
+        learncpp = {
+          id = "learncpp";
+          title = "Learn C++";
+          url = "https://www.learncpp.com/";
+          position = 24;
+          isEssential = false;
+          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
+        };
+      };
     };
+
     policies = {
       AutofillAddressEnabled = true;
       AutofillCreditCardEnabled = false;
