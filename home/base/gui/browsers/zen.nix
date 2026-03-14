@@ -215,6 +215,15 @@
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
           folderParentId = "homelab-group";
         };
+        convert = {
+          id = "convert";
+          title = "Img Convert";
+          url = "https://convert.okwilkins.dev";
+          position = 19;
+          isEssential = false;
+          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
+          folderParentId = "homelab-group";
+        };
         prometheus = {
           id = "prometheus";
           title = "Prometheus";
