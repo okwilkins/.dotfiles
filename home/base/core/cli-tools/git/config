@@ -1,7 +1,7 @@
 [user]
     email = okwilkins@googlemail.com
     name = Oliver Wilkins
-    signingkey = ~/.ssh/raven.pub
+    signingkey = ~/.ssh/oli.pub
 
 [init]
     defaultBranch = main
