@@ -5,6 +5,6 @@
     ./system-variables.nix
     ./security.nix
     ./networking.nix
-    ./sops.nix
+    # ./sops.nix
   ];
 }

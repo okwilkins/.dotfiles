@@ -3,6 +3,6 @@
   imports = [
     ./gui
     ./yubikey.nix
-    ./sops.nix
+    # ./sops.nix
   ];
 }
