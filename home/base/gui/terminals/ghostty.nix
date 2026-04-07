@@ -3,6 +3,9 @@
   programs.ghostty = {
     enable = true;
   };
+  programs.foot = {
+    enable = true;
+  };
   home.file."${osConfig.system.xdg.configDir}/ghostty/config" = {
     source = ./ghostty/config;
   };
