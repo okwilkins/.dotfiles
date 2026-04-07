@@ -27,4 +27,7 @@
     # Cursor shader
     custom-shader = ${pins.ghostty-cursor-shaders}/ghostty/cursor_warp.glsl
   '';
+  programs.foot = {
+    enable = true;
+  };
 }

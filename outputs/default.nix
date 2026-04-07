@@ -19,7 +19,15 @@ let
         ;
       overlays = overlays;
     };
-    # aarch64-linux = import ./aarch64-linux ({system = "aarch64-linux";});
+    aarch64-linux = import ./aarch_64-linux { 
+      inherit
+        nixpkgs
+        home-manager
+        inputs
+        sops-nix
+        ;
+      overlays = overlays;
+    };
     # riscv64-linux = import ./riscv64-linux ({system = "riscv64-linux";});
   };
   darwinSystems = {
