@@ -20,7 +20,11 @@
     "sd_mod"
   ];
   boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-intel" ];
+  boot.kernelModules = [
+    "kvm-intel"
+    # For CUDA deving, allows for device memory interactions for example
+    "nvidia-uvm"
+  ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
