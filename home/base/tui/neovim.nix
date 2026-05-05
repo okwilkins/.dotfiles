@@ -18,14 +18,12 @@
     #                     To adopt the new default behavior, set:
     #                       programs.neovim.withPython3 = false;
     withPython3 = false;
+    initLua = builtins.readFile ./neovim/init.lua;
   };
 
   home.file."${osConfig.system.xdg.configDir}/nvim/lua" = {
     source = ./neovim/lua;
     recursive = true;
-  };
-  home.file."${osConfig.system.xdg.configDir}/nvim/init.lua" = {
-    source = ./neovim/init.lua;
   };
 
   home.file."${osConfig.system.xdg.configDir}/nvim/lazy-lock.json" = {
