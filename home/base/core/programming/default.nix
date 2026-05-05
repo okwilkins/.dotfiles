@@ -38,7 +38,7 @@ in
     vscode-langservers-extracted
     zls
     # Formatters
-    nixfmt-rfc-style
+    nixfmt
     stylua
     ruff
     yamlfmt
