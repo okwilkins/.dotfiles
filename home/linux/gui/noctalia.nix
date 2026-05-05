@@ -10,11 +10,16 @@
     };
   };
 
-  # NOTE: WANT TO MAKE OWN CATPPUCCIN THEME!
+  # Deploy colors.json directly:
+  home.file."${osConfig.system.xdg.configDir}/noctalia/colors.json" = {
+    text = builtins.toJSON (
+      (builtins.fromJSON (builtins.readFile ./noctalia/catppuccin-sapphire.json)).dark
+    );
+  };
 
   programs.noctalia-shell = {
     enable = true;
-    # Taken from: https://github.com/noctalia-dev/noctalia-shell/blob/1ef5c0eb307e8a4f30dfa6bcc75cf90ae8c6af46/Assets/settings-default.json
+    # Taken from: https://github.com/noctalia-dev/noctalia-shell/blob/6b48834dd6c3913d211476ab2f964f3fb100675e/Assets/settings-default.json
     settings = {
       appLauncher = {
         autoPasteClipboard = false;
@@ -146,6 +151,10 @@
             }
             {
               displayMode = "onhover";
+              id = "VPN";
+            }
+            {
+              displayMode = "onhover";
               id = "Network";
             }
             {
@@ -186,7 +195,7 @@
         extractionMethod = "default";
         manualSunrise = "06:30";
         manualSunset = "18:30";
-        predefinedScheme = "Tokyo Night";
+        # predefinedScheme = "catppuccin-sapphire";
         schedulingMode = "off";
         useWallpaperColors = false;
       };
@@ -295,6 +304,10 @@
         showScreenCorners = false;
         showSessionButtonsOnLockScreen = true;
         telemetryEnabled = false;
+        lockScreenBlur = 0.6;
+        lockScreenAnimations = true;
+        # Cool password chars on lockscreen
+        passwordChars = true;
       };
       hooks = {
         darkModeChange = "";
@@ -328,6 +341,7 @@
         wifiDetailsViewMode = "grid";
         wifiEnabled = true;
       };
+      vpn = { };
       nightLight = {
         autoSchedule = false;
         enabled = true;
@@ -378,10 +392,11 @@
         overlayLayer = true;
       };
       sessionMenu = {
-        countdownDuration = 10000;
+        countdownDuration = 3000;
         enableCountdown = true;
         largeButtonsLayout = "grid";
-        largeButtonsStyle = true;
+        largeButtonsStyle = false;
+        showKeybinds = false;
         position = "center";
         powerOptions = [
           {
@@ -421,8 +436,7 @@
             enabled = true;
           }
         ];
-        showHeader = true;
-        showNumberLabels = true;
+        showHeader = false;
       };
       settingsVersion = 41;
       systemMonitor = {
@@ -469,6 +483,8 @@
         settingsPanelMode = "attached";
         tooltipsEnabled = true;
         wifiDetailsViewMode = "grid";
+        translucentWidgets = true;
+        # Want widgets: mic, KeepAwake, systemMonitor
       };
       wallpaper = {
         directory = "${osConfig.system.homeDir}/Pictures/wallpapers";
@@ -501,6 +517,20 @@
         wallhavenResolutionWidth = "";
         wallhavenSorting = "relevance";
         wallpaperChangeMode = "random";
+        skipStartupTransition = false;
+      };
+      idle = {
+        enabled = true;
+        screenOffTimeout = 600;
+        lockTimeout = 900;
+        suspendTimeout = 1800;
+        fadeDuration = 5;
+        screenOffCommand = "hyprctl dispatch dpms off";
+        resumeScreenOffCommand = "hyprctl dispatch dpms on";
+        lockCommand = "";
+        suspendCommand = "";
+        resumeLockCommand = "";
+        resumeSuspendCommand = "";
       };
     };
   };
