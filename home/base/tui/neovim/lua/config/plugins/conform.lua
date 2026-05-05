@@ -3,7 +3,7 @@ return {
         lua = { "stylua" },
         yaml = { "yamlfmt" },
         json = { "jq" },
-        terraform = { "terraform_fmt" },
+        terraform = { "tofu_fmt" },
         go = { "gofmt" },
         python = { "ruff" },
         nix = { "nixfmt" },

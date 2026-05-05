@@ -22,7 +22,7 @@ in
     cosign
     talosctl
     go-task
-    terraform
+    # terraform
     opentofu
     cilium-cli
     clang-tools
@@ -32,7 +32,8 @@ in
     marksman
     pyright
     gopls
-    terraform-ls
+    # terraform-ls
+    tofu-ls
     yaml-language-server
     vscode-langservers-extracted
     zls
