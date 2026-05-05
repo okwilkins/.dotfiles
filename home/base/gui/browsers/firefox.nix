@@ -12,8 +12,9 @@ in
     source = "${firefoxCss}/chrome";
     recursive = true;
   };
+
   programs.firefox = {
-    enable = true;
+    enable = false;
     profiles.default = {
       settings = {
         # Personal settings
