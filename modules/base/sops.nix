@@ -24,18 +24,19 @@ in
     gnupg.sshKeyPaths = [ ];
   };
 
-  sops.secrets."ssh_keys/racoon" = {
-    owner = config.system.username;
-    path = "${config.system.homeDir}/.ssh/racoon";
-  };
+  sops.secrets = {
+    "ssh_keys/racoon" = {
+      owner = config.system.username;
+      path = "${config.system.homeDir}/.ssh/racoon";
+    };
+    "ssh_keys/raven" = {
+      owner = config.system.username;
+      path = "${config.system.homeDir}/.ssh/raven";
+    };
 
-  sops.secrets."ssh_keys/raven" = {
-    owner = config.system.username;
-    path = "${config.system.homeDir}/.ssh/raven";
-  };
-
-  sops.secrets."ssh_keys/oli" = {
-    owner = config.system.username;
-    path = "${config.system.homeDir}/.ssh/oli";
+    "ssh_keys/oli" = {
+      owner = config.system.username;
+      path = "${config.system.homeDir}/.ssh/oli";
+    };
   };
 }
