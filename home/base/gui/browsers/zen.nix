@@ -5,7 +5,6 @@
   ];
   programs.zen-browser = {
     enable = true;
-    suppressXdgMigrationWarning = true;
     profiles.default = {
       path = "default";
       isDefault = true;
