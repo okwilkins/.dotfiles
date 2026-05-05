@@ -88,5 +88,14 @@
       enable = true;
       createDirectories = true;
     };
+
+    # INFO:
+    # evaluation warning: The default value of `xdg.userDirs.setSessionVariables` has changed from `true` to `false`.
+    #                     You are currently using the legacy default (`true`) because `home.stateVersion` is less than "26.05".
+    #                     To silence this warning and keep legacy behavior, set:
+    #                       xdg.userDirs.setSessionVariables = true;
+    #                     To adopt the new default behavior, set:
+    #                       xdg.userDirs.setSessionVariables = false;
+    userDirs.setSessionVariables = false;
   };
 }
