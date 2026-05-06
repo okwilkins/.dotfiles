@@ -1,5 +1,72 @@
-{ inputs, osConfig, ... }:
 {
+  inputs,
+  pkgs,
+  osConfig,
+  ...
+}:
+let
+  noctaliaPluginsRepo = pkgs.fetchFromGitHub {
+    owner = "noctalia-dev";
+    repo = "noctalia-plugins";
+    rev = "cb10d233e53ac45dbc9117f0ca19e6224f3ea2d8";
+    hash = "sha256-vgJj89YeiU2FQ+cXIraPx/XdiAMC9Cj+rJqC//O4Na4=";
+  };
+
+  # For security, this stops noctalia from being able to download plugins
+  # Let Nix deal with the downloading so it can be compared to a hash
+  # Available plugins: https://github.com/noctalia-dev/noctalia-plugins
+  #                    https://noctalia.dev/plugins
+  mkPlugin =
+    {
+      name,
+      settings ? { },
+      sourceUrl ? "https://github.com/noctalia-dev/noctalia-plugins",
+    }:
+    {
+      dir = pkgs.runCommand "noctalia-plugin-${name}" { } ''
+        mkdir -p $out/${name}
+        cp -r ${noctaliaPluginsRepo}/${name}/. $out/${name}/
+        cp ${pkgs.writeText "${name}-settings.json" (builtins.toJSON settings)} $out/${name}/settings.json
+      '';
+      state = {
+        enabled = true;
+        inherit sourceUrl;
+      };
+    };
+
+  # INFO: Ensure that the plugin has the same name in here: https://github.com/noctalia-dev/noctalia-plugins
+  noctaliaPlugins = {
+    privacy-indicator = mkPlugin {
+      name = "privacy-indicator";
+      settings = {
+        hideInactive = true;
+        enableToast = false;
+        removeMargins = false;
+        iconSpacing = 4;
+        activeColor = "primary";
+        inactiveColor = "none";
+        micFilterRegex = "";
+        camFilterRegex = "";
+      };
+    };
+  };
+
+  pluginsDir = pkgs.runCommand "noctalia-plugins" { } ''
+    mkdir -p $out
+    ${builtins.concatStringsSep "\n" (
+      map (p: "cp -r ${p.dir}/. $out/") (builtins.attrValues noctaliaPlugins)
+    )}
+  '';
+in
+{
+  # TODO:
+  # Make it so that there is no lag on start with wallpaper
+  # Want widgets: mic, KeepAwake, systemMonitor
+  # https://noctalia.dev/plugins/timer
+  # https://noctalia.dev/plugins/tamagotchi
+  # https://noctalia.dev/plugins/pomodoro (check that the timer plugin one can't do this)
+  # https://noctalia.dev/plugins/polkit-agent (check that sudo in shell activates this)
+
   imports = [
     inputs.noctalia.homeModules.default
   ];
@@ -15,6 +82,21 @@
     text = builtins.toJSON (
       (builtins.fromJSON (builtins.readFile ./noctalia/catppuccin-sapphire.json)).dark
     );
+  };
+
+  # Manually create plugins.json
+  home.file."${osConfig.system.xdg.configDir}/noctalia/plugins.json" = {
+    force = true;
+    text = builtins.toJSON {
+      sources = [ ];
+      version = 2;
+      states = builtins.mapAttrs (_: p: p.state) noctaliaPlugins;
+    };
+  };
+
+  home.file."${osConfig.system.xdg.configDir}/noctalia/plugins" = {
+    source = pluginsDir;
+    recursive = false;
   };
 
   programs.noctalia-shell = {
@@ -165,6 +247,9 @@
               icon = "noctalia";
               id = "ControlCenter";
               useDistroLogo = true;
+            }
+            {
+              id = "plugin:privacy-indicator";
             }
           ];
         };
@@ -484,7 +569,6 @@
         tooltipsEnabled = true;
         wifiDetailsViewMode = "grid";
         translucentWidgets = true;
-        # Want widgets: mic, KeepAwake, systemMonitor
       };
       wallpaper = {
         directory = "${osConfig.system.homeDir}/Pictures/wallpapers";
