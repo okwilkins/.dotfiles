@@ -49,6 +49,17 @@ let
         camFilterRegex = "";
       };
     };
+    pomodoro = mkPlugin {
+      name = "pomodoro";
+      settings = {
+        workDuration = 25;
+        shortBreakDuration = 5;
+        longBreakDuration = 15;
+        sessionsBeforeLongBreak = 4;
+        autoStartBreaks = false;
+        autoStartWork = false;
+      };
+    };
   };
 
   pluginsDir = pkgs.runCommand "noctalia-plugins" { } ''
@@ -59,14 +70,6 @@ let
   '';
 in
 {
-  # TODO:
-  # Make it so that there is no lag on start with wallpaper
-  # Want widgets: mic, KeepAwake, systemMonitor
-  # https://noctalia.dev/plugins/timer
-  # https://noctalia.dev/plugins/tamagotchi
-  # https://noctalia.dev/plugins/pomodoro (check that the timer plugin one can't do this)
-  # https://noctalia.dev/plugins/polkit-agent (check that sudo in shell activates this)
-
   imports = [
     inputs.noctalia.homeModules.default
   ];
@@ -192,6 +195,12 @@ in
               useFixedWidth = false;
               visualizerType = "linear";
             }
+            {
+              id = "plugin:pomodoro";
+            }
+            {
+              id = "plugin:privacy-indicator";
+            }
           ];
           right = [
             {
@@ -247,9 +256,6 @@ in
               icon = "noctalia";
               id = "ControlCenter";
               useDistroLogo = true;
-            }
-            {
-              id = "plugin:privacy-indicator";
             }
           ];
         };
