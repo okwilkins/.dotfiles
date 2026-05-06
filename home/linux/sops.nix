@@ -13,9 +13,6 @@ let
   ageKeyFile = pkgs.writeText "age-identities" (
     builtins.concatStringsSep "\n" (map builtins.readFile ageKeyFiles)
   );
-
-  openvpnDir = "${inputs.dot-secrets}/openvpn-configs";
-  openvpnNames = builtins.attrNames (builtins.readDir openvpnDir);
 in
 {
   imports = [ inputs.sops-nix.homeManagerModules.sops ];
@@ -43,6 +40,7 @@ in
     defaultSopsFile = "${secretsFile}";
   };
 
+  # WARN: THESE DONT WORK, THEY ARE NOT THERE
   sops.secrets = {
     "yubico/u2f_keys" = {
       path = "${osConfig.system.xdg.configHome}/Yubico/u2f_keys";
@@ -51,15 +49,5 @@ in
     "talos/homelab" = {
       path = "${osConfig.system.xdg.configHome}/talos/talosconfig";
     };
-  }
-  // builtins.listToAttrs (
-    map (name: {
-      name = "openvpn-config/${name}";
-      value = {
-        sopsFile = "${openvpnDir}/${name}";
-        format = "binary";
-        path = "${osConfig.system.xdg.configDir}/openvpn/${name}";
-      };
-    }) openvpnNames
-  );
+  };
 }

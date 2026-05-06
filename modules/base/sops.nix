@@ -8,6 +8,9 @@ let
   ageDir = "${inputs.dot-secrets}/keys/age";
   ageKeyFiles = map (name: "${ageDir}/${name}") (builtins.attrNames (builtins.readDir ageDir));
   ageKeysContent = builtins.concatStringsSep "\n" (map builtins.readFile ageKeyFiles);
+
+  openvpnDir = "${inputs.dot-secrets}/openvpn-configs";
+  openvpnNames = builtins.attrNames (builtins.readDir openvpnDir);
 in
 {
   environment.etc."sops/age/keys.txt" = {
@@ -38,5 +41,19 @@ in
       owner = config.system.username;
       path = "${config.system.homeDir}/.ssh/oli";
     };
-  };
+
+    "nordvpn/username" = { };
+    "nordvpn/password" = { };
+  }
+  // builtins.listToAttrs (
+    map (name: {
+      name = "openvpn-config/${name}";
+      value = {
+        sopsFile = "${openvpnDir}/${name}";
+        format = "binary";
+        path = "/etc/openvpn/${name}";
+        mode = "0440";
+      };
+    }) openvpnNames
+  );
 }
