@@ -31,4 +31,34 @@
     ];
   };
 
+  system.activationScripts.importNordvpn = {
+    text = ''
+      PATH=${pkgs.networkmanager}/bin:$PATH
+
+      USERNAME=$(cat ${config.sops.secrets."nordvpn/username".path} 2>/dev/null)
+      PASSWORD=$(cat ${config.sops.secrets."nordvpn/password".path} 2>/dev/null)
+
+      if [ -z "$USERNAME" ] || [ -z "$PASSWORD" ]; then
+        echo "ERROR: NordVPN credentials missing! Sops may not have decrypted yet!" >&2
+        exit 1
+      fi
+
+      for ovpn in /etc/openvpn/*.ovpn; do
+        [ -f "$ovpn" ] || continue
+        name=$(basename "$ovpn" .ovpn)
+
+        if ! nmcli -t -f NAME connection show | grep -qF "$name"; then
+          echo "Importing: $name"
+          nmcli connection import type openvpn file "$ovpn" || continue
+        fi
+
+        nmcli connection modify "$name" \
+          +vpn.data "username=$USERNAME" \
+          +vpn.data "password-flags=0" \
+          vpn.secrets "password=$PASSWORD" \
+          connection.autoconnect no
+      done
+    '';
+  };
+
 }
