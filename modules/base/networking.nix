@@ -32,6 +32,8 @@
   };
 
   system.activationScripts.importNordvpn = {
+    # WARN: Without this the system will not boot as there is not access to the secrets!
+    deps = [ "setupSecrets" ];
     text = ''
       PATH=${pkgs.networkmanager}/bin:$PATH
 
