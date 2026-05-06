@@ -52,7 +52,7 @@ in
         sopsFile = "${openvpnDir}/${name}";
         format = "binary";
         path = "/etc/openvpn/${name}";
-        mode = "0440";
+        mode = "0444";
       };
     }) openvpnNames
   );
