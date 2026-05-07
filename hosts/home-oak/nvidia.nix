@@ -31,7 +31,7 @@
     # https://github.com/NVIDIA/open-gpu-kernel-modules#compatible-gpus
     # Only available from driver 515.43.04+
     # For newer cards RTX 20-series onwards it's recommended by Nvidia to use the open drivers
-    open = false;
+    open = true;
 
     # Enable the Nvidia settings menu, accessible via `nvidia-settings`
     nvidiaSettings = true;
