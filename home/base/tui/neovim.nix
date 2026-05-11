@@ -1,4 +1,9 @@
-{ osConfig, config, ... }:
+{
+  osConfig,
+  config,
+  pkgs,
+  ...
+}:
 {
   programs.neovim = {
     enable = true;
@@ -19,7 +24,12 @@
     #                       programs.neovim.withPython3 = false;
     withPython3 = false;
     initLua = builtins.readFile ./neovim/init.lua;
+    plugins = with pkgs.vimPlugins; [
+      nvim-treesitter.withAllGrammars
+    ];
   };
+  # INFO: Treesitter CLI is a requirement in nvim 0.12+ to get TS working
+  home.packages = [ pkgs.tree-sitter ];
 
   home.file."${osConfig.system.xdg.configDir}/nvim/lua" = {
     source = ./neovim/lua;
