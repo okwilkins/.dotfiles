@@ -21,8 +21,6 @@
         "browser.tabs.allow_transparent_browser" = true;
         "zen.widget.linux.transparency" = true;
         "zen.view.grey-out-inactive-windows" = false;
-        # Stops DNS over HTTPS interfering with internal home DNS
-        "network.trr.excluded-domains" = "okwilkins.dev";
       };
 
       # Spaces/Workspaces Configuration
@@ -279,6 +277,9 @@
     };
 
     policies = {
+      Certificates = {
+        Install = [ ../../../../certs/talos-homelab-ca.crt ];
+      };
       AutofillAddressEnabled = true;
       AutofillCreditCardEnabled = false;
       DisableAppUpdate = true;
