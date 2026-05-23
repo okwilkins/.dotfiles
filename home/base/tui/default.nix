@@ -7,11 +7,11 @@
     ./fastfetch.nix
     ./bottom.nix
     ./yazi.nix
+    ./opencode.nix
   ];
 
   home.packages = with pkgs; [
     lazydocker
     cbonsai
-    opencode
   ];
 }
