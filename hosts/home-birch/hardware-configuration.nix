@@ -4,7 +4,6 @@
 {
   config,
   lib,
-  pkgs,
   modulesPath,
   ...
 }:
@@ -23,7 +22,11 @@
     "rtsx_pci_sdmmc"
   ];
   boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-intel" ];
+  boot.kernelModules = [
+    "kvm-intel"
+    # For CUDA deving, allows for device memory interactions for example
+    "nvidia-uvm"
+  ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
