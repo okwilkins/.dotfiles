@@ -221,11 +221,20 @@
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
           folderParentId = "homelab-group";
         };
+        link = {
+          id = "link";
+          title = "Link";
+          url = "https://link.okwilkins.dev";
+          position = 20;
+          isEssential = false;
+          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
+          folderParentId = "homelab-group";
+        };
         prometheus = {
           id = "prometheus";
           title = "Prometheus";
           url = "https://prometheus.okwilkins.dev";
-          position = 20;
+          position = 21;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
           folderParentId = "homelab-group";
@@ -234,7 +243,7 @@
           id = "hubble";
           title = "Hubble";
           url = "https://hubble.okwilkins.dev/";
-          position = 21;
+          position = 22;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
           folderParentId = "homelab-group";
@@ -245,7 +254,7 @@
           id = "frontend-masters";
           title = "Frontend Masters";
           url = "https://frontendmasters.com/courses/algorithms/linked-list-complexity/";
-          position = 22;
+          position = 23;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
@@ -253,7 +262,7 @@
           id = "monkeytype";
           title = "Monkeytype";
           url = "https://monkeytype.com/";
-          position = 23;
+          position = 24;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
@@ -261,7 +270,7 @@
           id = "keybr";
           title = "Keybr";
           url = "https://www.keybr.com/";
-          position = 24;
+          position = 25;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
@@ -269,7 +278,7 @@
           id = "learncpp";
           title = "Learn C++";
           url = "https://www.learncpp.com/";
-          position = 25;
+          position = 26;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
