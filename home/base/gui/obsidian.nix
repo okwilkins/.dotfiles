@@ -2,9 +2,18 @@
   pkgs,
   lib,
   osConfig,
+  inputs,
   ...
 }:
 let
+  # INFO: Obsidian is currently broken: https://github.com/NixOS/nixpkgs/issues/523846
+  # Downgrade temporarily
+  obsidian =
+    (import inputs.nixpkgs-stable {
+      inherit (pkgs) system;
+      config.allowUnfree = true;
+    }).obsidian;
+
   relVaultPath = "Documents/projects/knowledge-system";
   vaultPath = "${osConfig.system.homeDir}/${relVaultPath}";
   repoUrl = "git@github.com:okwilkins/knowledge-system.git";
@@ -56,6 +65,7 @@ in
 
   programs.obsidian = {
     enable = true;
+    package = obsidian;
     vaults = {
       ${relVaultPath} = {
         enable = true;
