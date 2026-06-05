@@ -95,6 +95,10 @@ let
       "word-count"
       "zk-prefixer"
     ];
+    # INFO: Conflicts with vim motion page-down keybind
+    hotkeys = {
+      "editor:delete-paragraph" = [ ];
+    };
   };
 in
 {
