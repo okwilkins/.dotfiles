@@ -2,18 +2,9 @@
   pkgs,
   lib,
   osConfig,
-  inputs,
   ...
 }:
 let
-  # INFO: Obsidian is currently broken: https://github.com/NixOS/nixpkgs/issues/523846
-  # Downgrade temporarily
-  obsidian =
-    (import inputs.nixpkgs-stable {
-      inherit (pkgs) system;
-      config.allowUnfree = true;
-    }).obsidian;
-
   flashNavigation = pkgs.linkFarm "flash-navigation" [
     {
       name = "main.js";
@@ -118,7 +109,6 @@ in
 
   programs.obsidian = {
     enable = true;
-    package = obsidian;
     vaults = {
       ${relVaultPath} = {
         enable = true;
