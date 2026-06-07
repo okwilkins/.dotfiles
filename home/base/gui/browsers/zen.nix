@@ -93,11 +93,19 @@
           isEssential = true;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
+        feed = {
+          id = "feed";
+          title = "Feed";
+          url = "https://feed.okwilkins.dev";
+          position = 7;
+          isEssential = true;
+          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
+        };
         reddit = {
           id = "reddit";
           title = "Reddit";
           url = "https://www.reddit.com/";
-          position = 7;
+          position = 8;
           isEssential = true;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
@@ -105,7 +113,7 @@
           id = "financial-times";
           title = "Financial Times";
           url = "https://www.ft.com/";
-          position = 8;
+          position = 9;
           isEssential = true;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
@@ -113,7 +121,7 @@
           id = "linkedin";
           title = "LinkedIn";
           url = "https://www.linkedin.com";
-          position = 9;
+          position = 10;
           isEssential = true;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
@@ -123,7 +131,7 @@
           id = "messenger";
           title = "Messenger";
           url = "https://www.messenger.com";
-          position = 10;
+          position = 11;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
@@ -131,7 +139,7 @@
           id = "telegram";
           title = "Telegram";
           url = "https://web.telegram.org/k/#-498955210";
-          position = 11;
+          position = 12;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
@@ -141,7 +149,7 @@
           id = "homelab-group";
           title = "Homelab";
           url = null;
-          position = 12;
+          position = 13;
           isEssential = false;
           isGroup = true;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
@@ -152,7 +160,7 @@
           id = "proxmox-server-01";
           title = "Proxmox 01";
           url = "https://pve1.okwilkins.dev:8006";
-          position = 13;
+          position = 14;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
           folderParentId = "homelab-group";
@@ -161,7 +169,7 @@
           id = "proxmox-server-02";
           title = "Proxmox 02";
           url = "https://pve2.okwilkins.dev:8006";
-          position = 14;
+          position = 15;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
           folderParentId = "homelab-group";
@@ -170,7 +178,7 @@
           id = "grafana";
           title = "Grafana";
           url = "https://grafana.okwilkins.dev";
-          position = 15;
+          position = 16;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
           folderParentId = "homelab-group";
@@ -179,7 +187,7 @@
           id = "argocd";
           title = "ArgoCD";
           url = "https://argocd.okwilkins.dev";
-          position = 16;
+          position = 17;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
           folderParentId = "homelab-group";
@@ -188,7 +196,7 @@
           id = "argo-workflows";
           title = "Argo Workflows";
           url = "https://workflows.okwilkins.dev";
-          position = 17;
+          position = 18;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
           folderParentId = "homelab-group";
@@ -197,7 +205,7 @@
           id = "excalidraw";
           title = "Excalidraw";
           url = "https://draw.okwilkins.dev/";
-          position = 18;
+          position = 19;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
           folderParentId = "homelab-group";
@@ -206,7 +214,7 @@
           id = "harbor";
           title = "Harbor";
           url = "https://harbor.okwilkins.dev";
-          position = 19;
+          position = 20;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
           folderParentId = "homelab-group";
@@ -215,7 +223,7 @@
           id = "auth";
           title = "Auth";
           url = "https://auth.okwilkins.dev";
-          position = 20;
+          position = 21;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
           folderParentId = "homelab-group";
@@ -224,7 +232,7 @@
           id = "convert";
           title = "Img Convert";
           url = "https://convert.okwilkins.dev";
-          position = 21;
+          position = 22;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
           folderParentId = "homelab-group";
@@ -233,7 +241,7 @@
           id = "link";
           title = "Link";
           url = "https://link.okwilkins.dev";
-          position = 22;
+          position = 23;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
           folderParentId = "homelab-group";
@@ -242,7 +250,7 @@
           id = "prometheus";
           title = "Prometheus";
           url = "https://prometheus.okwilkins.dev";
-          position = 23;
+          position = 24;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
           folderParentId = "homelab-group";
@@ -251,7 +259,7 @@
           id = "hubble";
           title = "Hubble";
           url = "https://hubble.okwilkins.dev/";
-          position = 24;
+          position = 25;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
           folderParentId = "homelab-group";
@@ -262,7 +270,7 @@
           id = "frontend-masters";
           title = "Frontend Masters";
           url = "https://frontendmasters.com/courses/algorithms/linked-list-complexity/";
-          position = 25;
+          position = 26;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
@@ -270,7 +278,7 @@
           id = "monkeytype";
           title = "Monkeytype";
           url = "https://monkeytype.com/";
-          position = 26;
+          position = 27;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
@@ -278,7 +286,7 @@
           id = "keybr";
           title = "Keybr";
           url = "https://www.keybr.com/";
-          position = 27;
+          position = 28;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
@@ -286,7 +294,7 @@
           id = "learncpp";
           title = "Learn C++";
           url = "https://www.learncpp.com/";
-          position = 28;
+          position = 29;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
