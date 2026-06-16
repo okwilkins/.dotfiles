@@ -47,7 +47,7 @@ return function()
 
     -- Python
     vim.lsp.enable("ruff")
-    vim.lsp.enable("pyright")
+    vim.lsp.enable("ty")
 
     -- Nix
     vim.lsp.enable("nixd")
