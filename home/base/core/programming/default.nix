@@ -30,7 +30,7 @@ in
     nixd
     lua-language-server
     marksman
-    pyright
+    ty
     gopls
     # terraform-ls
     tofu-ls
