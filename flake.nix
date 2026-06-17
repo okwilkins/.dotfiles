@@ -36,7 +36,8 @@
     };
 
     noctalia = {
-      url = "github:noctalia-dev/noctalia-shell";
+      # TODO: Switch to v5 when have the time
+      url = "github:noctalia-dev/noctalia/legacy-v4";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
