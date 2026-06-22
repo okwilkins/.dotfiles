@@ -1,0 +1,11 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "skills": {
+    "paths": [
+      "./ponytail/skills"
+    ]
+  },
+  "plugin": [
+    "./ponytail/.opencode/plugins/ponytail.mjs"
+  ]
+}
