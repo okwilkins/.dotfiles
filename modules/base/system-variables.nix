@@ -14,8 +14,5 @@
 
     # Zsh
     ZDOTDIR = config.system.zshDotDir;
-
-    # GNOME
-    GTK_THEME = "Dracula:dark";
   };
 }
