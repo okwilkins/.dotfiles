@@ -3,8 +3,8 @@ let
   catppuccinRepo = pkgs.fetchFromGitHub {
     owner = "catppuccin";
     repo = "hyprland";
-    rev = "v1.3";
-    hash = "sha256-jkk021LLjCLpWOaInzO4Klg6UOR4Sh5IcKdUxIn7Dis=";
+    rev = "v2.0.0";
+    hash = "sha256-jGqBpSQa793phan9PeU2yXMX1nxzYClthQSeTwdqgEQ=";
   };
 in
 {
@@ -22,8 +22,7 @@ in
     source = ./config;
     recursive = true;
   };
-  home.file."${osConfig.system.xdg.configDir}/hypr/mocha.conf" = {
-    source = "${catppuccinRepo}/themes/mocha.conf";
-    recursive = true;
+  home.file."${osConfig.system.xdg.configDir}/hypr/themes/catppuccin-mocha.lua" = {
+    source = "${catppuccinRepo}/themes/catppuccin-mocha.lua";
   };
 }
