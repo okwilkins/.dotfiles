@@ -24,6 +24,6 @@ authorColors:
   '*': '#b4befe'
   mouseEvents: false
 git:
-  pagers:
+  diffRenderers:
     - colorArg: always
-      pager: delta --paging=never
+      command: delta --paging=never
