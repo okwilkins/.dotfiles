@@ -9,5 +9,6 @@
     ./steam.nix
     ./peripherals.nix
     ./services.nix
+    ./networking.nix
   ];
 }
