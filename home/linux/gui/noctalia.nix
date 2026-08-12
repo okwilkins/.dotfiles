@@ -60,6 +60,14 @@ let
         autoStartWork = false;
       };
     };
+    tailscale = mkPlugin {
+      name = "tailscale";
+      settings = {
+        terminalCommand = "ghostty";
+        sshUsername = osConfig.system.username;
+        taildropReceiveMode = "operator";
+      };
+    };
   };
 
   pluginsDir = pkgs.runCommand "noctalia-plugins" { } ''
@@ -243,6 +251,9 @@ in
             {
               displayMode = "onhover";
               id = "VPN";
+            }
+            {
+              id = "plugin:tailscale";
             }
             {
               displayMode = "onhover";
