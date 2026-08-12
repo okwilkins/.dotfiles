@@ -8,8 +8,8 @@ let
   noctaliaPluginsRepo = pkgs.fetchFromGitHub {
     owner = "noctalia-dev";
     repo = "noctalia-plugins";
-    rev = "cb10d233e53ac45dbc9117f0ca19e6224f3ea2d8";
-    hash = "sha256-vgJj89YeiU2FQ+cXIraPx/XdiAMC9Cj+rJqC//O4Na4=";
+    rev = "ea21cb63d063075bc0acd72d8b946ce2c5eef00d";
+    hash = "sha256-M+7SLW+wI3KvDMj8dSrW/uUmpPiYhsXA2jpbbgL5imk=";
   };
 
   # For security, this stops noctalia from being able to download plugins
