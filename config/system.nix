@@ -22,7 +22,7 @@
     homeDir = lib.mkOption {
       type = lib.types.str;
       default =
-        if pkgs.stdenv.isDarwin then
+        if pkgs.stdenv.hostPlatform.isDarwin then
           "/Users/${config.system.username}"
         else
           "/home/${config.system.username}";
