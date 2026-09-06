@@ -21,5 +21,7 @@ require("lazy").setup(require("config.plugins.lazy"), {
         rtp = {
             reset = false,
         },
+        -- keep hm pack plugins (jupynvim) requireable
+        reset_packpath = false,
     },
 })
