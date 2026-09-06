@@ -1,5 +1,5 @@
 local function lsp_client_names()
-    local clients = vim.lsp.get_active_clients()
+    local clients = vim.lsp.get_clients()
     local buffer_clients = {}
 
     -- Filter clients attached to the current buffer
