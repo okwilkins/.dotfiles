@@ -26,6 +26,9 @@
     initLua = builtins.readFile ./neovim/init.lua;
     plugins = with pkgs.vimPlugins; [
       nvim-treesitter.withAllGrammars
+      # jupynvim-core is built by rustPlatform (stdenv auto-patchelf), so it
+      # runs on NixOS without nix-ld. Managed via nixpkgs, not lazy.nvim.
+      jupynvim
     ];
   };
   # INFO: Treesitter CLI is a requirement in nvim 0.12+ to get TS working
