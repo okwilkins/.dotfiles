@@ -2,7 +2,7 @@
 
 -- Ignore maximize requests from apps. You'll probably like this.
 hl.window_rule({
-    name  = "suppress-maximize-events",
+    name = "suppress-maximize-events",
     match = { class = ".*" },
 
     suppress_event = "maximize",
@@ -10,12 +10,12 @@ hl.window_rule({
 
 -- Fix some dragging issues with XWayland
 hl.window_rule({
-    name  = "fix-xwayland-drags",
+    name = "fix-xwayland-drags",
     match = {
-        class    = "^$",
-        title    = "^$",
+        class = "^$",
+        title = "^$",
         xwayland = true,
-        float    = true,
+        float = true,
     },
 
     no_initial_focus = true,
@@ -36,20 +36,25 @@ for _, class in ipairs({
     hl.window_rule({ name = "float-" .. class, match = { class = class }, float = true })
 end
 
+-- Scrolling layout
+hl.window_rule({ name = "scrolling-zen", match = { class = "zen-beta" }, scrolling_width = 1.0 })
+hl.window_rule({ name = "scrolling-steam", match = { class = "steam" }, scrolling_width = 1.0 })
+hl.window_rule({ name = "scrolling-steam-games", match = { class = "steam_app_.*" }, scrolling_width = 1.0 })
+
 -- Applies blur to wlogout interface
 hl.layer_rule({
-    name  = "logout-dialog-blur",
+    name = "logout-dialog-blur",
     match = { namespace = "logout_dialog" },
-    blur  = true,
+    blur = true,
 })
 
 -- Noctalia background blur
 hl.layer_rule({
-    name  = "noctalia-blur",
+    name = "noctalia-blur",
     match = { namespace = "noctalia-background-.*$" },
 
     -- Threshold at which Noctalia starts blurring with the dimmed background opacity
     ignore_alpha = 0.35,
-    blur         = true,
-    blur_popups  = true,
+    blur = true,
+    blur_popups = true,
 })
