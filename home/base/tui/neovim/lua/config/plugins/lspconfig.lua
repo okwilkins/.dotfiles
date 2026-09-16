@@ -46,6 +46,10 @@ return function()
     vim.lsp.enable("gopls")
 
     -- Python
+    -- Pin to the patched home-manager binaries: uv venv copies are generic
+    -- linux wheels that stub-ld blocks on NixOS (exit 127).
+    vim.lsp.config("ruff", { cmd = { "/etc/profiles/per-user/oli/bin/ruff", "server" } })
+    vim.lsp.config("ty", { cmd = { "/etc/profiles/per-user/oli/bin/ty", "server" } })
     vim.lsp.enable("ruff")
     vim.lsp.enable("ty")
 

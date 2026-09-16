@@ -14,7 +14,9 @@ return {
         },
     },
     performance = {
+        reset_packpath = false,
         rtp = {
+            reset = false,
             disabled_plugins = {
                 "2html_plugin",
                 "tohtml",

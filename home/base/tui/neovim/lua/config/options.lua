@@ -95,6 +95,16 @@ vim.api.nvim_create_autocmd("BufDelete", {
     end,
 })
 
+-- jupynvim sets filetype after open; nvim 0.12 does not auto-start
+-- treesitter for python. start() then jupynvim scopes it to code cells.
+vim.api.nvim_create_autocmd("FileType", {
+    callback = function(ev)
+        if vim.b[ev.buf].jupynvim_filetype then
+            pcall(vim.treesitter.start, ev.buf)
+        end
+    end,
+})
+
 -- LSP Diagnostics
 local signs = {
     { name = "DiagnosticSignError", text = "" },
