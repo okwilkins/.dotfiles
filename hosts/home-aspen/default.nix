@@ -1,6 +1,5 @@
 { pkgs, config, ... }:
 {
-
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -21,6 +20,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.${config.system.username} = {
     isNormalUser = true;
+    initialPassword = "password";
     description = config.system.userFullname;
     extraGroups = [
       "networkmanager"
