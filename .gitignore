@@ -4,3 +4,7 @@
 # Stop sensitive certs from leaking
 *.key
 *.csr
+
+# Nix build outputs
+/result
+/result-*
