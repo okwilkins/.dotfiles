@@ -17,9 +17,6 @@
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  boot.initrd.luks.devices."luks-c461448d-dc40-45ae-98cd-29b002e5b790".device =
-    "/dev/disk/by-uuid/c461448d-dc40-45ae-98cd-29b002e5b790";
-
   # Enable networking
   networking.networkmanager.enable = true;
   networking.hostName = "oak-nixos";
