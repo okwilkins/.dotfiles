@@ -185,6 +185,7 @@ hl.device({ name = "logitech-k400-plus", kb_layout = "gb" })
 
 -- Mice
 hl.device({ name = "logitech-g-pro--1", sensitivity = 0 })
+hl.device({ name = "logitech-mx-master-3s", sensitivity = 0.5 })
 hl.device({
     name = "logitech-k400-plus-1",
     sensitivity = 0,
