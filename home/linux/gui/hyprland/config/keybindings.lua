@@ -8,7 +8,8 @@ hl.bind(mainMod .. " + q", hl.dsp.window.close())
 hl.bind(mainMod .. " + e", hl.dsp.exec_cmd("nautilus"))
 hl.bind(mainMod .. " + v", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + space", hl.dsp.exec_cmd("noctalia-shell ipc call launcher toggle"))
-hl.bind(mainMod .. " + p", hl.dsp.layout("togglesplit")) -- dwindle
+-- INFO: Only works when not using tiling
+-- hl.bind(mainMod .. " + p", hl.dsp.layout("togglesplit"))
 hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd("hyprlock"))
 
 hl.bind(mainMod .. " + s", hl.dsp.exec_cmd("hyprshot -m region -z -s --clipboard-only"))
