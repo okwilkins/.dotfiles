@@ -1,0 +1,12 @@
+pager:
+  diff: delta
+
+include:
+  - ./themes/catppuccin-mocha-blue.yml
+
+keybindings:
+  prs:
+    - key: M
+      name: squash + delete
+      command: >-
+        gh pr merge --repo {{.RepoName}} {{.PrNumber}} --squash --delete-branch

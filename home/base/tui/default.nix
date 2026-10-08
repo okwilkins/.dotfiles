@@ -9,6 +9,7 @@
     ./yazi.nix
     ./opencode.nix
     ./tuicr.nix
+    ./gh-dash.nix
   ];
 
   home.packages = with pkgs; [
