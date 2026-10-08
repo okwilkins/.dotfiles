@@ -31,6 +31,7 @@
     carapace
     ouch
     dnsutils
+    gh
   ];
 
   home.file."${osConfig.system.xdg.configDir}/bat" = {
