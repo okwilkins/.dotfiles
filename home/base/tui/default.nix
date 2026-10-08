@@ -8,6 +8,7 @@
     ./bottom.nix
     ./yazi.nix
     ./opencode.nix
+    ./tuicr.nix
   ];
 
   home.packages = with pkgs; [

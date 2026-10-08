@@ -1,0 +1,12 @@
+# https://github.com/agavra/tuicr/blob/61767fba8c3b762105da2dde1327a5d7edc549d0/docs/CONFIG.md
+
+q_quits = true
+relative_line_numbers = true
+theme = "catppuccin-mocha"
+
+comment_types = [
+  { id = "note", label = "question", definition = "ask for clarification", color = "yellow" },
+  { id = "suggestion", definition = "possible improvements" },
+  { id = "issue", definition = "problems to fix" },
+  { id = "nit", label = "nitpick", definition = "small optional tweaks", color = "#d19a66" },
+]
