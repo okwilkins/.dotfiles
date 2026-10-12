@@ -3,6 +3,7 @@
 q_quits = true
 relative_line_numbers = true
 theme = "catppuccin-mocha"
+diff_view = "side-by-side"
 
 comment_types = [
   { id = "note", label = "question", definition = "ask for clarification", color = "yellow" },
