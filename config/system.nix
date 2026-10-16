@@ -41,6 +41,16 @@
       default = "$7$CU..../....Ky0nmU3QG7xuTv8RoBXtu1$4NLnWFNqL0c/4Lzqm9KZCgnrXARLqLU3Glh44m0KDt4";
     };
 
+    # TUI/CLI hosts keep tuigreet
+    # Graphical hosts running Noctalia use the themed noctalia-greeter
+    greeter = lib.mkOption {
+      type = lib.types.enum [
+        "tuigreet"
+        "noctalia"
+      ];
+      default = "tuigreet";
+    };
+
     xdg = lib.mkOption {
       type = lib.types.submodule {
         options = {
