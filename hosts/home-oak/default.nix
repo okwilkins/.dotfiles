@@ -17,6 +17,15 @@
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
+  system.greeter = "noctalia";
+
+  # Matches hypr-hardware.lua
+  services.displayManager.noctalia-greeter.settings.output = {
+    layout = "DP-4:0,0; DP-5:2560,0; HDMI-A-5:5120,0";
+    scales = "DP-4:1.5; DP-5:1; HDMI-A-5:2";
+    refresh_rate = "DP-4:60; DP-5:144; HDMI-A-5:120";
+  };
+
   # Enable networking
   networking.networkmanager.enable = true;
   networking.hostName = "oak-nixos";

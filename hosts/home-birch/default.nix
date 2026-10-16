@@ -12,6 +12,14 @@
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
+  system.greeter = "noctalia";
+
+  services.displayManager.noctalia-greeter.settings.output = {
+    layout = "eDP-1:0,0";
+    scales = "eDP-1:1";
+    refresh_rate = "eDP-1:60";
+  };
+
   boot.initrd.luks.devices."luks-74859448-03b4-4d15-8876-11e22b3813f4".device =
     "/dev/disk/by-uuid/74859448-03b4-4d15-8876-11e22b3813f4";
 
