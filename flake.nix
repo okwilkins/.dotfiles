@@ -31,8 +31,19 @@
     };
 
     noctalia = {
-      # TODO: Switch to v5 when have the time
-      url = "github:noctalia-dev/noctalia/legacy-v4";
+      url = "github:noctalia-dev/noctalia";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    noctalia-greeter = {
+      # INFO: greetd greeter for graphical hosts
+      url = "github:noctalia-dev/noctalia-greeter";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # https://github.com/NixOS/branding
+    branding = {
+      url = "github:NixOS/branding";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
