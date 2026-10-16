@@ -18,7 +18,7 @@ The configuration of each application has two ideas in mind:
 |----------------------------------------------------------------|--------------------------------------------------------------------------------------|
 | **Window Manager**                                             | [Hyprland](https://hypr.land/)                                                       |
 | **Terminal**                                                   | [Ghostty](https://ghostty.org/)                                                      |
-| **Status Bar** / **Notifier** / **Launcher** / **lockscreens** | [noctalia-shell](https://noctalia.dev)                                               |
+| **Status Bar** / **Notifier** / **Launcher** / **lockscreens** | [noctalia](https://noctalia.dev)                                            |
 | **Display Manager**                                            | [tuigreet](https://github.com/apognu/tuigreet)                                       |
 | **File Manager**                                               | [Yazi](https://github.com/sxyazi/yazi) + [Nautilus](https://apps.gnome.org/Nautilus) |
 | **Shell**                                                      | [Zsh](https://www.zsh.org) + [Starship](https://starship.rs)                         |
