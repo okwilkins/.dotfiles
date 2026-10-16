@@ -3,16 +3,16 @@
 local mainMod = "SUPER"
 
 hl.bind(mainMod .. " + t", hl.dsp.exec_cmd("ghostty"))
-hl.bind(mainMod .. " + n", hl.dsp.exec_cmd("noctalia-shell ipc call notifications toggleHistory"))
+hl.bind(mainMod .. " + n", hl.dsp.exec_cmd("noctalia msg panel-toggle control-center notifications"))
 hl.bind(mainMod .. " + q", hl.dsp.window.close())
 hl.bind(mainMod .. " + e", hl.dsp.exec_cmd("nautilus"))
 hl.bind(mainMod .. " + v", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + space", hl.dsp.exec_cmd("noctalia-shell ipc call launcher toggle"))
+hl.bind(mainMod .. " + space", hl.dsp.exec_cmd("noctalia msg panel-toggle launcher"))
 -- INFO: Only works when not using tiling
 -- hl.bind(mainMod .. " + p", hl.dsp.layout("togglesplit"))
-hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd("hyprlock"))
+hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd("noctalia msg session lock"))
 
-hl.bind(mainMod .. " + s", hl.dsp.exec_cmd("hyprshot -m region -z -s --clipboard-only"))
+hl.bind(mainMod .. " + s", hl.dsp.exec_cmd("noctalia msg screenshot-region"))
 
 -- Toggle full column width (0.5 <-> 1.0) and fullscreen
 hl.bind(mainMod .. " + m", hl.dsp.layout("colresize +conf"))
