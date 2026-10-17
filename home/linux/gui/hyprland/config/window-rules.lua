@@ -48,13 +48,13 @@ hl.layer_rule({
     blur = true,
 })
 
--- Noctalia background blur
+-- Noctalia bar / panel / notification blur (v5 namespaces)
 hl.layer_rule({
     name = "noctalia-blur",
-    match = { namespace = "noctalia-background-.*$" },
+    match = { namespace = "^noctalia-(bar-.+|notification|dock|panel|attached-panel|osd|window-switcher)$" },
 
-    -- Threshold at which Noctalia starts blurring with the dimmed background opacity
-    ignore_alpha = 0.35,
+    no_anim = true,
+    ignore_alpha = 0.5,
     blur = true,
     blur_popups = true,
 })
