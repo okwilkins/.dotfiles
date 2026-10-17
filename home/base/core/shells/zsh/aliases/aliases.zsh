@@ -14,6 +14,22 @@ alias diff=delta
 
 # QoL for applications
 alias t=talosctl
+# Follow the selected repository or worktree when exiting Lazygit with q.
+# Adapted from https://github.com/jesseduffield/lazygit#changing-directory-on-exit
+function lazygit() {
+  local dir_file exit_code
+  dir_file=$(mktemp) || return
+
+  LAZYGIT_NEW_DIR_FILE="$dir_file" command lazygit "$@"
+  exit_code=$?
+
+  if [[ -s "$dir_file" ]]; then
+    builtin cd -- "$(<"$dir_file")"
+  fi
+
+  rm -f -- "$dir_file"
+  return "$exit_code"
+}
 alias lg=lazygit
 alias ld=lazydocker
 alias n=nvim
