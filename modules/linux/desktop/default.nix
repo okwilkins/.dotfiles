@@ -2,6 +2,7 @@
 {
   imports = [
     ../base
+    ./accounts-service.nix
     ./fonts.nix
     ./system-packages.nix
     ./system-variables.nix
