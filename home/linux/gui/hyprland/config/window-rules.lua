@@ -36,6 +36,14 @@ for _, class in ipairs({
     hl.window_rule({ name = "float-" .. class, match = { class = class }, float = true })
 end
 
+-- The screen-sharing picker does not advertise an app class.
+hl.window_rule({
+    name = "float-screenshare-picker",
+    match = { title = "^Select what to share$" },
+    float = true,
+    center = true,
+})
+
 -- Scrolling layout
 hl.window_rule({ name = "scrolling-zen", match = { class = "zen-beta" }, scrolling_width = 1.0 })
 hl.window_rule({ name = "scrolling-steam", match = { class = "steam" }, scrolling_width = 1.0 })
