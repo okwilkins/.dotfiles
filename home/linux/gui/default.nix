@@ -16,6 +16,7 @@ in
     # ./wlogout
     # ./swaync
     ./noctalia.nix
+    ./steam.nix
     ./xdg.nix
   ];
 
