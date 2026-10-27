@@ -137,6 +137,7 @@ in
       shell = {
         font_family = "Inter";
         avatar_path = "${osConfig.system.homeDir}/Pictures/profiles/headshot-profile.png";
+        polkit_agent = true;
         # v4 passwordChars = true; v5 masks with random icons per char
         password_style = "random";
         # Match old hyprshot: --clipboard-only, no files
