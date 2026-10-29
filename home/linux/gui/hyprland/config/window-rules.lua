@@ -24,8 +24,6 @@ hl.window_rule({
 -- Floating windows
 for _, class in ipairs({
     "^(com%.ghostty%.fastfetch)$",
-    "^(com%.ghostty%.cbonsai)$",
-    "^(com%.ghostty%.btm)$",
     "^imv$",
     "^org%.gnome%.FileRoller$",
     "^org%.gnome%.Nautilus$",
