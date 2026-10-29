@@ -34,6 +34,29 @@ for _, class in ipairs({
     hl.window_rule({ name = "float-" .. class, match = { class = class }, float = true })
 end
 
+-- Zen sets extension titles after mapping, too late for a static float rule.
+local function float_zen_bitwarden_extension(window)
+    if not window or not window.mapped or window.class ~= "zen-beta" or window.floating then
+        return
+    end
+
+    local title = window.title:lower()
+    if title:find("extension", 1, true) and title:find("bitwarden", 1, true) then
+        hl.dispatch(hl.dsp.window.float({
+            window = "address:" .. window.address,
+            action = "enable",
+        }))
+    end
+end
+
+hl.on("window.open", float_zen_bitwarden_extension)
+hl.on("window.title", float_zen_bitwarden_extension)
+hl.on("config.reloaded", function()
+    for _, window in ipairs(hl.get_windows()) do
+        float_zen_bitwarden_extension(window)
+    end
+end)
+
 -- The screen-sharing picker does not advertise an app class.
 hl.window_rule({
     name = "float-screenshare-picker",
