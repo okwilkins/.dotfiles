@@ -25,10 +25,10 @@
 
       # Spaces/Workspaces Configuration
       spaces = {
-        nix = {
+        homelab = {
           id = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-          name = "Nix";
-          icon = "❄️";
+          name = "Homelab";
+          icon = "🏠";
           position = 1000;
           theme.type = "gradient";
           theme.opacity = 0.456;
@@ -53,10 +53,10 @@
           isEssential = true;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
-        perplexity = {
-          id = "perplexity";
-          title = "Perplexity";
-          url = "https://www.perplexity.ai/";
+        messenger = {
+          id = "messenger";
+          title = "Messenger";
+          url = "https://www.messenger.com";
           position = 2;
           isEssential = true;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
@@ -101,10 +101,10 @@
           isEssential = true;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
-        financial-times = {
-          id = "financial-times";
-          title = "Financial Times";
-          url = "https://www.ft.com/";
+        telegram = {
+          id = "telegram";
+          title = "Telegram";
+          url = "https://web.telegram.org/k/#-498955210";
           position = 8;
           isEssential = true;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
@@ -118,175 +118,100 @@
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
 
-        # Regular pins
-        messenger = {
-          id = "messenger";
-          title = "Messenger";
-          url = "https://www.messenger.com";
-          position = 10;
-          isEssential = false;
-          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-        };
-        telegram = {
-          id = "telegram";
-          title = "Telegram";
-          url = "https://web.telegram.org/k/#-498955210";
-          position = 11;
-          isEssential = false;
-          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-        };
-
-        # Homelab group
-        homelab-group = {
-          id = "homelab-group";
-          title = "Homelab";
-          url = null;
-          position = 12;
-          isEssential = false;
-          isGroup = true;
-          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-        };
-
-        # Homelab members
+        # Homelab pins
         proxmox-server-01 = {
           id = "proxmox-server-01";
           title = "Proxmox 01";
           url = "https://pve1.okwilkins.dev:8006";
-          position = 13;
+          position = 10;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-          folderParentId = "homelab-group";
         };
         proxmox-server-02 = {
           id = "proxmox-server-02";
           title = "Proxmox 02";
           url = "https://pve2.okwilkins.dev:8006";
-          position = 14;
+          position = 11;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-          folderParentId = "homelab-group";
         };
         grafana = {
           id = "grafana";
           title = "Grafana";
           url = "https://grafana.okwilkins.dev";
-          position = 15;
+          position = 12;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-          folderParentId = "homelab-group";
         };
         argocd = {
           id = "argocd";
           title = "ArgoCD";
           url = "https://argocd.okwilkins.dev";
-          position = 16;
+          position = 13;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-          folderParentId = "homelab-group";
         };
         argo-workflows = {
           id = "argo-workflows";
           title = "Argo Workflows";
           url = "https://workflows.okwilkins.dev";
-          position = 17;
+          position = 14;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-          folderParentId = "homelab-group";
         };
         excalidraw = {
           id = "excalidraw";
           title = "Excalidraw";
           url = "https://draw.okwilkins.dev/";
-          position = 18;
+          position = 15;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-          folderParentId = "homelab-group";
         };
         harbor = {
           id = "harbor";
           title = "Harbor";
           url = "https://harbor.okwilkins.dev";
-          position = 19;
+          position = 16;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-          folderParentId = "homelab-group";
         };
         auth = {
           id = "auth";
           title = "Auth";
           url = "https://auth.okwilkins.dev";
-          position = 20;
+          position = 17;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-          folderParentId = "homelab-group";
         };
         convert = {
           id = "convert";
           title = "Img Convert";
           url = "https://convert.okwilkins.dev";
-          position = 21;
+          position = 18;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-          folderParentId = "homelab-group";
         };
         link = {
           id = "link";
           title = "Link";
           url = "https://link.okwilkins.dev";
-          position = 22;
+          position = 19;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-          folderParentId = "homelab-group";
         };
         prometheus = {
           id = "prometheus";
           title = "Prometheus";
           url = "https://prometheus.okwilkins.dev";
-          position = 23;
+          position = 20;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-          folderParentId = "homelab-group";
         };
         hubble = {
           id = "hubble";
           title = "Hubble";
           url = "https://hubble.okwilkins.dev/";
-          position = 24;
-          isEssential = false;
-          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-          folderParentId = "homelab-group";
-        };
-
-        # Other pins
-        frontend-masters = {
-          id = "frontend-masters";
-          title = "Frontend Masters";
-          url = "https://frontendmasters.com/courses/algorithms/linked-list-complexity/";
-          position = 25;
-          isEssential = false;
-          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-        };
-        monkeytype = {
-          id = "monkeytype";
-          title = "Monkeytype";
-          url = "https://monkeytype.com/";
-          position = 26;
-          isEssential = false;
-          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-        };
-        keybr = {
-          id = "keybr";
-          title = "Keybr";
-          url = "https://www.keybr.com/";
-          position = 27;
-          isEssential = false;
-          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-        };
-        learncpp = {
-          id = "learncpp";
-          title = "Learn C++";
-          url = "https://www.learncpp.com/";
-          position = 28;
+          position = 21;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
