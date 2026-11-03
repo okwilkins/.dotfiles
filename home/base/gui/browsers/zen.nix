@@ -183,11 +183,19 @@
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
+        books = {
+          id = "books";
+          title = "Books";
+          url = "https://books.okwilkins.dev";
+          position = 18;
+          isEssential = false;
+          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
+        };
         convert = {
           id = "convert";
           title = "Img Convert";
           url = "https://convert.okwilkins.dev";
-          position = 18;
+          position = 19;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
@@ -195,7 +203,7 @@
           id = "link";
           title = "Link";
           url = "https://link.okwilkins.dev";
-          position = 19;
+          position = 20;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
@@ -203,7 +211,7 @@
           id = "prometheus";
           title = "Prometheus";
           url = "https://prometheus.okwilkins.dev";
-          position = 20;
+          position = 21;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
@@ -211,7 +219,7 @@
           id = "hubble";
           title = "Hubble";
           url = "https://hubble.okwilkins.dev/";
-          position = 21;
+          position = 22;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
