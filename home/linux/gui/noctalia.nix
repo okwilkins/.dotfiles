@@ -90,9 +90,11 @@ in
         media = {
           hide_when_no_media = true;
           max_length = 300;
-          title_scroll = "on_hover";
+          art_size = 46;
+          title_scroll = "always";
           artist_first = true;
-          show_progress = true;
+          show_progress = false;
+          scroll_repeat = "gesture";
         };
         privacy = {
           hide_inactive = true;
