@@ -159,11 +159,19 @@
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
+        git = {
+          id = "git";
+          title = "Git";
+          url = "https://git.okwilkins.dev";
+          position = 15;
+          isEssential = false;
+          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
+        };
         excalidraw = {
           id = "excalidraw";
           title = "Excalidraw";
           url = "https://draw.okwilkins.dev/";
-          position = 15;
+          position = 16;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
@@ -171,7 +179,7 @@
           id = "harbor";
           title = "Harbor";
           url = "https://harbor.okwilkins.dev";
-          position = 16;
+          position = 17;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
@@ -179,7 +187,7 @@
           id = "auth";
           title = "Auth";
           url = "https://auth.okwilkins.dev";
-          position = 17;
+          position = 18;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
@@ -187,7 +195,7 @@
           id = "books";
           title = "Books";
           url = "https://books.okwilkins.dev";
-          position = 18;
+          position = 19;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
@@ -195,7 +203,7 @@
           id = "convert";
           title = "Img Convert";
           url = "https://convert.okwilkins.dev";
-          position = 19;
+          position = 20;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
@@ -203,7 +211,7 @@
           id = "link";
           title = "Link";
           url = "https://link.okwilkins.dev";
-          position = 20;
+          position = 21;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
@@ -211,7 +219,7 @@
           id = "prometheus";
           title = "Prometheus";
           url = "https://prometheus.okwilkins.dev";
-          position = 21;
+          position = 22;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
@@ -219,7 +227,7 @@
           id = "hubble";
           title = "Hubble";
           url = "https://hubble.okwilkins.dev/";
-          position = 22;
+          position = 23;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
