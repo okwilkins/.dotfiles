@@ -22,7 +22,12 @@ let
       read -r monitor width height refresh < <(
         hyprctl monitors -j | jq -er '.[] | select(.focused) | [.id, .width, .height, (.refreshRate | round)] | @tsv'
       )
-      printf -v command '%q ' ${lib.getExe pkgs.gamescope} -e -f \
+      # Avoid native Wayland mouse stutter: https://github.com/ValveSoftware/gamescope/issues/1626
+      # Still needed after the pacing fix: https://github.com/ValveSoftware/gamescope/pull/2417
+      printf -v command '%q ' env \
+        SDL_VIDEODRIVER=wayland \
+        gamescope_drm_debug_disable_explicit_sync=false \
+        ${lib.getExe pkgs.gamescope} --backend sdl -e -f \
         -W "$width" \
         -H "$height" \
         -r "$refresh" \
