@@ -119,19 +119,11 @@
         };
 
         # Homelab pins
-        proxmox-server-01 = {
-          id = "proxmox-server-01";
-          title = "Proxmox 01";
-          url = "https://pve1.okwilkins.dev:8006";
+        personal-website = {
+          id = "personal-website";
+          title = "Personal Website";
+          url = "https://www.okwilkins.dev";
           position = 10;
-          isEssential = false;
-          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-        };
-        proxmox-server-02 = {
-          id = "proxmox-server-02";
-          title = "Proxmox 02";
-          url = "https://pve2.okwilkins.dev:8006";
-          position = 11;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
@@ -139,7 +131,7 @@
           id = "grafana";
           title = "Grafana";
           url = "https://grafana.okwilkins.dev";
-          position = 12;
+          position = 11;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
@@ -147,7 +139,7 @@
           id = "argocd";
           title = "ArgoCD";
           url = "https://argocd.okwilkins.dev";
-          position = 13;
+          position = 12;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
@@ -155,7 +147,7 @@
           id = "argo-workflows";
           title = "Argo Workflows";
           url = "https://workflows.okwilkins.dev";
-          position = 14;
+          position = 13;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
@@ -163,7 +155,7 @@
           id = "git";
           title = "Git";
           url = "https://git.okwilkins.dev";
-          position = 15;
+          position = 14;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
@@ -171,7 +163,7 @@
           id = "excalidraw";
           title = "Excalidraw";
           url = "https://draw.okwilkins.dev/";
-          position = 16;
+          position = 15;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
@@ -179,7 +171,7 @@
           id = "harbor";
           title = "Harbor";
           url = "https://harbor.okwilkins.dev";
-          position = 17;
+          position = 16;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
@@ -187,7 +179,7 @@
           id = "auth";
           title = "Auth";
           url = "https://auth.okwilkins.dev";
-          position = 18;
+          position = 17;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
@@ -195,7 +187,7 @@
           id = "books";
           title = "Books";
           url = "https://books.okwilkins.dev";
-          position = 19;
+          position = 18;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
@@ -203,7 +195,7 @@
           id = "convert";
           title = "Img Convert";
           url = "https://convert.okwilkins.dev";
-          position = 20;
+          position = 19;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
@@ -211,7 +203,7 @@
           id = "link";
           title = "Link";
           url = "https://link.okwilkins.dev";
-          position = 21;
+          position = 20;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
@@ -219,7 +211,7 @@
           id = "prometheus";
           title = "Prometheus";
           url = "https://prometheus.okwilkins.dev";
-          position = 22;
+          position = 21;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
@@ -227,7 +219,7 @@
           id = "hubble";
           title = "Hubble";
           url = "https://hubble.okwilkins.dev/";
-          position = 23;
+          position = 22;
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
