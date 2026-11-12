@@ -46,11 +46,6 @@
       url = "github:NixOS/branding";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    opencode = {
-      url = "github:anomalyco/opencode";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = inputs: import ./outputs inputs;
