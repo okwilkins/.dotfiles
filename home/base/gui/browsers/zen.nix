@@ -8,7 +8,38 @@
     profiles.default = {
       path = "default";
       isDefault = true;
+      search = {
+        force = true;
+        default = "homelab";
+        engines.homelab = {
+          name = "Homelab Search";
+          definedAliases = [ "@s" ];
+          urls = [
+            {
+              template = "https://search.okwilkins.dev/search";
+              params = [
+                {
+                  name = "q";
+                  value = "{searchTerms}";
+                }
+              ];
+            }
+            {
+              template = "https://kagisuggest.com/api/autosuggest";
+              type = "application/x-suggestions+json";
+              params = [
+                {
+                  name = "q";
+                  value = "{searchTerms}";
+                }
+              ];
+            }
+          ];
+        };
+      };
       settings = {
+        "browser.search.suggest.enabled" = true;
+        "browser.urlbar.suggest.searches" = true;
         "browser.startup.page" = 3; # Launch the last tab open
         "browser.aboutConfig.showWarning" = false;
         "browser.shell.checkDefaultBrowser" = false;
