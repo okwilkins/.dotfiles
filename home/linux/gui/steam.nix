@@ -19,21 +19,17 @@ let
         exit 1
       fi
 
-      read -r monitor width height refresh < <(
-        hyprctl monitors -j | jq -er '.[] | select(.focused) | [.id, .width, .height, (.refreshRate | round)] | @tsv'
+      read -r width height refresh < <(
+        hyprctl monitors -j | jq -er '.[] | select(.focused) | [.width, .height, (.refreshRate | round)] | @tsv'
       )
-      # Avoid native Wayland mouse stutter: https://github.com/ValveSoftware/gamescope/issues/1626
-      # Still needed after the pacing fix: https://github.com/ValveSoftware/gamescope/pull/2417
-      printf -v command '%q ' env \
-        SDL_VIDEODRIVER=wayland \
-        gamescope_drm_debug_disable_explicit_sync=false \
-        ${lib.getExe pkgs.gamescope} --backend sdl -e -f \
+      # Disable explicit sync for NVIDIA mouse stutter: https://github.com/ValveSoftware/gamescope/issues/1626
+      exec env -u SDL_VIDEODRIVER \
+        gamescope_drm_debug_disable_explicit_sync=true \
+        ${lib.getExe pkgs.gamescope} --backend wayland -e -f \
         -W "$width" \
         -H "$height" \
         -r "$refresh" \
         -- ${steam} -gamepadui "$@"
-      # Open Gamescope on the same monitor detected
-      exec hyprctl dispatch "hl.dsp.exec_cmd($(jq -Rn --arg command "$command" '$command'), { monitor = \"$monitor\" })"
     '';
   };
 in
@@ -43,7 +39,7 @@ in
 
     xdg.desktopEntries.steam-tv = {
       name = "Steam (TV)";
-      comment = "Steam Big Picture in Gamescope on the focused monitor";
+      comment = "Steam Big Picture in Gamescope with focused monitor settings";
       exec = lib.getExe steamGamescope;
       icon = "steam";
       categories = [ "Game" ];
