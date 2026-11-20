@@ -33,11 +33,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1791630145,
-        "narHash": "sha256-xNCWUOFUt0KX56dkx1TgdkVG8BpJiojEGDKkkfq8WaM=",
+        "lastModified": 1795211716,
+        "narHash": "sha256-Gg+Sxv7lTwK9cIJ/PF/9mzCEANtY18RHX92vQAe91fE=",
         "ref": "refs/heads/main",
-        "rev": "b5e83ba504b9277b214aa3a7a2f7673f04f59a41",
-        "revCount": 29,
+        "rev": "c00f35dd13bd5e4eef22cbda7eb1e3acdf1d7a19",
+        "revCount": 30,
         "type": "git",
         "url": "ssh://git@github.com/okwilkins/.secrets.git"
       },
