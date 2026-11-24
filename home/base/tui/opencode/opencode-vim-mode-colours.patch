@@ -1,0 +1,60 @@
+--- a/dist/tui.js
++++ b/dist/tui.js
+@@ -2280,7 +2280,8 @@
+       var _c$ = _$memo(() => !!props.enabled());
+       return () => _c$() ? modeLabel(props.mode()) : "";
+     })());
+-    _$effect((_$p) => _$setProp(_el$2, "fg", props.mode() === "insert" ? props.theme.success : props.theme.warning, _$p));
++    const colour = () => props.mode() === "insert" ? props.syntax.string : props.mode() === "normal" ? props.syntax.function : props.syntax.keyword;
++    _$effect((_$p) => _$setProp(_el$2, "fg", colour(), _$p));
+     return _el$;
+   })();
+ }
+@@ -2644,7 +2645,7 @@
+       get children() {
+         var _el$9 = _$createElement2("text");
+         _$insert2(_el$9, modeLabel);
+-        _$effect2((_$p) => _$setProp2(_el$9, "fg", theme().text.muted, _$p));
++        _$effect2((_$p) => _$setProp2(_el$9, "fg", theme().syntax.keyword, _$p));
+         return _el$9;
+       }
+     }), _el$0);
+@@ -4301,3 +4302,3 @@
+         _$insert6(_el$, () => notice() || `SESSION \xB7 Enter open \xB7 yy copy \xB7 ${config.sessionKey} prompt`);
+-        _$effect6((_$p) => _$setProp6(_el$, "fg", context.theme.text.feedback.info.base, _$p));
++        _$effect6((_$p) => _$setProp6(_el$, "fg", context.theme.syntax.function, _$p));
+         return _el$;
+@@ -4456,10 +4457,7 @@
+           },
+           enabled,
+-          get theme() {
+-            return {
+-              success: context.theme.text.feedback.success.base,
+-              warning: context.theme.text.feedback.warning.base
+-            };
++          get syntax() {
++            return context.theme.syntax;
+           }
+         }), _el$2);
+         _$insert7(_el$2, () => state.mode() === "normal" ? "j/k select \xB7 i type an answer" : "esc normal");
+@@ -4779,3 +4777,3 @@
+       _$insert8(_el$, () => mappings.hint);
+-      _$effect8((_$p) => _$setProp8(_el$, "fg", context.theme.text.feedback.info.base, _$p));
++      _$effect8((_$p) => _$setProp8(_el$, "fg", context.theme.syntax.string, _$p));
+       return _el$;
+@@ -4849,13 +4847,8 @@
+       return _$createComponent10(VimStatus, {
+         mode: () => dialogFocused() ? dialogState.mode() : state.mode(),
+         enabled,
+-        theme: {
+-          get success() {
+-            return props.context.theme.text.feedback.success.base;
+-          },
+-          get warning() {
+-            return props.context.theme.text.feedback.warning.base;
+-          }
++        get syntax() {
++          return props.context.theme.syntax;
+         }
+       });
+     }

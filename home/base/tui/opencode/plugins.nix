@@ -20,23 +20,29 @@ let
 
   npmPlugin =
     plugin:
-    pkgs.runCommand (builtins.baseNameOf plugin.package) { } ''
-      mkdir -p "$out"
-      tar -xf ${npm plugin} -C "$out" --strip-components=1
-      ${lib.concatMapStringsSep "\n" (dep: ''
-        mkdir -p "$out/node_modules/${dep.package}"
-        tar -xf ${npm dep} -C "$out/node_modules/${dep.package}" --strip-components=1
-      '') (plugin.dependencies or [ ])}
-      ${pkgs.gnupatch}/bin/patch -d "$out" -p1 --fuzz=0 < ${plugin.patch}
-    '';
+    pkgs.stdenvNoCC.mkDerivation {
+      pname = builtins.baseNameOf plugin.package;
+      inherit (plugin) version patches;
+      src = npm plugin;
+      installPhase = ''
+        cp -r . "$out"
+        ${lib.concatMapStringsSep "\n" (dep: ''
+          mkdir -p "$out/node_modules/${dep.package}"
+          tar -xf ${npm dep} -C "$out/node_modules/${dep.package}" --strip-components=1
+        '') (plugin.dependencies or [ ])}
+      '';
+    };
 in
 {
   home.file = {
     "${dir}/packages/opencode-vim".source = npmPlugin {
       package = "opencode-vim";
       version = "0.0.30";
-      # Upstream copies deleted text to the system clipboard; we only want explicit yanks to replace it.
-      patch = ./opencode-vim-yank-only.patch;
+      # Preserve the clipboard on cuts and match Neovim's mode colours using the active theme.
+      patches = [
+        ./opencode-vim-yank-only.patch
+        ./opencode-vim-mode-colours.patch
+      ];
       hash = "sha512-oZ48kyjFpM29hZj9rvZiJjAFiy1fI7vHnikQ6wa6by71Wqx8XQMQPQmKrvMDJMrdr4FTEpI11YzDMiJQoOJWsQ==";
       dependencies = [
         {
