@@ -254,6 +254,14 @@
           isEssential = false;
           workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
         };
+        crowdsec = {
+          id = "crowdsec";
+          title = "CrowdSec";
+          url = "https://app.crowdsec.net/security-engines/54978e689035435d90897245940454a9reaawmj6tqk2rg77";
+          position = 23;
+          isEssential = false;
+          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
+        };
       };
     };
 
