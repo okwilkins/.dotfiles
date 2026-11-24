@@ -14,6 +14,7 @@ alias diff=delta
 
 # QoL for applications
 alias t=talosctl
+alias k9s='k9s -A'
 # Follow the selected repository or worktree when exiting Lazygit with q.
 # Adapted from https://github.com/jesseduffield/lazygit#changing-directory-on-exit
 function lazygit() {
