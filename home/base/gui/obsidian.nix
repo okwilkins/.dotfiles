@@ -58,7 +58,7 @@ let
     };
     communityPlugins = [
       (pkgs.fetchzip {
-        url = "https://github.com/Vinzent03/obsidian-git/releases/download/2.38.3/obsidian-git-2.38.3.zip";
+        url = "https://github.com/Vinzent03/obsidian-git/releases/download/2.44.0/obsidian-git-2.44.0.zip";
         name = "Git";
         stripRoot = true;
         hash = "sha256-Bm0USEhNtRCNzt9cx7vI6mgHF+mvZEAzo9WJalBKD8U=";
