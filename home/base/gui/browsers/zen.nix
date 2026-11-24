@@ -1,4 +1,74 @@
-{ inputs, ... }:
+{ inputs, lib, ... }:
+let
+  pin = id: title: url: {
+    inherit id title url;
+    editedTitle = true;
+  };
+  orderedPins =
+    {
+      start ? 0,
+      isEssential ? false,
+    }:
+    pins:
+    builtins.listToAttrs (
+      lib.imap0 (i: p: {
+        name = p.id;
+        value = p // {
+          position = start + i;
+          inherit isEssential;
+        };
+      }) pins
+    );
+  folder = id: position: pins: {
+    inherit id position;
+    pins = orderedPins { start = position + 1; } pins;
+  };
+
+  essentials = orderedPins { isEssential = true; } [
+    (pin "gmail" "Gmail" "https://mail.google.com")
+    (pin "youtube-music" "YouTube Music" "https://music.youtube.com/")
+    (pin "messenger" "Messenger" "https://www.messenger.com")
+    (pin "grok" "Grok" "https://grok.com/")
+    (pin "x-twitter" "X" "https://x.com/home")
+    (pin "github" "GitHub" "https://github.com/")
+    (pin "whatsapp" "WhatsApp" "https://web.whatsapp.com/")
+    (pin "reddit" "Reddit" "https://www.reddit.com/")
+    (pin "telegram" "Telegram" "https://web.telegram.org/k/#-498955210")
+    (pin "linkedin" "LinkedIn" "https://www.linkedin.com")
+  ];
+
+  # Use the H8s directories for groups of services and pin individual services directly.
+  homelabPins = {
+    Applications = folder "2f28f068-6ff7-4201-b7aa-3ed920736c07" 10 [
+      (pin "personal-website" "Personal Website" "https://www.okwilkins.dev")
+      (pin "git" "Git" "https://git.okwilkins.dev")
+      (pin "excalidraw" "Excalidraw" "https://draw.okwilkins.dev/")
+      (pin "books" "Books" "https://books.okwilkins.dev")
+      (pin "convert" "Img Convert" "https://convert.okwilkins.dev")
+      (pin "link" "Link" "https://link.okwilkins.dev")
+    ];
+    "CI/CD" = folder "47b1583e-85eb-4e46-80be-845d93a97aa2" 20 [
+      (pin "argocd" "Argo CD" "https://argocd.okwilkins.dev")
+      (pin "argo-workflows" "Argo Workflows" "https://workflows.okwilkins.dev")
+    ];
+    Observability = folder "a3145349-a2ca-4b85-ac46-45014ff853f3" 40 [
+      (pin "grafana" "Grafana" "https://grafana.okwilkins.dev")
+      (pin "prometheus" "Prometheus" "https://prometheus.okwilkins.dev")
+    ];
+    Security = folder "ab5313b1-1588-47ca-91fe-d00ad439bd12" 50 [
+      (pin "auth" "Auth" "https://auth.okwilkins.dev")
+      (pin "crowdsec" "CrowdSec"
+        "https://app.crowdsec.net/security-engines/54978e689035435d90897245940454a9reaawmj6tqk2rg77"
+      )
+    ];
+    hubble = (pin "hubble" "Hubble" "https://hubble.okwilkins.dev/") // {
+      position = 60;
+    };
+    harbor = (pin "harbor" "Harbor" "https://harbor.okwilkins.dev") // {
+      position = 61;
+    };
+  };
+in
 {
   imports = [
     inputs.zen-browser.homeModules.beta
@@ -47,6 +117,7 @@
         # Styling
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
         "widget.transparent-windows" = true;
+        "zen.theme.accent-color" = "AccentColor";
         "zen.theme.gradient.show-custom-colors" = true;
         "zen.theme.acrylic-elements" = true;
         "browser.tabs.allow_transparent_browser" = true;
@@ -54,214 +125,19 @@
         "zen.view.grey-out-inactive-windows" = false;
       };
 
-      # Spaces/Workspaces Configuration
-      spaces = {
-        homelab = {
-          id = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-          name = "Homelab";
-          icon = "🏠";
-          position = 1000;
-          theme.type = "gradient";
-          theme.opacity = 0.456;
+      spaces.homelab = {
+        id = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
+        name = "Homelab";
+        icon = "🏠";
+        position = 1000;
+        theme = {
+          type = "gradient";
+          colors = [ ]; # No custom stops: Zen derives its colours from the system accent.
+          opacity = 0.456;
+          rotation = null;
+          texture = 0.0;
         };
-      };
-
-      pins = {
-        # Essentials
-        gmail = {
-          id = "gmail";
-          title = "Gmail";
-          url = "https://mail.google.com";
-          position = 0;
-          isEssential = true;
-          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-        };
-        youtube-music = {
-          id = "youtube-music";
-          title = "YouTube Music";
-          url = "https://music.youtube.com/";
-          position = 1;
-          isEssential = true;
-          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-        };
-        messenger = {
-          id = "messenger";
-          title = "Messenger";
-          url = "https://www.messenger.com";
-          position = 2;
-          isEssential = true;
-          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-        };
-        grok = {
-          id = "grok";
-          title = "Grok";
-          url = "https://grok.com/";
-          position = 3;
-          isEssential = true;
-          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-        };
-        x-twitter = {
-          id = "x-twitter";
-          title = "X";
-          url = "https://x.com/home";
-          position = 4;
-          isEssential = true;
-          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-        };
-        github = {
-          id = "github";
-          title = "GitHub";
-          url = "https://github.com/";
-          position = 5;
-          isEssential = true;
-          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-        };
-        whatsapp = {
-          id = "whatsapp";
-          title = "WhatsApp";
-          url = "https://web.whatsapp.com/";
-          position = 6;
-          isEssential = true;
-          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-        };
-        reddit = {
-          id = "reddit";
-          title = "Reddit";
-          url = "https://www.reddit.com/";
-          position = 7;
-          isEssential = true;
-          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-        };
-        telegram = {
-          id = "telegram";
-          title = "Telegram";
-          url = "https://web.telegram.org/k/#-498955210";
-          position = 8;
-          isEssential = true;
-          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-        };
-        linkedin = {
-          id = "linkedin";
-          title = "LinkedIn";
-          url = "https://www.linkedin.com";
-          position = 9;
-          isEssential = true;
-          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-        };
-
-        # Homelab pins
-        personal-website = {
-          id = "personal-website";
-          title = "Personal Website";
-          url = "https://www.okwilkins.dev";
-          position = 10;
-          isEssential = false;
-          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-        };
-        grafana = {
-          id = "grafana";
-          title = "Grafana";
-          url = "https://grafana.okwilkins.dev";
-          position = 11;
-          isEssential = false;
-          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-        };
-        argocd = {
-          id = "argocd";
-          title = "ArgoCD";
-          url = "https://argocd.okwilkins.dev";
-          position = 12;
-          isEssential = false;
-          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-        };
-        argo-workflows = {
-          id = "argo-workflows";
-          title = "Argo Workflows";
-          url = "https://workflows.okwilkins.dev";
-          position = 13;
-          isEssential = false;
-          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-        };
-        git = {
-          id = "git";
-          title = "Git";
-          url = "https://git.okwilkins.dev";
-          position = 14;
-          isEssential = false;
-          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-        };
-        excalidraw = {
-          id = "excalidraw";
-          title = "Excalidraw";
-          url = "https://draw.okwilkins.dev/";
-          position = 15;
-          isEssential = false;
-          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-        };
-        harbor = {
-          id = "harbor";
-          title = "Harbor";
-          url = "https://harbor.okwilkins.dev";
-          position = 16;
-          isEssential = false;
-          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-        };
-        auth = {
-          id = "auth";
-          title = "Auth";
-          url = "https://auth.okwilkins.dev";
-          position = 17;
-          isEssential = false;
-          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-        };
-        books = {
-          id = "books";
-          title = "Books";
-          url = "https://books.okwilkins.dev";
-          position = 18;
-          isEssential = false;
-          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-        };
-        convert = {
-          id = "convert";
-          title = "Img Convert";
-          url = "https://convert.okwilkins.dev";
-          position = 19;
-          isEssential = false;
-          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-        };
-        link = {
-          id = "link";
-          title = "Link";
-          url = "https://link.okwilkins.dev";
-          position = 20;
-          isEssential = false;
-          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-        };
-        prometheus = {
-          id = "prometheus";
-          title = "Prometheus";
-          url = "https://prometheus.okwilkins.dev";
-          position = 21;
-          isEssential = false;
-          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-        };
-        hubble = {
-          id = "hubble";
-          title = "Hubble";
-          url = "https://hubble.okwilkins.dev/";
-          position = 22;
-          isEssential = false;
-          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-        };
-        crowdsec = {
-          id = "crowdsec";
-          title = "CrowdSec";
-          url = "https://app.crowdsec.net/security-engines/54978e689035435d90897245940454a9reaawmj6tqk2rg77";
-          position = 23;
-          isEssential = false;
-          workspace = "a1b2c3d4-e5f6-7890-abcd-ef1234567890";
-        };
+        pins = essentials // homelabPins;
       };
     };
 
@@ -289,44 +165,22 @@
           "Status" = "locked";
         };
       };
-      # To find the key, install the addon, right-click inspect and look at the link: addons://detail/<<AUTHOR ID>>
-      ExtensionSettings = {
-        "addon@darkreader.org" = {
-          install_url = "https://addons.mozilla.org/firefox/downloads/file/4535824/darkreader-4.9.116.xpi";
-          installation_mode = "force_installed";
-          default_area = "menupanel";
-        };
-        "{446900e4-71c2-419f-a6a7-df9c091e268b}" = {
-          install_url = "https://addons.mozilla.org/firefox/downloads/file/4624303/bitwarden_password_manager-2025.11.1.xpi";
-          installation_mode = "force_installed";
-          default_area = "menupanel";
-        };
-        "jid1-MnnxcxisBPnSXQ@jetpack" = {
-          install_url = "https://addons.mozilla.org/firefox/downloads/file/4504218/privacy_badger17-2025.9.2.xpi";
-          installation_mode = "force_installed";
-          default_area = "menupanel";
-        };
-        "{a4c4eda4-fb84-4a84-b4a1-f7c1cbf2a1ad}" = {
-          install_url = "https://addons.mozilla.org/firefox/downloads/file/4550452/refined_github-25.11.22.xpi";
-          installation_mode = "force_installed";
-          default_area = "menupanel";
-        };
-        "{762f9885-5a13-4abd-9c77-433dcd38b8fd}" = {
-          install_url = "https://addons.mozilla.org/firefox/downloads/file/4371820/return_youtube_dislikes-3.0.0.18.xpi";
-          installation_mode = "force_installed";
-          default_area = "menupanel";
-        };
-        "uBlock0@raymondhill.net" = {
-          install_url = "https://addons.mozilla.org/firefox/downloads/file/4531307/ublock_origin-1.67.0.xpi";
-          installation_mode = "force_installed";
-          default_area = "menupanel";
-        };
-        "{356f451b-e441-4bf4-8683-f33a29c38cc6}" = {
-          install_url = "https://addons.mozilla.org/firefox/downloads/file/4532383/simplified_twitter-2.0.0.xpi";
-          installation_mode = "force_installed";
-          default_area = "menupanel";
-        };
-      };
+      ExtensionSettings =
+        lib.genAttrs
+          [
+            "addon@darkreader.org" # Dark Reader
+            "{446900e4-71c2-419f-a6a7-df9c091e268b}" # Bitwarden
+            "jid1-MnnxcxisBPnSXQ@jetpack" # Privacy Badger
+            "{a4c4eda4-fb84-4a84-b4a1-f7c1cbf2a1ad}" # Refined GitHub
+            "{762f9885-5a13-4abd-9c77-433dcd38b8fd}" # Return YouTube Dislike
+            "uBlock0@raymondhill.net" # uBlock Origin
+            "{356f451b-e441-4bf4-8683-f33a29c38cc6}" # Simplified Twitter
+          ]
+          (id: {
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/${lib.escapeURL id}/latest.xpi";
+            installation_mode = "force_installed";
+            default_area = "menupanel";
+          });
     };
   };
 }
