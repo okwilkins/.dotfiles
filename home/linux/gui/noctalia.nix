@@ -206,7 +206,8 @@ in
           volume_output = true;
           volume_input = true;
           brightness = true;
-          keyboard_layout = true;
+          # INFO: Stops Hex from spamming notifications for this when outputting
+          keyboard_layout = false;
           media = false;
           privacy = false;
           wifi = false;
