@@ -1,0 +1,73 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "dependencyDashboard": true,
+  "prHourlyLimit": 0,
+  "prConcurrentLimit": 0,
+  "customDatasources": {
+    "npm-tarball": {
+      "defaultRegistryUrlTemplate": "https://registry.npmjs.org/{{{packageName}}}/latest",
+      "transformTemplates": [
+        "{\"releases\": [$[dist.integrity ~> /^sha512-/].{\"version\": version, \"digest\": dist.integrity}]}"
+      ]
+    }
+  },
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": "Update npm tarball versions and SHA-512 hashes together.",
+      "managerFilePatterns": ["**/*.nix"],
+      "matchStrings": [
+        "\\bpackage\\s*=\\s*\"(?<depName>(?:@[\\w.-]+/)?[\\w.-]+)\";\\s*version\\s*=\\s*\"(?<currentValue>[^\"\\s]+)\";\\s*hash\\s*=\\s*\"(?<currentDigest>sha512-[A-Za-z0-9+/=]+)\""
+      ],
+      "datasourceTemplate": "custom.npm-tarball",
+      "versioningTemplate": "npm"
+    },
+    {
+      "customType": "regex",
+      "description": "Track tagged fetchFromGitHub sources.",
+      "managerFilePatterns": ["**/*.nix"],
+      "matchStrings": [
+        "fetchFromGitHub\\s*\\{\\s*owner\\s*=\\s*\"(?<owner>[\\w.-]+)\";\\s*repo\\s*=\\s*\"(?<repo>[\\w.-]+)\";\\s*rev\\s*=\\s*\"(?<currentValue>v?\\d+\\.\\d+[\\w.-]*)\""
+      ],
+      "depNameTemplate": "{{{owner}}}/{{{repo}}}",
+      "depTypeTemplate": "nix-fixed-output",
+      "datasourceTemplate": "github-tags",
+      "versioningTemplate": "loose"
+    },
+    {
+      "customType": "regex",
+      "description": "Commit pins follow main unless a # renovate: branch=NAME line immediately precedes rev.",
+      "managerFilePatterns": ["**/*.nix"],
+      "matchStrings": [
+        "fetchFromGitHub\\s*\\{\\s*owner\\s*=\\s*\"(?<owner>[\\w.-]+)\";\\s*repo\\s*=\\s*\"(?<repo>[\\w.-]+)\";\\s*(?:# renovate: branch=(?<branch>[^\\s]+)\\s+)?rev\\s*=\\s*\"(?<currentDigest>[a-f0-9]{40})\""
+      ],
+      "depNameTemplate": "{{{owner}}}/{{{repo}}}",
+      "packageNameTemplate": "https://github.com/{{{owner}}}/{{{repo}}}.git",
+      "depTypeTemplate": "nix-fixed-output",
+      "currentValueTemplate": "{{#if branch}}{{{branch}}}{{else}}main{{/if}}",
+      "datasourceTemplate": "git-refs",
+      "versioningTemplate": "exact"
+    },
+    {
+      "customType": "regex",
+      "description": "Update GitHub release assets, including versions repeated in ZIP filenames.",
+      "managerFilePatterns": ["**/*.nix"],
+      "matchStrings": [
+        "url\\s*=\\s*\"https://github\\.com/(?<depName>[\\w.-]+/[\\w.-]+)/releases/download/(?<currentValue>v?\\d[\\w.-]*)/[^\"\\s]+\""
+      ],
+      "depTypeTemplate": "nix-fixed-output",
+      "datasourceTemplate": "github-releases",
+      "versioningTemplate": "loose"
+    }
+  ],
+  "packageRules": [
+    {
+      "matchDepTypes": ["nix-fixed-output"],
+      "postUpgradeTasks": {
+        "executionMode": "branch",
+        "fileFilters": ["**/*.nix"],
+        "commands": ["python3 -I /etc/renovate/helpers/rehash-github.py"]
+      }
+    }
+  ]
+}
