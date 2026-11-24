@@ -1,0 +1,12 @@
+--- a/dist/tui.js
++++ b/dist/tui.js
+@@ -1432,7 +1432,8 @@
+           buffer.replaceContent(currentMap.vimText);
+           break;
+         case "yank":
+-          if (!action.register)
++          // Cuts emit a yank alongside the edit; leave the clipboard alone for those.
++          if (!action.register && !actions.some((item) => item.type === "content-change"))
+             options.onYank?.(codec.decode(action.text));
+           break;
+         case "mode-change":

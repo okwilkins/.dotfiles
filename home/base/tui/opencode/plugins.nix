@@ -27,6 +27,7 @@ let
         mkdir -p "$out/node_modules/${dep.package}"
         tar -xf ${npm dep} -C "$out/node_modules/${dep.package}" --strip-components=1
       '') (plugin.dependencies or [ ])}
+      ${pkgs.gnupatch}/bin/patch -d "$out" -p1 --fuzz=0 < ${plugin.patch}
     '';
 in
 {
@@ -34,6 +35,8 @@ in
     "${dir}/packages/opencode-vim".source = npmPlugin {
       package = "opencode-vim";
       version = "0.0.30";
+      # Upstream copies deleted text to the system clipboard; we only want explicit yanks to replace it.
+      patch = ./opencode-vim-yank-only.patch;
       hash = "sha512-oZ48kyjFpM29hZj9rvZiJjAFiy1fI7vHnikQ6wa6by71Wqx8XQMQPQmKrvMDJMrdr4FTEpI11YzDMiJQoOJWsQ==";
       dependencies = [
         {
