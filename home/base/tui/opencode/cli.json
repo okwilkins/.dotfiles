@@ -1,5 +1,9 @@
 {
   "$schema": "https://opencode.ai/v2/cli.json",
+  "attention": {
+    "notifications": true,
+    "sound": true
+  },
   "plugins": ["./packages/opencode-vim"],
   "tabs": {
     "mode": "off"
