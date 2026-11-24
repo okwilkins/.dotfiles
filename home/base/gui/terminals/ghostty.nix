@@ -3,7 +3,7 @@ let
   ghosttyCursorShadersRepo = pkgs.fetchFromGitHub {
     owner = "sahaj-b";
     repo = "ghostty-cursor-shaders";
-    rev = "0a274beac8b93ee6ce6b94402b7313a0417b8e38";
+    rev = "9ad9158a93c0de0c045e1c6b27df37da698bc8af";
     hash = "sha256-B7B6K7Ee4uJlW8zzLP3ILgddnbcIQyNimY+rVllzbR0=";
   };
 in
