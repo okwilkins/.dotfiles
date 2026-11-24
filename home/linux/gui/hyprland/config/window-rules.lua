@@ -21,6 +21,12 @@ hl.window_rule({
     no_initial_focus = true,
 })
 
+hl.window_rule({
+    name = "tile-hex-main",
+    match = { class = "^anomaly[.]hex$", initial_title = "^Hex$" },
+    tile = true,
+})
+
 -- Floating windows
 for _, class in ipairs({
     "^(com%.ghostty%.fastfetch)$",

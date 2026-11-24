@@ -14,6 +14,8 @@ hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd("noctalia msg session lock"))
 
 hl.bind(mainMod .. " + s", hl.dsp.exec_cmd("noctalia msg screenshot-region"))
 
+hl.bind(mainMod .. " + d", hl.dsp.global("anomaly.hex:dictation"))
+
 -- Toggle full column width (0.5 <-> 1.0) and fullscreen
 hl.bind(mainMod .. " + m", hl.dsp.layout("colresize +conf"))
 hl.bind(mainMod .. " + f", hl.dsp.window.fullscreen_state({ internal = 2, client = 0, action = "toggle" }))

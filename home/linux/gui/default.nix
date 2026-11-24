@@ -9,6 +9,7 @@ let
 in
 {
   imports = [
+    ./hex.nix
     ./hyprland
     # INFO: Old setup using the hyprland applications
     # ./anyrun

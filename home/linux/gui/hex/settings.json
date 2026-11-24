@@ -1,0 +1,183 @@
+{
+    "vocabulary": [
+        {
+            "term": "Hyprland",
+            "sounds_like": [
+                "hyper land"
+            ]
+        },
+        {
+            "term": "hyprctl",
+            "sounds_like": [
+                "hyper ctl"
+            ]
+        },
+        "Noctalia",
+        {
+            "term": "Ghostty",
+            "sounds_like": [
+                "ghosty"
+            ]
+        },
+        {
+            "term": "Catppuccin",
+            "sounds_like": [
+                "catpoochin"
+            ]
+        },
+        "Yazi",
+        {
+            "term": "Neovim",
+            "sounds_like": [
+                "neo vim"
+            ]
+        },
+        {
+            "term": "lazygit",
+            "sounds_like": [
+                "lazy git"
+            ]
+        },
+        {
+            "term": "tmux",
+            "sounds_like": [
+                "tee mux"
+            ]
+        },
+        "OpenCode",
+        {
+            "term": "NixOS",
+            "sounds_like": [
+                "nix OS"
+            ]
+        },
+        {
+            "term": "nixpkgs",
+            "sounds_like": [
+                "Next packages",
+                "nix packages"
+            ]
+        },
+        {
+            "term": "YubiKey",
+            "sounds_like": [
+                "Yubi key"
+            ]
+        },
+        {
+            "term": "h8s",
+            "sounds_like": [
+                "h eights",
+                "H. Eights",
+                "H. Eates."
+            ]
+        },
+        {
+            "term": "k8s",
+            "sounds_like": [
+                "Kay Eights.",
+                "K. Ats."
+            ]
+        },
+        {
+            "term": "k9s",
+            "sounds_like": [
+                "k nines",
+                "Canines"
+            ]
+        },
+        {
+            "term": "kubectl",
+            "sounds_like": [
+                "kube ctl",
+                "Cube Cuttle"
+            ]
+        },
+        {
+            "term": "talosctl",
+            "sounds_like": [
+                "talos ctl",
+                "Talos Cattle",
+                "Talos Cuttle"
+            ]
+        },
+        {
+            "term": "Proxmox",
+            "sounds_like": [
+                "prox mox"
+            ]
+        },
+        "Argo CD",
+        {
+            "term": "Buildah",
+            "sounds_like": [
+                "builder"
+            ]
+        },
+        "SOPS",
+        "Cilium",
+        "Authelia",
+        "CrowdSec",
+        "BookOrbit",
+        {
+            "term": "Forgejo",
+            "sounds_like": [
+                "forgeho",
+                "For Joe",
+                "Forger"
+            ]
+        }
+    ],
+    "transcription": {
+        "model": "cohere_transcribe",
+        "language": "en"
+    },
+    "dictation_hotkey": {
+        "keys": [
+            {
+                "modifier": "command",
+                "side": "any"
+            },
+            {
+                "code": 0,
+                "label": "D"
+            }
+        ]
+    },
+    "paste_last_hotkey": {
+        "keys": [
+            {
+                "modifier": "command",
+                "side": "any"
+            },
+            {
+                "code": 0,
+                "label": "R"
+            }
+        ]
+    },
+    "paste_with_shift": true,
+    "release_microphone_while_idle": true,
+    "capture": {
+        "enabled": false
+    },
+    "labs": {
+        "failure_notices": true
+    },
+    "dictation_processing": {
+        "default_mode": {
+            "name": "Global"
+        }
+    },
+    "migrations": [
+        "streaming-english-model",
+        "annotate-on-by-default",
+        "anomaly-hex-identity",
+        "meeting-retention-default",
+        "meeting-summaries-choice",
+        "meeting-labs-settings",
+        "yearly-stats-merge",
+        "scrawl-capture-settings",
+        "scrawl-routing-settings"
+    ]
+}
