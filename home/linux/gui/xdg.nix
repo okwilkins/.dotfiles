@@ -44,7 +44,7 @@
             "imv.desktop"
           ];
           videoViewer = [
-            "imv.desktop"
+            "mpv.desktop"
           ];
           fileBrowser = [
             "org.gnome.Nautilus.desktop"
