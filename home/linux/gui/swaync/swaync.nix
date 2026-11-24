@@ -2,7 +2,7 @@
 let
   catppuccinMochaSwaync = pkgs.fetchurl {
     # Upgrade to 1.X when swaync is upgraded to 0.12+
-    url = "https://github.com/catppuccin/swaync/releases/download/v0.2.3/mocha.css";
+    url = "https://github.com/catppuccin/swaync/releases/download/v1.0.1/mocha.css";
     hash = "sha256-Hie/vDt15nGCy4XWERGy1tUIecROw17GOoasT97kIfc=";
   };
 in
