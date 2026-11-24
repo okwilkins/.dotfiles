@@ -16,6 +16,7 @@ in
     # ./waybar
     # ./wlogout
     # ./swaync
+    ./libre_pods.nix
     ./noctalia.nix
     ./steam.nix
     ./xdg.nix

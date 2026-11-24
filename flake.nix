@@ -36,6 +36,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # INFO: PR #888 keeps stereo playback with the hi-res mic and waits for the AirPods handshake before starting capture.
+    librepods.url = "github:borislisandro/librepods/d12d4111eca85e69c6993d3fc015991f0eefec8b";
+
     noctalia = {
       url = "github:noctalia-dev/noctalia";
       inputs.nixpkgs.follows = "nixpkgs";
