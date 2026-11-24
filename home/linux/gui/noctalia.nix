@@ -8,7 +8,7 @@ let
   communityPluginsRepo = pkgs.fetchFromGitHub {
     owner = "noctalia-dev";
     repo = "community-plugins";
-    rev = "093661f688847ffd7a47d3fdfa39c9b6f63a3a36";
+    rev = "5efc3bbca3a98015822776db20a5138454022cec";
     hash = "sha256-DVlvf1bjUia35aOo7M7LKQxTS+xTkF0OpqzJHK3qjWk=";
   };
 
