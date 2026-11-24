@@ -126,6 +126,12 @@
                 "For Joe",
                 "Forger"
             ]
+        },
+        {
+            "term": "glove80",
+            "sounds_like": [
+                "Glove eighty"
+            ]
         }
     ],
     "transcription": {
