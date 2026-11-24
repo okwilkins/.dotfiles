@@ -8,7 +8,7 @@ let
   src = pkgs.fetchFromGitHub {
     owner = "cursor";
     repo = "plugins";
-    rev = "7a583913eb1b8d1a0ee76753d1a2cf072e7b54f9";
+    rev = "ca782ed8b3c2c521cead8e1720d55c3a5dbf2347";
     hash = "sha256-prQwn1as83NuoYIDee+ZJ2ETDVNoFbHNabSwzpy70mk=";
   };
   dir = "${osConfig.system.xdg.configDir}/opencode";
