@@ -1,0 +1,157 @@
+{
+  "pins": {
+    "catppuccin-bottom": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "catppuccin",
+        "repo": "bottom"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "eadd75acd0ecad4a58ade9a1d6daa3b97ccec07c",
+      "url": "https://github.com/catppuccin/bottom/archive/eadd75acd0ecad4a58ade9a1d6daa3b97ccec07c.tar.gz",
+      "hash": "sha256-dfukdk70ug1lRGADKBnvMhkl+3tsY7F+UAwTS2Qyapk="
+    },
+    "catppuccin-fzf": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "catppuccin",
+        "repo": "fzf"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "7508f8141286fb95249100a2b5325960320dcf32",
+      "url": "https://github.com/catppuccin/fzf/archive/7508f8141286fb95249100a2b5325960320dcf32.tar.gz",
+      "hash": "sha256-A6X0TyzET1HbcCv4tlUvhMr6IguRYA9GYqWDKY7XeMg="
+    },
+    "catppuccin-gh-dash": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "catppuccin",
+        "repo": "gh-dash"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "ecd62f5a2b6230ba2d8fe080e31d870997c7a738",
+      "url": "https://github.com/catppuccin/gh-dash/archive/ecd62f5a2b6230ba2d8fe080e31d870997c7a738.tar.gz",
+      "hash": "sha256-Pm5PkfyFqBZQ+L0cu6b66yiIE7hpT7z062xm9khxfc8="
+    },
+    "catppuccin-hyprland": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "catppuccin",
+        "repo": "hyprland"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "v2.0.0",
+      "revision": "f62df0599e8c2e8adae74edac6faa268838d7644",
+      "url": "https://api.github.com/repos/catppuccin/hyprland/tarball/refs/tags/v2.0.0",
+      "hash": "sha256-jGqBpSQa793phan9PeU2yXMX1nxzYClthQSeTwdqgEQ="
+    },
+    "catppuccin-k9s": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "catppuccin",
+        "repo": "k9s"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "fdbec82284744a1fc2eb3e2d24cb92ef87ffb8b4",
+      "url": "https://github.com/catppuccin/k9s/archive/fdbec82284744a1fc2eb3e2d24cb92ef87ffb8b4.tar.gz",
+      "hash": "sha256-9h+jyEO4w0OnzeEKQXJbg9dvvWGZYQAO4MbgDn6QRzM="
+    },
+    "catppuccin-yazi": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "catppuccin",
+        "repo": "yazi"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "d62802be39210ea10e54b3e3b09735c6cb9e57c1",
+      "url": "https://github.com/catppuccin/yazi/archive/d62802be39210ea10e54b3e3b09735c6cb9e57c1.tar.gz",
+      "hash": "sha256-bwzEO8exoBwa19q+jnYjHkaamGl2mhfukIEhDfUCRGI="
+    },
+    "cursor-plugins": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "cursor",
+        "repo": "plugins"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "ca782ed8b3c2c521cead8e1720d55c3a5dbf2347",
+      "url": "https://github.com/cursor/plugins/archive/ca782ed8b3c2c521cead8e1720d55c3a5dbf2347.tar.gz",
+      "hash": "sha256-KTFLq+fYVaLyGxdzgIK4QFJ5eQQhjYAO8IMRGMspws8="
+    },
+    "ghostty-cursor-shaders": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "sahaj-b",
+        "repo": "ghostty-cursor-shaders"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "9ad9158a93c0de0c045e1c6b27df37da698bc8af",
+      "url": "https://github.com/sahaj-b/ghostty-cursor-shaders/archive/9ad9158a93c0de0c045e1c6b27df37da698bc8af.tar.gz",
+      "hash": "sha256-TnoQvptwjs6P5/JfJO1CR3yhCfCcaw5wvPr5oEhn4Ho="
+    },
+    "noctalia-community-plugins": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "noctalia-dev",
+        "repo": "community-plugins"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "5efc3bbca3a98015822776db20a5138454022cec",
+      "url": "https://github.com/noctalia-dev/community-plugins/archive/5efc3bbca3a98015822776db20a5138454022cec.tar.gz",
+      "hash": "sha256-EoUipKt+d3yGT8lPy+y0vsdWuWfDKLob5SkarHOb2RY="
+    },
+    "rose-pine-hyprcursor": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "ndom91",
+        "repo": "rose-pine-hyprcursor"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "v0.3.2",
+      "revision": "1b6ab6990323c062c2e766331fb82d52da0156ed",
+      "url": "https://api.github.com/repos/ndom91/rose-pine-hyprcursor/tarball/refs/tags/v0.3.2",
+      "hash": "sha256-ArUX5qlqAXUqcRqHz4QxXy3KgkfasTPA/Qwf6D2kV0U="
+    },
+    "wavefox": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "QNetITQ",
+        "repo": "WaveFox"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "v1.204",
+      "revision": "ee0fb80ad277902520fed7e6146c1c9580b1d75e",
+      "url": "https://api.github.com/repos/QNetITQ/WaveFox/tarball/refs/tags/v1.204",
+      "hash": "sha256-6QZyCiPqhYN/HChmQy3vtnCxHo77OaEgT/PvXs9K19w="
+    }
+  },
+  "version": 8
+}

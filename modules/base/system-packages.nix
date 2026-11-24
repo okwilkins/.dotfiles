@@ -4,6 +4,7 @@
     # Core tools
     neovim
     git
+    npins
 
     # Achieves
     gnutar

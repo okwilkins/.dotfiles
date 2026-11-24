@@ -1,20 +1,14 @@
 {
   inputs,
+  pins,
   pkgs,
   osConfig,
   ...
 }:
 let
-  communityPluginsRepo = pkgs.fetchFromGitHub {
-    owner = "noctalia-dev";
-    repo = "community-plugins";
-    rev = "093661f688847ffd7a47d3fdfa39c9b6f63a3a36";
-    hash = "sha256-DVlvf1bjUia35aOo7M7LKQxTS+xTkF0OpqzJHK3qjWk=";
-  };
-
   communityPlugins = pkgs.runCommand "noctalia-community-plugins" { } ''
     mkdir -p $out
-    cp -r ${communityPluginsRepo}/tailscale/. $out/tailscale/
+    cp -r ${pins.noctalia-community-plugins}/tailscale/. $out/tailscale/
   '';
 
   # https://github.com/NixOS/branding generates the NixOS logo assets; use the

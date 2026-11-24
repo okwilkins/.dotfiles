@@ -1,15 +1,7 @@
-{ pkgs, ... }:
-let
-  firefoxCss = pkgs.fetchFromGitHub {
-    owner = "QNetITQ";
-    repo = "WaveFox";
-    rev = "v1.204";
-    sha256 = "sha256-6QZyCiPqhYN/HChmQy3vtnCxHo77OaEgT/PvXs9K19w=";
-  };
-in
+{ pins, ... }:
 {
   home.file.".mozilla/firefox/default/chrome" = {
-    source = "${firefoxCss}/chrome";
+    source = "${pins.wavefox}/chrome";
     recursive = true;
   };
 

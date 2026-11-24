@@ -1,12 +1,9 @@
-{ osConfig, pkgs, ... }:
-let
-  catppuccinRepo = pkgs.fetchFromGitHub {
-    owner = "catppuccin";
-    repo = "hyprland";
-    rev = "v2.0.0";
-    hash = "sha256-jGqBpSQa793phan9PeU2yXMX1nxzYClthQSeTwdqgEQ=";
-  };
-in
+{
+  osConfig,
+  pkgs,
+  pins,
+  ...
+}:
 {
 
   home.packages = with pkgs; [
@@ -35,6 +32,6 @@ in
     recursive = true;
   };
   home.file."${osConfig.system.xdg.configDir}/hypr/themes/catppuccin-mocha.lua" = {
-    source = "${catppuccinRepo}/themes/catppuccin-mocha.lua";
+    source = "${pins.catppuccin-hyprland}/themes/catppuccin-mocha.lua";
   };
 }
