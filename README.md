@@ -18,14 +18,14 @@ The configuration of each application has two ideas in mind:
 |----------------------------------------------------------------|--------------------------------------------------------------------------------------|
 | **Window Manager**                                             | [Hyprland](https://hypr.land/)                                                       |
 | **Terminal**                                                   | [Ghostty](https://ghostty.org/)                                                      |
-| **Status Bar** / **Notifier** / **Launcher** / **lockscreens** | [noctalia](https://noctalia.dev)                                            |
-| **Display Manager**                                            | [tuigreet](https://github.com/apognu/tuigreet)                                       |
+| **Desktop Shell**                                              | [Noctalia](https://noctalia.dev)                                                     |
+| **Display Manager**                                            | [greetd](https://git.sr.ht/~kennylevinsen/greetd) + [Noctalia Greeter](https://github.com/noctalia-dev/noctalia-greeter) |
 | **File Manager**                                               | [Yazi](https://github.com/sxyazi/yazi) + [Nautilus](https://apps.gnome.org/Nautilus) |
 | **Shell**                                                      | [Zsh](https://www.zsh.org) + [Starship](https://starship.rs)                         |
 | **Media Player**                                               | [mpv](https://mpv.io)                                                                |
 | **Text Editor**                                                | [Neovim](https://neovim.io)                                                          |
 | **Image Viewer**                                               | [imv](https://sr.ht/~exec64/imv)                                                     |
-| **Screenshot Software**                                        | [Hyprshot](https://github.com/Gustash/hyprshot)                                      |
+| **Screenshot Software**                                        | [Noctalia](https://noctalia.dev)                                                     |
 
 This setup also include full disk encryption and user auth via Yubikeys. Secrets are maintained and stored via SOPs in a private repo.
 
@@ -50,27 +50,39 @@ To install the setup for a given host run:
 sudo nixos-rebuild switch --flake .#<INSERT HOST>
 ```
 
+[AirPlay setup](docs/airplay.md)
+
+## Updating pinned GitHub sources
+
+From the repo root, run `npins update` (or `nix run nixpkgs#npins -- update` before your first rebuild).
+Review `git diff -- npins/sources.json`, rebuild your host, then commit the lockfile.
+The three Obsidian plugins still use manually pinned release files in `home/base/gui/obsidian.nix`.
+
+To track a new source, run `npins add github OWNER REPO --branch main` (omit `--branch` to track release tags),
+then reference `pins.<name>` in the Home Manager module that uses it.
+
 ## Project Structure
 
 ```
-├── certs                           | Collection of certificates to be installed.
-├── config                          | Configuration globals used throughout the setup.
-├── generators                      | Allows NixOS configurations to generate outputs for different target formats (ISOs, VMs, containers).
-├── home                            | Home-manager applications and config files to be installed for the user.
-│   ├── base                        | Config for ALL systems.
-│   │   ├── core                    | Core config like shells and CLI tools.
-│   │   ├── gui                     | Config for GUI-based application shared on all systems.
-│   │   └── tui                     | Config for TUI-based application shared on all systems.
-│   ├── darwin                      | Config for MacOS-based systems.
-│   └── linux                       | Config for Linus-based systems.
-├── hosts                           | Nix and hardware config for individual systems.
-│   ├── home-aspen                  | Container-based setup for personal use.
-│   ├── home-birch                  | NixOS setup for my personal laptop.
-│   ├── home-oak                    | NixOS setup for my high powered desktop.
-│   └── work-hamming                | Nix Darwin setup for my work laptop.
-├── modules                         | System-wide config for each system types.
-├── outputs                         | Nix Flake outputs for each host.
-└── overlays                        | Allows patching of any packages that maybe broken on a particular system.
+├── certs            | Collection of certificates to be installed.
+├── config           | Configuration globals used throughout the setup.
+├── generators       | Aspen container image definition and startup script.
+├── home             | Home-manager applications and config files to be installed for the user.
+│   ├── base         | Config for ALL systems.
+│   │   ├── core     | Core config like shells and CLI tools.
+│   │   ├── gui      | Desktop application settings shared by Linux and macOS.
+│   │   └── tui      | Config for TUI-based application shared on all systems.
+│   ├── darwin       | Config for MacOS-based systems.
+│   └── linux        | Linux desktop, secrets and YubiKey settings.
+├── hosts            | Nix and hardware config for individual systems.
+│   ├── home-aspen   | Container-based setup for personal use.
+│   ├── home-birch   | NixOS setup for my personal laptop.
+│   ├── home-oak     | NixOS setup for my high powered desktop.
+│   └── work-hamming | Nix Darwin setup for my work laptop.
+├── modules          | Shared and platform-specific system settings.
+├── npins            | Source pins for Home Manager modules.
+├── outputs          | Nix Flake outputs for each host.
+└── overlays         | Allows patching of any packages that maybe broken on a particular system.
 ```
 
 ## Thanks To
@@ -85,4 +97,3 @@ A big thank you to the following people for their inspiration and help:
 - [vfarcic](https://github.com/vfarcic)
 - [elliotminns](https://github.com/elliottminns)
 - [vl-cr](https://github.com/vl-cr)
-
